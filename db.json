@@ -1,13 +1,10 @@
 {
-  "nav":{
-     "name": "MOBILE",
-                                                    "subCategories": [
-                                                        {
-                                                            "name": "Phone Brands",
-                                                            "url": "/content/M1/us/en/test/home/common-element-testing",
-                                                            "type": null,
-                                                            
-                                                        },
-                                                    ]
+  "nav": {
+    "name": "MOBILE",
+    "subCategories": [
+      {
+        "name": "Phone Brands"
+      }
+    ]
   }
 }
