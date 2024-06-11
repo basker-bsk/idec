@@ -6,33 +6,8 @@
                                                             "name": "Phone Brands",
                                                             "url": "/content/M1/us/en/test/home/common-element-testing",
                                                             "type": null,
-                                                            "subCategories": [
-                                                                {
-                                                                    "name": "Apple",
-                                                                    "url": "/content/M1/us/en/test/home/common-element-testing",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Samsung",
-                                                                    "url": "/content/M1/us/en/test/business",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Huawei",
-                                                                    "url": "/content/M1/us/en/contentpage",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Oppo",
-                                                                    "url": null,
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Vivo",
-                                                                    "url": null,
-                                                                    "type": null
-                                                                }
-                                                            ]
+                                                            
                                                         },
+                                                    ]
   }
 }
