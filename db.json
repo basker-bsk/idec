@@ -1,9 +1,44 @@
 {
   "nav": {
-    "name": "MOBILE",
+    "name": "PRODUCTS",
     "subCategories": [
       {
-        "name": "Phone Brands"
+        "name": "PANEL SWITCHES",
+        "subCategories": [
+          {
+            "name": "Toggles"
+          },
+          {
+            "name": "Pushbutton Switches"
+          },
+          {
+            "name": "Rocker Switches"
+          },
+          {
+            "name": "Industrial Controls"
+          },
+          {
+            "name": "Emergency Stops"
+          },
+          {
+            "name": "Switch Guards"
+          },
+          {
+            "name": "Sealing Boots"
+          },
+          {
+            "name": "Hardware"
+          },
+          {
+            "name": "TogglesMicro Switches"
+          },
+          {
+            "name": "Pushwheel Switches"
+          },
+          {
+            "name": "Keylock switches"
+          }
+        ]
       }
     ]
   }
