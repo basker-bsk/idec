@@ -1,5 +1,5 @@
 {
-  "nav": {
+  "nav": [
     "name": "PRODUCTS",
     "subCategories": [
       {
@@ -67,5 +67,5 @@
         ]
       }
     ]
-  }
+  ]
 }
