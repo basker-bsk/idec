@@ -66,6 +66,73 @@
               "name": "Pushwheel Switches"
             }
           ]
+        },
+        {
+      "name": "Categories",
+      "subCategories": [
+        {
+          "name": "PANEL SWITCHES",
+          "subCategories": [
+            {
+              "name": "Pushbutton Switches"
+            },
+            {
+              "name": "Rocker Switches"
+            },
+            {
+              "name": "Industrial Controls"
+            },
+            {
+              "name": "Emergency Stops"
+            },
+            {
+              "name": "Switch Guards"
+            },
+            {
+              "name": "Sealing Boots"
+            },
+            {
+              "name": "Hardware"
+            },
+            {
+              "name": "TogglesMicro Switches"
+            },
+            {
+              "name": "Pushwheel Switches"
+            },
+            {
+              "name": "Keylock switches"
+            }
+          ]
+        },
+        {
+          "name": "PCB SWITCHES",
+          "subCategories": [
+            {
+              "name": "Rocker Switches"
+            },
+            {
+              "name": "Industrial Controls"
+            },
+            {
+              "name": "Emergency Stops"
+            },
+            {
+              "name": "Switch Guards"
+            },
+            {
+              "name": "Sealing Boots"
+            },
+            {
+              "name": "Hardware"
+            },
+            {
+              "name": "TogglesMicro Switches"
+            },
+            {
+              "name": "Pushwheel Switches"
+            }
+          ]
         }
       ]
     }
