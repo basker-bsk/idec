@@ -1,225 +1,211 @@
 {
-  nav: [
+  "nav": [
     {
-      name: "PRODUCTS",
-      subCategories: [
+      "name": "Products",
+      "subCategories": [
         {
-          name: "PANEL SWITCHES",
-          subCategories: [
+          "name": "PANEL SWITCHES",
+          "subCategories": [
             {
-              name: "Toggles",
+              "name": "Pushbutton Switches"
             },
             {
-              name: "Pushbutton Switches",
+              "name": "Rocker Switches"
             },
             {
-              name: "Rocker Switches",
+              "name": "Industrial Controls"
             },
             {
-              name: "Industrial Controls",
+              "name": "Emergency Stops"
             },
             {
-              name: "Emergency Stops",
+              "name": "Switch Guards"
             },
             {
-              name: "Switch Guards",
+              "name": "Sealing Boots"
             },
             {
-              name: "Sealing Boots",
+              "name": "Hardware"
             },
             {
-              name: "Hardware",
+              "name": "TogglesMicro Switches"
             },
             {
-              name: "TogglesMicro Switches",
+              "name": "Pushwheel Switches"
             },
             {
-              name: "Pushwheel Switches",
-            },
-            {
-              name: "Keylock switches",
-            },
-          ],
+              "name": "Keylock switches"
+            }
+          ]
         },
         {
-          name: "PCB SWITCHES",
-          subCategories: [
+          "name": "PCB SWITCHES",
+          "subCategories": [
             {
-              name: "Rocker Switches",
+              "name": "Rocker Switches"
             },
             {
-              name: "Industrial Controls",
+              "name": "Industrial Controls"
             },
             {
-              name: "Emergency Stops",
+              "name": "Emergency Stops"
             },
             {
-              name: "Switch Guards",
+              "name": "Switch Guards"
             },
             {
-              name: "Sealing Boots",
+              "name": "Sealing Boots"
             },
             {
-              name: "Hardware",
+              "name": "Hardware"
             },
             {
-              name: "TogglesMicro Switches",
+              "name": "TogglesMicro Switches"
             },
             {
-              name: "Pushwheel Switches",
-            },
-            {
-              name: "Keylock switches",
-            },
-          ],
-        },
-        {
-          name: "Industrial Controls",
-          subCategories: [
-            {
-              name: "Toggles",
-            },
-            {
-              name: "Pushbutton Switches",
-            },
-            {
-              name: "Rocker Switches",
-            },
-            {
-              name: "Industrial Controls",
-            },
-            {
-              name: "Emergency Stops",
-            },
-            {
-              name: "Switch Guards",
-            },
-            {
-              name: "Sealing Boots",
-            },
-            {
-              name: "Hardware",
-            },
-            {
-              name: "TogglesMicro Switches",
-            },
-            {
-              name: "Pushwheel Switches",
-            },
-            {
-              name: "Keylock switches",
-            },
-          ],
-        },
-        {
-          name: "LED Indicators",
-          subCategories: [
-            {
-              name: "Rocker Switches",
-            },
-            {
-              name: "Industrial Controls",
-            },
-            {
-              name: "Emergency Stops",
-            },
-            {
-              name: "Switch Guards",
-            },
-            {
-              name: "Sealing Boots",
-            },
-            {
-              name: "Hardware",
-            },
-            {
-              name: "TogglesMicro Switches",
-            },
-            {
-              name: "Pushwheel Switches",
-            },
-            {
-              name: "Keylock switches",
-            },
-          ],
-        },
-      ],
+              "name": "Pushwheel Switches"
+            }
+          ]
+        }
+      ]
     },
     {
-      name: "Industries",
-      subCategories: [
+      "name": "Categories",
+      "subCategories": [
         {
-          name: "Toggles",
+          "name": "PANEL SWITCHES",
+          "subCategories": [
+            {
+              "name": "Pushbutton Switches"
+            },
+            {
+              "name": "Rocker Switches"
+            },
+            {
+              "name": "Industrial Controls"
+            },
+            {
+              "name": "Emergency Stops"
+            },
+            {
+              "name": "Switch Guards"
+            },
+            {
+              "name": "Sealing Boots"
+            },
+            {
+              "name": "Hardware"
+            },
+            {
+              "name": "TogglesMicro Switches"
+            },
+            {
+              "name": "Pushwheel Switches"
+            },
+            {
+              "name": "Keylock switches"
+            }
+          ]
         },
         {
-          name: "Pushbutton Switches",
-        },
-        {
-          name: "Rocker Switches",
-        },
-        {
-          name: "Industrial Controls",
-        },
-        {
-          name: "Emergency Stops",
-        },
-        {
-          name: "Switch Guards",
-        },
-        {
-          name: "Sealing Boots",
-        },
-        {
-          name: "Hardware",
-        },
-        {
-          name: "TogglesMicro Switches",
-        },
-        {
-          name: "Pushwheel Switches",
-        },
-        {
-          name: "Keylock switches",
-        },
-      ],
+          "name": "PCB SWITCHES",
+          "subCategories": [
+            {
+              "name": "Rocker Switches"
+            },
+            {
+              "name": "Industrial Controls"
+            },
+            {
+              "name": "Emergency Stops"
+            },
+            {
+              "name": "Switch Guards"
+            },
+            {
+              "name": "Sealing Boots"
+            },
+            {
+              "name": "Hardware"
+            },
+            {
+              "name": "TogglesMicro Switches"
+            },
+            {
+              "name": "Pushwheel Switches"
+            }
+          ]
+        }
+      ]
     },
     {
-      name: "Solutions",
-      subCategories: [
+      "name": "Categories",
+      "subCategories": [
         {
-          name: "Toggles",
+          "name": "PANEL SWITCHES",
+          "subCategories": [
+            {
+              "name": "Pushbutton Switches"
+            },
+            {
+              "name": "Rocker Switches"
+            },
+            {
+              "name": "Industrial Controls"
+            },
+            {
+              "name": "Emergency Stops"
+            },
+            {
+              "name": "Switch Guards"
+            },
+            {
+              "name": "Sealing Boots"
+            },
+            {
+              "name": "Hardware"
+            },
+            {
+              "name": "TogglesMicro Switches"
+            },
+            {
+              "name": "Pushwheel Switches"
+            },
+            {
+              "name": "Keylock switches"
+            }
+          ]
         },
         {
-          name: "Pushbutton Switches",
-        },
-        {
-          name: "Rocker Switches",
-        },
-        {
-          name: "Industrial Controls",
-        },
-        {
-          name: "Emergency Stops",
-        },
-        {
-          name: "Switch Guards",
-        },
-        {
-          name: "Sealing Boots",
-        },
-        {
-          name: "Hardware",
-        },
-        {
-          name: "TogglesMicro Switches",
-        },
-        {
-          name: "Pushwheel Switches",
-        },
-        {
-          name: "Keylock switches",
-        },
-      ],
-    },
-  ],
+          "name": "PCB SWITCHES",
+          "subCategories": [
+            {
+              "name": "Rocker Switches"
+            },
+            {
+              "name": "Industrial Controls"
+            },
+            {
+              "name": "Emergency Stops"
+            },
+            {
+              "name": "Switch Guards"
+            },
+            {
+              "name": "Sealing Boots"
+            },
+            {
+              "name": "Hardware"
+            },
+            {
+              "name": "TogglesMicro Switches"
+            },
+            {
+              "name": "Pushwheel Switches"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
