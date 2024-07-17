@@ -66,8 +66,10 @@
               "name": "Pushwheel Switches"
             }
           ]
-        },
-        {
+        }
+      ]
+    },
+    {
       "name": "Categories",
       "subCategories": [
         {
