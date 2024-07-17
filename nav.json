@@ -1,687 +1,79 @@
 {
-                                        "header": {
-                                            "personalTitle": "Personal",
-                                            "personaltitlelink": "/",
-                                            "businessTitle": "Business",
-                                            "businessTitleLink": "/",
-                                            "searchLogoPath": "/content/dam/M1/simolandingpageimages/simcard-orange.svg",
-                                            "personal": [
-                                                {
-                                                    "id": "Mobile",
-                                                    "name": "MOBILE",
-                                                    "subCategories": [
-                                                        {
-                                                            "name": "Phone Brands",
-                                                            "url": "/content/M1/us/en/test/home/common-element-testing",
-                                                            "type": null,
-                                                            "subCategories": [
-                                                                {
-                                                                    "name": "Apple",
-                                                                    "url": "/content/M1/us/en/test/home/common-element-testing",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Samsung",
-                                                                    "url": "/content/M1/us/en/test/business",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Huawei",
-                                                                    "url": "/content/M1/us/en/contentpage",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Oppo",
-                                                                    "url": null,
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Vivo",
-                                                                    "url": null,
-                                                                    "type": null
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "name": "Sim Only Plan",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": [
-                                                                {
-                                                                    "name": "100 GB Sim-only plan",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "150 GB Sim-only Plan",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "name": "Phone Plan",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": [
-                                                                {
-                                                                    "name": "Bespoke Flexi",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "$0 Deals",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Device with Contract",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Buy Now Pay Later",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "name": "Corporate Individual",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": [
-                                                                {
-                                                                    "name": "SIM-only",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Device with Contract",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Bundled Roaming Plan",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "name": "Prepaid",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": [
-                                                                {
-                                                                    "name": "Prepaid SIM",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Top Up",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Social Packs",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Data Packs",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Tourist Sim",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "name": "Add-ons & Services",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": [
-                                                                {
-                                                                    "name": "True 5G",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Mobile Add-ons",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Postpaid Roaming",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "International Calls",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "IDD 021 Saver",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "name": "Special Benefits",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": [
-                                                                {
-                                                                    "name": "Promotions",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "NumberShare",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Bespoke Family Plan",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Multi-Service Saver",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Corporate Individual",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                }
-                                                            ]
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "id": "Home BroadBand",
-                                                    "name": "HOME BROADBAND",
-                                                    "subCategories": [
-                                                        {
-                                                            "name": "Plans",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": [
-                                                                {
-                                                                    "name": "500 Mbps",
-                                                                    "url": "/content/M1/us",
-                                                                    "type": null
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "name": "Device",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": null
-                                                        },
-                                                        {
-                                                            "name": "Fixed Voice",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": null
-                                                        },
-                                                        {
-                                                            "name": "Special Benefits",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": null
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "id": "Travel",
-                                                    "name": "TRAVEL",
-                                                    "subCategories": [
-                                                        {
-                                                            "name": "Postpaid Roaming",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": [
-                                                                {
-                                                                    "name": "Daily Passport",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Data Passport",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Unlimited Data Roaming",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "name": "Prepaid Roaming",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": null
-                                                        },
-                                                        {
-                                                            "name": "Tourist SIM",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": null
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "id": "Digital Service",
-                                                    "name": "DIGITAL SERVICE",
-                                                    "subCategories": [
-                                                        {
-                                                            "name": "Entertainment",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": null
-                                                        },
-                                                        {
-                                                            "name": "Security",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": null
-                                                        },
-                                                        {
-                                                            "name": "Finance",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": null
-                                                        },
-                                                        {
-                                                            "name": "Utilities",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": null
-                                                        },
-                                                        {
-                                                            "name": "Direct Carrier Billing",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": null
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "id": "Deals",
-                                                    "name": "DEALS",
-                                                    "subCategories": [
-                                                        {
-                                                            "name": "Mobile",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": null
-                                                        },
-                                                        {
-                                                            "name": "Prepaid",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": null
-                                                        },
-                                                        {
-                                                            "name": "Home Broadband",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": null
-                                                        },
-                                                        {
-                                                            "name": "Others",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": null
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "id": "About Us",
-                                                    "name": "ABOUT US",
-                                                    "subCategories": [
-                                                        {
-                                                            "name": "Media Centre",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": null
-                                                        },
-                                                        {
-                                                            "name": "Regulatory Information",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": null
-                                                        },
-                                                        {
-                                                            "name": "Careers",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": null
-                                                        },
-                                                        {
-                                                            "name": "Blog",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": null
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "id": "Maxx",
-                                                    "name": "MAXX",
-                                                    "subCategories": null
-                                                }
-                                            ],
-                                            "business": [
-                                                {
-                                                    "id": "Products ",
-                                                    "name": "Products",
-                                                    "subCategories": [
-                                                        {
-                                                            "name": "Product1",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": [
-                                                                {
-                                                                    "name": "Product 1 child",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Product 1 child2",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "name": "Product 2",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": [
-                                                                {
-                                                                    "name": "Product 2 child1",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Product 2 child2",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                }
-                                                            ]
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "id": "Solutions",
-                                                    "name": "Solutions",
-                                                    "subCategories": [
-                                                        {
-                                                            "name": "Enterprise Computing",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": [
-                                                                {
-                                                                    "name": "End User Compputing",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Printers & Managed Services",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "name": "Manager Infrastructure",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": [
-                                                                {
-                                                                    "name": "Managed IT Infrastructure",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Storage Management",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Data Protection",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Backup & Replication",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Platform Virtualisation",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Network & System Monitoring",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Hardware Maintenance",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Managed Services",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "name": "Managed Network Solutions",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": [
-                                                                {
-                                                                    "name": "Managed Secured Office Gateway",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "SDWAN",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "name": "Managed Security Solutions",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": [
-                                                                {
-                                                                    "name": "Cloud Access Security Broker",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Cyber Defense as a Service",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Cyber Threat Intelligence(CTI)",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Data Loss Prevention",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "DDOS Migration",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Email Security",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Endpoint Protection",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Managed Firewall",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Managed SoC",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Privileged  Access Management",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Secure Web",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Unified Threat Management",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Video Surveillance",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Web Application Firewall",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Web Defacement Monitoring",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "name": "Managed Applications & Solutions ",
-                                                            "url": "/",
-                                                            "type": null,
-                                                            "subCategories": [
-                                                                {
-                                                                    "name": "Internet of Things",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Machine to Machine",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Big Data-Telco Analytics",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "PBX",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                },
-                                                                {
-                                                                    "name": "Smart Wifi Analytics",
-                                                                    "url": "/",
-                                                                    "type": null
-                                                                }
-                                                            ]
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "id": "Deals",
-                                                    "name": "Deals",
-                                                    "subCategories": null
-                                                },
-                                                {
-                                                    "id": "5G Enterprise",
-                                                    "name": "5G Enterprise",
-                                                    "subCategories": null
-                                                },
-                                                {
-                                                    "id": "Digital Service",
-                                                    "name": "Digital Service",
-                                                    "subCategories": null
-                                                },
-                                                {
-                                                    "id": "Support",
-                                                    "name": "Support",
-                                                    "subCategories": null
-                                                }
-                                            ],
-                                            ":type": "M1/components/ibuycomponents/header"
-                                        },
-                                        "offersoverlayitem": {
-                                            "header": "Welcome back!",
-                                            "description": "Enjoy $0* upfront for Bespoke Flexi, plus {{totalVoucher}} vouchers to help you save more when you check out today.",
-                                            "ctaLabel": "See Offers",
-                                            "logoutLabel": "Log out",
-                                            "consentText": "* Subject to eligibility check",
-                                            "backgroundImage": "/content/dam/offers/offers-loggedin.png",
-                                            "headerGuest": "Looking for $0 upfront or discounts?",
-                                            "descriptionGuest": "Log in now to see what we have prepared - just for you!",
-                                            "ctaLabelGuest": "Log in",
-                                            "backgroundImageGuest": "/content/dam/offers/offers-guest.png",
-                                            "connectionErrorText": "We are experiencing some difficulties while loading your offers. Check your connection and refresh the page again.",
-                                            "connectionErrorCTAText": "refresh",
-                                            "staticOffersItems": [
-                                                {
-                                                    "promoName": "Infinite handset mega deals",
-                                                    "validDate": "2023-12-19T18:30:00Z",
-                                                    "orderType": "both",
-                                                    "configureCTA": "external",
-                                                    "ctaURL": "https://m1.com.sg",
-                                                    "disclaimerText": null,
-                                                    "promoIcon": null
-                                                },
-                                                {
-                                                    "promoName": "$0* upfront with Bespoke Flexi",
-                                                    "validDate": null,
-                                                    "orderType": "both",
-                                                    "configureCTA": "internal",
-                                                    "ctaURL": "/content/M1/us/en/personal/flexi",
-                                                    "disclaimerText": "* Subject to eligibility check.",
-                                                    "promoIcon": null
-                                                }
-                                            ],
-                                            ":type": "M1/components/ibuycomponents/offersOverlayItem"
-                                        }
-                                    },
+  "nav":[
+    {
+     "name": "PRODUCTS",
+     "subCategories": [  
+          {
+         "name": "PANEL SWITCHES",
+         "subCategories": [
+           {
+             "name":"Toggles"
+           },
+           {
+             "name":"Pushbutton Switches"
+           },
+           {
+             "name":"Rocker Switches"
+           },
+           {
+             "name":"Industrial Controls"
+           },
+           {
+             "name":"Emergency Stops"
+           },
+           {
+             "name":"Switch Guards"
+           },
+           {
+             "name":"Sealing Boots"
+           },
+           {
+             "name":"Hardware"
+           },
+           {
+             "name":"TogglesMicro Switches"
+           },
+           {
+             "name":"Pushwheel Switches"
+           },
+           {
+             "name":"Keylock switches"
+           }
+           ]
+          },
+          {
+          "name": "PCB SWITCHES",
+         "subCategories": [
+           {
+             "name":"Rocker Switches"
+           },
+           {
+             "name":"Industrial Controls"
+           },
+           {
+             "name":"Emergency Stops"
+           },
+           {
+             "name":"Switch Guards"
+           },
+           {
+             "name":"Sealing Boots"
+           },
+           {
+             "name":"Hardware"
+           },
+           {
+             "name":"TogglesMicro Switches"
+           },
+           {
+             "name":"Pushwheel Switches"
+           },
+           {
+             "name":"Keylock switches"
+           }
+           ]
+          }
+    ]
+    }
+  ]
+}
