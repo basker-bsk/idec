@@ -67,9 +67,9 @@
             }
           ]
         }
-      ]
-    },
-    {
+        ]
+},
+{
       "name": "Industries",
       "subCategories": [
         {
@@ -139,7 +139,7 @@
       ]
     },
     {
-      "name": "Categories",
+      "name": "Solutions",
       "subCategories": [
         {
           "name": "PANEL SWITCHES",
@@ -207,5 +207,5 @@
         }
       ]
     }
-  ]
+]
 }
