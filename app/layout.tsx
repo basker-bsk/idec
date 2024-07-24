@@ -3,8 +3,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Sidebar from "@/components/sidebar";
 import Banner from "@/components/banner";
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"] });
+import { Poppins } from "next/font/google";
+const poppins = Poppins({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata: Metadata = {
   title: "IDEC UI Components",
@@ -18,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gray-100`}>
+      <body className={`${poppins.variable} bg-gray-100`}>
         <div className="flex">
           <Sidebar />
           <main className="py-4 pl-[320px] pr-[20px] overflow-y-auto">
