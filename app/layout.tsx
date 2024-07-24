@@ -25,8 +25,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.variable} bg-gray-100`}>
         <div className="flex">
-          <Sidebar />
-          <main className="py-4 pl-[320px] pr-[20px] overflow-y-auto">
+          <div className="hidden lg:flex">
+            <Sidebar />
+          </div>
+          <main className="py-[10px] pl-[10px] lg:pl-[320px] pr-[10px] lg:pr-[20px] lg:py-[20px] overflow-y-auto">
+            <div className="mb-4 flex gap-2 lg:hidden items-center justify-center">
+              <img src="../images/logo.jpg" width="150" />
+              <h2 className="font-bold text-2xl">UI Components</h2>
+            </div>
             <div className="mb-10">
               <Banner />
             </div>
