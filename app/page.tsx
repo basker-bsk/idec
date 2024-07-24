@@ -8,15 +8,13 @@ import PopoverDemo from "./popover/page";
 import { CardWithForm } from "./card/page";
 import HoverCardDemo from "./hovercard/page";
 
-
-
 export default function Home() {
   return (
     <main className="w-full flex flex-col gap-4">
-      <Accordian />  
+      <Accordian />
       <Buttons />
       <DatePicker />
-      <Modal/>
+      <Modal />
       <PopoverDemo />
       <CardWithForm />
       <HoverCardDemo />

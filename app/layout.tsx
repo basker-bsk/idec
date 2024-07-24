@@ -1,10 +1,24 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
 import "./globals.css";
 import Header from "@/components/header";
 import Sidebar from "@/components/sidebar";
+import Banner from "@/components/banner";
+import localFont from "next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = localFont({
+  src: [
+    {
+      path: "../public/fonts/Poppins-Regular.ttf",
+      weight: "400",
+    },
+    {
+      path: "../public/fonts/Poppins-Bold.ttf",
+      weight: "700",
+    },
+  ],
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: "IDEC UI Components",
@@ -18,10 +32,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gray-200`}>
+      <body className={`${poppins.variable} font-sans bg-gray-100`}>
         <div className="flex">
           <Sidebar />
-          <main className="py-4 pl-[320px] flex grow overflow-y-auto">{children}</main>
+          <main className="py-4 pl-[320px] pr-[20px] overflow-y-auto">
+            <div className="mb-10">
+              <Banner />
+            </div>
+
+            {children}
+          </main>
         </div>
       </body>
     </html>

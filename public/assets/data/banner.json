@@ -1,0 +1,24 @@
+{
+  "banner": {
+    "bannerItems": [
+      {
+        "heading": "MEC switches: visually appealing for enhanced user experience",
+        "description": "MEC caps are visually appealing and highly customizable, providing a pleasing user experience without compromising on functionality.",
+        "bgImageDesktop": "https://www.apem.com/medias/TEMPLATE-Web-banner.png?context=bWFzdGVyfGltYWdlc3wzNDc1MjF8aW1hZ2UvcG5nfGg5OS9oZjIvOTQzMDQ4Njk3NDQ5NC9URU1QTEFURSBXZWIgYmFubmVyLnBuZ3w0ZmYyY2Q0NmVjM2ZhN2ZhNDRiYzBjMDViMjZkMWQyOTY0NjQyZmE3ODJkMjBhOThjNGI0MzZjNWZlNjZhOTIy",
+        "ctaText": "Learn More",
+        "ctaUrl": "#Devices",
+        "textAlignment": "left",
+        "textTheme": "Dark"
+      },
+      {
+        "heading": "HMI PROTECTION AGAINT SAND, MUD AND DIRT ",
+        "description": "Imagine an interface designed not just for functionality but also for reliability. When facing sand, mud and dirt exposure, it is vital that your HMIs ensure durability in demanding conditions. Understand effective design strategies to protect your HMIs in our latest FAQ.",
+        "bgImageDesktop": "https://www.apem.com/medias/TEMPLATE-Web-banner-News-1-1-.png?context=bWFzdGVyfGltYWdlc3w2NDkwODJ8aW1hZ2UvcG5nfGg1Zi9oMjkvOTUxNTQ1MjM5OTY0Ni9URU1QTEFURSBXZWIgYmFubmVyIE5ld3MgKDEpICgxKS5wbmd8YzJhYTE1YmNlOTdiOGQ5NTMxOGY2ZjJmMjQyMTFlZDllMTkyOTdkOWRjMWVkNDViNjhmNDljZmIzZDQ5ODI3Mg",
+        "ctaText": "Learn More",
+        "ctaUrl": "#Devices",
+        "textAlignment": "left",
+        "textTheme": "Dark"
+      }
+    ]
+  }
+}
