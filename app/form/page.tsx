@@ -2,7 +2,8 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
+import { date, z } from "zod";
+import { Checkbox } from "@/components/ui/checkbox";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -22,6 +23,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Link from "next/link";
 
 const formSchema = z
   .object({
@@ -38,10 +40,15 @@ const formSchema = z
       .string()
       .min(5, { message: "Password must be atleaset 5 characters" }),
     confirmPassword: z.string(),
+    mobile: z.boolean().default(false),
   })
   .refine((data) => data.password === data.confirmPassword, {
     message: "Password must be same",
     path: ["confirmPassword"],
+  })
+  .refine((data) => data.mobile === true, {
+    message: "Accept is Required",
+    path: ["mobile"],
   });
 
 export default function FormWithZod() {
@@ -52,6 +59,7 @@ export default function FormWithZod() {
       emailAddress: "",
       password: "",
       confirmPassword: "",
+      mobile: false,
     },
   });
 
@@ -73,7 +81,7 @@ export default function FormWithZod() {
         </CardHeader>
         <CardContent>
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
               <FormField
                 control={form.control}
                 name="username"
@@ -134,6 +142,28 @@ export default function FormWithZod() {
                       />
                     </FormControl>
 
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="mobile"
+                render={({ field }) => (
+                  <FormItem>
+                    <div className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel>
+                          I agree to APEMs Terms & Conditions and Privacy Policy
+                        </FormLabel>
+                      </div>
+                    </div>
                     <FormMessage />
                   </FormItem>
                 )}
