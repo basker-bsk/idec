@@ -5,6 +5,7 @@ import Modal from "./modal/page";
 import PopoverDemo from "./popover/page";
 import CardWithForm from "./card/page";
 import HoverCardDemo from "./hovercard/page";
+import FormWithZod from "./form/page";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <PopoverDemo />
       <CardWithForm />
       <HoverCardDemo />
+      <FormWithZod />
     </main>
   );
 }

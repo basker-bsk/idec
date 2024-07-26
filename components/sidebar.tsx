@@ -44,6 +44,10 @@ export default function Sidebar() {
       link: "/#hoverCard",
       text: "hoverCard",
     },
+    {
+      link: "/#form",
+      text: "form",
+    },
   ];
 
   return (
