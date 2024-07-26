@@ -66,7 +66,7 @@ export default function FormWithZod() {
       </div>
       <Card className="w-full lg:w-1/2">
         <CardHeader>
-          <CardTitle>Don't have an account?</CardTitle>
+          <CardTitle>Dont have an account?</CardTitle>
           <CardDescription>
             Register now and benefit from the following:
           </CardDescription>

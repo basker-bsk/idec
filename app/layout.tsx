@@ -4,6 +4,7 @@ import "./globals.css";
 import Sidebar from "@/components/sidebar";
 import Banner from "@/components/banner";
 import { Poppins } from "next/font/google";
+import Image from "next/image";
 const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
@@ -30,7 +31,13 @@ export default function RootLayout({
           </div>
           <main className="py-[10px] pl-[10px] lg:pl-[320px] pr-[10px] lg:pr-[20px] lg:py-[20px] overflow-y-auto">
             <div className="mb-4 flex gap-2 lg:hidden items-center justify-center">
-              <img src="../images/logo.jpg" width="150" />
+              <Image
+                src="/images/logo.jpg"
+                width={150}
+                height={100}
+                alt="Picture of the author"
+                className="w-[150px]"
+              />
               <h2 className="font-bold text-2xl">UI Components</h2>
             </div>
             <div className="mb-10">
