@@ -67,7 +67,7 @@
     @apply bg-background text-foreground;
   }
   h1 {
-    @apply text-2xl lg:text-4xl font-bold my-4;
+    @apply text-2xl lg:text-3xl font-bold my-2;
   }
   h2 {
     @apply text-["14px"] lg:text-2xl font-semibold capitalize;

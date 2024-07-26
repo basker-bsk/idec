@@ -49,6 +49,10 @@ export default function Sidebar() {
       link: "/#form",
       text: "form",
     },
+    {
+      link: "/#skeleton",
+      text: "skeleton",
+    },
   ];
 
   return (
@@ -63,7 +67,7 @@ export default function Sidebar() {
               alt="Picture of the author"
               className="w-[150px]"
             />
-            <h2 className="font-semibold">UI Components</h2>
+            <h2 className="font-bold">UI Components</h2>
           </div>
           <Command>
             <CommandInput placeholder="Type a command or search..." />
