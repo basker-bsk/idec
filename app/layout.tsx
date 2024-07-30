@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import Sidebar from "@/components/sidebar";
-import Banner from "@/components/banner";
+
 import { Poppins } from "next/font/google";
 import Image from "next/image";
 const poppins = Poppins({
@@ -40,9 +40,7 @@ export default function RootLayout({
               />
               <h2 className="font-bold text-2xl">UI Components</h2>
             </div>
-            {/* <div className="mb-10">
-              <Banner />
-            </div> */}
+
             {children}
           </main>
         </div>
