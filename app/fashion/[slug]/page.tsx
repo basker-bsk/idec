@@ -2,23 +2,26 @@ import Image from "next/image";
 import client from "../../../config/contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Link from "next/link";
+
 export default async function Detail({ params }: { params: { slug: string } }) {
   const response = await client.getEntries();
   const fashionsDetail = response.items;
-  const detail = fashionsDetail.find((fd: any, id: number) => {
+  const detail: any = fashionsDetail.find((fd: any) => {
     if (fd.fields.slug === params.slug) {
       return fd;
     }
   });
   console.log("-------", detail);
 
+  const { title, brief, cI, description } = detail?.fields;
+
   return (
     <>
       <p>
         <Link href={"/fashion"}>Back to Fashion</Link>
       </p>
-      <h1>{detail.fields.title}</h1>
-      <p>{detail.fields.brief}</p>
+      <h1>{title.title}</h1>
+      <p>{brief.brief}</p>
       <div className="justify-center items-center flex flex-col gap-4 mt-4">
         <>
           <div className="flex flex-col gap-2 ">
@@ -32,7 +35,7 @@ export default async function Detail({ params }: { params: { slug: string } }) {
             />
           </div>
 
-          <p>{documentToReactComponents(detail.fields.description)}</p>
+          <p>{documentToReactComponents(description.description)}</p>
         </>
       </div>
     </>
