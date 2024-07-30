@@ -40,9 +40,9 @@ export default function RootLayout({
               />
               <h2 className="font-bold text-2xl">UI Components</h2>
             </div>
-            <div className="mb-10">
+            {/* <div className="mb-10">
               <Banner />
-            </div>
+            </div> */}
             {children}
           </main>
         </div>
