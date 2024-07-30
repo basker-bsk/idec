@@ -20,8 +20,8 @@ export default async function Detail({ params }: { params: { slug: string } }) {
       <p>
         <Link href={"/fashion"}>Back to Fashion</Link>
       </p>
-      <h1>{title.title}</h1>
-      <p>{brief.brief}</p>
+      <h1>{detail.fields.title}</h1>
+      <p>{detail.fields.brief}</p>
       <div className="justify-center items-center flex flex-col gap-4 mt-4">
         <>
           <div className="flex flex-col gap-2 ">
@@ -35,7 +35,7 @@ export default async function Detail({ params }: { params: { slug: string } }) {
             />
           </div>
 
-          <p>{documentToReactComponents(description.description)}</p>
+          <p>{documentToReactComponents(detail.fields.description)}</p>
         </>
       </div>
     </>
