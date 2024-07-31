@@ -53,11 +53,15 @@ export default function Sidebar() {
       link: "/#skeleton",
       text: "skeleton",
     },
+    {
+      link: "/fashion",
+      text: "contentful",
+    },
   ];
 
   return (
     <>
-      <div className="flex min-w-[300px] fixed top-0 left-0 bg-slate-300 shadow">
+      <div className="flex min-w-[300px] fixed top-0 left-0 bg-slate-300 shadow overflow-y-auto">
         <div className=" w-[300px] p-4 rounded-lg min-h-screen">
           <div className="mb-4 flex flex-col gap-2">
             <Image
