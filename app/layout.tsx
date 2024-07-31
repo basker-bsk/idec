@@ -3,13 +3,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Sidebar from "@/components/sidebar";
 import Banner from "@/components/banner";
-import { Poppins } from "next/font/google";
-const poppins = Poppins({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-poppins",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
+// import { Poppins } from "next/font/google";
+// const poppins = Poppins({
+//   subsets: ["latin"],
+//   display: "swap",
+//   variable: "--font-poppins",
+//   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+// });
 
 export const metadata: Metadata = {
   title: "IDEC UI Components",
@@ -23,7 +23,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} bg-gray-100`}>
+      {/* <body className={`${poppins.variable} bg-gray-100`}> */}
+      <body className="bg-gray-100">
         <div className="flex">
           <div className="hidden lg:flex">
             <Sidebar />
