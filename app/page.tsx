@@ -5,6 +5,8 @@ import Modal from "./modal/page";
 import PopoverDemo from "./popover/page";
 import CardWithForm from "./card/page";
 import HoverCardDemo from "./hovercard/page";
+import FormWithZod from "./form/page";
+import SkeletonCard from "./skeleton/page";
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
       <PopoverDemo />
       <CardWithForm />
       <HoverCardDemo />
+      <FormWithZod />
+      <SkeletonCard />
     </main>
   );
 }
