@@ -34,10 +34,12 @@ export default function RootLayout({
             <div className="mb-4 flex gap-2 lg:hidden items-center justify-center">
               <Image
                 src="/images/logo.jpg"
-                width={150}
-                height={100}
+                width={0}
+                height={0}
+                priority={true}
                 alt="Picture of the author"
-                className="w-[150px]"
+                placeholder="empty"
+                className="w-[150px] h-auto"
               />
               <h2 className="font-bold text-2xl">UI Components</h2>
             </div>

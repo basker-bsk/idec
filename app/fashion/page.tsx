@@ -23,7 +23,8 @@ export default async function Fashion() {
                     alt="Content Image"
                     width={400}
                     height={200}
-                    layout="responsive"
+                    loading="eager"
+                    priority={true}
                     className="rounded-lg"
                   />
                   <h2>{fashion.fields.title}</h2>
