@@ -57,6 +57,14 @@ export default function Sidebar() {
       link: "/fashion",
       text: "contentful",
     },
+    {
+      link: "/#redux",
+      text: "Redux Toolkit",
+    },
+    {
+      link: "/#users",
+      text: "users",
+    },
   ];
 
   return (

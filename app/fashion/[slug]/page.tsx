@@ -1,9 +1,11 @@
 import Image from "next/image";
-import client from "../../../config/contentful";
+import client from "@/config/contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Link from "next/link";
+import { wait } from "@/lib/loadingdelay";
 
 export default async function Detail({ params }: { params: { slug: string } }) {
+  await wait(2000);
   const response = await client.getEntries();
   const fashionsDetail = response.items;
   const detail: any = fashionsDetail.find((fd: any) => {
@@ -35,7 +37,7 @@ export default async function Detail({ params }: { params: { slug: string } }) {
             />
           </div>
 
-          <p>{documentToReactComponents(detail.fields.description)}</p>
+          <div>{documentToReactComponents(detail.fields.description)}</div>
         </>
       </div>
     </>

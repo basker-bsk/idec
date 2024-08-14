@@ -7,6 +7,8 @@ import CardWithForm from "./card/page";
 import HoverCardDemo from "./hovercard/page";
 import FormWithZod from "./form/page";
 import SkeletonCard from "./skeleton/page";
+import Users from "./users/page";
+import Counter from "./counter/page";
 
 export default function Home() {
   return (
@@ -20,6 +22,8 @@ export default function Home() {
       <HoverCardDemo />
       <FormWithZod />
       <SkeletonCard />
+      <Users />
+      <Counter />
     </main>
   );
 }

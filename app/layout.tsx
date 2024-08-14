@@ -4,6 +4,7 @@ import "./globals.css";
 import Sidebar from "@/components/sidebar";
 
 import { Poppins } from "next/font/google";
+import { Providers } from "./GlobalRedux/provider";
 import Image from "next/image";
 const poppins = Poppins({
   subsets: ["latin"],
@@ -40,8 +41,7 @@ export default function RootLayout({
               />
               <h2 className="font-bold text-2xl">UI Components</h2>
             </div>
-
-            {children}
+            <Providers>{children}</Providers>
           </main>
         </div>
       </body>

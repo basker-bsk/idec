@@ -1,11 +1,14 @@
-import client from "../../config/contentful";
+import client from "@/config/contentful";
 import Image from "next/image";
 import Link from "next/link";
+import { wait } from "@/lib/loadingdelay";
 
 export default async function Fashion() {
+  await wait(1000);
   const response = await client.getEntries();
-  const fashionsList = response.items;
+  const fashionsList: any = response.items;
   console.log("response----++++++++++++-------", response.items);
+
   return (
     <>
       <div className="flex flex-col  w-full">
@@ -15,7 +18,7 @@ export default async function Fashion() {
             <>
               <Link href={`fashion/${fashion.fields.slug}`}>
                 <div
-                  className="flex flex-col gap-2 rounded-lg border-gray-500 p-4 bg-gray-300"
+                  className="h-[300px] w-[328px] flex flex-col gap-2 rounded-lg border-gray-500 p-4 bg-gray-300"
                   key={`menu-${sid}`}
                 >
                   <Image
@@ -24,7 +27,7 @@ export default async function Fashion() {
                     width={400}
                     height={200}
                     layout="responsive"
-                    className="rounded-lg"
+                    className="rounded-lg min-h-[200px]"
                   />
                   <h2>{fashion.fields.title}</h2>
                   <p>{fashion.fields.brief}</p>
