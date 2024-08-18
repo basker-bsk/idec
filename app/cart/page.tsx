@@ -5,7 +5,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Cart() {
-  const cartItems = useSelector((state) => state.cart);
+  const cartItems = useSelector((state: any) => state.cart);
   const totalPrice = cartItems.reduce((accumulator: any, currentItem: any) => {
     return accumulator + currentItem.price * currentItem.qty;
   }, 0);
