@@ -13,7 +13,7 @@ import {
   CommandShortcut,
 } from "@/components/ui/command";
 import Link from "next/link";
-import Image from "next/image";
+import Header from "./header";
 
 export default function Sidebar() {
   const menuList = [
@@ -28,6 +28,10 @@ export default function Sidebar() {
     {
       link: "/#calendar",
       text: "calendar",
+    },
+    {
+      link: "/products",
+      text: "products",
     },
     {
       link: "/#modal",
@@ -71,16 +75,7 @@ export default function Sidebar() {
     <>
       <div className="flex min-w-[300px] fixed top-0 left-0 bg-slate-300 shadow overflow-y-auto">
         <div className=" w-[300px] p-4 rounded-lg min-h-screen">
-          <div className="mb-4 flex flex-col gap-2">
-            <Image
-              src="/images/logo.jpg"
-              width={150}
-              height={100}
-              alt="Picture of the author"
-              className="w-[150px]"
-            />
-            <h2 className="font-bold">UI Components</h2>
-          </div>
+          <Header />
           <Command>
             <CommandInput placeholder="Type a command or search..." />
             <CommandList className="capitalize">

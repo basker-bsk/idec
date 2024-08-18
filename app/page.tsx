@@ -9,6 +9,8 @@ import FormWithZod from "./form/page";
 import SkeletonCard from "./skeleton/page";
 import Users from "./users/page";
 import Counter from "./counter/page";
+import Redis from "./Redis/page";
+import Products from "./products/page";
 
 export default function Home() {
   return (
@@ -17,6 +19,7 @@ export default function Home() {
       <Buttons />
       <DatePicker />
       <Modal />
+      {/* <Products /> */}
       <PopoverDemo />
       <CardWithForm />
       <HoverCardDemo />
@@ -24,6 +27,7 @@ export default function Home() {
       <SkeletonCard />
       <Users />
       <Counter />
+      <Redis />
     </main>
   );
 }
