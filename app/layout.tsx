@@ -2,14 +2,21 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import Sidebar from "@/components/sidebar";
-import { Poppins } from "next/font/google";
 import { Providers } from "./GlobalRedux/provider";
 import Header from "@/components/header";
-const poppins = Poppins({
-  subsets: ["latin"],
-  display: "swap",
+// import { Poppins } from "next/font/google";
+// const poppins = Poppins({
+//   subsets: ["latin"],
+//   display: "swap",
+//   variable: "--font-poppins",
+//   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+// });
+
+import localFont from "next/font/local";
+
+const poppins = localFont({
+  src: "../public/fonts/DINRoundPro.woff2",
   variable: "--font-poppins",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {

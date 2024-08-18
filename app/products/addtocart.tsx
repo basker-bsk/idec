@@ -28,7 +28,7 @@ export default function AddToCart({ product }: any) {
       <Button
         variant="secondary"
         onClick={() => handleAddToCart()}
-        className="bg-cyan-600 text-white hover:bg-cyan-800"
+        className="bg-pink-800 text-white hover:bg-pink-700 flex gap-2"
       >
         <BaggageClaim />
         <span>Add</span>

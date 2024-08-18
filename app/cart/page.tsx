@@ -42,7 +42,7 @@ export default function Cart() {
         <h2 className="text-2xl pb-3">Cart total</h2>
         <div className="flex items-center justify-between border-b border-slate-500 pb-6">
           <span>Subtotal </span>
-          <span>${totalPrice}</span>
+          <span>${totalPrice.toFixed(2)}</span>
         </div>
         <div className="flex items-center justify-between pb-4 mt-2">
           <span>Tax </span>

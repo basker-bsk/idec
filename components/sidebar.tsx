@@ -74,9 +74,21 @@ export default function Sidebar() {
   return (
     <>
       <div className="flex min-w-[300px] fixed top-0 left-0 bg-slate-300 shadow overflow-y-auto">
-        <div className=" w-[300px] p-4 rounded-lg min-h-screen">
+        <div className=" w-[300px] px-4 pt-4 pb-10 rounded-lg min-h-screen">
           <Header />
-          <Command>
+          <div className="bg-white flex flex-col text-sm capitalize mb-4">
+            {menuList.map((menu: any, id: number) => (
+              <div
+                key={`menu-${id}`}
+                className="border-b border-gray-200 px-4 py-2 flex hover:bg-slate-50"
+              >
+                <Link href={menu.link} className="w-full">
+                  {menu.text}
+                </Link>
+              </div>
+            ))}
+          </div>
+          {/* <Command>
             <CommandInput placeholder="Type a command or search..." />
             <CommandList className="capitalize">
               <CommandEmpty>No results found.</CommandEmpty>
@@ -91,7 +103,7 @@ export default function Sidebar() {
                 </div>
               ))}
             </CommandList>
-          </Command>
+          </Command> */}
         </div>
       </div>
     </>

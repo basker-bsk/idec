@@ -12,17 +12,17 @@ export default async function Products() {
         <h1>Products</h1>
         <div>
           <Link
-            className="bg-lime-600 hover:bg-lime-800 duration-300 transition-all text-slate-50 rounded-md px-4 py-2"
+            className="bg-pink-800 text-white hover:bg-pink-700 duration-300 transition-all text-sm rounded-md px-4 py-2"
             href="/cart"
           >
             View Cart (<CartLength />)
           </Link>
         </div>
       </div>
-      <div className="mt-8 md:grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 pb-16 list-item-wpr gap-6">
+      <div className="mt-4 lg:mt-8 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-16 list-item-wpr gap-3 lg:gap-6">
         {products.map((product: any, index: number) => (
           <div
-            className="border border-gray-200 rounded-lg p-4 bg-white flex flex-col justify-between mb-3 "
+            className="border border-gray-200 rounded-lg p-2 lg:p-4 bg-white flex flex-col justify-between lg:mb-3 "
             key={`P-${product.id}`}
           >
             <Image
@@ -34,9 +34,9 @@ export default async function Products() {
               style={{ width: "100%", height: "auto" }}
             />
             <div className="flex flex-col">
-              <p className="text-sm mt-4 font-semibold">{product.title}</p>
-              <div className="flex justify-between items-start mt-2">
-                <p className="text-2xl">${product.price}</p>
+              <p className="text-sm mt-4">{product.title}</p>
+              <div className="flex justify-between items-center mt-2">
+                <p className="text-md font-semibold">${product.price}</p>
                 <AddToCart product={product} />
               </div>
             </div>
