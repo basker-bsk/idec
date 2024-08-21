@@ -2,14 +2,21 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import Sidebar from "@/components/sidebar";
+import { Providers } from "./GlobalRedux/provider";
+import Header from "@/components/header";
+// import { Poppins } from "next/font/google";
+// const poppins = Poppins({
+//   subsets: ["latin"],
+//   display: "swap",
+//   variable: "--font-poppins",
+//   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+// });
 
-import { Poppins } from "next/font/google";
-import Image from "next/image";
-const poppins = Poppins({
-  subsets: ["latin"],
-  display: "swap",
+import localFont from "next/font/local";
+
+const poppins = localFont({
+  src: "../public/fonts/DINRoundPro.woff2",
   variable: "--font-poppins",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -32,19 +39,9 @@ export default function RootLayout({
           </div>
           <main className="py-[10px] pl-[10px] lg:pl-[320px] pr-[10px] lg:pr-[20px] lg:py-[20px] overflow-y-auto">
             <div className="mb-4 flex gap-2 lg:hidden items-center justify-center">
-              <Image
-                src="/images/logo.jpg"
-                width={0}
-                height={0}
-                priority={true}
-                alt="Picture of the author"
-                placeholder="empty"
-                className="w-[150px] h-auto"
-              />
-              <h2 className="font-bold text-2xl">UI Components</h2>
+              <Header />
             </div>
-
-            {children}
+            <Providers>{children}</Providers>
           </main>
         </div>
       </body>

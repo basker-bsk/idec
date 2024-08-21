@@ -13,7 +13,7 @@ import {
   CommandShortcut,
 } from "@/components/ui/command";
 import Link from "next/link";
-import Image from "next/image";
+import Header from "./header";
 
 export default function Sidebar() {
   const menuList = [
@@ -28,6 +28,10 @@ export default function Sidebar() {
     {
       link: "/#calendar",
       text: "calendar",
+    },
+    {
+      link: "/products",
+      text: "products",
     },
     {
       link: "/#modal",
@@ -57,23 +61,34 @@ export default function Sidebar() {
       link: "/fashion",
       text: "contentful",
     },
+    {
+      link: "/#redux",
+      text: "Redux Toolkit",
+    },
+    {
+      link: "/#users",
+      text: "users",
+    },
   ];
 
   return (
     <>
       <div className="flex min-w-[300px] fixed top-0 left-0 bg-slate-300 shadow overflow-y-auto">
-        <div className=" w-[300px] p-4 rounded-lg min-h-screen">
-          <div className="mb-4 flex flex-col gap-2">
-            <Image
-              src="/images/logo.jpg"
-              width={150}
-              height={100}
-              alt="Picture of the author"
-              className="w-[150px]"
-            />
-            <h2 className="font-bold">UI Components</h2>
+        <div className=" w-[300px] px-4 pt-4 pb-10 rounded-lg min-h-screen">
+          <Header />
+          <div className="bg-white flex flex-col text-sm capitalize mb-4">
+            {menuList.map((menu: any, id: number) => (
+              <div
+                key={`menu-${id}`}
+                className="border-b border-gray-200 px-4 py-2 flex hover:bg-slate-50"
+              >
+                <Link href={menu.link} className="w-full">
+                  {menu.text}
+                </Link>
+              </div>
+            ))}
           </div>
-          <Command>
+          {/* <Command>
             <CommandInput placeholder="Type a command or search..." />
             <CommandList className="capitalize">
               <CommandEmpty>No results found.</CommandEmpty>
@@ -88,7 +103,7 @@ export default function Sidebar() {
                 </div>
               ))}
             </CommandList>
-          </Command>
+          </Command> */}
         </div>
       </div>
     </>
