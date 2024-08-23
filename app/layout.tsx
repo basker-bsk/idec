@@ -40,7 +40,7 @@ export default function RootLayout({
             <div className="mb-4 flex gap-2 lg:hidden items-center justify-center">
               <Header />
             </div>
-            <Providers>{children}</Providers>
+            <Providers initialReduxState="">{children}</Providers>
           </main>
         </div>
       </body>
