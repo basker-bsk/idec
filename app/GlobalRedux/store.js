@@ -1,22 +1,26 @@
 "use client";
 import { useMemo } from "react";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { persistStore, persistReducer } from "redux-persist";
+import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import counterReducer from "./Features/counter/counterSlice";
 import cartReducer from "./Features/Cart/cartSlice";
+
 const persistConfig = {
-  key: "root",
+  key: "bsk",
   storage,
 };
 const rootReducer = combineReducers({
   counter: counterReducer,
   cart: cartReducer,
 });
+
 const persistedReducer = persistReducer(persistConfig, rootReducer);
-// export const store = configureStore({
-//   reducer: persistedReducer,
-// });
+
+export const storeN = configureStore({
+  reducer: persistedReducer,
+});
+
 export function initializeStore(preloadedState) {
   return configureStore({
     reducer: persistedReducer,
@@ -32,5 +36,6 @@ export function useStore(initialState) {
   const persistor = persistStore(store); // Persist the store
   return { store, persistor };
 }
-//  export type RootState = ReturnType<typeof store.getState>;
-//  export type AppDispatch = typeof store.dispatch;
+
+//export type RootState = ReturnType<typeof store.getState>;
+//export type AppDispatch = typeof store.dispatch;

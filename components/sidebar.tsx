@@ -62,7 +62,7 @@ export default function Sidebar() {
       text: "contentful",
     },
     {
-      link: "/#redux",
+      link: "/counter",
       text: "Redux Toolkit",
     },
     {

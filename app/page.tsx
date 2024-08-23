@@ -26,7 +26,7 @@ export default function Home() {
       <FormWithZod />
       <SkeletonCard />
       <Users />
-      <Counter />
+      {/* <Counter /> */}
       <Redis />
     </main>
   );
