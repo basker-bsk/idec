@@ -33,8 +33,8 @@ export function initializeStore(preloadedState) {
 }
 export function useStore(initialState) {
   const store = useMemo(() => initializeStore(initialState), [initialState]);
-  const persistor = persistStore(store); // Persist the store
-  return { store, persistor };
+  // const persistor = persistStore(store); // Persist the store
+  return { store };
 }
 
 //export type RootState = ReturnType<typeof store.getState>;

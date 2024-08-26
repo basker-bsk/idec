@@ -21,26 +21,28 @@ export default async function Products() {
       </div>
       <div className="mt-4 lg:mt-8 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-16 list-item-wpr gap-3 lg:gap-6">
         {products.map((product: any, index: number) => (
-          <div
-            className="border border-gray-200 rounded-lg p-2 lg:p-4 bg-white flex flex-col justify-between lg:mb-3 "
-            key={`P-${product.id}`}
-          >
-            <Image
-              src={product.image}
-              alt={product.title}
-              width="0"
-              height="0"
-              sizes="100vw"
-              style={{ width: "100%", height: "auto" }}
-            />
-            <div className="flex flex-col">
-              <p className="text-sm mt-4">{product.title}</p>
-              <div className="flex justify-between items-center mt-2">
-                <p className="text-md font-semibold">${product.price}</p>
-                <AddToCart product={product} />
+          <Link href={`products/${product.id}`}>
+            <div
+              className="border border-gray-200 rounded-lg p-2 lg:p-4 bg-white flex flex-col justify-between lg:mb-3 "
+              key={`P-${product.id}`}
+            >
+              <Image
+                src={product.image}
+                alt={product.title}
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{ width: "100%", height: "auto" }}
+              />
+              <div className="flex flex-col">
+                <p className="text-sm mt-4">{product.title}</p>
+                <div className="flex justify-between items-center mt-2">
+                  <p className="text-md font-semibold">${product.price}</p>
+                  <AddToCart product={product} name="Add" />
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
