@@ -26,8 +26,8 @@ export default async function ProductDetail({ params }: idType) {
         </div>
       </div>
 
-      <div className="flex gap-4 mt-4 items-start">
-        <div className="w-5/12">
+      <div className="flex gap-4 mt-4 items-start flex-col lg:flex-row">
+        <div className="w-full lg:w-5/12">
           <div className="bg-white p-4 border border-gray-300">
             <Image
               src={detail.image}
@@ -39,7 +39,7 @@ export default async function ProductDetail({ params }: idType) {
             />
           </div>
         </div>
-        <div className="w-7/12">
+        <div className="w-full lg:w-7/12">
           <h1 className="text-[56px] tracking-tight leading-[56px] text-gray-800">
             {detail.title}
           </h1>
