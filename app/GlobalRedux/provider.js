@@ -10,7 +10,8 @@ export function Providers({ children, initialReduxState }) {
   const { store, persistor } = useStore(initialReduxState);
   return (
     <Provider store={store}>
-      <PersistGate persistor={persistor}>{children}</PersistGate>
+      {/* <PersistGate persistor={persistor}>{children}</PersistGate> */}
+      {children}
     </Provider>
   );
 }

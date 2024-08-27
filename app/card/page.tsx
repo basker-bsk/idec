@@ -24,7 +24,7 @@ export default function CardWithForm() {
     <div className="flex flex-col w-full">
       <a id="card"></a>
       <h1>Card</h1>
-      <Card className="w-[350px]">
+      <Card className="w-full">
         <CardHeader>
           <CardTitle>Create project</CardTitle>
           <CardDescription>
