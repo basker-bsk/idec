@@ -74,9 +74,9 @@ export default function Sidebar() {
   return (
     <>
       <div className="flex min-w-[300px] fixed top-0 left-0 bg-slate-300 shadow overflow-y-auto">
-        <div className=" w-[300px] px-4 pt-4 pb-10 rounded-lg min-h-screen">
+        <div className=" w-[300px] px-4 pt-4 pb-10 rounded-lg ">
           <Header />
-          <div className="bg-white flex flex-col text-sm capitalize mb-4">
+          <div className="bg-white flex flex-col text-sm capitalize mb-4 overflow-y-auto sidebar-menu">
             {menuList.map((menu: any, id: number) => (
               <div
                 key={`menu-${id}`}

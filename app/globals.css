@@ -117,7 +117,12 @@
 ::-webkit-scrollbar-corner {
   background-color: transparent;
 }
-
+.sidebar-menu {
+  height: -moz-calc(100vh - (91px));
+  height: -webkit-calc(100vh - (91px));
+  height: calc(100vh - (91px));
+  padding-bottom: 40px;
+}
 .card {
   @apply bg-white p-5 rounded-md shadow-sm my-5;
 

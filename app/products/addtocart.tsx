@@ -4,6 +4,7 @@ import { BaggageClaim } from "lucide-react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../GlobalRedux/Features/Cart/cartSlice";
 import { addProduct } from "../actions/addproducts";
+import { useToast } from "@/components/ui/use-toast";
 type Props = {
   product: {
     id: number;
@@ -20,11 +21,16 @@ type Props = {
   name: string;
 };
 export default function AddToCart(props: Props) {
+  const { toast } = useToast();
   const dispatch = useDispatch();
   function handleAddToCart() {
-    console.log(props.product);
+    console.log("---", props.product);
     dispatch(addToCart(props.product));
     addProduct(props.product);
+    toast({
+      title: "Added to cart",
+      description: props.product.title,
+    });
   }
   return (
     <>

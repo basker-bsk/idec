@@ -4,6 +4,7 @@ import "./globals.css";
 import Sidebar from "@/components/sidebar";
 import { Providers } from "./GlobalRedux/provider";
 import Header from "@/components/header";
+import { Toaster } from "@/components/ui/toaster";
 // import { Poppins } from "next/font/google";
 // const poppins = Poppins({
 //   subsets: ["latin"],
@@ -43,6 +44,7 @@ export default function RootLayout({
             <Providers initialReduxState="">{children}</Providers>
           </main>
         </div>
+        <Toaster />
       </body>
     </html>
   );
