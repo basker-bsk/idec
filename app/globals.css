@@ -117,7 +117,21 @@
 ::-webkit-scrollbar-corner {
   background-color: transparent;
 }
-
+.sidebar-menu {
+  height: -moz-calc(100vh - (91px));
+  height: -webkit-calc(100vh - (91px));
+  height: calc(100vh - (91px));
+  padding-bottom: 40px;
+}
+form {
+  text-align: left !important;
+}
+.custom-select button {
+  @apply w-full;
+}
+.menu-active {
+  @apply bg-pink-800 text-white;
+}
 .card {
   @apply bg-white p-5 rounded-md shadow-sm my-5;
 

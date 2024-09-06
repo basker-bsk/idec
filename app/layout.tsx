@@ -4,6 +4,7 @@ import "./globals.css";
 import Sidebar from "@/components/sidebar";
 import { Providers } from "./GlobalRedux/provider";
 import Header from "@/components/header";
+import { Toaster } from "@/components/ui/toaster";
 // import { Poppins } from "next/font/google";
 // const poppins = Poppins({
 //   subsets: ["latin"],
@@ -37,13 +38,14 @@ export default function RootLayout({
           <div className="hidden lg:flex">
             <Sidebar />
           </div>
-          <main className="py-[10px] pl-[10px] lg:pl-[320px] pr-[10px] lg:pr-[20px] lg:py-[20px] overflow-y-auto">
+          <main className="py-[10px] pl-[10px] lg:pl-[320px] pr-[10px] lg:pr-[20px] w-full lg:w-auto lg:py-[20px] overflow-y-auto">
             <div className="mb-4 flex gap-2 lg:hidden items-center justify-center">
               <Header />
             </div>
-            <Providers>{children}</Providers>
+            <Providers initialReduxState="">{children}</Providers>
           </main>
         </div>
+        <Toaster />
       </body>
     </html>
   );

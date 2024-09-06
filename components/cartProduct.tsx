@@ -6,6 +6,7 @@ import {
 } from "../app/GlobalRedux/Features/Cart/cartSlice";
 import { Minus, Plus, Trash2 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { useDispatch } from "react-redux";
 
@@ -22,7 +23,10 @@ export default function CartProduct({ cartItem }: any) {
   }
   return (
     <div className="flex w-full md:items-center gap-4 md:justify-between border-b flex-col md:flex-row border-slate-400  pb-3 font-semibold text-sm mb-4">
-      <div className="flex md:items-center gap-3 md:w-1/2">
+      <Link
+        href={`products/${cartItem.id}`}
+        className="flex md:items-center gap-3 md:w-1/2"
+      >
         <Image
           src={cartItem.image}
           width={249}
@@ -33,7 +37,7 @@ export default function CartProduct({ cartItem }: any) {
         <div className="flex">
           <p>{cartItem.title}</p>
         </div>
-      </div>
+      </Link>
       <div className="flex justify-between gap-4">
         <div className="flex items-center ">
           <div className=" rounded-md border border-gray-400 flex ">

@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import type { RootState } from "../GlobalRedux/store";
+// import type { RootState } from "../GlobalRedux/store";
 import { useSelector, useDispatch } from "react-redux";
 import {
   increment,
@@ -9,7 +9,7 @@ import {
 } from "../GlobalRedux/Features/counter/counterSlice";
 
 export default function Counter() {
-  const count = useSelector((state: RootState) => state.counter.value);
+  const count = useSelector((state: any) => state.counter.value);
   const dispatch = useDispatch();
 
   return (
