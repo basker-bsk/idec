@@ -31,7 +31,7 @@ function banner() {
   };
 
   return (
-    <>
+    <div className="mb-10">
       {Banners && (
         <Slider {...settings}>
           {Banners.banner.bannerItems.map((data: any, index: number) => (
@@ -41,7 +41,7 @@ function banner() {
           ))}
         </Slider>
       )}
-    </>
+    </div>
   );
 }
 

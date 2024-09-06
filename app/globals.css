@@ -66,6 +66,7 @@
   body {
     @apply bg-background text-foreground;
     font-family: "poppins", sans-serif;
+    overflow-x: hidden;
   }
   h1 {
     @apply text-2xl lg:text-3xl font-bold my-2;
@@ -161,4 +162,11 @@ form {
     @apply my-4 p-2 text-sm rounded-md border-2 
       border-red-500 bg-red-200 text-red-500;
   }
+}
+.slick-dots {
+  bottom: 25px !important;
+}
+/* Header */
+.header .nav a {
+  @apply hover:text-red-900;
 }
