@@ -1,13 +1,7 @@
 import "./globals.css";
 import { Providers } from "./GlobalRedux/provider";
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
-const poppins = Poppins({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-poppins",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
+
 // import localFont from "next/font/local";
 
 // const poppins = localFont({
@@ -28,7 +22,7 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
-        <body className={`${poppins.variable} bg-gray-100`}>
+        <body className="bg-gray-100">
           <Providers initialReduxState="">{children}</Providers>
         </body>
       </html>

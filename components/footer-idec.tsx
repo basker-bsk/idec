@@ -14,18 +14,24 @@ export default function FooterIdec() {
       ],
     },
     {
-      title: "OUR PRODUCTS",
+      title: "Resources & Documents",
       links: [
+        "Apem History",
+        "APEM affiliates",
         "Panel switches",
         "Apem History",
         "APEM affiliates",
-        "APEM presentation",
+        "Corporate Social Responsibility (CSR)",
         "Our core business",
       ],
     },
     {
       title: "OUR PRODUCTS",
       links: [
+        "Panel switches",
+        "Terms & conditions of sale",
+        "APEM affiliates",
+        "APEM presentation",
         "CEO’s message",
         "Apem History",
         "APEM affiliates",
@@ -37,7 +43,7 @@ export default function FooterIdec() {
       title: "About IDEC",
       links: [
         "CEO’s message",
-        "Apem History",
+        "Construction Machinery",
         "APEM affiliates",
         "APEM presentation",
         "Our core business",
@@ -45,10 +51,10 @@ export default function FooterIdec() {
     },
   ];
   return (
-    <div className="flex bg-gray-200 px-4 font-bold flex-col">
-      <div className="text-[16px] mx-auto w-[1360px] border-b border-gray-400">
+    <div className="flex bg-gray-200 px-4  flex-col">
+      <div className="text-[14px] container border-b border-gray-400 font-semibold">
         <div className="flex w-full gap-4 py-8 ">
-          <div className="w-full lg:w-1/4 flex flex-col">
+          <div className="w-full lg:w-1/4 flex flex-col gap-2">
             <Image
               src="/images/logo.jpg"
               width={150}
@@ -78,33 +84,43 @@ export default function FooterIdec() {
               </div>
             </div>
           </div>
-          <div className="w-full lg:w-1/4 flex flex-col gap-3">
+          <div className="w-full lg:w-1/4 flex flex-col gap-2">
             <p>Socials</p>
-            <div className="flex gap-6">
-              <Youtube className="h-6 w-6 " />
-              <Linkedin className="h-6 w-6 " />
-              <Twitter className="h-6 w-6 " />
-              <Facebook className="h-6 w-6 " />
+            <div className="flex gap-4">
+              <Youtube className="h-4 w-4" />
+              <Linkedin className="h-4 w-4 " />
+              <Twitter className="h-4 w-4 " />
+              <Facebook className="h-4 w-4 " />
             </div>
           </div>
         </div>
       </div>
-      <div className="text-[16px] mx-auto w-[1360px] border-b border-gray-400">
+      <div className="container border-b border-gray-400 font-semibold">
         <div className="flex w-full gap-4 py-8 ">
-          <div className="w-full lg:w-1/4 flex flex-col">
-            <h3>THE APEM GROUP</h3>
-            <ul className="footer__nav--links">
-              <li aria-hidden="true" className="yCmsComponent footer__link">
-                <a
-                  href="/idec-apem/en_US/content/apem-presentation"
-                  title="APEM presentation"
+          <div className=" flex justify-between w-full ">
+            {footerLinks.map((nav, index) => (
+              <div className="flex flex-col w-full lg:w-1/4">
+                <h3 className="text-[14px] mb-2 uppercase">{nav.title}</h3>
+                <ul
+                  className="text-[12px] flex gap-2 flex-col font-medium"
+                  key={`f-${index}`}
                 >
-                  APEM presentation
-                </a>
-              </li>
-            </ul>
+                  {nav.links.map((link, index) => (
+                    <li aria-hidden="true" className="" key={`fs-${index}`}>
+                      <a href="/" title="">
+                        {link}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
+      </div>
+      <div className="container border-b border-gray-400 py-2 flex justify-between text-[12px]">
+        <span>Terms & Conditions</span>
+        <span>&copy; 2024 IDEC Corporation</span>
       </div>
     </div>
   );

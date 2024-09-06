@@ -5,15 +5,15 @@ export default function HeaderIdec() {
   return (
     <div className="flex flex-col header">
       <div className="bg-blue-800 ">
-        <div className="p-2 uppercase text-[12px] mx-auto max-w-[1360px]  flex justify-end">
-          <div className="font-semibold text-white flex gap-4   ">
+        <div className="p-2 uppercase text-[10px] tracking-wide container  flex justify-end">
+          <div className="text-white flex gap-4   ">
             <Link href="/">Partners</Link>
             <Link href="/">Support</Link>
           </div>
         </div>
       </div>
       <div className="bg-white">
-        <div className="p-4 mx-auto max-w-[1360px] flex justify-between items-center">
+        <div className="p-4 container flex justify-between items-center">
           <div className="flex gap-8 items-center">
             <Image
               src="/images/logo.jpg"
@@ -22,7 +22,7 @@ export default function HeaderIdec() {
               alt="Picture of the author"
               className="w-[150px]"
             />
-            <ul className="nav text-[14px] font-bold uppercase flex gap-4">
+            <ul className="nav text-[14px] font-semibold uppercase flex gap-4">
               <li>
                 <Link href="/">Products</Link>
               </li>
@@ -40,11 +40,13 @@ export default function HeaderIdec() {
               </li>
             </ul>
           </div>
-          <div className="flex gap-10">
+          <div className="flex gap-6">
             <Search className="h-6 w-6 " />
             <div className="flex gap-1 items-center">
               <User className="h-6 w-6" />
-              <span className="text-[14px] font-bold uppercase ">James</span>
+              <span className="text-[14px] font-semibold uppercase ">
+                James
+              </span>
             </div>
             <ShoppingCart className="h-6 w-6 " />
           </div>
