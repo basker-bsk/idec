@@ -1,13 +1,19 @@
 import "./globals.css";
 import { Providers } from "./GlobalRedux/provider";
 import type { Metadata } from "next";
-
-import localFont from "next/font/local";
-
-const poppins = localFont({
-  src: "../public/fonts/DINRoundPro.woff2",
+import { Poppins } from "next/font/google";
+const poppins = Poppins({
+  subsets: ["latin"],
+  display: "swap",
   variable: "--font-poppins",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
+// import localFont from "next/font/local";
+
+// const poppins = localFont({
+//   src: "../public/fonts/DINRoundPro.woff2",
+//   variable: "--font-poppins",
+// });
 
 export const metadata: Metadata = {
   title: "IDEC Home page",
