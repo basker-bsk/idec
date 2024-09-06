@@ -3,7 +3,7 @@ import Link from "next/link";
 import { User, Search, ShoppingBag, ShoppingCart } from "lucide-react";
 export default function HeaderIdec() {
   return (
-    <div className="flex flex-col header">
+    <div className="flex flex-col header relative z-10">
       <div className="bg-blue-800 ">
         <div className="p-2 uppercase text-[10px] tracking-wide container  flex justify-end">
           <div className="text-white flex gap-4   ">
@@ -12,7 +12,7 @@ export default function HeaderIdec() {
           </div>
         </div>
       </div>
-      <div className="bg-white">
+      <div className="bg-white shadow-md">
         <div className="p-4 container flex justify-between items-center">
           <div className="flex gap-8 items-center">
             <Image
