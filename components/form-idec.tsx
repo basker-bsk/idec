@@ -58,7 +58,7 @@ export default function IdecForm() {
     <>
       <div className="flex flex-col w-full p-8 border border-gray-300 bg-white">
         <h2 className="idec-title uppercase text-[32px] lg:text-[50px] font-extrabold mb-6">
-          LET'S TALK ABOUT YOU
+          LETS TALK ABOUT YOU
         </h2>
         <Form {...form}>
           <form
