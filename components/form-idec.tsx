@@ -60,7 +60,6 @@ export default function IdecForm() {
         <h2 className="idec-title uppercase text-[32px] lg:text-[50px] font-extrabold mb-6">
           LET'S TALK ABOUT YOU
         </h2>
-
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
