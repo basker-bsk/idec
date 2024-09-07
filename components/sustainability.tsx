@@ -18,7 +18,7 @@ export default function SustainabilityComponent() {
         <h2 className="idec-title uppercase text-[32px] lg:text-[50px] font-extrabold mb-6">
           Sustainability
         </h2>
-        <p className="lg:text-[16px] mb-6">
+        <p className="text-[14px] lg:text-[16px] mb-6">
           No matter your industry, APEM have the solutions you need to enhance
           productivity, efficiency, and user satisfaction. From material
           handling to defense, we tailor our HMIs to fit your unique industrial

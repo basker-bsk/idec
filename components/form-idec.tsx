@@ -120,7 +120,7 @@ export default function IdecForm() {
                       />
                     </FormControl>
                     <div className="space-y-1 leading-none">
-                      <FormLabel>
+                      <FormLabel className="text-[12px]">
                         I agree to APEMs Terms & Conditions and Privacy Policy
                       </FormLabel>
                     </div>
