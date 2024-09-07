@@ -31,7 +31,7 @@ function banner() {
   };
 
   return (
-    <div>
+    <div className="lg:min-h-[460px]">
       {Banners && (
         <Slider {...settings}>
           {Banners.banner.bannerItems.map((data: any, index: number) => (

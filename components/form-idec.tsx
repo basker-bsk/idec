@@ -56,20 +56,20 @@ export default function IdecForm() {
   }
   return (
     <>
-      <div className="flex flex-col w-full p-8 border border-gray-300 bg-white">
-        <h2 className="idec-title uppercase text-[32px] lg:text-[50px] font-extrabold mb-6">
+      <div className="flex flex-col w-full p-4 lg:p-8 border border-gray-300 bg-white">
+        <h2 className="idec-title uppercase text-[20px] lg:text-[50px] font-extrabold w-full lg:w-3/4 leading-tight lg:leading-loose">
           LETS TALK ABOUT YOU
         </h2>
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="space-y-2 flex flex-wrap items-center"
+            className="space-y-2 flex flex-wrap items-center mt-6"
           >
             <FormField
               control={form.control}
               name="name"
               render={({ field }) => (
-                <FormItem className="w-full lg:w-1/2 px-6">
+                <FormItem className="w-full lg:w-1/2 lg:px-6">
                   <FormLabel>I am a</FormLabel>
                   <FormControl>
                     <Input placeholder="" {...field} />
@@ -83,7 +83,7 @@ export default function IdecForm() {
               control={form.control}
               name="industry"
               render={({ field }) => (
-                <FormItem className="w-full lg:w-1/2 px-6">
+                <FormItem className="w-full lg:w-1/2 lg:px-6">
                   <FormLabel>I WORK IN THE FOLLOWING INDUSTRY</FormLabel>
                   <FormControl>
                     <Input placeholder="" {...field} />
@@ -96,7 +96,7 @@ export default function IdecForm() {
               control={form.control}
               name="emailAddress"
               render={({ field }) => (
-                <FormItem className="w-full lg:w-1/2 px-6">
+                <FormItem className="w-full lg:w-1/2 lg:px-6">
                   <FormLabel>MY EMAIL IS</FormLabel>
                   <FormControl>
                     <Input placeholder="" type="email" {...field} />
@@ -111,7 +111,7 @@ export default function IdecForm() {
               control={form.control}
               name="mobile"
               render={({ field }) => (
-                <FormItem className="w-full lg:w-1/2 p-6">
+                <FormItem className="w-full lg:w-1/2 py-3 lg:py-6 lg:px-6">
                   <div className="flex flex-row items-start space-x-3 space-y-0 ">
                     <FormControl>
                       <Checkbox
@@ -129,7 +129,7 @@ export default function IdecForm() {
                 </FormItem>
               )}
             />
-            <div className="w-full lg:w-1/2 px-6 py-3">
+            <div className="w-full lg:w-1/2 lg:px-6 ">
               <Button type="submit">Submit</Button>
             </div>
           </form>

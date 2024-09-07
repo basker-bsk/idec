@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { User, Search, ShoppingBag, ShoppingCart } from "lucide-react";
+import MobileMenu from "./mobile-menu";
 export default function HeaderIdec() {
   return (
     <div className="flex flex-col header relative z-10">
@@ -14,15 +15,18 @@ export default function HeaderIdec() {
       </div>
       <div className="bg-white shadow-md">
         <div className="p-4 container flex justify-between items-center">
+          <div className="lg:hidden">
+            <MobileMenu />
+          </div>
           <div className="flex gap-8 items-center">
             <Image
               src="/images/logo.jpg"
               width={150}
               height={100}
               alt="Picture of the author"
-              className="w-[150px]"
+              className="w-[100px] lg:w-[150px]"
             />
-            <ul className="nav text-[14px] font-semibold uppercase flex gap-4 snip1168">
+            <ul className="hidden nav text-[14px] font-semibold uppercase lg:flex gap-4">
               <li>
                 <Link href="/" data-hover="Products">
                   Products
@@ -50,15 +54,15 @@ export default function HeaderIdec() {
               </li>
             </ul>
           </div>
-          <div className="flex gap-6">
-            <Search className="h-6 w-6 " />
+          <div className="flex gap-2 lg:gap-6 ">
+            <Search className="h-4 w-4 " />
             <div className="flex gap-1 items-center">
-              <User className="h-6 w-6" />
-              <span className="text-[14px] font-semibold uppercase ">
+              <User className="h-4 w-4" />
+              <span className="text-[14px] font-semibold uppercase hidden lg:flex">
                 James
               </span>
             </div>
-            <ShoppingCart className="h-6 w-6 " />
+            <ShoppingCart className="h-4 w-4 " />
           </div>
         </div>
       </div>

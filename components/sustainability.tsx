@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 export default function SustainabilityComponent() {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center flex-col lg:flex-row">
       <div className=" w-full lg:w-5/12">
         <Image
           src="/images/people.jpg"

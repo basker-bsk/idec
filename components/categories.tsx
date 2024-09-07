@@ -2,11 +2,11 @@ import Categories from "@/public/assets/data/categories.json";
 import { Button } from "./ui/button";
 export default function CategoriesComponent() {
   return (
-    <div className="flex flex-col pb-16 lg:pb-8 p-8 border border-gray-300">
-      <h2 className="uppercase font-bold text-blue-800">
+    <div className="flex flex-col pb-16 lg:pb-8 p-4 lg:p-8 border border-gray-300">
+      <h2 className="uppercase font-bold text-blue-800 ">
         {Categories.category}
       </h2>
-      <h3 className="idec-title uppercase text-[32px] lg:text-[50px] font-extrabold w-full lg:w-3/4 ">
+      <h3 className="idec-title uppercase text-[20px] lg:text-[50px] font-extrabold w-full lg:w-3/4 leading-tight lg:leading-loose">
         {Categories.title}
       </h3>
       <div className="my-8">

@@ -165,9 +165,7 @@ form {
     @apply my-4 p-2 text-sm rounded-md border-2 border-red-500 bg-red-200 text-red-500;
   }
 }
-.slick-dots {
-  bottom: 25px !important;
-}
+
 /* Header */
 .container {
   @apply mx-auto max-w-[1280px];
@@ -239,18 +237,15 @@ form {
 }
 
 .idec-title {
-  position: relative;
-  padding-left: 50px;
-  z-index: 1;
-  line-height: 50px;
+  @apply relative z-10 pl-[30px] lg:pl-[50px];
 }
 .idec-title::before {
-  @apply absolute left-0 bg-gray-400 w-[50px] h-full;
+  @apply absolute left-0 bg-gray-400 w-[30px] lg:w-[50px] h-full;
   content: "";
   z-index: 2;
 }
 .idec-title::after {
-  @apply absolute left-[40px] bg-white w-[10px] h-[70%] top-1/2 -translate-y-1/2;
+  @apply absolute left-[25px] lg:left-[40px] bg-white w-[5px] lg:w-[10px] h-[70%] top-1/2 -translate-y-1/2;
   content: "";
   z-index: 3;
 }
