@@ -226,3 +226,31 @@ form {
 .snip1168 .current a:after {
   max-width: 100%;
 }
+
+/* Categories */
+.categories .desc {
+  display: none;
+}
+.categories li:hover .desc {
+  display: flex;
+}
+.categories li:first-child .title {
+  @apply border-t border-gray-300;
+}
+
+.idec-title {
+  position: relative;
+  padding-left: 50px;
+  z-index: 1;
+  line-height: 50px;
+}
+.idec-title::before {
+  @apply absolute left-0 bg-gray-400 w-[50px] h-full;
+  content: "";
+  z-index: 2;
+}
+.idec-title::after {
+  @apply absolute left-[40px] bg-white w-[10px] h-[70%] top-1/2 -translate-y-1/2;
+  content: "";
+  z-index: 3;
+}
