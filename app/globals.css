@@ -155,7 +155,7 @@ form {
   @apply bg-rose-500 text-white p-2 rounded-sm text-xs;
 }
 form {
-  @apply max-w-sm mx-auto text-center;
+  @apply text-left;
 
   & input,
   & textarea {

@@ -53,7 +53,7 @@ export default function FooterIdec() {
   return (
     <div className="flex bg-gray-200 px-4  flex-col">
       <div className="text-[12px] lg:text-[14px] container border-b border-gray-400 font-semibold">
-        <div className="flex w-full flex-wrap gap-y-8 lg:gap-8 py-8 ">
+        <div className="flex w-full flex-wrap gap-y-8 py-8 ">
           <div className="w-1/2 lg:w-1/4 flex flex-col gap-2">
             <Image
               src="/images/logo.jpg"
@@ -68,7 +68,7 @@ export default function FooterIdec() {
             <p>1175 Elko Drive Sunnyvale,</p> <p>CA 94089-2209</p>
             <p>US/United States</p>
           </div>
-          <div className="w-1/2 lg:w-1/4 flex flex-col gap-4">
+          <div className="w-1/2 lg:w-1/4 flex flex-col lg:gap-4">
             <div className="flex gap-2">
               <p>T:</p>
               <div className="flex flex-col">
@@ -84,7 +84,7 @@ export default function FooterIdec() {
               </div>
             </div>
           </div>
-          <div className="w-1/2 lg:w-1/4 flex flex-col gap-2">
+          <div className="w-1/2 lg:w-1/4 flex flex-col lg:gap-2">
             <p>Socials</p>
             <div className="flex gap-4">
               <Youtube className="h-4 w-4" />
@@ -97,7 +97,7 @@ export default function FooterIdec() {
       </div>
       <div className="container border-b border-gray-400 font-semibold">
         <div className="flex w-full  py-8 ">
-          <div className=" flex justify-between w-full flex-wrap gap-y-8 lg:gap-8">
+          <div className=" flex justify-between w-full flex-wrap gap-y-8">
             {footerLinks.map((nav, index) => (
               <div className="flex flex-col w-1/2 lg:w-1/4" key={`f-${index}`}>
                 <h3 className="text-[12px] lg:text-[14px] mb-2 uppercase font-bold">
