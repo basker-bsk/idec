@@ -99,12 +99,9 @@ export default function FooterIdec() {
         <div className="flex w-full gap-4 py-8 ">
           <div className=" flex justify-between w-full ">
             {footerLinks.map((nav, index) => (
-              <div className="flex flex-col w-full lg:w-1/4">
+              <div className="flex flex-col w-full lg:w-1/4" key={`f-${index}`}>
                 <h3 className="text-[14px] mb-2 uppercase">{nav.title}</h3>
-                <ul
-                  className="text-[12px] flex gap-2 flex-col font-medium"
-                  key={`f-${index}`}
-                >
+                <ul className="text-[12px] flex gap-2 flex-col font-medium">
                   {nav.links.map((link, index) => (
                     <li aria-hidden="true" className="" key={`fs-${index}`}>
                       <a href="/" title="">
