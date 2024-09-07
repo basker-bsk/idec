@@ -237,7 +237,8 @@ form {
 }
 
 .idec-title {
-  @apply relative z-10 pl-[30px] lg:pl-[50px];
+  @apply relative  pl-[30px] lg:pl-[50px] leading-tight lg:leading-none;
+  z-index: 1;
 }
 .idec-title::before {
   @apply absolute left-0 bg-gray-400 w-[30px] lg:w-[50px] h-full;

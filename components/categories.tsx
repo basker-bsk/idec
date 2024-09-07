@@ -6,7 +6,7 @@ export default function CategoriesComponent() {
       <h2 className="uppercase font-bold text-blue-800 ">
         {Categories.category}
       </h2>
-      <h3 className="idec-title uppercase text-[20px] lg:text-[50px] font-extrabold w-full lg:w-3/4 leading-tight lg:leading-loose">
+      <h3 className="idec-title uppercase text-[20px] lg:text-[50px] font-extrabold w-full lg:w-3/4 ">
         {Categories.title}
       </h3>
       <div className="my-8">
