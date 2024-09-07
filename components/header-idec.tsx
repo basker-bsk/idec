@@ -22,21 +22,31 @@ export default function HeaderIdec() {
               alt="Picture of the author"
               className="w-[150px]"
             />
-            <ul className="nav text-[14px] font-semibold uppercase flex gap-4">
+            <ul className="nav text-[14px] font-semibold uppercase flex gap-4 snip1168">
               <li>
-                <Link href="/">Products</Link>
+                <Link href="/" data-hover="Products">
+                  Products
+                </Link>
               </li>
               <li>
-                <Link href="/">Industries</Link>
+                <Link href="/" data-hover="Industries">
+                  Industries
+                </Link>
               </li>
               <li>
-                <Link href="/">Solutions</Link>
+                <Link href="/" data-hover="Solutions">
+                  Solutions
+                </Link>
               </li>
               <li>
-                <Link href="/">Resources</Link>
+                <Link href="/" data-hover="Resources">
+                  Resources
+                </Link>
               </li>
-              <li>
-                <Link href="/">About</Link>
+              <li className="current">
+                <Link href="/" data-hover="About">
+                  About
+                </Link>
               </li>
             </ul>
           </div>
