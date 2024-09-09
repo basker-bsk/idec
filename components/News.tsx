@@ -14,10 +14,10 @@ export default function News() {
               <h2 className="idec-title uppercase text-[32px] lg:text-[50px] font-extrabold mb-6">
                 {data.news_title}
               </h2>
-              <p>{data.description}</p>
+              <p className="text-[12px] lg:text-[14px]">{data.description}</p>
             </div>
             <div className="w-full lg:w-1/2 lg:px-6">
-              <ul className="flex justify-between lg:justify-around mt-4 lg:mt-0">
+              <ul className="flex flex-col lg:flex-row justify-between lg:justify-around mt-4 lg:mt-0 mr-4">
                 {data.links.map((link, index) => (
                   <li
                     className="font-bold flex items-center hover:text-red-800"
@@ -33,7 +33,7 @@ export default function News() {
             </div>
           </div>
         ))}
-        <div className="flex flex-col pt-16 lg:pb-8 p-2 lg:p-8">
+        <div className="flex flex-col pt-8 lg:pt-16 lg:pb-8 p-2 lg:p-8">
           <div className="space-y-2 flex flex-wrap items-baseline">
             <div className="w-full">
               <h2 className="font-bold text-left border-b border-t py-3 lg:text-[24px]">
@@ -43,10 +43,12 @@ export default function News() {
                 {NewsData.NewsList.map((list, index) => (
                   <li
                     key={`NewsData-${index}`}
-                    className="w-full flex border-b flex-col lg:flex-row text-left border-gray-300 py-3 font-bold"
+                    className="w-full flex border-b flex-col lg:flex-row text-left border-gray-300 py-3"
                   >
-                    <p className="mr-32 py-2">{list.date}</p>
-                    <p className="py-2">{list.news}</p>
+                    <p className="lg:mr-32 py-1  font-bold">{list.date}</p>
+                    <p className="py-1 text-[12px] lg:text-[14px]">
+                      {list.news}
+                    </p>
                   </li>
                 ))}
               </ul>
