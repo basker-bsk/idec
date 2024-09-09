@@ -4,6 +4,8 @@ import Banner from "@/components/banner";
 import CategoriesComponent from "@/components/categories";
 import SustainabilityComponent from "@/components/sustainability";
 import IdecForm from "@/components/form-idec";
+import News from "@/components/News";
+import IdecCard from "@/components/Idec-Card";
 export default function Home() {
   return (
     <>
@@ -17,6 +19,12 @@ export default function Home() {
         </div>
         <div className="mb-12">
           <SustainabilityComponent />
+        </div>
+        <div className="mb-12">
+          <News />
+        </div>
+        <div className="mb-12">
+          <IdecCard />
         </div>
         <div className="mb-12">
           <IdecForm />

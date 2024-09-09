@@ -226,8 +226,11 @@ form {
 }
 
 /* Categories */
-.categories .desc {
+.categories li .desc {
   display: none;
+}
+.categories li:first-child .desc {
+  display: flex;
 }
 .categories li:hover .desc {
   display: flex;
@@ -249,4 +252,7 @@ form {
   @apply absolute left-[25px] lg:left-[40px] bg-white w-[5px] lg:w-[10px] h-[70%] top-1/2 -translate-y-1/2;
   content: "";
   z-index: 3;
+}
+.cards h3 {
+  display: ruby;
 }

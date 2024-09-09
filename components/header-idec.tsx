@@ -54,7 +54,7 @@ export default function HeaderIdec() {
               </li>
             </ul>
           </div>
-          <div className="flex gap-2 lg:gap-6 ">
+          <div className="flex gap-2 lg:gap-6 items-center">
             <Search className="h-4 w-4 " />
             <div className="flex gap-1 items-center">
               <User className="h-4 w-4" />
