@@ -4,6 +4,14 @@ import { Button } from "./ui/button";
 import Image from "next/image";
 import { useState } from "react";
 import { useEffect } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/scrollbar";
+import { Scrollbar } from "swiper/modules";
+
 export default function FeatureProducts() {
   const [selectedCategory, setSelectedCategory] = useState("automation");
   const [productList, setProductList] = useState([]);
@@ -96,25 +104,35 @@ export default function FeatureProducts() {
           </ul>
         </div>
         <div className="mt-6 flex w-full relative flex-wrap">
-          <ul className="grid gap-4 grid-rows-1 grid-flow-col">
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={20}
+            scrollbar={{
+              hide: true,
+            }}
+            modules={[Scrollbar]}
+            className="mySwiper"
+          >
             {productList &&
               productList.map((data: any, index) => {
                 return (
-                  <li key={index}>
-                    <Image
-                      src={data.image}
-                      width={550}
-                      height={600}
-                      alt={data.name}
-                      className="border p-2 border-gray-300 bg-white rounded-md w-auto h-auto"
-                    />
-                    <div className="mt-5 text-black text-sm font-bold">
-                      {data.name}
+                  <SwiperSlide key={index}>
+                    <div className="pb-8">
+                      <Image
+                        src={data.image}
+                        width={550}
+                        height={600}
+                        alt={data.name}
+                        className="border p-2 border-gray-300 bg-white rounded-md w-auto h-auto"
+                      />
+                      <div className="mt-5 text-black text-sm font-bold">
+                        {data.name}
+                      </div>
                     </div>
-                  </li>
+                  </SwiperSlide>
                 );
               })}
-          </ul>
+          </Swiper>
         </div>
 
         <div className="mt-5 flex justify-center flex-row">
