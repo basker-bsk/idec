@@ -6,6 +6,7 @@ import SustainabilityComponent from "@/components/sustainability";
 import IdecForm from "@/components/form-idec";
 import News from "@/components/News";
 import IdecCard from "@/components/Idec-Card";
+import FeatureProducts from "@/components/feature-products";
 export default function Home() {
   return (
     <>
@@ -13,6 +14,9 @@ export default function Home() {
       <main className="mx-auto max-w-[1360px]">
         <div className="mb-12">
           <Banner />
+        </div>
+        <div className="mb-12">
+          <FeatureProducts />
         </div>
         <div className="mb-12">
           <CategoriesComponent />
