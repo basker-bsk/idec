@@ -1,55 +1,55 @@
 export default function Menus() {
   const menuList = [
     {
-      link: "/accordian",
+      link: "idec-ui/#accordian",
       text: "accordian",
     },
     {
-      link: "/buttons",
+      link: "idec-ui/#buttons",
       text: "buttons",
     },
     {
-      link: "/calendar",
+      link: "idec-ui/#calendar",
       text: "calendar",
     },
     {
-      link: "/products",
+      link: "idec-ui/#products",
       text: "products",
     },
     {
-      link: "/modal",
+      link: "idec-ui/#modal",
       text: "modal",
     },
     {
-      link: "/popover",
+      link: "idec-ui/#popover",
       text: "popover",
     },
     {
-      link: "/card",
+      link: "idec-ui/#card",
       text: "card",
     },
     {
-      link: "/hovercard",
-      text: "hover card",
+      link: "idec-ui/#hovercard",
+      text: "hover-card",
     },
     {
-      link: "/form",
+      link: "idec-ui/#form",
       text: "form",
     },
     {
-      link: "/skeleton",
+      link: "idec-ui/#skeleton",
       text: "skeleton",
     },
     {
-      link: "/fashion",
+      link: "idec-ui/#fashion",
       text: "contentful",
     },
     {
-      link: "/counter",
+      link: "idec-ui/#counter",
       text: "Redux Toolkit",
     },
     {
-      link: "/users",
+      link: "idec-ui/#users",
       text: "users",
     },
   ];

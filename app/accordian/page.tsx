@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import Banner from "@/components/banner";
+
 export default function Accordian() {
   const acc = [
     {
@@ -27,9 +27,6 @@ export default function Accordian() {
   ];
   return (
     <div className="flex flex-col w-full">
-      <div className="mb-10">
-        <Banner />
-      </div>
       <a id="accordian"></a>
       <h1>Accordian</h1>
       <Accordion type="single" collapsible className="w-full">

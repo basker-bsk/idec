@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+* {
+  font-family: "Poppins";
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -64,8 +69,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
-    font-family: "poppins", sans-serif;
+    @apply bg-background text-foreground overflow-x-hidden;
   }
   h1 {
     @apply text-2xl lg:text-3xl font-bold my-2;
@@ -151,14 +155,104 @@ form {
   @apply bg-rose-500 text-white p-2 rounded-sm text-xs;
 }
 form {
-  @apply max-w-sm mx-auto text-center;
+  @apply text-left;
 
   & input,
   & textarea {
     @apply block w-full p-2 rounded-sm my-4;
   }
   .error {
-    @apply my-4 p-2 text-sm rounded-md border-2 
-      border-red-500 bg-red-200 text-red-500;
+    @apply my-4 p-2 text-sm rounded-md border-2 border-red-500 bg-red-200 text-red-500;
   }
+}
+
+/* Header */
+.container {
+  @apply mx-auto max-w-[1280px];
+}
+.snip1168 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.snip1168 * {
+  box-sizing: border-box;
+}
+.snip1168 li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0 0.5em;
+  padding: 0;
+}
+.snip1168 a {
+  padding: 0.5em 0;
+  color: black;
+  position: relative;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.snip1168 a:before,
+.snip1168 a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.snip1168 a:before {
+  top: 0;
+  display: block;
+  height: 3px;
+  width: 0%;
+  content: "";
+  background-color: #c0392b;
+}
+.snip1168 a:after {
+  left: 0;
+  top: 0;
+  padding: 0.5em 0;
+  position: absolute;
+  content: attr(data-hover);
+  color: black;
+  white-space: nowrap;
+  max-width: 0%;
+  overflow: hidden;
+}
+.snip1168 a:hover:before,
+.snip1168 .current a:before {
+  opacity: 1;
+  width: 100%;
+}
+.snip1168 a:hover:after,
+.snip1168 .current a:after {
+  max-width: 100%;
+}
+
+/* Categories */
+.categories li .desc {
+  display: none;
+}
+.categories li:first-child .desc {
+  display: flex;
+}
+.categories li:hover .desc {
+  display: flex;
+}
+.categories li:first-child .title {
+  @apply border-t border-gray-300;
+}
+
+.idec-title {
+  @apply relative  pl-[30px] lg:pl-[50px] leading-tight lg:leading-none;
+  z-index: 1;
+}
+.idec-title::before {
+  @apply absolute left-0 bg-gray-400 w-[30px] lg:w-[50px] h-full;
+  content: "";
+  z-index: 2;
+}
+.idec-title::after {
+  @apply absolute left-[25px] lg:left-[40px] bg-white w-[5px] lg:w-[10px] h-[70%] top-1/2 -translate-y-1/2;
+  content: "";
+  z-index: 3;
+}
+.cards h3 {
+  display: ruby;
 }

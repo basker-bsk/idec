@@ -1,33 +1,36 @@
-import Accordian from "./accordian/page";
-import Buttons from "./buttons/page";
-import DatePicker from "./calendar/page";
-import Modal from "./modal/page";
-import PopoverDemo from "./popover/page";
-import CardWithForm from "./card/page";
-import HoverCardDemo from "./hovercard/page";
-import FormWithZod from "./form/page";
-import SkeletonCard from "./skeleton/page";
-import Users from "./users/page";
-import Counter from "./counter/page";
-import Redis from "./Redis/page";
-import Products from "./products/page";
-
+import FooterIdec from "@/components/footer-idec";
+import HeaderIdec from "@/components/header-idec";
+import Banner from "@/components/banner";
+import CategoriesComponent from "@/components/categories";
+import SustainabilityComponent from "@/components/sustainability";
+import IdecForm from "@/components/form-idec";
+import News from "@/components/News";
+import IdecCard from "@/components/Idec-Card";
 export default function Home() {
   return (
-    <main className="w-full flex flex-col gap-4">
-      <Accordian />
-      <Buttons />
-      <DatePicker />
-      <Modal />
-      {/* <Products /> */}
-      <PopoverDemo />
-      <CardWithForm />
-      <HoverCardDemo />
-      <FormWithZod />
-      <SkeletonCard />
-      <Users />
-      {/* <Counter /> */}
-      <Redis />
-    </main>
+    <>
+      <HeaderIdec />
+      <main className="mx-auto max-w-[1360px]">
+        <div className="mb-12">
+          <Banner />
+        </div>
+        <div className="mb-12">
+          <CategoriesComponent />
+        </div>
+        <div className="mb-12">
+          <SustainabilityComponent />
+        </div>
+        <div className="mb-12">
+          <News />
+        </div>
+        <div className="mb-12">
+          <IdecCard />
+        </div>
+        <div className="mb-12">
+          <IdecForm />
+        </div>
+      </main>
+      <FooterIdec />
+    </>
   );
 }
