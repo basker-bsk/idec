@@ -20,7 +20,7 @@ export default function HeaderIdec() {
         </div>
       </div>
       <div className="bg-white shadow-md">
-        <div className="px-4 container flex justify-between items-center">
+        <div className="py-4 px-4 lg:py-0 container flex justify-between items-center">
           <div className="lg:hidden">
             <MobileMenu />
           </div>
@@ -32,11 +32,13 @@ export default function HeaderIdec() {
               alt="Picture of the author"
               className="w-[100px] lg:w-[150px]"
             />
-            <DesktopMenu
-              menuItems={MenuLinks.menus}
-              setShowOverlay={setShowOverlay}
-            />
-            {/* <ul className="snip1168 hidden nav text-[14px] font-semibold uppercase lg:flex gap-4">
+            <div className="hidden lg:flex">
+              <DesktopMenu
+                menuItems={MenuLinks.menus}
+                setShowOverlay={setShowOverlay}
+              />
+            </div>
+            {/* <ul className="snip1168 hidden nav text-[14px] font-semibold uppercase  gap-4">
               <li>
                 <Link href="/" data-hover="Products">
                   Products

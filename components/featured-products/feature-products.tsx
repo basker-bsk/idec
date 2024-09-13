@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { useEffect } from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -14,11 +14,16 @@ import { Scrollbar } from "swiper/modules";
 import Buttons from "@/app/buttons/page";
 
 export default function FeatureProducts() {
+  const swiper = useSwiper();
   const [selectedCategory, setSelectedCategory] = useState("automation");
   const [productList, setProductList] = useState([]);
+
   const filterCategory = (category: any) => {
     setSelectedCategory(category);
   };
+  useEffect(() => {
+    swiper?.init();
+  }, [selectedCategory]);
   useEffect(() => {
     if (selectedCategory) {
       console.log(selectedCategory);
@@ -35,14 +40,15 @@ export default function FeatureProducts() {
       console.log(productList);
     }
   }, [productList]);
+
   return (
     <div className="flex flex-col pb-16 lg:pb-8 p-4 lg:p-8 border border-gray-300 bg-white">
       <h3 className="idec-title uppercase text-[20px] lg:text-[50px] font-extrabold w-full lg:w-3/4 ">
         {FeatureProductsData.title}
       </h3>
       <div className="my-8">
-        <div className="flex w-full relative flex-wrap">
-          <ul className="grid gap-4 grid-rows-1 grid-flow-col">
+        <div className="flex relative flex-wrap overflow-hidden w-full">
+          <ul className="flex gap-4 overflow-x-auto ">
             <li>
               <Button
                 className="uppercase"
@@ -106,10 +112,24 @@ export default function FeatureProducts() {
         </div>
         <div className="mt-6 flex w-full relative flex-wrap">
           <Swiper
-            slidesPerView={4}
+            breakpoints={{
+              390: {
+                slidesPerView: 1.5,
+              },
+              600: {
+                slidesPerView: 2.5,
+              },
+              1024: {
+                slidesPerView: 4.5,
+              },
+            }}
+            initialSlide={0}
             spaceBetween={20}
             scrollbar={{
-              hide: true,
+              hide: false,
+            }}
+            autoplay={{
+              delay: 2500,
             }}
             modules={[Scrollbar]}
             className="mySwiper"
@@ -124,9 +144,9 @@ export default function FeatureProducts() {
                         width={550}
                         height={600}
                         alt={data.name}
-                        className="border p-2 border-gray-300 bg-white rounded-md w-auto h-auto"
+                        className="border p-1 border-gray-300 bg-white rounded-md w-[300px] h-auto"
                       />
-                      <div className="mt-5 text-black text-sm font-bold">
+                      <div className="mt-2 text-[12px] lg:text-[14px] font-bold">
                         {data.name}
                       </div>
                     </div>
