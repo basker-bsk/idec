@@ -1,8 +1,14 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { User, Search, ShoppingBag, ShoppingCart } from "lucide-react";
+import { User, ShoppingBag, ShoppingCart } from "lucide-react";
+import MenuLinks from "@/public/assets/data/menu.json";
 import MobileMenu from "./mobile-menu";
+import SearchComponent from "./search";
+import DesktopMenu from "./mega-menu";
+import { useState } from "react";
 export default function HeaderIdec() {
+  const [showOverlay, setShowOverlay] = useState(false);
   return (
     <div className="flex flex-col header relative z-10">
       <div className="bg-blue-800 ">
@@ -14,11 +20,11 @@ export default function HeaderIdec() {
         </div>
       </div>
       <div className="bg-white shadow-md">
-        <div className="p-4 container flex justify-between items-center">
+        <div className="px-4 container flex justify-between items-center">
           <div className="lg:hidden">
             <MobileMenu />
           </div>
-          <div className="flex gap-8 items-center">
+          <div className="flex gap-8 items-center ">
             <Image
               src="/images/logo.jpg"
               width={150}
@@ -26,7 +32,11 @@ export default function HeaderIdec() {
               alt="Picture of the author"
               className="w-[100px] lg:w-[150px]"
             />
-            <ul className="hidden nav text-[14px] font-semibold uppercase lg:flex gap-4">
+            <DesktopMenu
+              menuItems={MenuLinks.menus}
+              setShowOverlay={setShowOverlay}
+            />
+            {/* <ul className="snip1168 hidden nav text-[14px] font-semibold uppercase lg:flex gap-4">
               <li>
                 <Link href="/" data-hover="Products">
                   Products
@@ -52,17 +62,17 @@ export default function HeaderIdec() {
                   About
                 </Link>
               </li>
-            </ul>
+            </ul> */}
           </div>
-          <div className="flex gap-2 lg:gap-6 items-center">
-            <Search className="h-4 w-4 " />
-            <div className="flex gap-1 items-center">
+          <div className="flex gap-2 lg:gap-6 items-center ">
+            <SearchComponent />
+            <div className="flex gap-1 items-center hover:text-red-800  cursor-pointer ">
               <User className="h-4 w-4" />
               <span className="text-[14px] font-semibold uppercase hidden lg:flex">
                 James
               </span>
             </div>
-            <ShoppingCart className="h-4 w-4 " />
+            <ShoppingCart className="h-4 w-4 hover:text-red-800  cursor-pointer " />
           </div>
         </div>
       </div>

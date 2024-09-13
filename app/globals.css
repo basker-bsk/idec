@@ -181,22 +181,22 @@ form {
   display: inline-block;
   list-style: outside none none;
   margin: 0 0.5em;
-  padding: 0;
+  padding: 28px 0;
 }
-.snip1168 a {
+.snip1168 li a {
   padding: 0.5em 0;
   color: black;
   position: relative;
   letter-spacing: 1px;
   text-decoration: none;
 }
-.snip1168 a:before,
-.snip1168 a:after {
+.snip1168 li a:before,
+.snip1168 li a:after {
   position: absolute;
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
-.snip1168 a:before {
+.snip1168 li a:before {
   top: 0;
   display: block;
   height: 3px;
@@ -215,13 +215,13 @@ form {
   max-width: 0%;
   overflow: hidden;
 }
-.snip1168 a:hover:before,
-.snip1168 .current a:before {
+.snip1168 li:hover a:before,
+.snip1168 li.current:hover a:before {
   opacity: 1;
   width: 100%;
 }
-.snip1168 a:hover:after,
-.snip1168 .current a:after {
+.snip1168 li:hover a:after,
+.snip1168 li.current a:after {
   max-width: 100%;
 }
 
@@ -255,4 +255,37 @@ form {
 }
 .cards h3 {
   display: ruby;
+}
+.herobanner .slick-list {
+  @apply lg:min-h-[460px];
+}
+
+/* Search */
+/* Desktop Menu */
+@media only screen and (max-width: 767px) {
+  .overlaySection {
+    top: 0;
+    z-index: 2;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .overlaySection {
+    top: 108px;
+    z-index: 2;
+  }
+
+  .megamenu-dropdown {
+    left: 0;
+    z-index: 3;
+    top: 108px;
+    padding: 20px 0;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+    @apply lg:border-t lg:border-gray-100;
+  }
+}
+
+/* Overlay */
+.overlay {
+  @apply fixed top-0 left-0 h-full w-full bg-black z-50 opacity-75;
 }
