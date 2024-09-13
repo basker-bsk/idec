@@ -86,7 +86,7 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
                                 subCategories[0].subCategories,
                             },
                             {
-                              "font-semibold hover:text-red-800":
+                              "font-semibold hover:text-red-800 mb-2":
                                 subCategories[0] &&
                                 !subCategories[0].subCategories,
                             }
@@ -100,7 +100,7 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
 
                         {submenu?.subCategories &&
                           submenu?.subCategories.length > 0 && (
-                            <ul className="flex flex-col mt-8 max-h-80 flex-wrap gap-x-4">
+                            <ul className="flex flex-col max-h-80 flex-wrap gap-x-4">
                               {submenu.subCategories.map((level1, index) => (
                                 <>
                                   {level1 && (

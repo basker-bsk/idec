@@ -261,6 +261,23 @@ form {
 }
 
 /* Search */
+.search-click {
+  outline: none;
+  width: 100px;
+  padding: 5px;
+  transition: all 0.5s;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: left;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.search-click:focus {
+  width: 400px;
+  padding-left: 20px;
+}
 /* Desktop Menu */
 @media only screen and (max-width: 767px) {
   .overlaySection {

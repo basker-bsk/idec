@@ -66,7 +66,7 @@ export default function HeaderIdec() {
               </li>
             </ul> */}
           </div>
-          <div className="flex gap-2 lg:gap-6 items-center ">
+          <div className="flex gap-2 lg:gap-6 items-center relative">
             <SearchComponent />
             <div className="flex gap-1 items-center hover:text-red-800  cursor-pointer ">
               <User className="h-4 w-4" />
