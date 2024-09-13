@@ -12,13 +12,13 @@ export default async function Fashion() {
   return (
     <>
       <div className="flex flex-col my-10 w-full">
-        <h1 className="mb-4">Fashion</h1>
+        <h1 className="mb-4">INDUSTRIES</h1>
         <div className="justify-center items-center grid grid-cols-1 lg:grid-cols-3 gap-4">
           {fashionsList.map((fashion: any, sid: number) => (
             <>
-              <Link href={`fashion/${fashion.fields.slug}`}>
+              <Link href={`industries/${fashion.fields.slug}`}>
                 <div
-                  className="h-[300px] w-[328px] flex flex-col gap-2 rounded-lg border-gray-500 p-4 bg-gray-300"
+                  className=" flex flex-col gap-2 rounded-lg border-gray-500 p-4 bg-gray-300"
                   key={`menu-${sid}`}
                 >
                   <Image
@@ -30,7 +30,7 @@ export default async function Fashion() {
                     className="rounded-lg min-h-[200px]"
                   />
                   <h2>{fashion.fields.title}</h2>
-                  <p>{fashion.fields.brief}</p>
+                  <p>{fashion.fields.brief.substring(0, 50) + "..."}</p>
                 </div>
               </Link>
             </>

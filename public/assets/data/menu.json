@@ -197,7 +197,7 @@
     {
       "id": "Industries",
       "name": "Industries",
-      "url": "/",
+      "url": "/industries",
       "type": "internal",
       "subCategories": [
         {

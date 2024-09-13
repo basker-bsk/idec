@@ -44,7 +44,7 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
               >
                 <Link
                   className="py-[28px] font-bold"
-                  href="/"
+                  href={menu.url}
                   title={menu.name}
                 >
                   {menu.name ? menu.name : ""}

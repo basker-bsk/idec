@@ -18,9 +18,9 @@ export default async function Detail({ params }: { params: { slug: string } }) {
   const { title, brief, cI, description } = detail?.fields;
 
   return (
-    <>
+    <div className="flex flex-col my-10 w-full">
       <p>
-        <Link href={"/fashion"}>Back to Fashion</Link>
+        <Link href={"/industries"}>Back to Industries</Link>
       </p>
       <h1>{detail.fields.title}</h1>
       <p>{detail.fields.brief}</p>
@@ -40,6 +40,6 @@ export default async function Detail({ params }: { params: { slug: string } }) {
           <div>{documentToReactComponents(detail.fields.description)}</div>
         </>
       </div>
-    </>
+    </div>
   );
 }
