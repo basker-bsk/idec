@@ -11,7 +11,7 @@ export default async function Fashion() {
 
   return (
     <>
-      <div className="flex flex-col  w-full">
+      <div className="flex flex-col my-10 w-full">
         <h1 className="mb-4">Fashion</h1>
         <div className="justify-center items-center grid grid-cols-1 lg:grid-cols-3 gap-4">
           {fashionsList.map((fashion: any, sid: number) => (

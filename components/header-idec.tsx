@@ -20,18 +20,20 @@ export default function HeaderIdec() {
         </div>
       </div>
       <div className="bg-white shadow-md">
-        <div className="py-4 px-4 lg:py-0 container flex justify-between items-center">
+        <div className="py-4 lg:py-0 container flex justify-between items-center">
           <div className="lg:hidden">
             <MobileMenu />
           </div>
           <div className="flex gap-8 items-center ">
-            <Image
-              src="/images/logo.jpg"
-              width={150}
-              height={100}
-              alt="Picture of the author"
-              className="w-[100px] lg:w-[150px]"
-            />
+            <Link href="/">
+              <Image
+                src="/images/logo.jpg"
+                width={150}
+                height={100}
+                alt="Picture of the author"
+                className="w-[100px] lg:w-[150px]"
+              />
+            </Link>
             <div className="hidden lg:flex">
               <DesktopMenu
                 menuItems={MenuLinks.menus}
