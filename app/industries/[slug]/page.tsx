@@ -18,7 +18,7 @@ export default async function Detail({ params }: { params: { slug: string } }) {
   const { title, brief, cI, description } = detail?.fields;
 
   return (
-    <div className="flex flex-col my-10 w-full">
+    <div className="flex flex-col my-10 w-full px-4 lg:px-0">
       <p>
         <Link href={"/industries"}>Back to Industries</Link>
       </p>
