@@ -7,6 +7,7 @@ import MobileMenu from "./mobile-menu";
 import SearchComponent from "./search";
 import DesktopMenu from "./mega-menu";
 import { useState } from "react";
+import CartComponent from "./cart";
 export default function HeaderIdec() {
   const [showOverlay, setShowOverlay] = useState(false);
   return (
@@ -19,7 +20,7 @@ export default function HeaderIdec() {
           </div>
         </div>
       </div>
-      <div className="bg-white shadow-md">
+      <div className="bg-white shadow-md px-4 lg:px-0">
         <div className="py-4 lg:py-0 container flex justify-between items-center">
           <div className="lg:hidden">
             <MobileMenu />
@@ -68,7 +69,7 @@ export default function HeaderIdec() {
               </li>
             </ul> */}
           </div>
-          <div className="flex gap-2 lg:gap-6 items-center relative">
+          <div className="flex gap-2 lg:gap-4 items-center relative">
             <SearchComponent />
             <div className="flex gap-1 items-center hover:text-red-800  cursor-pointer ">
               <User className="h-4 w-4" />
@@ -76,7 +77,7 @@ export default function HeaderIdec() {
                 James
               </span>
             </div>
-            <ShoppingCart className="h-4 w-4 hover:text-red-800  cursor-pointer " />
+            <CartComponent />
           </div>
         </div>
       </div>
