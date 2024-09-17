@@ -5,7 +5,7 @@ export default function Hit({ hit }) {
     <>
       <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-5">
         <h2>{hit.product_name}</h2>
-        <a href="#">
+        <a href="#" className="block mt-5">
           <img
             src={hit.product_image}
             width={550}

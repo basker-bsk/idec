@@ -13,8 +13,8 @@
   padding-right: 15px;
 }
 .ais-Hits {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 .ais-SearchBox {
   padding: 50px;
@@ -22,12 +22,14 @@
 .ais-SearchBox-form {
   position: relative;
   border: 1px solid #ccc;
+  padding: 0 10px;
+  background-color: #fff;
 }
 .ais-SearchBox-submit {
   background-color: #ccc;
   padding: 20px;
   position: absolute;
-  top: 5px;
+  top: 15px;
   right: 10px;
   border-radius: 10px;
 }
@@ -39,11 +41,18 @@
   background-color: #ccc;
   padding: 20px;
   position: absolute;
-  top: 5px;
+  top: 15px;
   right: 90px;
   border-radius: 10px;
 }
 .ais-SearchBox-reset svg {
   height: 20px;
   width: 20px;
+}
+.ais-SearchBox-input {
+  height: 60px;
+}
+.ais-SearchBox-input:focus-visible {
+  border: none;
+  outline: none;
 }
