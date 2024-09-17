@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Providers } from "./GlobalRedux/provider";
 import type { Metadata } from "next";
+import FooterIdec from "@/components/footer-idec";
+import HeaderIdec from "@/components/header-idec";
 
 // import localFont from "next/font/local";
 
@@ -22,8 +24,13 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
+        <link rel="shortcut icon" href="/assets/images/favicon.ico" />
         <body className="bg-gray-50 text-gray-900">
-          <Providers initialReduxState="">{children}</Providers>
+          <Providers initialReduxState="">
+            <HeaderIdec />
+            <main className="mx-auto container">{children}</main>
+            <FooterIdec />
+          </Providers>
         </body>
       </html>
     </>

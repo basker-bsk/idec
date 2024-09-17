@@ -7,19 +7,19 @@
         "id": "automation",
         "types": [
           {
-            "image": "/images/people.jpg",
+            "image": "/images/a1.jpg",
             "name": "11-FT27 Automation"
           },
           {
-            "image": "/images/people.jpg",
+            "image": "/images/a2.jpg",
             "name": "12-FT27 Automation"
           },
           {
-            "image": "/images/people.jpg",
+            "image": "/images/a3.jpg",
             "name": "13-XA Automation"
           },
           {
-            "image": "/images/people.jpg",
+            "image": "/images/a4.jpg",
             "name": "14-XMA Automation"
           },
           {
@@ -27,7 +27,7 @@
             "name": "15-RC Automation"
           },
           {
-            "image": "/images/people.jpg",
+            "image": "/images/a1.jpg",
             "name": "16-SA2E Automation"
           }
         ]
@@ -37,7 +37,7 @@
         "id": "safety-explosions",
         "types": [
           {
-            "image": "/images/people.jpg",
+            "image": "/images/a3.jpg",
             "name": "21-FT27 safety"
           },
           {
@@ -45,15 +45,15 @@
             "name": "22-FT27 safety"
           },
           {
-            "image": "/images/people.jpg",
+            "image": "/images/a1.jpg",
             "name": "23-XA safety"
           },
           {
-            "image": "/images/people.jpg",
+            "image": "/images/a4.jpg",
             "name": "24-XMA safety"
           },
           {
-            "image": "/images/people.jpg",
+            "image": "/images/a2.jpg",
             "name": "25-RC safety"
           },
           {
@@ -71,19 +71,19 @@
             "name": "FT27 7inch Switches"
           },
           {
-            "image": "/images/people.jpg",
+            "image": "/images/a4.jpg",
             "name": "FT27 7inch Switches"
           },
           {
-            "image": "/images/people.jpg",
+            "image": "/images/a3.jpg",
             "name": "XA 16mm Switches"
           },
           {
-            "image": "/images/people.jpg",
+            "image": "/images/a2.jpg",
             "name": "XMA 22mm Switches"
           },
           {
-            "image": "/images/people.jpg",
+            "image": "/images/a1.jpg",
             "name": "RC Series Switches"
           },
           {
@@ -97,15 +97,15 @@
         "id": "industrial-components",
         "types": [
           {
-            "image": "/images/people.jpg",
+            "image": "/images/a3.jpg",
             "name": "FT27 7inch PLC+HMI"
           },
           {
-            "image": "/images/people.jpg",
+            "image": "/images/a1.jpg",
             "name": "FT27 7inch PLC+HMI"
           },
           {
-            "image": "/images/people.jpg",
+            "image": "/images/a2.jpg",
             "name": "XA 16mm Estop"
           },
           {
@@ -113,7 +113,7 @@
             "name": "XMA 22mm Estop"
           },
           {
-            "image": "/images/people.jpg",
+            "image": "/images/a4.jpg",
             "name": "RC Series PCB Relays"
           },
           {
@@ -127,15 +127,15 @@
         "id": "auto-id",
         "types": [
           {
-            "image": "/images/people.jpg",
+            "image": "/images/a4.jpg",
             "name": "FT27 7inch Auto"
           },
           {
-            "image": "/images/people.jpg",
+            "image": "/images/a3.jpg",
             "name": "FT27 Auto PLC+HMI"
           },
           {
-            "image": "/images/people.jpg",
+            "image": "/images/a2.jpg",
             "name": "XA 16mm Estop"
           },
           {
@@ -143,7 +143,7 @@
             "name": "XMA Auto Estop"
           },
           {
-            "image": "/images/people.jpg",
+            "image": "/images/a1.jpg",
             "name": "RC Series PCB Relays"
           },
           {
