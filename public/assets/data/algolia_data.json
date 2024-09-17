@@ -1,0 +1,38 @@
+[
+    {
+      "product_name": "Panel Switches",
+      "product_image": "https://www.apem.com/medias/panel-switch.png?context=bWFzdGVyfGNsb3VkaW1hZ2VzfDk2NzE4fGltYWdlL3BuZ3xoMDMvaDg4LzkyNzI5MjkyMjI2ODYvcGFuZWwgc3dpdGNoLnBuZ3w3NTA5ZjhmNzc4ZGExYWIwMzc5MTVjNTQ4YmUwMmUxMzEzMTI3ZDYzNmVhNjcxYWI5NGUwMzlmMjMxMGUwMzNk",
+      "product_code":"D612",
+      "product_description": "From toggles to pushbuttons, rockers to micro switches, APEM develops and produces one of the widest ranges of interfaces dedicated to panels."
+    },
+    {
+      "product_name": "PCB Switches",
+      "product_image": "https://www.apem.com/medias/industrial-control.png?context=bWFzdGVyfHJvb3R8MTc3Mzk0fGltYWdlL3BuZ3xoY2IvaGU3LzkyNzI5Mjg1MDE3OTAvaW5kdXN0cmlhbCBjb250cm9sLnBuZ3xiNjdlNzRlMTk0MGZjYjJjYzcyYWQyNjdhNDVkMDM0MDE0MGU2N2ZlNzIzODQ4NmQ5YjkyYTJhNTlkNWU4YTdh",
+      "product_code":"SPCB",
+      "product_description": "PCB switches are ideal for applications with low current. They are also a smart choice when your control panel requires many switches to control the electronics"
+    },
+    {
+      "product_name": "Industrial Controls",
+      "product_image": "https://www.apem.com/medias/PCB.png?context=bWFzdGVyfGNsb3VkaW1hZ2VzfDExMDA2OXxpbWFnZS9wbmd8aDU0L2g4Ny85MjcyOTI5Mjg4MjIyL1BDQi5wbmd8YTFmMTIzYzkwZDdlMzhlYzc4NmI0YzRmMmU5OGIxNjljYWUyMDFjZWRkNWQ3MzZiMDhmYmJhNGU0MWYxOTI2NA",
+      "product_code":"ASLB",
+      "product_description": "APEM develops and produces one of the widest ranges of interfaces dedicated to panels."
+    },
+    {
+      "product_name": "LED Indicators",
+      "product_image": "https://www.apem.com/medias/panel-switch.png?context=bWFzdGVyfGNsb3VkaW1hZ2VzfDk2NzE4fGltYWdlL3BuZ3xoMDMvaDg4LzkyNzI5MjkyMjI2ODYvcGFuZWwgc3dpdGNoLnBuZ3w3NTA5ZjhmNzc4ZGExYWIwMzc5MTVjNTQ4YmUwMmUxMzEzMTI3ZDYzNmVhNjcxYWI5NGUwMzlmMjMxMGUwMzNk",
+      "product_code":"IKD",
+      "product_description": "This selection of APEM products is the must-have to always keep control of your machines, in full safety."
+    },
+    {
+      "product_name": "Joysticks",
+      "product_image": "https://www.apem.com/medias/joys.png?context=bWFzdGVyfGNsb3VkaW1hZ2VzfDE2MjQyM3xpbWFnZS9wbmd8aDc1L2g3YS85MjcyOTI5NjE1OTAyL2pveXMucG5nfGMxNGQxN2Y0MTM3ZTI1MTFiYTJjMTJhZjgwMDgxZTE4NGQ1Y2I5NTg1MjY1MmYwNzY4NTZmMjZlZGQ5YjU5YTc",
+      "product_code":"IKC",
+      "product_description": "Are you searching for the right joystick to meet the specific requirements of your industry? APEM simplifies the process of finding the perfect joystick control solutions for your applications."
+    },
+    {
+      "product_name": "Panel Solutions",
+      "product_image": "https://www.apem.com/medias/industrial-control.png?context=bWFzdGVyfHJvb3R8MTc3Mzk0fGltYWdlL3BuZ3xoY2IvaGU3LzkyNzI5Mjg1MDE3OTAvaW5kdXN0cmlhbCBjb250cm9sLnBuZ3xiNjdlNzRlMTk0MGZjYjJjYzcyYWQyNjdhNDVkMDM0MDE0MGU2N2ZlNzIzODQ4NmQ5YjkyYTJhNTlkNWU4YTdh",
+      "product_code":"DH1",
+      "product_description": "Combining high-quality components with the knowledge of panel technologies along with their applications in various environments enables us in providing you with an industrial remote control or complete dashboard to fit your exact needs."
+    }
+  ]
