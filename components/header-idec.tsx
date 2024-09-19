@@ -12,7 +12,7 @@ export default function HeaderIdec() {
   const [showOverlay, setShowOverlay] = useState(false);
   return (
     <div className="flex flex-col header relative z-10">
-      <div className="bg-blue-800 ">
+      <div className="bg-black ">
         <div className="p-2 uppercase text-[10px] tracking-wide container  flex justify-end">
           <div className="text-white flex gap-4   ">
             <Link href="/">Partners</Link>
