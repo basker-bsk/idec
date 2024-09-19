@@ -37,8 +37,14 @@ export default function SearchBar() {
         </div>
         <div className="content_block">
           <div className="category_block">
+            <h2>Brands</h2>
+            <RefinementList attribute="brand" />
             <h2>Categories</h2>
             <RefinementList attribute="category" />
+            <h2>Price</h2>
+            <RefinementList attribute="price" />
+            <h2>Free Shipping</h2>
+            <RefinementList attribute="free_shipping" />
           </div>
           <div className="hits_block">
             {/* Adding Data */}
