@@ -6,15 +6,16 @@
   margin-right: -15px;
 }
 .ais-Hits-item {
-  max-width: 25%;
+  max-width: 33%;
   display: flex;
   flex-direction: column;
   padding-left: 15px;
   padding-right: 15px;
+  margin-bottom: 30px;
 }
 .ais-Hits {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .ais-SearchBox {
   padding: 50px;
@@ -55,4 +56,97 @@
 .ais-SearchBox-input:focus-visible {
   border: none;
   outline: none;
+}
+.filter-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 50px;
+}
+.ais-SortBy-select {
+  background-color: #eee;
+  padding: 10px;
+}
+.price {
+  font-weight: bold;
+  font-size: 30px;
+}
+.ais-Pagination-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.ais-Pagination-list li {
+  margin: 0px 20px;
+}
+.ais-Pagination-link {
+  display: block;
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 5px;
+}
+.ais-Highlight {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ais-Pagination {
+  display: none;
+}
+.ais-RefinementList {
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.ais-RefinementList-labelText {
+  padding-left: 10px;
+}
+.ais-RefinementList-count {
+  margin-left: 10px;
+  font-weight: 700;
+}
+.ais-RefinementList-item {
+  margin-bottom: 10px;
+}
+.category_block {
+  padding-left: 50px;
+  width: 20%;
+}
+.category_block h2 {
+  margin-bottom: 20px;
+}
+.content_block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.hits_block {
+  width: 80%;
+}
+@media only screen and (max-width: 992px) {
+  .hits_block {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .category_block {
+    padding-left: 20px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .ais-Hits-item {
+    max-width: 100%;
+  }
+  .ais-SearchBox,
+  .filter-group {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

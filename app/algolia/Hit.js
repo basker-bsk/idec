@@ -1,9 +1,9 @@
 "use client";
-
+import { Highlight } from "react-instantsearch";
 export default function Hit({ hit }) {
   return (
     <>
-      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-5">
+      <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-5">
         <h2>{hit.product_name}</h2>
         <a href="#" className="block mt-5">
           <img
@@ -14,15 +14,15 @@ export default function Hit({ hit }) {
             className="border p-2 border-gray-300 bg-white rounded-md w-auto h-auto"
           />
         </a>
-        <div class="p-5">
+        <div className="p-5">
           <a href="#">
-            <h5 class="mb-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h5 className="mb-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
               {hit.product_code}
             </h5>
           </a>
-          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            {hit.product_description}
-          </p>
+          <div className="price">{hit.price}</div>
+
+          <Highlight attribute="product_description" hit={hit} />
         </div>
       </div>
     </>
