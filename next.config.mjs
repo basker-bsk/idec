@@ -6,6 +6,8 @@ const nextConfig = {
       "fakestoreapi.com",
       "www.apem.com",
       "images.pexels.com",
+      "5.imimg.com",
+      "www.cpecn.com"
     ],
   },
   // experimental: {

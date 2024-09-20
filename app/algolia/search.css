@@ -18,14 +18,10 @@
   padding-right: 0px;
 }
 .ais-SearchBox {
-  padding: 50px;
-  padding-bottom: 10px;
+  @apply container mx-auto pt-10;
 }
-.ais-SearchBox-form {
-  position: relative;
-  border: 1px solid #ccc;
-  padding: 0 10px;
-  background-color: #fff;
+.ais-SearchBox-form {  
+  @apply rounded-md relative border border-gray-400 bg-white;
 }
 .ais-SearchBox-form input{
   margin: 0;
@@ -67,13 +63,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-left: 50px;
-  padding-right: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .ais-SortBy-select {
-  background-color: #eee;
-  padding: 10px;
+  @apply rounded-sm p-2 bg-gray-200;
 }
 .price {
   font-weight: bold;
@@ -91,21 +84,21 @@
   margin: 0px 6px;
 }
 .ais-Pagination-item .ais-Pagination-link {
-  @apply rounded-sm text-center p-2 bg-gray-500 text-white;
+  @apply rounded-sm text-center py-2 px-4 bg-gray-500 text-white text-[12px];
 }
 .ais-Pagination-item.ais-Pagination-item--disabled .ais-Pagination-link {
   pointer-events: none;
   color: #ccc;
   background-color: #eee;
-  @apply  text-center p-2; 
+  @apply  text-center py-2 px-4; 
 }
 .ais-Pagination-item--page .ais-Pagination-link {
-  @apply bg-gray-400 text-white text-center p-2;
+  @apply bg-gray-400 text-white text-center py-2 px-4;
   
 }
 
 .ais-Pagination-item--page.ais-Pagination-item--selected .ais-Pagination-link {
-  @apply bg-red-800 text-white text-center p-2;  
+  @apply bg-red-800 text-white text-center py-2 px-4;  
 }
 .ais-Highlight {
   display: -webkit-box;
@@ -119,7 +112,7 @@
   padding-bottom: 10px;
 }
 .ais-RefinementList-label{
-  @apply flex items-center;
+  @apply flex items-center cursor-pointer;
 }
 .ais-RefinementList-labelText {
   padding-left: 10px;
@@ -131,8 +124,7 @@
 .ais-RefinementList-item {
   margin-bottom: 5px;
 }
-.category_block {
-  padding-left: 50px;
+.category_block {  
   width: 20%;
 }
 .category_block h2 {
@@ -177,7 +169,7 @@
   font-size: 16px;
 }
 .ais-SortBy {
-  margin-top: 40px;
+  @apply mt-4 text-sm rounded-sm;
 }
 .free {
   color: #fff;
@@ -201,13 +193,12 @@
     padding-right: 20px;
   }
   .category_block {
-    padding-left: 20px;
-    width: 100%;
+    @apply px-4 w-full;
   }
 }
 @media only screen and (max-width: 767px) {
   .ais-Hits-item {
-    max-width: 100%;
+    max-width: 50%;
   }
   .ais-SearchBox,
   .filter-group {
