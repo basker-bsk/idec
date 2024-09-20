@@ -73,7 +73,8 @@
 }
 .price {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 28px;
+  font-family: "Times New Roman", Times, serif;
 }
 .ais-Pagination-list {
   display: flex;
@@ -190,6 +191,21 @@
 }
 .ais-SortBy {
   margin-top: 40px;
+}
+.free {
+  color: #fff;
+  padding: 3px 7px;
+  background-color: #c0392b;
+  text-align: center;
+  font-size: 10px;
+  max-width: 100px;
+}
+.free_wrap {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 @media only screen and (max-width: 992px) {
   .hits_block {
