@@ -27,13 +27,17 @@
   padding: 0 10px;
   background-color: #fff;
 }
+.ais-SearchBox-form input{
+  margin: 0;
+}
+.ais-Stats-text{
+  @apply text-sm;
+}
 .ais-SearchBox-submit {
-  background-color: #ccc;
-  padding: 20px;
   position: absolute;
-  top: 15px;
+  top: 10px;
   right: 10px;
-  border-radius: 10px;
+  border-radius: 2px;
 }
 .ais-SearchBox-submit svg {
   height: 20px;
@@ -52,7 +56,7 @@
   width: 20px;
 }
 .ais-SearchBox-input {
-  height: 60px;
+  
 }
 .ais-SearchBox-input:focus-visible {
   border: none;
@@ -74,7 +78,7 @@
 .price {
   font-weight: bold;
   font-size: 28px;
-  font-family: "Times New Roman", Times, serif;
+  
 }
 .ais-Pagination-list {
   display: flex;
@@ -86,40 +90,22 @@
 .ais-Pagination-list li {
   margin: 0px 6px;
 }
-.ais-Pagination-link {
-  display: block;
-  background-color: #eee;
-  padding: 6px 10px;
-  border-radius: 5px;
-}
 .ais-Pagination-item .ais-Pagination-link {
-  background-color: #ccc;
-  color: #000;
-  min-width: 30px;
-  padding: 4px 6px;
-  text-align: center;
-  font-size: 2rem;
-  line-height: 1;
+  @apply rounded-sm text-center p-2 bg-gray-500 text-white;
 }
 .ais-Pagination-item.ais-Pagination-item--disabled .ais-Pagination-link {
   pointer-events: none;
   color: #ccc;
   background-color: #eee;
+  @apply  text-center p-2; 
 }
 .ais-Pagination-item--page .ais-Pagination-link {
-  background-color: #86ceed;
-  color: #fff;
-  min-width: 40px;
-  text-align: center;
-  font-size: 2rem;
-  line-height: 1;
+  @apply bg-gray-400 text-white text-center p-2;
+  
 }
 
 .ais-Pagination-item--page.ais-Pagination-item--selected .ais-Pagination-link {
-  background-color: #1694ca;
-  color: #fff;
-  min-width: 40px;
-  text-align: center;
+  @apply bg-red-800 text-white text-center p-2;  
 }
 .ais-Highlight {
   display: -webkit-box;
@@ -132,22 +118,26 @@
   padding-left: 10px;
   padding-bottom: 10px;
 }
+.ais-RefinementList-label{
+  @apply flex items-center;
+}
 .ais-RefinementList-labelText {
   padding-left: 10px;
+  font-size: 11px;
 }
 .ais-RefinementList-count {
-  margin-left: 10px;
-  font-weight: 700;
+  margin-left: 10px;  
 }
 .ais-RefinementList-item {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .category_block {
   padding-left: 50px;
   width: 20%;
 }
 .category_block h2 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 .content_block {
   display: flex;
@@ -163,15 +153,11 @@
   font-weight: 700;
 }
 .ais-RefinementList-count {
-  background-color: #ccc;
-  padding: 2px 4px;
-  border: 1px solid #333;
-  border-radius: 3px;
-  font-size: 12px;
+  @apply bg-gray-200 py-1 px-2 rounded-sm text-[10px];
 }
 .ais-RefinementList-item {
   border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 .ais-RefinementList-list {
   padding-right: 15px;
@@ -188,6 +174,7 @@
   overflow: hidden;
   width: 100%;
   white-space: nowrap;
+  font-size: 16px;
 }
 .ais-SortBy {
   margin-top: 40px;
