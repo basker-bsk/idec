@@ -23,9 +23,9 @@ export default function SearchBar() {
     <>
       <InstantSearch searchClient={searchClient} indexName="algolia_data">
         {/* Adding Search Box */}
-        <div className="flex items-end my-8 justify-between w-full gap-4">
-          <div className="w-1/4">&nbsp;</div>
-          <div className="w-full lg:w-3/4 flex justify-between px-3">
+        <div className="flex items-end my-8 justify-between w-full flex-col lg:flex-row gap-4">
+          <div className="lg:w-1/4 w-full hidden lg:flex">&nbsp;</div>
+          <div className="w-full lg:w-3/4 flex flex-col lg:flex-row justify-between px-3 ">
             <div className="flex  flex-col">
               <SearchBox translations={{ placeholder: "Search for products" }} className="" />
               <Stats />
@@ -43,8 +43,8 @@ export default function SearchBar() {
           </div>
         </div>
        
-        <div className="flex gap-4">
-          <div className="w-full lg:w-1/4 flex gap-4 flex-col">
+        <div className="flex flex-col lg:flex-row gap-4">
+          <div className="w-full lg:w-1/4 flex gap-4 flex-col px-3 lg:px-0">
             <h2 className="text-sm">Brands</h2>
             <RefinementList attribute="brand" />
             <h2 className="text-sm">Categories</h2>

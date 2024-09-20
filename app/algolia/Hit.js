@@ -8,10 +8,8 @@ export default function Hit({ hit }) {
         <a href="#" className="block mt-2">
           <img
             src={hit.product_image}
-            width={550}
-            height={600}
             alt={hit.product_name}
-            className="border p-2 border-gray-300 bg-white rounded-md w-auto h-auto"
+            className="border p-2 border-gray-300 bg-white rounded-md w-[200px] h-auto"
           />
         </a>
         <div className="py-4">
