@@ -226,30 +226,22 @@ form {
 }
 
 /* Categories */
-/* .categories li .desc {
-  display: none;
-} */
-/* .categories li:first-child .desc {
-  display: flex;
-}
-.categories li:hover .desc {
-  display: flex;
-} */
 .categories li:first-child .title {
   @apply border-t border-gray-300;
 }
 
 .idec-title {
-  @apply relative  pl-[30px] lg:pl-[50px] leading-tight lg:leading-none;
+  @apply relative  pl-[30px] lg:pl-[50px];
+  line-height: 1;
   z-index: 1;
 }
 .idec-title::before {
-  @apply absolute left-0 bg-gray-400 w-[30px] lg:w-[50px] h-full;
-  content: "";
+  @apply absolute bg-gray-400 left-[2px] w-[30px] lg:w-[50px] h-full;
+  content: "";  
   z-index: 2;
 }
 .idec-title::after {
-  @apply absolute left-[25px] lg:left-[40px] bg-white w-[5px] lg:w-[10px] h-[70%] top-1/2 -translate-y-1/2;
+  @apply absolute left-[27px] lg:left-[42px] bg-white w-[5px] lg:w-[10px] h-[70%] top-1/2 -translate-y-1/2;
   content: "";
   z-index: 3;
 }
