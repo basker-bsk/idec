@@ -9,10 +9,13 @@ import {
   SortBy,
   Pagination,
   RefinementList,
+  ClearRefinements,
   Menu,
 } from "react-instantsearch";
 import Hit from "./Hit";
 import "./search.css";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 const searchClient = algoliasearch(
   "MRO29UE8V8",
   "4c7f782ea67e241310a15817a29e277c"
@@ -20,7 +23,7 @@ const searchClient = algoliasearch(
 
 export default function SearchBar() {
   return (
-    <>
+    <div className="min-h-[400px]">
       <InstantSearch searchClient={searchClient} indexName="algolia_data">
         {/* Adding Search Box */}
         <div className="flex items-end my-8 justify-between w-full flex-col lg:flex-row gap-4">
@@ -45,6 +48,7 @@ export default function SearchBar() {
        
         <div className="flex flex-col lg:flex-row gap-4">
           <div className="w-full lg:w-1/4 flex gap-4 flex-col px-3 lg:px-0">
+            <ClearRefinements  translations={{resetButtonText: 'Clear all',}}/>
             <h2 className="text-sm">Brands</h2>
             <RefinementList attribute="brand" />
             <h2 className="text-sm">Categories</h2>
@@ -61,6 +65,6 @@ export default function SearchBar() {
           </div>
         </div>
       </InstantSearch>
-    </>
+    </div>
   );
 }
