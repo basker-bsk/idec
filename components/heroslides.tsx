@@ -4,8 +4,8 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 function heroslides(props: any) {
   return (
-    <div className="min-h-[130px] lg:min-h-[460px] relative flex flex-col lg:flex-row">
-      <div className="relative z-1">
+    <div className="min-h-[260px] lg:min-h-[460px] relative flex flex-col lg:flex-row">
+      <div className="relative z-1 min-h-[140px]">
         <LazyLoadImage
           alt={props.data.heading}
           effect="blur"
