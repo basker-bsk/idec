@@ -22,7 +22,7 @@ export default async function Products() {
       <div className="mt-4 lg:mt-8 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-16 list-item-wpr gap-3 lg:gap-6">
         {products.map((product: any, index: number) => (
           <Link
-            href={`products/${product.id}`}
+            href={`products-list/${product.id}`}
             key={`P-${product.id}`}
             className="border border-gray-200 rounded-lg p-2 lg:p-4 bg-white flex flex-col justify-between lg:mb-3 "
           >

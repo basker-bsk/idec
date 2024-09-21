@@ -3,7 +3,7 @@
     {
       "id": "Products",
       "name": "Products",
-      "url": "/",
+      "url": "/products",
       "type": "internal",
       "subCategories": [
         {
