@@ -1,6 +1,10 @@
+'use client'
 import Categories from "@/public/assets/data/categories.json";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import classnames from "classnames";
 export default function CategoriesComponent() {
+  const [catIndex, setCatIndex] = useState(0)
   return (
     <div className="flex flex-col pb-16 lg:pb-8 p-4 lg:p-8 border border-gray-300 bg-white">
       <h2 className="uppercase font-bold text-blue-800 ">
@@ -17,10 +21,12 @@ export default function CategoriesComponent() {
                 className=" w-full flex flex-col lg:flex-row "
                 key={`cat-${index}`}
               >
-                <span className="hover:text-red-800 title cursor-pointer border-b border-gray-300 py-2 font-bold uppercase w-full lg:w-1/2">
+                <span onMouseOver={()=>setCatIndex(index)} className={classnames("title cursor-pointer border-b border-gray-300 py-2 font-bold uppercase w-full lg:w-1/2",
+                  {'text-red-800': catIndex===index})}>
                   {cat.title}
                 </span>
-                <span className="desc bg-white h-full lg:absolute left-0 lg:left-1/2 top-0 w-full lg:w-1/2 lg:px-6 leading-8">
+                <span className={classnames("desc bg-white h-full lg:absolute left-0 lg:left-1/2 top-0 w-full lg:w-1/2 lg:px-6 leading-8",
+                  {'flex': catIndex===index},{'hidden': catIndex!==index})}>
                   {cat.desc}
                 </span>
               </li>

@@ -226,15 +226,15 @@ form {
 }
 
 /* Categories */
-.categories li .desc {
+/* .categories li .desc {
   display: none;
-}
-.categories li:first-child .desc {
+} */
+/* .categories li:first-child .desc {
   display: flex;
 }
 .categories li:hover .desc {
   display: flex;
-}
+} */
 .categories li:first-child .title {
   @apply border-t border-gray-300;
 }
