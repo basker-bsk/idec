@@ -27,7 +27,7 @@ export default function Home() {
       <SkeletonCard />
       <Users />
       {/* <Counter /> */}
-      <Redis />
+      {/* <Redis /> */}
     </main>
   );
 }

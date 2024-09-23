@@ -13,7 +13,7 @@ export default function Menus() {
       text: "calendar",
     },
     {
-      link: "idec-ui/#products",
+      link: "products",
       text: "products",
     },
     {
@@ -40,14 +40,7 @@ export default function Menus() {
       link: "idec-ui/#skeleton",
       text: "skeleton",
     },
-    {
-      link: "idec-ui/#fashion",
-      text: "contentful",
-    },
-    {
-      link: "idec-ui/#counter",
-      text: "Redux Toolkit",
-    },
+
     {
       link: "idec-ui/#users",
       text: "users",
