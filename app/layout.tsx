@@ -25,7 +25,7 @@ export default function RootLayout({
     <>
       <html lang="en">
         <link rel="shortcut icon" href="/assets/images/favicon.ico" />
-        <body className="bg-gray-50 text-gray-900">
+        <body className="IDEC bg-gray-50 text-gray-900">
           <Providers initialReduxState="">
             <HeaderIdec />
             <main className="mx-auto container">{children}</main>

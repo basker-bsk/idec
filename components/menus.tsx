@@ -45,6 +45,18 @@ export default function Menus() {
       link: "idec-ui/#users",
       text: "users",
     },
+    {
+      link: "idec-ui/#toggle",
+      text: "Toggle Switch",
+    },
+    {
+      link: "idec-ui/#selectbox",
+      text: "Select dropdown",
+    },
+    {
+      link: "idec-ui/#radiobutton",
+      text: "Radio button",
+    },
   ];
   return menuList;
 }
