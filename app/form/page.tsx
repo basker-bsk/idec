@@ -24,6 +24,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Link from "next/link";
+import SelectBox from "../selectbox/selectbox";
 
 const formSchema = z
   .object({
@@ -140,6 +141,20 @@ export default function FormWithZod() {
                         type="password"
                         {...field}
                       />
+                    </FormControl>
+
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="selectbox"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Select Box</FormLabel>
+                    <FormControl>
+                      <SelectBox />
                     </FormControl>
 
                     <FormMessage />

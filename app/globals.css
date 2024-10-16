@@ -7,6 +7,7 @@
 * {
   font-family: "Poppins";
 }
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -68,12 +69,15 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground overflow-x-hidden;
   }
+
   h1 {
     @apply text-2xl lg:text-3xl font-bold my-2;
   }
+
   h2 {
     @apply text-["14px"] lg:text-2xl font-semibold capitalize;
   }
@@ -121,39 +125,47 @@
 ::-webkit-scrollbar-corner {
   background-color: transparent;
 }
+
 .sidebar-menu {
   height: -moz-calc(100vh - (91px));
   height: -webkit-calc(100vh - (91px));
   height: calc(100vh - (91px));
   padding-bottom: 40px;
 }
+
 form {
   text-align: left !important;
 }
+
 .custom-select button {
   @apply w-full;
 }
+
 .menu-active {
   @apply bg-pink-800 text-white;
 }
+
 .card {
   @apply bg-white p-5 rounded-md shadow-sm my-5;
 
   & h2 {
     @apply mb-0 font-bold;
 
-    & + p {
+    &+p {
       @apply lowercase text-xs font-bold text-gray-500;
       font-variant: small-caps;
     }
   }
+
   & p {
     @apply mb-2 text-sm text-gray-500;
   }
 }
+
 .btn {
   @apply bg-rose-500 text-white p-2 rounded-sm text-xs;
 }
+
 form {
   @apply text-left;
 
@@ -161,6 +173,7 @@ form {
   & textarea {
     @apply block w-full p-2 rounded-sm my-4;
   }
+
   .error {
     @apply my-4 p-2 text-sm rounded-md border-2 border-red-500 bg-red-200 text-red-500;
   }
@@ -170,19 +183,23 @@ form {
 .container {
   @apply mx-auto max-w-[1280px];
 }
+
 .snip1168 {
   text-align: center;
   text-transform: uppercase;
 }
+
 .snip1168 * {
   box-sizing: border-box;
 }
+
 .snip1168 li {
   display: inline-block;
   list-style: outside none none;
   margin: 0 0.5em;
   padding: 28px 0;
 }
+
 .snip1168 li a {
   padding: 0.5em 0;
   color: black;
@@ -190,12 +207,14 @@ form {
   letter-spacing: 1px;
   text-decoration: none;
 }
+
 .snip1168 li a:before,
 .snip1168 li a:after {
   position: absolute;
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
+
 .snip1168 li a:before {
   top: 0;
   display: block;
@@ -204,6 +223,7 @@ form {
   content: "";
   background-color: #c0392b;
 }
+
 .snip1168 a:after {
   left: 0;
   top: 0;
@@ -215,11 +235,13 @@ form {
   max-width: 0%;
   overflow: hidden;
 }
+
 .snip1168 li:hover a:before,
 .snip1168 li.current:hover a:before {
   opacity: 1;
   width: 100%;
 }
+
 .snip1168 li:hover a:after,
 .snip1168 li.current a:after {
   max-width: 100%;
@@ -231,23 +253,27 @@ form {
 }
 
 .idec-title {
-  @apply relative  pl-[30px] lg:pl-[50px];
+  @apply relative pl-[30px] lg:pl-[50px];
   line-height: 1;
   z-index: 1;
 }
+
 .idec-title::before {
   @apply absolute bg-gray-400 left-[2px] w-[30px] lg:w-[50px] h-full;
-  content: "";  
+  content: "";
   z-index: 2;
 }
+
 .idec-title::after {
   @apply absolute left-[27px] lg:left-[42px] bg-white w-[5px] lg:w-[10px] h-[70%] top-1/2 -translate-y-1/2;
   content: "";
   z-index: 3;
 }
+
 .cards h3 {
   display: ruby;
 }
+
 .herobanner .slick-list {
   @apply lg:min-h-[460px];
 }
@@ -270,6 +296,7 @@ form {
   width: 400px;
   padding-left: 20px;
 }
+
 /* Desktop Menu */
 @media only screen and (max-width: 767px) {
   .overlaySection {
@@ -304,27 +331,31 @@ form {
   display: flex;
   align-items: center;
 }
+
 .searchIcon {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-.searchInput {  
+
+.searchInput {
   width: 0;
   opacity: 0;
   transition: width 0.3s ease, opacity 0.3s ease;
-  padding: 0;  
+  padding: 0;
   border: none;
   outline: none;
   border-bottom: 1px solid #ccc;
 }
-.searchInput input{
-  border:0;
+
+.searchInput input {
+  border: 0;
   width: 100%;
   outline: none;
   font-size: 12px;
 }
-.searchInput.expanded {  
+
+.searchInput.expanded {
   opacity: 1;
   padding: 5px;
-  @apply w-[100px] lg:w-[200px];  
+  @apply w-[100px] lg:w-[200px];
 }

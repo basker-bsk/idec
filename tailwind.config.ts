@@ -1,5 +1,8 @@
 import type { Config } from "tailwindcss";
-
+const pxToRem = (pxSize: number) => {
+  const baseSize = 16;
+  return (pxSize / baseSize).toFixed(4);
+};
 const config = {
   darkMode: ["class"],
   content: [
@@ -14,16 +17,48 @@ const config = {
       center: true,
       padding: "0",
       screens: {
-        "2xl": "1400px",
+        sm: '360px',
+        md: '656px',
+        lg: '1024px',
+        xl: '1340px',
       },
     },
+
     extend: {
+      fontFamily: {
+        GothamRegular: ["'Gotham-Font', sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        transparent: 'transparent',
+        IDEC: {
+          primary: {
+            red: '#A30000',
+            lightred: '#C31008'
+          }
+        },
+        APEM: {
+          primary: {
+            blue: '#14377F',
+            lightblue: '#009FE3'
+          }
+        },
+        black: '#000000',
+        white: '#FFFFFF',
+        borderGray: '#B0B0B0',
+        whiteTint: 'rgba(255, 255, 255, 0.8)',
+        danger: '#CC0000',
+        dangerHover: '#EA0E00',
+        success: '#2D9F48',
+        successTint: 'rgba(45, 159, 72, 0.2)',
+        orangeTint: '#FFECD1',
+        orangeTintDeep: '#FCF3EC',
+        redTint: 'rgba(234, 14, 0, 0.1)',
+        lightOrange: '#FFF8EE',
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -53,6 +88,21 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      fontSize: {
+        8: `${pxToRem(8)}rem`,
+        10: `${pxToRem(10)}rem`,
+        12: `${pxToRem(12)}rem`,
+        14: `${pxToRem(14)}rem`,
+        16: `${pxToRem(16)}rem`,
+        18: `${pxToRem(18)}rem`,
+        21: `${pxToRem(21)}rem`,
+        24: `${pxToRem(24)}rem`,
+        28: `${pxToRem(28)}rem`,
+        38: `${pxToRem(38)}rem`,
+        51: `${pxToRem(51)}rem`,
+        67: `${pxToRem(67)}rem`,
+        88: `${pxToRem(88)}rem`,
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -72,6 +122,12 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+    },
+  },
+  variants: {
+    extend: {
+      backgroundColor: ['IDEC', 'APEM'],
+      textColor: ['IDEC', 'APEM']
     },
   },
   plugins: [require("tailwindcss-animate")],
