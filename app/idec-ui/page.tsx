@@ -11,6 +11,9 @@ import Users from "../users/page";
 import Counter from "../counter/page";
 import Redis from "../Redis/page";
 import Products from "../products-lists/page";
+import Toggle from "../toggle/page";
+import SelectBox from "../selectbox/selectbox";
+import RadioButton from "../radiobutton/page";
 
 export default function Home() {
   return (
@@ -26,6 +29,13 @@ export default function Home() {
       <FormWithZod />
       <SkeletonCard />
       <Users />
+      <Toggle />
+      <div className="w-[180px]">
+        <a id="selectbox"></a>
+        <h1>Select Box</h1>
+        <SelectBox />
+      </div>
+      <RadioButton />
       {/* <Counter /> */}
       {/* <Redis /> */}
     </main>
