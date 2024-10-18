@@ -16,14 +16,14 @@ const config = {
     container: {
       center: true,
       padding: "0",
-      screens: {
-        sm: '360px',
-        md: '656px',
-        lg: '1024px',
-        xl: '1340px',
-      },
-    },
 
+    },
+    screens: {
+      sm: '360px',
+      md: '656px',
+      lg: '1024px',
+      xl: '1340px',
+    },
     extend: {
       fontFamily: {
         GothamRegular: ["'Gotham-Font', sans-serif"],
@@ -46,6 +46,7 @@ const config = {
         black: '#000000',
         white: '#FFFFFF',
         borderGray: '#B0B0B0',
+        halfGray: '#D1D1D1',
         whiteTint: 'rgba(255, 255, 255, 0.8)',
         danger: '#CC0000',
         dangerHover: '#EA0E00',

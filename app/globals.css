@@ -8,6 +8,8 @@
   font-family: "Poppins";
 }
 
+@import url(../public/fonts/icon-font-style.css);
+
 @layer base {
   :root {
     --background: 0 0% 100%;
