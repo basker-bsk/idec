@@ -52,8 +52,8 @@ export default function FeatureProducts() {
             <li>
               <Button
                 className="uppercase"
-                variant={
-                  selectedCategory === "automation" ? "default" : "outline"
+                theme={
+                  selectedCategory === "automation" ? "primary" : "secondary"
                 }
                 onClick={() => filterCategory("automation")}
               >
@@ -63,10 +63,10 @@ export default function FeatureProducts() {
             <li>
               <Button
                 className="uppercase"
-                variant={
+                theme={
                   selectedCategory === "safety-explosions"
-                    ? "default"
-                    : "outline"
+                    ? "primary"
+                    : "secondary"
                 }
                 onClick={() => filterCategory("safety-explosions")}
               >
@@ -76,10 +76,10 @@ export default function FeatureProducts() {
             <li>
               <Button
                 className="uppercase"
-                variant={
+                theme={
                   selectedCategory === "switches-indicators"
-                    ? "default"
-                    : "outline"
+                    ? "primary"
+                    : "secondary"
                 }
                 onClick={() => filterCategory("switches-indicators")}
               >
@@ -89,10 +89,10 @@ export default function FeatureProducts() {
             <li>
               <Button
                 className="uppercase"
-                variant={
+                theme={
                   selectedCategory === "industrial-components"
-                    ? "default"
-                    : "outline"
+                    ? "primary"
+                    : "secondary"
                 }
                 onClick={() => filterCategory("industrial-components")}
               >
@@ -102,7 +102,8 @@ export default function FeatureProducts() {
             <li>
               <Button
                 className="uppercase"
-                variant={selectedCategory === "auto-id" ? "default" : "outline"}
+                theme={selectedCategory === "auto-id" ? "primary"
+                  : "secondary"}
                 onClick={() => filterCategory("auto-id")}
               >
                 auto-id

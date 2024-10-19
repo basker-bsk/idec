@@ -35,7 +35,7 @@ export default function AddToCart(props: Props) {
   return (
     <>
       <Button
-        variant="secondary"
+        theme="secondary"
         onClick={(event) => {
           event.preventDefault();
           handleAddToCart();
