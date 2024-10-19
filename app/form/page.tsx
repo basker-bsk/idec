@@ -23,8 +23,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectLabel,
+  SelectGroup,
+  SelectValue,
+} from "@/components/ui/select"
 import Link from "next/link";
-import SelectBox from "../selectbox/page";
 
 const formSchema = z
   .object({
@@ -41,6 +49,9 @@ const formSchema = z
       .string()
       .min(5, { message: "Password must be atleaset 5 characters" }),
     confirmPassword: z.string(),
+    selectbox: z
+    .string()
+    .min(1, { message: "Select option required" }), 
     mobile: z.boolean().default(false),
   })
   .refine((data) => data.password === data.confirmPassword, {
@@ -60,6 +71,7 @@ export default function FormWithZod() {
       emailAddress: "",
       password: "",
       confirmPassword: "",
+      selectbox:"",
       mobile: false,
     },
   });
@@ -154,9 +166,22 @@ export default function FormWithZod() {
                   <FormItem>
                     <FormLabel>Select Box</FormLabel>
                     <FormControl>
-                      <SelectBox />
-                    </FormControl>
-
+                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                      <SelectTrigger className="w-[180px]">
+                          <SelectValue placeholder="Select a fruit" />
+                      </SelectTrigger>
+                      <SelectContent>
+                          <SelectGroup>
+                          <SelectLabel>Fruits</SelectLabel>
+                          <SelectItem value="apple">Apple</SelectItem>
+                          <SelectItem value="banana">Banana</SelectItem>
+                          <SelectItem value="blueberry">Blueberry</SelectItem>
+                          <SelectItem value="grapes">Grapes</SelectItem>
+                          <SelectItem value="pineapple">Pineapple</SelectItem>
+                          </SelectGroup>
+                      </SelectContent>
+                      </Select>
+                      </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
