@@ -8,7 +8,7 @@
   font-family: "Poppins";
 }
 
-@import url(../public/fonts/icon-font-style.css);
+@import url(../public/fonts/icons.css);
 
 @layer base {
   :root {
@@ -126,6 +126,20 @@
 
 ::-webkit-scrollbar-corner {
   background-color: transparent;
+}
+
+@media only screen and (max-width: 767px) {
+  button span[class*='icon-']{
+    @apply text-16;
+  }
+}
+@media only screen and (min-width: 768px) {
+  button span[class*='icon-']{
+    @apply text-24;
+  }
+}
+button.radio-box[aria-checked='true']{
+  @apply border-primary;
 }
 
 .sidebar-menu {

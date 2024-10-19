@@ -35,14 +35,8 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         transparent: 'transparent',
-        primaryTheme: '#A30000',
-        secondaryTheme: '#C31008',
-        APEM: {
-          primary: {
-            blue: '#14377F',
-            lightblue: '#009FE3'
-          }
-        },
+        primary: '#AE0E16',        
+        secondary: '#C31008',   
         black: '#000000',
         white: '#FFFFFF',
         borderGray: '#B0B0B0',
@@ -56,14 +50,14 @@ const config = {
         orangeTintDeep: '#FCF3EC',
         redTint: 'rgba(234, 14, 0, 0.1)',
         lightOrange: '#FFF8EE',
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
+        // primary1: {
+        //   DEFAULT: "hsl(var(--primary))",
+        //   foreground: "hsl(var(--primary-foreground))",
+        // },
+        // secondary1: {
+        //   DEFAULT: "hsl(var(--secondary))",
+        //   foreground: "hsl(var(--secondary-foreground))",
+        // },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",

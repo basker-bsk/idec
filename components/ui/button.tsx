@@ -5,31 +5,27 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-md  font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+  "flex gap-2 items-center  h-9 lg:h-12 text-12 lg:text-14 justify-center whitespace-nowrap rounded-md lg:rounded-lg  font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-ring focus-visible:ring-offset-0",
   {
     variants: {
-      variant: {
-        default: "bg-primaryTheme text-primary-foreground hover:bg-secondaryTheme",
+      theme: {
+        primary: "bg-primary text-white hover:bg-secondary",
         secondary:
-          "bg-white text-black hover:text-white hover:bg-secondaryTheme border border-black hover:border-secondaryTheme",
-        outline:
-          "border border-gray-500  hover:bg-accent hover:text-accent-foreground",
-        destructive:
-          "bg-white text-black hover:text-white hover:bg-black border border-black",
+          "bg-white text-black hover:text-white hover:bg-secondary border border-black hover:border-secondary",
+        tertiary:
+          "bg-white border border-gray-500  hover:bg-black hover:text-white",
         ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+        link: "text-primary underline-offset-4 hover:underline",        
         disabled: "bg-halfGray text-borderGray border border-halfGray pointer-events-none"
-      },
-      size: {
-        sm: "h-10 px-4 py-2 text-sm",
-        md: "h-10 rounded-md px-3 text-md",
-        lg: "h-12 rounded-lg px-8 text-md",
-        icon: "h-10 w-10 text-sm",
-      },
+      }, 
+      variant: {
+        default: "px-4 lg:px-5 py-2",
+        icon: "min-w-[36px] lg:min-w-[48px] px-0 lg:px-0",
+      },    
     },
     defaultVariants: {
-      variant: "default",
-      size: "sm",
+      theme: "primary",
+      variant: "default"
     },
   }
 )
@@ -41,12 +37,12 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, theme, variant, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
     return (
       <>
         <Comp
-          className={cn(buttonVariants({ variant, size, className }))}
+          className={cn(buttonVariants({ theme, variant, className }))}
           ref={ref}
           {...props}
         />

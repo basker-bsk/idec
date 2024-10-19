@@ -12,7 +12,7 @@ import Counter from "../counter/page";
 import Redis from "../Redis/page";
 import Products from "../products-lists/page";
 import Toggle from "../toggle/page";
-import SelectBox from "../selectbox/selectbox";
+import SelectBox from "../selectbox/page";
 import RadioButton from "../radiobutton/page";
 import ButtonStyle from "@/components/ui/buttonStyle";
 
@@ -20,10 +20,9 @@ export default function Home() {
   return (
     <main className="w-full flex flex-col gap-4">
       <Accordian />
-      <Buttons />
-      <p className="py-10">==============================================</p>
+      <Buttons />      
       <ButtonStyle />
-      <DatePicker />
+      {/* <DatePicker /> */}
       <Modal />
       {/* <Products /> */}
       <PopoverDemo />

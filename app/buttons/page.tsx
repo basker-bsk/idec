@@ -12,20 +12,20 @@ function MailIcon() {
 export default function Buttons() {
   const buttonTypes = [
     {
-      type: "default",
-      size: ["sm", "md", "lg"],
+      btype: "primary",  
+      variant:''    
     },
     {
-      type: "secondary",
-      size: ["sm", "md", "lg"],
+      btype: "secondary",      
+      variant:''    
     },
     {
-      type: "outline",
-      size: ["sm", "md", "lg"],
+      btype: "tertiary",      
+      variant:''    
     },
     {
-      type: "destructive",
-      size: ["sm", "md", "lg"],
+      btype: "disabled",      
+      variant:''    
     },
   ];
 
@@ -34,22 +34,12 @@ export default function Buttons() {
       <a id="buttons"></a>
       <h1>Buttons</h1>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
-        {buttonTypes.map((types: any, tid: number) => (
+        {buttonTypes.map((btypes: any, tid: number) => (
           <div className="flex flex-col gap-2" key={`b-${tid}`}>
-            <h2 className="">{types.type}</h2>
-            {types.size.map((size: any, sid: number) => (
-              <>
-                {size}
-                <Button
-                  key={`s-${sid}`}
-                  variant={types.type}
-                  size={size}
-                  className="capitalize"
-                >
-                  {types.type}
-                </Button>
-              </>
-            ))}
+            <h2 className="">{btypes.btype}</h2>
+            <Button theme={btypes.btype} variant={btypes.variant} className="capitalize">
+                {btypes.btype}
+              </Button>
           </div>
         ))}
       </div>

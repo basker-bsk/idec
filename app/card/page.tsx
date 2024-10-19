@@ -55,8 +55,8 @@ export default function CardWithForm() {
             </div>
           </form>
         </CardContent>
-        <CardFooter className="flex justify-between">
-          <Button variant="outline">Cancel</Button>
+        <CardFooter className="flex gap-4 justify-end">
+          <Button theme="secondary">Cancel</Button>
           <Button>Deploy</Button>
         </CardFooter>
       </Card>

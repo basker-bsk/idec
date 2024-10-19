@@ -15,7 +15,7 @@ export default function PopoverDemo() {
             <div className="justify-center items-center flex ">
                 <Popover>
                     <PopoverTrigger asChild>
-                        <Button variant="outline">Open popover</Button>
+                        <Button theme="secondary">Open popover</Button>
                     </PopoverTrigger>
                     <PopoverContent className="w-80">
                         <div className="grid gap-4">

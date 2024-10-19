@@ -19,7 +19,7 @@ export default function Modal() {
             <div className="justify-center items-center flex ">
                 <AlertDialog>
                     <AlertDialogTrigger asChild>
-                        <Button variant="default" size="lg">Show Dialog</Button>
+                        <Button>Show Dialog</Button>
                     </AlertDialogTrigger>
                     <AlertDialogContent>
                         <AlertDialogHeader>
