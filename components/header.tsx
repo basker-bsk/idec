@@ -30,7 +30,7 @@ export default function Header() {
         alt="Picture of the author"
         className="w-[150px]"
       />
-      <h2 className="font-bold">UI Components</h2>
+      <h4 className="">UI Components</h4>
       <div className="lg:hidden flex w-full custom-select">
         <Select onValueChange={handleChange}>
           <SelectTrigger className="w-[180px] capitalize">

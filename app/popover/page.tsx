@@ -11,7 +11,7 @@ export default function PopoverDemo() {
     return (
         <div className="flex flex-col  w-full">
             <a id="popover"></a>
-            <h1>Popover</h1>
+            <h4>Popover</h4>
             <div className="justify-center items-center flex ">
                 <Popover>
                     <PopoverTrigger asChild>

@@ -43,9 +43,9 @@ export default function FeatureProducts() {
 
   return (
     <div className="flex flex-col pb-16 lg:pb-8 p-4 lg:p-8 border border-gray-300 bg-white">
-      <h3 className="idec-title uppercase text-[20px] lg:text-[50px] font-extrabold w-full lg:w-3/4 ">
+      <h4 className="idec-title uppercase text-[20px] lg:text-[50px] font-bold w-full lg:w-3/4 ">
         {FeatureProductsData.title}
-      </h3>
+      </h4>
       <div className="mt-8">
         <div className="flex relative flex-wrap overflow-hidden w-full">
           <ul className="flex gap-4 overflow-x-auto ">

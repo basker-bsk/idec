@@ -15,7 +15,7 @@ export default function Counter() {
   return (
     <div className="flex flex-col gap-2 w-full">
       <a id="redux"></a>
-      <h1>Redux Toolkit</h1>
+      <h4>Redux Toolkit</h4>
       <div className="flex gap-4 w-full items-center">
         <Button       
           className="capitalize"

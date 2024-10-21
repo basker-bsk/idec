@@ -83,7 +83,7 @@ export default function FormWithZod() {
     <>
       <div className="flex flex-col w-full">
         <a id="form"></a>
-        <h1>Form</h1>
+        <h4>Form</h4>
       </div>
       <Card className="w-full lg:w-1/2">
         <CardHeader>

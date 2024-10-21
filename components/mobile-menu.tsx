@@ -29,7 +29,7 @@ export default function MobileMenu() {
           )}
         >
           <div className="p-6">
-            <ul className="text-[14px] font-semibold uppercase">
+            <ul className="text-[14px] font-medium uppercase">
               <li className="py-4 border-b border-gray-200">
                 <Link href="/" data-hover="Products">
                   Products

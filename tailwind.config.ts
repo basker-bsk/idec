@@ -16,7 +16,6 @@ const config = {
     container: {
       center: true,
       padding: "0",
-
     },
     screens: {
       sm: '360px',
@@ -26,7 +25,20 @@ const config = {
     },
     extend: {
       fontFamily: {
-        GothamRegular: ["'Gotham-Font', sans-serif"],
+        sans: ['var(--font-gotham)']
+      },
+      fontWeight: {
+        thin: '100',
+        hairline: '100',
+        extralight: '200',
+        light: '300',
+        normal: '400',
+        medium: '500',
+        semibold: '600',
+        bold: '700',
+        extrabold: '800',
+        'extra-bold': '800',
+        black: '900',
       },
       colors: {
         border: "hsl(var(--border))",
@@ -49,15 +61,7 @@ const config = {
         orangeTint: '#FFECD1',
         orangeTintDeep: '#FCF3EC',
         redTint: 'rgba(234, 14, 0, 0.1)',
-        lightOrange: '#FFF8EE',
-        // primary1: {
-        //   DEFAULT: "hsl(var(--primary))",
-        //   foreground: "hsl(var(--primary-foreground))",
-        // },
-        // secondary1: {
-        //   DEFAULT: "hsl(var(--secondary))",
-        //   foreground: "hsl(var(--secondary-foreground))",
-        // },
+        lightOrange: '#FFF8EE',   
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -86,10 +90,15 @@ const config = {
         14: `${pxToRem(14)}rem`,
         16: `${pxToRem(16)}rem`,
         18: `${pxToRem(18)}rem`,
+        20: `${pxToRem(20)}rem`,
         21: `${pxToRem(21)}rem`,
         24: `${pxToRem(24)}rem`,
         28: `${pxToRem(28)}rem`,
+        32: `${pxToRem(32)}rem`,
         38: `${pxToRem(38)}rem`,
+        40: `${pxToRem(40)}rem`,
+        42: `${pxToRem(42)}rem`,
+        48: `${pxToRem(48)}rem`,
         51: `${pxToRem(51)}rem`,
         67: `${pxToRem(67)}rem`,
         88: `${pxToRem(88)}rem`,
@@ -121,7 +130,7 @@ const config = {
       textColor: ['IDEC', 'APEM']
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require('postcss-nesting')],
 } satisfies Config;
 
 export default config;

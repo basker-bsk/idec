@@ -9,7 +9,7 @@ export default async function Products() {
     <div className="flex flex-col w-full">
       <a id="products"></a>
       <div className="flex w-full justify-between items-center">
-        <h1>Products</h1>
+        <h4>Products</h4>
         <div>
           <Link
             className="bg-pink-800 text-white hover:bg-pink-700 duration-300 transition-all text-sm rounded-md px-4 py-2"
@@ -37,7 +37,7 @@ export default async function Products() {
             <div className="flex flex-col">
               <p className="text-sm mt-4">{product.title}</p>
               <div className="flex justify-between items-center mt-2">
-                <p className="text-md font-semibold">${product.price}</p>
+                <p className="text-md font-medium">${product.price}</p>
                 <AddToCart product={product} name="Add" />
               </div>
             </div>

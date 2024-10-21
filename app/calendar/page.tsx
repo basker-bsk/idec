@@ -9,7 +9,7 @@ export default function DatePicker() {
   return (
     <div className="flex flex-col w-full">
       <a id="calendar"></a>
-      <h1>Calendar</h1>
+      <h4>Calendar</h4>
       <div className="flex flex-col lg:flex-row gap-10 justify-center">
         <Calendar
           mode="single"

@@ -28,11 +28,11 @@ export default function Accordian() {
   return (
     <div className="flex flex-col w-full">
       <a id="accordian"></a>
-      <h1>Accordian</h1>
+      <h4>Accordian</h4>
       <Accordion type="single" collapsible className="w-full">
         {acc.map((ac: any, index: number) => (
           <AccordionItem value={`item-${index}`} key={`item-${index}`}>
-            <AccordionTrigger className="text-lg font-semibold">
+            <AccordionTrigger className="text-lg">
               {ac.title}
             </AccordionTrigger>
             <AccordionContent className="text-[14px]">

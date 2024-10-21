@@ -1,14 +1,57 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-* {
-  font-family: "Poppins";
-}
-
 @import url(../public/fonts/icons.css);
+body {
+  &:lang(en) {
+    @apply text-14 md:text-16;
+    h1 {      
+      @apply text-40 md:text-48 font-medium leading-[62px];
+    }
+
+    h2 {
+      @apply text-32 md:text-40 font-medium leading-[52px];
+    }
+
+    h3 {
+      @apply text-24 md:text-32 font-medium;
+    }
+
+    h4 {
+      @apply text-18 md:text-24 font-medium;
+    }
+
+    p {
+      @apply text-14 md:text-16 font-medium;
+    }
+  }
+
+  &:lang(ch) {
+    @apply text-base md:text-lg;
+
+    h1 {
+      @apply text-42 md:text-51;
+    }
+
+    h2 {
+      @apply text-32 md:text-40;
+    }
+
+    h3 {
+      @apply text-24 md:text-32;
+    }
+
+    h4 {
+      @apply text-18 md:text-24;
+    }
+
+    p {
+      @apply text-14 md:text-16;
+    }
+
+  }
+}
 
 @layer base {
   :root {
@@ -76,13 +119,6 @@
     @apply bg-background text-foreground overflow-x-hidden;
   }
 
-  h1 {
-    @apply text-2xl lg:text-3xl font-bold my-2;
-  }
-
-  h2 {
-    @apply text-["14px"] lg:text-2xl font-semibold capitalize;
-  }
 }
 
 ::-webkit-scrollbar {

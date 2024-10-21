@@ -26,15 +26,15 @@ export default function Buttons() {
   ];
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="w-full">
       <a id="buttons"></a>
-      <h1>Buttons</h1>
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+      <h4>Buttons</h4>
+      <div className="flex">
         {buttonTypes.map((btypes: any, tid: number) => (
-          <div className="flex flex-col gap-2" key={`b-${tid}`}>
-            <h2 className="">{btypes.btype}</h2>
-            <Button theme={btypes.btype} className="capitalize">
-                {btypes.btype}
+          <div className="mr-12" key={`b-${tid}`}>
+            <p className="font-bold capitalize text-14">{btypes.btype}</p>
+            <Button theme={btypes.btype}  >
+                Learn more
               </Button>
           </div>
         ))}

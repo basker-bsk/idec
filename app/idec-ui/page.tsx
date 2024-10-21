@@ -34,7 +34,7 @@ export default function Home() {
       <Toggle />
       <div className="w-[180px]">
         <a id="selectbox"></a>
-        <h1>Select Box</h1>
+        <h4>Select Box</h4>
         <SelectBox />
       </div>
       <RadioButton />

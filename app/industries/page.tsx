@@ -29,7 +29,7 @@ export default async function Fashion() {
                     layout="responsive"
                     className="rounded-lg min-h-[200px]"
                   />
-                  <h2>{fashion.fields.title}</h2>
+                  <h4>{fashion.fields.title}</h4>
                   <p>{fashion.fields.brief.substring(0, 50) + "..."}</p>
                 </div>
               </Link>

@@ -13,7 +13,7 @@ export default function Cart() {
   return (
     <div className="grid grid-cols-12 gap-4">
       <div className="col-span-12 md:col-span-8">
-        <h2 className="py-2 mb-6 text-2xl">Your Cart</h2>
+        <h4 className="py-2 mb-6 text-2xl">Your Cart</h4>
         <div className="hidden md:flex items-center  justify-between border-b border-slate-400 text-slate-400 pb-3  mb-4">
           <div>Product</div>
           <div>Quantity</div>
@@ -39,7 +39,7 @@ export default function Cart() {
         </div>
       </div>
       <div className="col-span-12 md:col-span-4 sm:block bg-white border border-gray-300 rounded-lg  dark:bg-gray-700 dark:border-gray-700 text-slate-800 overflow-hidden hidden p-5 dark:text-slate-100 font-bold">
-        <h2 className="text-2xl pb-3">Cart total</h2>
+        <h4>Cart total</h4>
         <div className="flex items-center justify-between border-b border-slate-500 pb-6">
           <span>Subtotal </span>
           <span>${totalPrice.toFixed(2)}</span>

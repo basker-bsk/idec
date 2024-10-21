@@ -6,7 +6,7 @@ export default function RadioButton() {
     return (
         <div className="flex flex-col w-full">
             <a id="radiobutton"></a>
-            <h1>Radio button</h1>
+            <h4>Radio button</h4>
             <RadioGroup defaultValue="comfortable">
                 <div className="flex items-center space-x-2">
                     <RadioGroupItem value="default" id="r1" />

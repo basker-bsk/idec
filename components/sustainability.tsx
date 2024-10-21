@@ -15,9 +15,9 @@ export default function SustainabilityComponent() {
         />
       </div>
       <div className="p-6 w-full lg:w-7/12">
-        <h2 className="idec-title uppercase text-[32px] lg:text-[50px] font-extrabold mb-6">
+        <h4 className="idec-title uppercase text-[32px] lg:text-[50px] font-bold mb-6">
           Sustainability
-        </h2>
+        </h4>
         <p className="text-[14px] lg:text-[16px] mb-6">
           No matter your industry, APEM have the solutions you need to enhance
           productivity, efficiency, and user satisfaction. From material

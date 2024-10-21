@@ -40,7 +40,7 @@ export default async function ProductDetail({ params }: idType) {
           </div>
         </div>
         <div className="w-full lg:w-7/12">
-          <h1 className="text-2xl lg:text-[56px] tracking-tight leading-[56px] text-gray-800">
+          <h1>
             {detail.title}
           </h1>
           <p>

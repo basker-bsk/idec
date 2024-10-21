@@ -6,7 +6,7 @@ export default async function Users() {
     <>
       <div className="flex flex-col  w-full">
         <a id="users"></a>
-        <h1>USERS</h1>
+        <h4>USERS</h4>
         <ul>
           {users.map((user: any, id: number) => (
             <li key={`user-${id}`}>{user.name}</li>
