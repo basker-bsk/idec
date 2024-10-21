@@ -6,50 +6,34 @@
 body {
   &:lang(en) {
     @apply text-14 md:text-16;
-    h1 {      
-      @apply text-40 md:text-48 font-medium leading-[62px];
+    h1 {
+      @apply text-40 md:text-48 font-medium leading-[52px] md:leading-[62px];
     }
-
     h2 {
-      @apply text-32 md:text-40 font-medium leading-[52px];
+      @apply text-32 md:text-40 font-medium leading-[42px] md:leading-[52px];
     }
-
     h3 {
-      @apply text-24 md:text-32 font-medium;
+      @apply text-24 md:text-32 font-medium leading-[31px] md:leading-[42px];
     }
-
     h4 {
-      @apply text-18 md:text-24 font-medium;
-    }
-
-    p {
-      @apply text-14 md:text-16 font-medium;
+      @apply text-18 md:text-24 font-medium leading-[23px] md:leading-[31px];
     }
   }
 
   &:lang(ch) {
     @apply text-base md:text-lg;
-
     h1 {
       @apply text-42 md:text-51;
     }
-
     h2 {
       @apply text-32 md:text-40;
     }
-
     h3 {
       @apply text-24 md:text-32;
     }
-
     h4 {
       @apply text-18 md:text-24;
     }
-
-    p {
-      @apply text-14 md:text-16;
-    }
-
   }
 }
 
@@ -116,11 +100,11 @@ body {
   }
 
   body {
-    @apply bg-background text-foreground overflow-x-hidden;
+    @apply bg-background overflow-x-hidden text-gray900;
   }
-
 }
 
+/* Scroll Bar Styles */
 ::-webkit-scrollbar {
   width: 0.5rem;
   height: 0.25rem;
@@ -165,16 +149,16 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
-  button span[class*='icon-']{
+  button span[class*="icon-"] {
     @apply text-16;
   }
 }
 @media only screen and (min-width: 768px) {
-  button span[class*='icon-']{
+  button span[class*="icon-"] {
     @apply text-24;
   }
 }
-button.radio-box[aria-checked='true']{
+button.radio-box[aria-checked="true"] {
   @apply border-primary;
 }
 
@@ -185,8 +169,41 @@ button.radio-box[aria-checked='true']{
   padding-bottom: 40px;
 }
 
+/* Form Elemets */
 form {
   text-align: left !important;
+}
+input.error-field {
+  @apply border-secondary placeholder:text-secondary;
+}
+.custom-select[aria-expanded="true"] {
+  .lucide {
+    @apply rotate-180 ease-in-out duration-500;
+  }
+}
+.custom-select[aria-expanded="false"] {
+  .lucide {
+    @apply ease-in-out duration-500;
+  }
+}
+.radio-box {
+  .lucide {
+    @apply ease-in-out duration-500;
+  }
+}
+.custom-select {
+  span {
+    @apply text-gray400;
+  }
+}
+.checkbox-container {
+  @apply flex gap-2 items-center;
+  label {
+    @apply text-14 cursor-pointer leading-[18px];
+  }
+  + .error-msg {
+    @apply pl-10;
+  }
 }
 
 .custom-select button {
@@ -203,7 +220,7 @@ form {
   & h2 {
     @apply mb-0 font-bold;
 
-    &+p {
+    & + p {
       @apply lowercase text-xs font-bold text-gray-500;
       font-variant: small-caps;
     }
@@ -223,7 +240,7 @@ form {
 
   & input,
   & textarea {
-    @apply block w-full p-2 rounded-sm my-4;
+    @apply block w-full;
   }
 
   .error {
@@ -233,7 +250,7 @@ form {
 
 /* Header */
 .container {
-  @apply mx-auto max-w-[1280px];
+  @apply mx-auto max-w-[1440px];
 }
 
 .snip1168 {
@@ -392,7 +409,9 @@ form {
 .searchInput {
   width: 0;
   opacity: 0;
-  transition: width 0.3s ease, opacity 0.3s ease;
+  transition:
+    width 0.3s ease,
+    opacity 0.3s ease;
   padding: 0;
   border: none;
   outline: none;

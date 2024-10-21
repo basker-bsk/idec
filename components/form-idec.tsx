@@ -119,8 +119,8 @@ export default function IdecForm() {
                         onCheckedChange={field.onChange}
                       />
                     </FormControl>
-                    <div className="space-y-1 leading-none">
-                      <FormLabel className="text-[12px]">
+                    <div className="">
+                      <FormLabel className="text-12 leading-12">
                         I agree to APEMs Terms & Conditions and Privacy Policy
                       </FormLabel>
                     </div>
