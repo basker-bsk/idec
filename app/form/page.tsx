@@ -242,8 +242,8 @@ export default function FormWithZod() {
                   </FormItem>
                 )}
               />
-              <Button className="mt-6" type="submit">
-                Submit
+              <Button className="mt-6 w-full" type="submit">
+                Create Account
               </Button>
             </form>
           </Form>

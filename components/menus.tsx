@@ -9,8 +9,8 @@ export default function Menus() {
       text: "buttons",
     },
     {
-      link: "idec-ui/#calendar",
-      text: "calendar",
+      link: "idec-ui/#Typography",
+      text: "Typography",
     },
     {
       link: "products",

@@ -214,6 +214,9 @@ input.error-field {
   @apply bg-pink-800 text-white;
 }
 
+.gradient {
+  @apply bg-gradient-to-r from-gradient1 from-10%  to-gradient2 to-90%;
+}
 .card {
   @apply bg-white p-5 rounded-md shadow-sm my-5;
 

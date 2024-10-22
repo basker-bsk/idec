@@ -15,14 +15,16 @@ import Toggle from "../toggle/page";
 import SelectBox from "../selectbox/page";
 import RadioButton from "../radiobutton/page";
 import ButtonStyle from "@/components/ui/buttonStyle";
+import Typography from "../typography/page";
 
 export default function Home() {
   return (
     <main className="w-full flex flex-col gap-4">
       <Accordian />
-      <Buttons />      
+      <Buttons />
       <ButtonStyle />
       {/* <DatePicker /> */}
+      <Typography />
       <Modal />
       {/* <Products /> */}
       <PopoverDemo />

@@ -69,6 +69,8 @@ const config = {
         gray700: "#4F4F4F",
         gray800: "#454545",
         gray900: "#222222",
+        gradient1: "#C91111",
+        gradient2: "#7B0909",
         borderGray: "#B0B0B0",
         halfGray: "#D1D1D1",
         whiteTint: "rgba(255, 255, 255, 0.8)",
