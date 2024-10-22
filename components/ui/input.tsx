@@ -26,8 +26,8 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             onClick={() => setViews(!views)}
             className={classnames(
               "cursor-pointer absolute right-4 top-4 text-24",
-              { "icon-Seen": !views },
-              { "icon-Unseen": views }
+              { "icon-seen": !views },
+              { "icon-unseen": views }
             )}
           ></span>
         )}

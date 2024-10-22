@@ -1,11 +1,11 @@
 @font-face {
   font-family: "icomoon";
-  src: url("icomoon.eot?acsbm8");
+  src: url("icomoon.eot?fg6njm");
   src:
-    url("icomoon.eot?acsbm8#iefix") format("embedded-opentype"),
-    url("icomoon.ttf?acsbm8") format("truetype"),
-    url("icomoon.woff?acsbm8") format("woff"),
-    url("icomoon.svg?acsbm8#icomoon") format("svg");
+    url("icomoon.eot?fg6njm#iefix") format("embedded-opentype"),
+    url("icomoon.ttf?fg6njm") format("truetype"),
+    url("icomoon.woff?fg6njm") format("woff"),
+    url("icomoon.svg?fg6njm#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,145 +27,145 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-Documents:before {
+.icon-documents:before {
   content: "\e900";
 }
-.icon-Documents-Download:before {
+.icon-download:before {
   content: "\e901";
 }
-.icon-Zoom-Out:before {
+.icon-zoomout:before {
   content: "\e902";
 }
-.icon-Calendar:before {
+.icon-calendar:before {
   content: "\e903";
 }
-.icon-News:before {
+.icon-news:before {
   content: "\e904";
 }
-.icon-Table-Toggle-Filter:before {
+.icon-table-filter:before {
   content: "\e905";
 }
-.icon-Zoom-In:before {
+.icon-zoom-in:before {
   content: "\e906";
 }
-.icon-Application-Notes:before {
+.icon-application-notes:before {
   content: "\e907";
 }
-.icon-Catalog:before {
+.icon-catalog:before {
   content: "\e908";
 }
-.icon-Software-Updates:before {
+.icon-software-updates:before {
   content: "\e909";
 }
-.icon-CAD-File:before {
+.icon-cad-file:before {
   content: "\e90a";
 }
-.icon-Products:before {
+.icon-products:before {
   content: "\e90b";
 }
-.icon-Related-Series:before {
+.icon-related-series:before {
   content: "\e90c";
 }
-.icon-User-Manual:before {
+.icon-user-manual:before {
   content: "\e90d";
 }
-.icon-Contact-us:before {
+.icon-contact-us:before {
   content: "\e90e";
 }
-.icon-Key-feature:before {
+.icon-key-feature:before {
   content: "\e90f";
 }
-.icon-Product-Details:before {
+.icon-product-Details:before {
   content: "\e910";
 }
-.icon-Support:before {
+.icon-support:before {
   content: "\e911";
 }
-.icon-Video:before {
+.icon-video:before {
   content: "\e912";
 }
-.icon-Checked:before {
+.icon-checked:before {
   content: "\e913";
 }
-.icon-Discontinued:before {
+.icon-discontinued:before {
   content: "\e914";
 }
-.icon-Lock:before {
+.icon-lock:before {
   content: "\e915";
 }
 .icon-promocode:before {
   content: "\e916";
 }
-.icon-Configure:before {
+.icon-configure:before {
   content: "\e917";
 }
-.icon-Delete:before {
+.icon-delete:before {
   content: "\e918";
 }
-.icon-Favourite:before {
+.icon-favourite:before {
   content: "\e919";
 }
-.icon-More:before {
+.icon-more:before {
   content: "\e91a";
 }
-.icon-Play-Button:before {
+.icon-play-Button:before {
   content: "\e91b";
 }
-.icon-Harmony:before {
+.icon-harmony:before {
   content: "\e91d";
 }
-.icon-Social-FB:before {
+.icon-social-FB:before {
   content: "\e91f";
 }
-.icon-Social-IG:before {
+.icon-social-IG:before {
   content: "\e920";
 }
-.icon-Social-tiktok:before {
+.icon-social-tiktok:before {
   content: "\e921";
 }
-.icon-Social-Twitter:before {
+.icon-social-Twitter:before {
   content: "\e922";
 }
-.icon-Social-YT:before {
+.icon-social-YT:before {
   content: "\e923";
 }
-.icon-Error:before {
+.icon-error:before {
   content: "\e924";
 }
-.icon-Menu:before {
+.icon-menu:before {
   content: "\e925";
 }
-.icon-Seen:before {
+.icon-seen:before {
   content: "\e926";
 }
-.icon-Unseen:before {
+.icon-unseen:before {
   content: "\e927";
 }
-.icon-Automotive:before {
+.icon-automotive:before {
   content: "\e928";
 }
-.icon-Edit:before {
+.icon-edit:before {
   content: "\e929";
 }
-.icon-Info:before {
+.icon-info:before {
   content: "\e92a";
 }
-.icon-Tick:before {
+.icon-tick:before {
   content: "\e92b";
 }
-.icon-Download:before {
+.icon-download:before {
   content: "\e92c";
 }
-.icon-Filter:before {
+.icon-filter:before {
   content: "\e92d";
 }
-.icon-Import:before {
+.icon-import:before {
   content: "\e92e";
 }
-.icon-Sort:before {
+.icon-sort:before {
   content: "\e92f";
 }
-.icon-Star:before {
+.icon-star:before {
   content: "\e930";
 }
 .icon-arrowleft:before {
@@ -177,13 +177,13 @@
 .icon-arrowright:before {
   content: "\e933";
 }
-.icon-Close:before {
+.icon-close:before {
   content: "\e934";
 }
-.icon-Print:before {
+.icon-print:before {
   content: "\e935";
 }
-.icon-Share:before {
+.icon-share:before {
   content: "\e936";
 }
 .icon-chevron-left:before {
@@ -216,9 +216,21 @@
 .icon-cart:before {
   content: "\e940";
 }
-.icon-Saved-Cart:before {
+.icon-saved-cart:before {
   content: "\e941";
 }
 .icon-search:before {
   content: "\e942";
+}
+.icon-certification:before {
+  content: "\e91c";
+}
+.icon-globe:before {
+  content: "\e91e";
+}
+.icon-product-changes:before {
+  content: "\e943";
+}
+.icon-linkedin:before {
+  content: "\eac9";
 }
