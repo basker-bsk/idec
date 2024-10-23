@@ -14,10 +14,10 @@ const headingLineHeight = (fontSize: number) => {
 const config = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./pages/**/*.{ts,tsx,js}",
+    "./components/**/*.{ts,tsx,js}",
+    "./app/**/*.{ts,tsx,js}",
+    "./src/**/*.{ts,tsx,js}",
   ],
   prefix: "",
   theme: {

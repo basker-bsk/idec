@@ -1,0 +1,751 @@
+{
+  "data": {
+    "headerCollection": {
+      "items": [
+        {
+          "hdName": "Header - IDEC",
+          "hdSearchBoxPlaceholder": "Search products, keywords or documents",
+          "hdWelcomeUserPrelogin": "Hi, Guest",
+          "hdWelcomeUserPostlogin": "Welcome Back",
+          "hdLoginLabel": "Login / Sign Up",
+          "hdLogoutLabel": "Logout",
+          "hdRegionIndicator": "You are in",
+          "hdProductFinder": "PRODUCT FINDER",
+          "hdProductFinderHeading": "Enhance Your Search",
+          "hdProductFinderIntroText": "The product finder helps you quickly find the right solutions for your needs.",
+          "hdLogo": {
+            "fileName": "idec-logo-red.png",
+            "url": "https://images.ctfassets.net/fg4hnnyn9urp/4yAkjh1RP7CtQkc5jyXwjw/5b3ab557780be208f58f19f00bb6e883/idec-logo-red.png",
+            "title": "IDEC Red logo",
+            "description": ""
+          },
+          "hdProductFinderLink": {
+            "linkText": "Try it Out",
+            "linkUrl": "/try-it-out",
+            "linkNewWindow": false,
+            "linkClass": null,
+            "linkId": null
+          },
+          "hdMainNavigation": {
+            "menusTitle": "Main Navigation",
+            "menusDescription": "Header Menu",
+            "menusItemsCollection": {
+              "items": [
+                {
+                  "sys": {
+                    "id": "35qZlV98tdFnFYSiLYg41O"
+                  },
+                  "linkText": "All Products",
+                  "linkUrl": "/all-products",
+                  "linkIcon": "/assets/images/switch.png",
+                  "linkFromSap": false,
+                  "linkClass": null,
+                  "linkId": null,
+                  "linkHideText": false,
+                  "linkNewWindow": false,
+                  "linkChildrenCollection": {
+                    "items": [
+                      {
+                        "linkText": "Automation",
+                        "linkUrl": "/all-products/automation",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": false,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": false,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      },
+                      {
+                        "linkText": "Safety & Explosion Protection",
+                        "linkUrl": "/all-products/safety-explosion-protection",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": false,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": false,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      },
+                      {
+                        "linkText": "Switches & Indicators",
+                        "linkUrl": "/all-products/switches-indicators",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": false,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": false,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": [
+                            {
+                              "linkText": "Switches & Pushbuttons",
+                              "linkUrl": "/all-products/switches-indicators/switches-pushbuttons",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": false,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": false,
+                              "linkNewWindow": false
+                            },
+                            {
+                              "linkText": "Indicator Lights & Buzzers",
+                              "linkUrl": "/all-products/switches-indicators/indicator-lights-buzzers",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": false,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": false,
+                              "linkNewWindow": false
+                            },
+                            {
+                              "linkText": "LED Lighting",
+                              "linkUrl": "/all-products/switches-indicators/led-lighting",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": false,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": false,
+                              "linkNewWindow": false
+                            },
+                            {
+                              "linkText": "Explore All",
+                              "linkUrl": "/all-products/switches-indicators/explore-all",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": false,
+                              "linkClass": null,
+                              "linkId": "Explore-All",
+                              "linkHideText": false,
+                              "linkNewWindow": false
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "linkText": "Industrial Components",
+                        "linkUrl": "/all-products/industrial-components",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": false,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": false,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      },
+                      {
+                        "linkText": "Auto-ID",
+                        "linkUrl": "/all-products/auto-id",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": false,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": false,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "sys": {
+                    "id": "31fsibHc8tsZ1chEbjnTNN"
+                  },
+                  "linkText": "Product Finder",
+                  "linkUrl": "/product-finder",
+                  "linkIcon": "/assets/images/switch.png",
+                  "linkFromSap": false,
+                  "linkClass": "red-link",
+                  "linkId": null,
+                  "linkHideText": false,
+                  "linkNewWindow": false,
+                  "linkChildrenCollection": {
+                    "items": []
+                  }
+                },
+                {
+                  "sys": {
+                    "id": "2hqVLtIVcALJKCGs8O6Nfc"
+                  },
+                  "linkText": "Industries",
+                  "linkUrl": "/industries",
+                  "linkIcon": "/assets/images/switch.png",
+                  "linkFromSap": false,
+                  "linkClass": null,
+                  "linkId": null,
+                  "linkHideText": false,
+                  "linkNewWindow": false,
+                  "linkChildrenCollection": {
+                    "items": [
+                      {
+                        "linkText": "Automative",
+                        "linkUrl": "/industries/automative",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": false,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": false,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": [
+                            {
+                              "linkText": "Time Efficiency",
+                              "linkUrl": "/industries/automative/time-efficiency",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": null,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": null,
+                              "linkNewWindow": false
+                            },
+                            {
+                              "linkText": "Simplify Traceability System Installation",
+                              "linkUrl": "/industries/automative/simplify-traceability-system-installation",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": null,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": null,
+                              "linkNewWindow": false
+                            },
+                            {
+                              "linkText": "Reduce Injuries",
+                              "linkUrl": "/industries/automative/reduce-injuries",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": null,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": null,
+                              "linkNewWindow": false
+                            },
+                            {
+                              "linkText": "Improve Visibility & Maintenance Time",
+                              "linkUrl": "/industries/automative/improve-visibility-maintenance-time",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": null,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": null,
+                              "linkNewWindow": false
+                            },
+                            {
+                              "linkText": "Optmise Small Equipment Safety",
+                              "linkUrl": "/industries/automative/optmise-small-equipment-safety",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": null,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": null,
+                              "linkNewWindow": false
+                            },
+                            {
+                              "linkText": "Explore All",
+                              "linkUrl": "/industries/automative/explore-all",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": false,
+                              "linkClass": null,
+                              "linkId": "Explore-All",
+                              "linkHideText": false,
+                              "linkNewWindow": false
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "linkText": "Machine Tools",
+                        "linkUrl": "/industries/machine-tools",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": false,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": false,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": [
+                            {
+                              "linkText": "Machine tools(empty)",
+                              "linkUrl": "/industries/machine-tools/empty",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": null,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": null,
+                              "linkNewWindow": true
+                            },
+                            {
+                              "linkText": "Machine Tools(empty 2)",
+                              "linkUrl": "/machine-tools/empty2",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": null,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": null,
+                              "linkNewWindow": true
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "linkText": "Robotics",
+                        "linkUrl": "/industries/robotics",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": false,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": false,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": [
+                            {
+                              "linkText": "Robotics(empty)",
+                              "linkUrl": "/robotics/empty",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": null,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": null,
+                              "linkNewWindow": true
+                            },
+                            {
+                              "linkText": "Robotics(empty2)",
+                              "linkUrl": "/robotics/empty2",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": null,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": null,
+                              "linkNewWindow": true
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "linkText": "Material Handling",
+                        "linkUrl": "/industries/material-handling",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": false,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": false,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": [
+                            {
+                              "linkText": "Material Handling(empty)",
+                              "linkUrl": "/material-handling/empty",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": null,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": null,
+                              "linkNewWindow": true
+                            },
+                            {
+                              "linkText": "Material Handling(empty2)",
+                              "linkUrl": "/material-handling/empty2",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": null,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": null,
+                              "linkNewWindow": true
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "linkText": "Food and Packaging",
+                        "linkUrl": "/industries/food-and-packaging",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": false,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": false,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": [
+                            {
+                              "linkText": "Food and Packaging(empty1)",
+                              "linkUrl": "/food-packaging/empty",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": null,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": null,
+                              "linkNewWindow": true
+                            },
+                            {
+                              "linkText": "Food and Packaging(empty2)",
+                              "linkUrl": "/food-packaging/empty2",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": null,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": null,
+                              "linkNewWindow": true
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "linkText": "Semi Conductor",
+                        "linkUrl": "/industries/semi-conductor",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": false,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": false,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": [
+                            {
+                              "linkText": "Semi Conductor dummy link (1)",
+                              "linkUrl": "/semi-conductor-dummy-link",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": null,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": null,
+                              "linkNewWindow": true
+                            },
+                            {
+                              "linkText": "Semi Conductor dummy link (2)",
+                              "linkUrl": "/semi-conductor-dummy-link",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": null,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": null,
+                              "linkNewWindow": true
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "linkText": "Special Vehicles",
+                        "linkUrl": "/industries/special-vehicles",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": false,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": false,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": [
+                            {
+                              "linkText": "Special Vehicles dummy link (1)",
+                              "linkUrl": "/special-vehicles-dummy-link",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": null,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": null,
+                              "linkNewWindow": true
+                            },
+                            {
+                              "linkText": "Special Vehicles dummy link (2)",
+                              "linkUrl": "/special-vehicles-dummy-link",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": null,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": null,
+                              "linkNewWindow": true
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "sys": {
+                    "id": "2UJbmqmrMtnNeKncfSvrZ4"
+                  },
+                  "linkText": "Solutions",
+                  "linkUrl": "/solutions",
+                  "linkIcon": "/assets/images/switch.png",
+                  "linkFromSap": false,
+                  "linkClass": null,
+                  "linkId": null,
+                  "linkHideText": false,
+                  "linkNewWindow": false,
+                  "linkChildrenCollection": {
+                    "items": [
+                      {
+                        "linkText": "Solution dummy 1",
+                        "linkUrl": "/solution/dummy1",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": null,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": null,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      },
+                      {
+                        "linkText": "Solutions dummy 2",
+                        "linkUrl": "/solutions/dummy2",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": null,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": null,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "sys": {
+                    "id": "4D3WANgzZBpLTFG1n0V1Eg"
+                  },
+                  "linkText": "Resources",
+                  "linkUrl": "/resources",
+                  "linkIcon": "/assets/images/switch.png",
+                  "linkFromSap": false,
+                  "linkClass": null,
+                  "linkId": null,
+                  "linkHideText": false,
+                  "linkNewWindow": false,
+                  "linkChildrenCollection": {
+                    "items": [
+                      {
+                        "linkText": "CAD Files",
+                        "linkUrl": "/resou/cad-files",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": null,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": null,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      },
+                      {
+                        "linkText": "Applications Notes",
+                        "linkUrl": "/resources/application-notes",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": null,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": null,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      },
+                      {
+                        "linkText": "Catalogs & Brochures",
+                        "linkUrl": "/resources/catalogs-brochures",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": null,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": null,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      },
+                      {
+                        "linkText": "Video Library",
+                        "linkUrl": "/resources/video-library",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": null,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": null,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      },
+                      {
+                        "linkText": "Certifications",
+                        "linkUrl": "/resources/certifications",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": null,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": null,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      },
+                      {
+                        "linkText": "Vulnerability Reports",
+                        "linkUrl": "/resources/vulnerability-reports",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": null,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": null,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      },
+                      {
+                        "linkText": "Whitepapers",
+                        "linkUrl": "/resources/white-papers",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": null,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": null,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "sys": {
+                    "id": "1AJhnVGILfBq9GTfk6Ehlt"
+                  },
+                  "linkText": "Happenings",
+                  "linkUrl": "/happenings",
+                  "linkIcon": "/assets/images/switch.png",
+                  "linkFromSap": false,
+                  "linkClass": null,
+                  "linkId": null,
+                  "linkHideText": false,
+                  "linkNewWindow": false,
+                  "linkChildrenCollection": {
+                    "items": [
+                      {
+                        "linkText": "Blogs/News",
+                        "linkUrl": "/happenings/blogs-news",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": null,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": null,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      },
+                      {
+                        "linkText": "Events/Seminars",
+                        "linkUrl": "/happenings/events-seminars",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": null,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": null,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      },
+                      {
+                        "linkText": "Campaigns",
+                        "linkUrl": "/happenings/campaigns",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": null,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": null,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "sys": {
+                    "id": "64LLVEM5vRusyMdtJTLr5x"
+                  },
+                  "linkText": "Support",
+                  "linkUrl": "/support",
+                  "linkIcon": "/assets/images/switch.png",
+                  "linkFromSap": false,
+                  "linkClass": null,
+                  "linkId": null,
+                  "linkHideText": false,
+                  "linkNewWindow": false,
+                  "linkChildrenCollection": {
+                    "items": [
+                      {
+                        "linkText": "FAQs",
+                        "linkUrl": "/support/faqs",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": null,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": null,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      },
+                      {
+                        "linkText": "Contact Us",
+                        "linkUrl": "/support/contact-us",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": null,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": null,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      },
+                      {
+                        "linkText": "Distributor Locator",
+                        "linkUrl": "/support/distributor-locator",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": null,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": null,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      },
+                      {
+                        "linkText": "Unauthorised Channels",
+                        "linkUrl": "/support/unauthorised-channels",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": null,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": null,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -2,26 +2,26 @@ import "./globals.css";
 import { Providers } from "./GlobalRedux/provider";
 import type { Metadata } from "next";
 import FooterIdec from "@/components/footer-idec";
-import HeaderIdec from "@/components/header-idec";
-import localFont from '@next/font/local'
+import Header from "@/components/Header/Header";
+import localFont from "next/font/local";
 
 const gotham = localFont({
   src: [
     {
-      path: '../public/fonts/Gotham-Book.otf',
-      weight: '400'
+      path: "../public/fonts/Gotham-Book.otf",
+      weight: "400",
     },
     {
-      path: '../public/fonts/Gotham-Medium.otf',
-      weight: '500'
+      path: "../public/fonts/Gotham-Medium.otf",
+      weight: "500",
     },
     {
-      path: '../public/fonts/Gotham-Bold.otf',
-      weight: '700'
-    }
+      path: "../public/fonts/Gotham-Bold.otf",
+      weight: "700",
+    },
   ],
-  variable: '--font-gotham'
-})
+  variable: "--font-gotham",
+});
 
 export const metadata: Metadata = {
   title: "IDEC Home page",
@@ -39,7 +39,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/assets/images/favicon.ico" />
         <body className="IDEC bg-gray-50">
           <Providers initialReduxState="">
-            <HeaderIdec />
+            <Header />
             <main className="mx-auto container">{children}</main>
             <FooterIdec />
           </Providers>

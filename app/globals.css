@@ -106,7 +106,7 @@ body {
 
 /* Scroll Bar Styles */
 ::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 5px;
   height: 0.25rem;
 }
 
@@ -119,13 +119,13 @@ body {
   --bg-opacity: 1;
   border-radius: 0.25rem;
   border-width: 0;
-  @apply bg-slate-400;
+  @apply bg-gray200;
 }
 
 ::-webkit-scrollbar-thumb:active,
 ::-webkit-scrollbar-thumb:hover {
   --bg-opacity: 1;
-  @apply bg-slate-500;
+  @apply bg-gray200;
 }
 
 ::-webkit-scrollbar-track {
@@ -136,12 +136,12 @@ body {
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-track:hover {
   --bg-opacity: 1;
-  @apply bg-slate-300;
+  @apply bg-gray50;
 }
 
 ::-webkit-scrollbar-track:active {
   --bg-opacity: 1;
-  @apply bg-slate-300;
+  @apply bg-gray50;
 }
 
 ::-webkit-scrollbar-corner {
@@ -217,6 +217,7 @@ input.error-field {
 .gradient {
   @apply bg-gradient-to-r from-gradient1 from-10%  to-gradient2 to-90%;
 }
+
 .card {
   @apply bg-white p-5 rounded-md shadow-sm my-5;
 
@@ -379,23 +380,40 @@ form {
 
 @media only screen and (min-width: 768px) {
   .overlaySection {
-    top: 108px;
+    top: 48px;
     z-index: 2;
   }
 
   .megamenu-dropdown {
     left: 0;
     z-index: 3;
-    top: 108px;
-    padding: 20px 0;
+    top: 47px;
+    position: absolute;
+    width: 100%;
+  }
+  .LevelZero {
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-    @apply lg:border-t lg:border-gray-100;
+  }
+  .levelOne {
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 8px 8px;
+    width: 100%;
+  }
+  .desktop-menu {
+    .level-0 {
+      li:first-child:hover {
+        @apply text-white bg-gradient-to-r from-gradient1 from-10%  to-gradient2 to-90%;
+      }
+    }
   }
 }
 
 /* Overlay */
 .overlay {
   @apply fixed top-0 left-0 h-full w-full bg-black z-50 opacity-75;
+}
+.pfs-container {
+  @apply w-full bg-black;
 }
 
 /* Search */
