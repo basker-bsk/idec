@@ -5,17 +5,17 @@ import { useEffect, useState } from "react";
 import LevelOne from "./LevelOne";
 
 const DesktopMenu = ({ setShowOverlay, menuItems }) => {
-  const [subCategories, setSubCategories] = useState([]);
+  const [levelOneMenus, setLevelOneMenus] = useState([]);
   const [menuActive, setMenuActive] = useState("");
 
   const showMenu = (subCategory, index) => {
-    setSubCategories(subCategory);
+    setLevelOneMenus(subCategory);
     setShowOverlay(true);
     setMenuActive(index);
   };
 
   const hideMenu = () => {
-    setSubCategories("");
+    setLevelOneMenus("");
     setShowOverlay(false);
     setMenuActive("");
   };
@@ -81,9 +81,9 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
               ))}
             </ul>
           </div>
-          {subCategories && subCategories.length > 0 && (
+          {levelOneMenus && levelOneMenus.length > 0 && (
             <div className=" megamenu-dropdown">
-              <LevelOne subCategories={subCategories} />
+              <LevelOne levelOneMenus={levelOneMenus} />
             </div>
           )}
         </div>

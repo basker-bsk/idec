@@ -5,15 +5,24 @@ import LevelTwo from "./LevelTwo";
 import Image from "next/image";
 import ProductFinderSearch from "./ProductFinderSearch";
 import { useState } from "react";
-export default function LevelOne({ subCategories }) {
+export default function LevelOne({ levelOneMenus }) {
+  const [levelTwoMenus, setLevelTwoMenus] = useState([]);
   const [menuActive, setMenuActive] = useState({
     activeMenu: false,
     activeIndex: "",
   });
-  const ActiveMenu = (index) => {
+
+  const showMenu = (subCategory, index) => {
+    setLevelTwoMenus(subCategory);
     setMenuActive({
       activeMenu: true,
       activeIndex: index,
+    });
+  };
+  const hideMenu = () => {
+    setMenuActive({
+      activeMenu: false,
+      activeIndex: "",
     });
   };
   return (
@@ -22,27 +31,28 @@ export default function LevelOne({ subCategories }) {
         <div className="mx-auto container flex w-full justify-between">
           <div className={classnames("flex flex-col p-4 w-2/3 ")}>
             <p className="text-14 text-gray-400  mb-4">Browse by categories</p>
-            <div className="overflow-y-auto h-[420px]">
-              {subCategories.map((submenu, index) => (
-                <div className="" key={submenu && submenu.name}>
-                  <Link
+            <div className="overflow-y-auto h-[431px]">
+              {levelOneMenus.map((levelOne, index) => (
+                <div className="" key={levelOne.linkText}>
+                  <div
                     className={classnames(
                       "text-20 leading-20 flex gap-2 items-center p-4 relative hover:text-primary hover:bg-gray-50 rounded-md"
                     )}
-                    href={submenu.linkUrl}
-                    title={submenu.linkText}
                     onMouseEnter={() => {
-                      ActiveMenu(index);
+                      showMenu(levelOne.linkChildrenCollection.items, index);
+                    }}
+                    onMouseLeave={() => {
+                      hideMenu();
                     }}
                   >
                     <Image
-                      src={submenu.linkIcon ? submenu.linkIcon : ""}
+                      src={levelOne.linkIcon ? levelOne.linkIcon : ""}
                       width={42}
                       height={42}
-                      alt={submenu.linkText}
+                      alt={levelOne.linkText}
                       className="w-10 h-10 bottom-1 border-gray-400"
                     ></Image>
-                    <span>{submenu.linkText}</span>
+                    <span>{levelOne.linkText}</span>
                     <span
                       className={classnames(
                         "icon-arrowright rounded-full  w-8 h-8 p-[6px]  text-black absolute right-4 top-1/2 -translate-y-1/2",
@@ -52,12 +62,12 @@ export default function LevelOne({ subCategories }) {
                         }
                       )}
                     ></span>
-                  </Link>
+                  </div>
 
-                  {/* {submenu?.subCategories &&
-                  submenu?.subCategories.length > 0 && (
+                  {/* {submenu?.levelOneMenus &&
+                  submenu?.levelOneMenus.length > 0 && (
                     <div className={classnames("flex flex-col p-4 w-1/3")}>
-                      <LevelTwo subCategories={submenu.subCategories} />
+                      <LevelTwo levelOneMenus={submenu.levelOneMenus} />
                     </div>
                   )} */}
                 </div>
