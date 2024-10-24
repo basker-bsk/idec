@@ -391,13 +391,7 @@ form {
     position: absolute;
     width: 100%;
   }
-  .LevelZero {
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-  }
   .levelOne {
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 8px 8px;
-    width: 100%;
   }
   .desktop-menu {
     .level-0 {

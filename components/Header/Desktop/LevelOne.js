@@ -12,14 +12,19 @@ export default function LevelOne({ levelOneMenus }) {
     activeIndex: "",
   });
 
-  const showMenu = (subCategory, index) => {
+  const showLevelTwoMenu = (subCategory) => {
     setLevelTwoMenus(subCategory);
+  };
+
+  const hoverLevelOneMenu = (index) => {
     setMenuActive({
       activeMenu: true,
       activeIndex: index,
     });
   };
+
   const hideMenu = () => {
+    setLevelTwoMenus([]);
     setMenuActive({
       activeMenu: false,
       activeIndex: "",
@@ -27,9 +32,10 @@ export default function LevelOne({ levelOneMenus }) {
   };
   return (
     <div className="container border-t border-gray100 mx-auto relative ">
-      <div className="levelOne w-full h-[500px]  bg-white  cursor-pointer  lg:top-[48px] max-h-100">
+      <div className="shadow-md w-full h-[500px]  bg-white  cursor-pointer max-h-100 rounded-br-md rounded-bl-md">
         <div className="mx-auto container flex w-full justify-between">
-          <div className={classnames("flex flex-col p-4 w-2/3 ")}>
+          {/* Level One  Starts here */}
+          <div className={classnames("levelOne flex flex-col p-4 w-2/3")}>
             <p className="text-14 text-gray-400  mb-4">Browse by categories</p>
             <div className="overflow-y-auto h-[431px]">
               {levelOneMenus.map((levelOne, index) => (
@@ -39,7 +45,10 @@ export default function LevelOne({ levelOneMenus }) {
                       "text-20 leading-20 flex gap-2 items-center p-4 relative hover:text-primary hover:bg-gray-50 rounded-md"
                     )}
                     onMouseEnter={() => {
-                      showMenu(levelOne.linkChildrenCollection.items, index);
+                      hoverLevelOneMenu(index);
+                    }}
+                    onClick={() => {
+                      showLevelTwoMenu(levelOne.linkChildrenCollection.items);
                     }}
                     onMouseLeave={() => {
                       hideMenu();
@@ -63,17 +72,20 @@ export default function LevelOne({ levelOneMenus }) {
                       )}
                     ></span>
                   </div>
-
-                  {/* {submenu?.levelOneMenus &&
-                  submenu?.levelOneMenus.length > 0 && (
-                    <div className={classnames("flex flex-col p-4 w-1/3")}>
-                      <LevelTwo levelOneMenus={submenu.levelOneMenus} />
-                    </div>
-                  )} */}
                 </div>
               ))}
             </div>
           </div>
+
+          {/* Level Two Starts here */}
+          {levelTwoMenus && levelTwoMenus.length > 0 && (
+            <div className={classnames("levelTwo flex flex-col p-4 w-2/3")}>
+              <div className={classnames("flex flex-col p-4 w-1/3")}>
+                <LevelTwo levelTwoMenus={levelTwoMenus} />
+              </div>
+            </div>
+          )}
+
           <div className="flex w-1/3">
             <ProductFinderSearch />
           </div>

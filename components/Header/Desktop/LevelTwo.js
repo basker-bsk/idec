@@ -1,18 +1,22 @@
 "use client";
 import classnames from "classnames";
 import Link from "next/link";
-export default function LevelTwo(props) {
+export default function LevelTwo({ levelTwoMenus }) {
   return (
     <>
       <ul className="flex flex-col max-h-80 flex-wrap gap-x-4">
-        {props.subCategories.map((level2, index) => (
+        {levelTwoMenus.map((levelTwo, index) => (
           <>
             <li
-              key={level2.name}
+              key={levelTwo.linkText}
               className={classnames("text-[12px] mb-2 hover:text-red-800")}
             >
-              <Link className="" href="/" title={level2.name} />
-              {level2.name}
+              <Link
+                className=""
+                href={levelTwo.linkUrl}
+                title={levelTwo.linkText}
+              />
+              {levelTwo.linkText}
             </li>
           </>
         ))}

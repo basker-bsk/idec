@@ -29,7 +29,7 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
           }}
           className=""
         >
-          <div className="bg-white LevelZero desktop-menu ">
+          <div className="bg-white shadow-md desktop-menu ">
             <ul className=" container mx-auto level-0 text-14 leading-14 md:text-16 md:leading-18 font-medium lg:flex gap-2 items-center">
               {menuItems.map((menu, index) => (
                 <li
