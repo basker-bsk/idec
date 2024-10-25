@@ -5,8 +5,7 @@ export default function LevelTwo({ levelTwoMenus }) {
   return (
     <>
       <ul className="flex flex-col max-h-80 flex-wrap gap-x-4">
-        {levelTwoMenus.map((levelTwo, index) => (
-          <>
+        {levelTwoMenus.map((levelTwo, index) => (          
             <li
               key={levelTwo.linkText}
               className={classnames("text-[12px] mb-2 hover:text-red-800")}
@@ -17,8 +16,7 @@ export default function LevelTwo({ levelTwoMenus }) {
                 title={levelTwo.linkText}
               />
               {levelTwo.linkText}
-            </li>
-          </>
+            </li>          
         ))}
       </ul>
     </>

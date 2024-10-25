@@ -10,7 +10,9 @@ import { useState } from "react";
 import CartComponent from "../cart";
 export default function Header() {
   const [showOverlay, setShowOverlay] = useState(false);
-
+  let Menus = MenuLinks?.data?.headerCollection?.items[0]?.hdMainNavigation
+  ?.menusItemsCollection?.items
+  
   return (
     <div className="flex flex-col header relative z-10">
       <div className="bg-black ">
@@ -51,10 +53,7 @@ export default function Header() {
       </div>
       <div className="relative hidden lg:flex lg:flex-col border-t border-gray100 ">
         <DesktopMenu
-          menuItems={
-            MenuLinks?.data?.headerCollection?.items[0]?.hdMainNavigation
-              ?.menusItemsCollection?.items
-          }
+          menuItems={Menus}
           setShowOverlay={setShowOverlay}
         />
       </div>

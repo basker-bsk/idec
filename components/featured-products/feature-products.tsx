@@ -37,7 +37,7 @@ export default function FeatureProducts() {
   }, [selectedCategory]);
   useEffect(() => {
     if (productList.length > 0) {
-      console.log(productList);
+      // console.log(productList);
     }
   }, [productList]);
 
