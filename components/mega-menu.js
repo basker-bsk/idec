@@ -24,7 +24,7 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
             hideMenu();
           }}
         >
-          <ul className="snip1168 nav text-[14px] font-medium uppercase lg:flex gap-4 items-center">
+          <ul className="nav text-[14px] font-medium uppercase lg:flex gap-4 items-center">
             {menuItems.map((menu, index) => (
               <li
                 className="cursor-pointer mr-20 lg:mr-40 last:mr-0 uppercase "

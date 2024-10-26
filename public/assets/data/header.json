@@ -90,7 +90,31 @@
                               "linkClass": null,
                               "linkId": null,
                               "linkHideText": false,
-                              "linkNewWindow": false
+                              "linkNewWindow": false,
+                              "linkChildrenCollection": {
+                                "items": [
+                                  {
+                                    "linkText": "Push Buttons & Pilot Lights",
+                                    "linkUrl": "/all-products/push-buttons-pilot-lights",
+                                    "linkIcon": "/assets/images/switch.png",
+                                    "linkFromSap": false,
+                                    "linkClass": null,
+                                    "linkId": null,
+                                    "linkHideText": false,
+                                    "linkNewWindow": false
+                                  },
+                                  {
+                                    "linkText": "Emergency Stop Switches",
+                                    "linkUrl": "/all-products/Emergency-Stop-Switches",
+                                    "linkIcon": "/assets/images/switch.png",
+                                    "linkFromSap": false,
+                                    "linkClass": null,
+                                    "linkId": null,
+                                    "linkHideText": false,
+                                    "linkNewWindow": false
+                                  }
+                                ]
+                              }
                             },
                             {
                               "linkText": "Indicator Lights & Buzzers",
@@ -100,7 +124,31 @@
                               "linkClass": null,
                               "linkId": null,
                               "linkHideText": false,
-                              "linkNewWindow": false
+                              "linkNewWindow": false,
+                              "linkChildrenCollection": {
+                                "items": [
+                                  {
+                                    "linkText": "Indicator & Pilot Lights",
+                                    "linkUrl": "/all-products/push-buttons-pilot-lights",
+                                    "linkIcon": "/assets/images/switch.png",
+                                    "linkFromSap": false,
+                                    "linkClass": null,
+                                    "linkId": null,
+                                    "linkHideText": false,
+                                    "linkNewWindow": false
+                                  },
+                                  {
+                                    "linkText": "Indicator Stop Switches",
+                                    "linkUrl": "/all-products/Emergency-Stop-Switches",
+                                    "linkIcon": "/assets/images/switch.png",
+                                    "linkFromSap": false,
+                                    "linkClass": null,
+                                    "linkId": null,
+                                    "linkHideText": false,
+                                    "linkNewWindow": false
+                                  }
+                                ]
+                              }
                             },
                             {
                               "linkText": "LED Lighting",

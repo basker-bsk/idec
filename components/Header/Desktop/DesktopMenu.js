@@ -34,15 +34,16 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
           }}
           className=""
         >
-          <div className="bg-white shadow-md desktop-menu ">
-            <ul className=" container mx-auto level-0 text-14 leading-14 md:text-16 md:leading-18 font-medium lg:flex gap-2 items-center">
+          <div className="snip1168 bg-white shadow-md desktop-menu relative ">
+            <ul className="relative container mx-auto level-0 text-14 leading-14 md:text-16 md:leading-18 font-medium lg:flex gap-2 items-center">
               {menuItems.map((menu, index) => (
                 <li
                   className={classnames(
-                    "cursor-pointer py-3 px-5 ",
+                    "cursor-pointer  relative",
                     {
-                      "gradient text-white": menuActive === index,
+                      "gradient text-white": index === 0,
                     },
+                    { "active-bdr  ": menuActive === index && index !== 0 && menu.linkClass === null},
                     { "text-primary": menu.linkClass !== null }
                   )}
                   key={menu.linkText}
@@ -68,7 +69,9 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
                   <Link
                     href={menu.linkUrl}
                     title={menu.linkText}
-                    className="flex gap-2 items-center"
+                    className={classnames("flex gap-2 items-center py-3 px-5 text-center justify-center",{
+                      
+                    },)}
                   >
                     <span>{menu.linkText}</span>
                     {menu.linkChildrenCollection.items &&
@@ -87,7 +90,7 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
             </ul>
           </div>
           {isLevelOne && (
-            <div className=" megamenu-dropdown">
+            <div className="megamenu-dropdown absolute z-10 left-0 top-[47px] w-full">
               <LevelOne levelOneMenus={levelOneMenus} />
             </div>
           )}

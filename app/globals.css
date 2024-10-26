@@ -257,39 +257,30 @@ form {
   @apply mx-auto max-w-[1440px];
 }
 
-.snip1168 {
-  text-align: center;
-  text-transform: uppercase;
-}
 
-.snip1168 * {
+.menu-active * {
   box-sizing: border-box;
 }
 
-.snip1168 li {
+.menu-active li {
   display: inline-block;
-  list-style: outside none none;
-  margin: 0 0.5em;
-  padding: 28px 0;
+  list-style: outside none none;  
 }
 
-.snip1168 li a {
-  padding: 0.5em 0;
-  color: black;
-  position: relative;
-  letter-spacing: 1px;
+.menu-active li a.active {  
+  position: relative;  
   text-decoration: none;
 }
 
-.snip1168 li a:before,
-.snip1168 li a:after {
+.menu-active li a.active:before,
+.menu-active li a.active:after {
   position: absolute;
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
 
-.snip1168 li a:before {
-  top: 0;
+.menu-active li a.active:before {
+  bottom: 0;
   display: block;
   height: 3px;
   width: 0%;
@@ -297,10 +288,9 @@ form {
   background-color: #c0392b;
 }
 
-.snip1168 a:after {
+.menu-active a.active:after {
   left: 0;
-  top: 0;
-  padding: 0.5em 0;
+  bottom: 0;  
   position: absolute;
   content: attr(data-hover);
   color: black;
@@ -309,14 +299,14 @@ form {
   overflow: hidden;
 }
 
-.snip1168 li:hover a:before,
-.snip1168 li.current:hover a:before {
+.menu-active li:hover a.active:before,
+.menu-active li.current:hover a.active:before {
   opacity: 1;
   width: 100%;
 }
 
-.snip1168 li:hover a:after,
-.snip1168 li.current a:after {
+.menu-active li:hover a.active:after,
+.menu-active li.current a.active:after {
   max-width: 100%;
 }
 
@@ -384,21 +374,9 @@ form {
     z-index: 2;
   }
 
-  .megamenu-dropdown {
-    left: 0;
-    z-index: 3;
-    top: 47px;
-    position: absolute;
-    width: 100%;
-  }
-  .levelOne {
-  }
-  .desktop-menu {
-    .level-0 {
-      li:first-child:hover {
-        @apply text-white bg-gradient-to-r from-gradient1 from-10%  to-gradient2 to-90%;
-      }
-    }
+  .desktop-menu .active-bdr:before{
+    content: "";
+    @apply absolute left-0 bottom-0 bg-primary w-full h-[2px];      
   }
 }
 
