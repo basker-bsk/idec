@@ -37,7 +37,7 @@ export default function LevelTwo({
       <div className="w-1/2 flex flex-col p-4 border-r border-gray-300">
         <div className="flex justify-between  mb-4">
           <div
-            className="flex gap-4 items-center"
+            className="flex gap-4 items-center cursor-pointer"
             onClick={() => setIsLevelTwo(false)}
           >
             <span className="text-20 text-white bg-primary icon-arrowleft rounded-full  w-8 h-8 p-[6px] "></span>
@@ -76,7 +76,7 @@ export default function LevelTwo({
                 hoverMenu(index);
               }}
             >
-              <span>{levelTwo.linkText}222</span>
+              <span>{levelTwo.linkText}</span>
               <span
                 className={classnames(
                   "icon-arrowright rounded-full  w-8 h-8 p-[6px]  text-black absolute right-4 top-1/2 -translate-y-1/2",

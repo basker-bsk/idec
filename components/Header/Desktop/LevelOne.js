@@ -107,7 +107,7 @@ export default function LevelOne({ levelOneMenus }) {
                           alt={levelOne.linkText}
                           className="w-10 h-10 bottom-1 border-gray-400"
                         ></Image>
-                        <span>{levelOne.linkText}111</span>
+                        <span>{levelOne.linkText}</span>
                         <span
                           className={classnames(
                             "icon-arrowright rounded-full  w-8 h-8 p-[6px]  text-black absolute right-4 top-1/2 -translate-y-1/2",

@@ -37,16 +37,16 @@ export default function LevelThree({
             href={levelThree.linkUrl}
             key={levelThree.linkText}
             className={classnames(
-              "text-20 leading-20 flex gap-2 items-center p-4 relative hover:text-primary hover:bg-gray-50 rounded-md"
+              "text-16 font-medium leading-16 flex gap-2 items-center p-4 relative hover:text-primary hover:bg-gray-50 rounded-md"
             )}
             onMouseEnter={() => {
               hoverMenu(index);
             }}
           >
-            <span>{levelThree.linkText}333</span>
+            <span>{levelThree.linkText}</span>
             <span
               className={classnames(
-                "icon-arrowright rounded-full  w-8 h-8 p-[6px]  text-black absolute right-4 top-1/2 -translate-y-1/2",
+                "icon-arrowright rounded-full text-20 w-8 h-8 p-[6px]  text-black absolute right-4 top-1/2 -translate-y-1/2",
                 {
                   "text-white bg-primary ": hoverArrowIndex === index,
                 }
