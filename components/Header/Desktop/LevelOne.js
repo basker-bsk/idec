@@ -1,10 +1,11 @@
 "use client";
 import classnames from "classnames";
-import Link from "next/link";
 import LevelTwo from "./LevelTwo";
 import Image from "next/image";
 import ProductFinderSearch from "./ProductFinderSearch";
 import { useState } from "react";
+import MenuWithSubMenu from "./MenuWithSubMenu";
+import MenuWithOutSubMenu from "./MenuWithOutSubMenu";
 
 export default function LevelOne({ levelOneMenus }) {
   const [levelTwoMenus, setLevelTwoMenus] = useState([]);
@@ -16,7 +17,7 @@ export default function LevelOne({ levelOneMenus }) {
     activeUrl: "",
   });
 
-  const showLevelTwoMenu = (subCategory, link, url) => {
+  const showLevelMenu = (subCategory, link, url) => {
     if (subCategory.length > 0) {
       setIsLevelTwo(true);
     }
@@ -43,7 +44,7 @@ export default function LevelOne({ levelOneMenus }) {
   };
   return (
     <div className="container border-t border-gray100 mx-auto relative ">
-      <div className="shadow-md w-full h-[500px]  bg-white  max-h-100 rounded-br-md rounded-bl-md">
+      <div className="shadow-md w-full h-[528px]  bg-white  max-h-100 rounded-br-md rounded-bl-md">
         <div className="mx-auto container flex w-full h-full justify-between">
           {/* Level One  Starts here */}
           {!isLevelTwo && (
@@ -51,73 +52,27 @@ export default function LevelOne({ levelOneMenus }) {
               <p className="text-14 text-gray-400  mb-4">
                 Browse by categories
               </p>
-              <div className="overflow-y-auto h-[431px]">
+              <div className="overflow-y-auto h-[450px]">
                 {levelOneMenus.map((levelOne, index) => (
                   <div key={levelOne.linkText}>
-                    {levelOne.linkChildrenCollection.items.length === 0 ? (
-                      <div
-                        className={classnames(
-                          "text-20 flex gap-2 items-center p-4 relative hover:text-primary hover:bg-gray-50 rounded-md"
-                        )}
-                        onMouseEnter={() => {
-                          hoverMenu(index);
-                        }}
-                      >
-                        <Image
-                          src={levelOne.linkIcon ? levelOne.linkIcon : ""}
-                          width={42}
-                          height={42}
-                          alt={levelOne.linkText}
-                          className="w-10 h-10 bottom-1 border-gray-400"
-                        ></Image>
-                        <Link href={levelOne.linkUrl}>{levelOne.linkText}</Link>
-                        <span
-                          className={classnames(
-                            "icon-arrowright rounded-full  w-8 h-8 p-[6px]  text-black absolute right-4 top-1/2 -translate-y-1/2",
-                            {
-                              "text-white bg-primary ":
-                                hoverArrowIndex === index,
-                            }
-                          )}
-                        ></span>
-                      </div>
+                    {levelOne?.linkChildrenCollection?.items?.length > 0 ? (
+                      <MenuWithOutSubMenu
+                        menu={levelOne}
+                        menuIndex={index}
+                        hideMenu={hideMenu}
+                        hoverArrowIndex={hoverArrowIndex}
+                        hoverMenu={hoverMenu}
+                        showLevelMenu={showLevelMenu}
+                        icon={true}
+                      />
                     ) : (
-                      <div
-                        className={classnames(
-                          "text-20 leading-20 flex cursor-pointer gap-2 items-center p-4 relative hover:text-primary hover:bg-gray-50 rounded-md"
-                        )}
-                        onMouseEnter={() => {
-                          hoverMenu(index);
-                        }}
-                        onClick={() => {
-                          showLevelTwoMenu(
-                            levelOne.linkChildrenCollection.items,
-                            levelOne.linkText,
-                            levelOne.linkUrl
-                          );
-                        }}
-                        onMouseLeave={() => {
-                          hideMenu();
-                        }}
-                      >
-                        <Image
-                          src={levelOne.linkIcon ? levelOne.linkIcon : ""}
-                          width={42}
-                          height={42}
-                          alt={levelOne.linkText}
-                          className="w-10 h-10 bottom-1 border-gray-400"
-                        ></Image>
-                        <span>{levelOne.linkText}</span>
-                        <span
-                          className={classnames(
-                            "icon-arrowright rounded-full  w-8 h-8 p-[6px]  text-black absolute right-4 top-1/2 -translate-y-1/2",
-                            {
-                              "text-white bg-primary ":
-                                hoverArrowIndex === index,
-                            }
-                          )}
-                        ></span>
-                      </div>
+                      <MenuWithSubMenu
+                        menu={levelOne}
+                        menuIndex={index}
+                        hoverArrowIndex={hoverArrowIndex}
+                        hoverMenu={hoverMenu}
+                        icon={true}
+                      />
                     )}
                   </div>
                 ))}

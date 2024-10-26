@@ -169,6 +169,94 @@
                               "linkId": "Explore-All",
                               "linkHideText": false,
                               "linkNewWindow": false
+                            },
+                            {
+                              "linkText": "Switches & Pushbuttons",
+                              "linkUrl": "/all-products/switches-indicators/switches-pushbuttons",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": false,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": false,
+                              "linkNewWindow": false,
+                              "linkChildrenCollection": {
+                                "items": [
+                                  {
+                                    "linkText": "Push Buttons & Pilot Lights",
+                                    "linkUrl": "/all-products/push-buttons-pilot-lights",
+                                    "linkIcon": "/assets/images/switch.png",
+                                    "linkFromSap": false,
+                                    "linkClass": null,
+                                    "linkId": null,
+                                    "linkHideText": false,
+                                    "linkNewWindow": false
+                                  },
+                                  {
+                                    "linkText": "Emergency Stop Switches",
+                                    "linkUrl": "/all-products/Emergency-Stop-Switches",
+                                    "linkIcon": "/assets/images/switch.png",
+                                    "linkFromSap": false,
+                                    "linkClass": null,
+                                    "linkId": null,
+                                    "linkHideText": false,
+                                    "linkNewWindow": false
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "linkText": "Indicator Lights & Buzzers",
+                              "linkUrl": "/all-products/switches-indicators/indicator-lights-buzzers",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": false,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": false,
+                              "linkNewWindow": false,
+                              "linkChildrenCollection": {
+                                "items": [
+                                  {
+                                    "linkText": "Indicator & Pilot Lights",
+                                    "linkUrl": "/all-products/push-buttons-pilot-lights",
+                                    "linkIcon": "/assets/images/switch.png",
+                                    "linkFromSap": false,
+                                    "linkClass": null,
+                                    "linkId": null,
+                                    "linkHideText": false,
+                                    "linkNewWindow": false
+                                  },
+                                  {
+                                    "linkText": "Indicator Stop Switches",
+                                    "linkUrl": "/all-products/Emergency-Stop-Switches",
+                                    "linkIcon": "/assets/images/switch.png",
+                                    "linkFromSap": false,
+                                    "linkClass": null,
+                                    "linkId": null,
+                                    "linkHideText": false,
+                                    "linkNewWindow": false
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "linkText": "LED Lighting",
+                              "linkUrl": "/all-products/switches-indicators/led-lighting",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": false,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": false,
+                              "linkNewWindow": false
+                            },
+                            {
+                              "linkText": "Explore All",
+                              "linkUrl": "/all-products/switches-indicators/explore-all",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": false,
+                              "linkClass": null,
+                              "linkId": "Explore-All",
+                              "linkHideText": false,
+                              "linkNewWindow": false
                             }
                           ]
                         }
