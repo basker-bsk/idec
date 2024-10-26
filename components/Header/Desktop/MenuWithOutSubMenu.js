@@ -1,34 +1,27 @@
 "use client";
 import classnames from "classnames";
+import Link from "next/link";
 import Image from "next/image";
-
-function MenuWithOutSubMenu({
+function MenuWithSubMenu({
   menu,
   menuIndex,
   hoverArrowIndex,
-  showLevelMenu,
   hoverMenu,
   hideMenu,
   icon,
 }) {
   return (
-    <div
+    <Link
+      href={menu.linkUrl}
       className={classnames(
-        "text-20 leading-20 flex cursor-pointer gap-2 items-center p-4 relative hover:text-primary hover:bg-gray-50 rounded-md"
+        "text-20 flex gap-2 items-center p-4 relative hover:text-primary hover:bg-gray-50 rounded-md"
       )}
       onMouseEnter={() => {
         hoverMenu(menuIndex);
       }}
-      onClick={() => {
-        showLevelMenu(
-          menu.linkChildrenCollection?.items,
-          menu.linkText,
-          menu.linkUrl
-        );
-      }}
-      onMouseLeave={() => {
-        hideMenu();
-      }}
+      // onMouseLeave={() => {
+      //   hoverMenu(-1);
+      // }}
     >
       {icon && (
         <Image
@@ -48,8 +41,8 @@ function MenuWithOutSubMenu({
           }
         )}
       ></span>
-    </div>
+    </Link>
   );
 }
 
-export default MenuWithOutSubMenu;
+export default MenuWithSubMenu;

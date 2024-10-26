@@ -257,18 +257,17 @@ form {
   @apply mx-auto max-w-[1440px];
 }
 
-
 .menu-active * {
   box-sizing: border-box;
 }
 
 .menu-active li {
   display: inline-block;
-  list-style: outside none none;  
+  list-style: outside none none;
 }
 
-.menu-active li a.active {  
-  position: relative;  
+.menu-active li a.active {
+  position: relative;
   text-decoration: none;
 }
 
@@ -290,7 +289,7 @@ form {
 
 .menu-active a.active:after {
   left: 0;
-  bottom: 0;  
+  bottom: 0;
   position: absolute;
   content: attr(data-hover);
   color: black;
@@ -374,9 +373,9 @@ form {
     z-index: 2;
   }
 
-  .desktop-menu .active-bdr:before{
+  .desktop-menu .active-bdr:before {
     content: "";
-    @apply absolute left-0 bottom-0 bg-primary w-full h-[2px];      
+    @apply absolute left-0 bottom-0 bg-primary w-full h-[2px];
   }
 }
 

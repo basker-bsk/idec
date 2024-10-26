@@ -10,6 +10,7 @@ export default function LevelTwo({
   levelTwoMenus,
   selectedMenu,
   setIsLevelTwo,
+  isAllProducts,
 }) {
   const [levelThreeMenus, setLevelThreeMenus] = useState([]);
   const [isLevelThree, setIsLevelThree] = useState(false);
@@ -37,17 +38,34 @@ export default function LevelTwo({
   };
   const hideMenu = () => {};
   return (
-    <div className="flex w-full">
-      <div className="w-1/2 flex flex-col p-4 border-r border-gray-300">
-        <LevelTwoTop
-          selectedMenu={selectedMenu}
-          setIsLevelTwo={setIsLevelTwo}
-        />
+    <div
+      className="flex w-full"
+      onMouseLeave={() => {
+        hideMenu();
+      }}
+    >
+      <div
+        className={classnames(
+          "flex flex-col p-4 border-r border-gray-300",
+          {
+            "w-1/2": isAllProducts,
+          },
+          {
+            "w-full": !isAllProducts,
+          }
+        )}
+      >
+        {isAllProducts && (
+          <LevelTwoTop
+            selectedMenu={selectedMenu}
+            setIsLevelTwo={setIsLevelTwo}
+          />
+        )}
         <div className="overflow-y-auto h-[450px]">
           {levelTwoMenus.map((levelTwo, index) => (
             <div key={levelTwo.linkText}>
               {levelTwo?.linkChildrenCollection?.items?.length > 0 ? (
-                <MenuWithOutSubMenu
+                <MenuWithSubMenu
                   menu={levelTwo}
                   menuIndex={index}
                   hoverArrowIndex={hoverArrowIndex}
@@ -57,7 +75,7 @@ export default function LevelTwo({
                   icon={false}
                 />
               ) : (
-                <MenuWithSubMenu
+                <MenuWithOutSubMenu
                   menu={levelTwo}
                   menuIndex={index}
                   hoverArrowIndex={hoverArrowIndex}
