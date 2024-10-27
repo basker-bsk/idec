@@ -748,6 +748,45 @@
                         "linkChildrenCollection": {
                           "items": []
                         }
+                      },
+                      {
+                        "linkText": "CAD Files",
+                        "linkUrl": "/resou/cad-files",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": null,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": null,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      },
+                      {
+                        "linkText": "Applications Notes",
+                        "linkUrl": "/resources/application-notes",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": null,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": null,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
+                      },
+                      {
+                        "linkText": "Catalogs & Brochures",
+                        "linkUrl": "/resources/catalogs-brochures",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": null,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": null,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": []
+                        }
                       }
                     ]
                   }

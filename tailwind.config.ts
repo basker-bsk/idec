@@ -69,6 +69,7 @@ const config = {
         gray700: "#4F4F4F",
         gray800: "#454545",
         gray900: "#222222",
+        scrollGray: "#808080",
         gradient1: "#C91111",
         gradient2: "#7B0909",
         borderGray: "#B0B0B0",

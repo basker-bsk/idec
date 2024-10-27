@@ -10,11 +10,15 @@ function MenuWithOutSubMenu({
   hoverMenu,
   hideMenu,
   icon,
+  isAllProducts,
 }) {
   return (
     <div
       className={classnames(
-        "text-20 leading-20 flex cursor-pointer gap-2 items-center p-4 relative hover:text-primary hover:bg-gray-50 rounded-md"
+        "text-20 leading-20 flex cursor-pointer gap-2 items-center py-4 pl-4 pr-16 relative hover:text-primary hover:bg-gray-50 rounded-md",
+        {
+          "text-primary bg-gray-50 ": hoverArrowIndex === menuIndex,
+        }
       )}
       onMouseEnter={() => {
         hoverMenu(menuIndex);
@@ -30,7 +34,7 @@ function MenuWithOutSubMenu({
         );
       }}
     >
-      {icon && (
+      {icon && isAllProducts && (
         <Image
           src={menu.linkIcon ? menu.linkIcon : ""}
           width={42}

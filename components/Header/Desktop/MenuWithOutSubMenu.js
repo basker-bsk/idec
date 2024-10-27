@@ -9,12 +9,16 @@ function MenuWithSubMenu({
   hoverMenu,
   hideMenu,
   icon,
+  isAllProducts,
 }) {
   return (
     <Link
       href={menu.linkUrl}
       className={classnames(
-        "text-20 flex gap-2 items-center p-4 relative hover:text-primary hover:bg-gray-50 rounded-md"
+        "text-20 flex gap-2 items-center py-4 pl-4 pr-16 relative hover:text-primary hover:bg-gray-50 rounded-md",
+        {
+          "text-primary bg-gray-50 ": hoverArrowIndex === menuIndex,
+        }
       )}
       onMouseEnter={() => {
         hoverMenu(menuIndex);
@@ -23,7 +27,7 @@ function MenuWithSubMenu({
       //   hoverMenu(-1);
       // }}
     >
-      {icon && (
+      {icon && isAllProducts && (
         <Image
           src={menu.linkIcon ? menu.linkIcon : ""}
           width={42}

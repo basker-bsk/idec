@@ -5,16 +5,22 @@ import { useState } from "react";
 import MenuWithSubMenu from "./MenuWithSubMenu";
 import MenuWithOutSubMenu from "./MenuWithOutSubMenu";
 
-export default function LevelOne({ levelOneMenus, bowseBy, isAllProducts }) {
+export default function LevelOne({
+  levelOneMenus,
+  bowseBy,
+  isAllProducts,
+  levelTwoHasSubMenu,
+  submenuPostion,
+}) {
   const [levelTwoMenus, setLevelTwoMenus] = useState([]);
-
+  console.log("levelTwoHasSubMenu", levelTwoHasSubMenu);
   const [hoverArrowIndex, setHoverArrowIndex] = useState();
   const [menuActive, setMenuActive] = useState({
     activeIndex: "",
     activeLink: "",
     activeUrl: "",
   });
-
+  console.log("submenuPostion", submenuPostion);
   const showLevelMenu = (subCategory, link, url) => {
     if (subCategory.length > 0) {
       setLevelTwoMenus(subCategory);
@@ -40,65 +46,90 @@ export default function LevelOne({ levelOneMenus, bowseBy, isAllProducts }) {
   };
   return (
     <div
-      className={classnames(
-        " border-t border-gray100 mx-auto relative container-menu max-w-[1000px]"
-      )}
+      className={classnames("megamenu-dropdown absolute z-10  top-[45px] ")}
+      style={{
+        left: levelTwoHasSubMenu ? "0" : `${submenuPostion}px`,
+        width: levelTwoHasSubMenu ? "100%" : "auto",
+      }}
     >
       <div
-        className="shadow-md w-full h-[528px]  bg-white  max-h-100 rounded-br-md rounded-bl-md"
-        onMouseLeave={() => {
-          hideMenu();
-        }}
+        className={classnames(
+          " border-t border-gray100 relative container-menu",
+          { "mx-auto  max-w-[1000px]": levelTwoHasSubMenu },
+          { "max-w-[450px]": !levelTwoHasSubMenu }
+        )}
       >
-        <div className="mx-auto container flex w-full h-full justify-between">
-          {/* Level One  Starts here */}
+        <div
+          className={classnames(
+            "shadow-md w-full   bg-white  rounded-br-md rounded-bl-md",
+            { "h-[528px]  max-h-100": levelTwoHasSubMenu },
+            { "h-auto": !levelTwoHasSubMenu }
+          )}
+          onMouseLeave={() => {
+            hideMenu();
+          }}
+        >
+          <div className="mx-auto container flex w-full h-full justify-between">
+            {/* Level One  Starts here */}
 
-          <div
-            className={classnames(
-              "levelOne flex flex-col p-4 w-1/2 border-r border-gray-300"
-            )}
-          >
-            <p className="text-14 text-gray-400  mb-4">Browse by {bowseBy}</p>
-            <div className="overflow-y-auto h-[450px]">
-              {levelOneMenus.map((levelOne, index) => (
-                <div key={levelOne.linkText}>
-                  {levelOne?.linkChildrenCollection?.items?.length > 0 ? (
-                    <MenuWithSubMenu
-                      menu={levelOne}
-                      menuIndex={index}
-                      hoverArrowIndex={hoverArrowIndex}
-                      hoverMenu={hoverMenu}
-                      showLevelMenu={showLevelMenu}
-                      icon={true}
-                      hideMenu={hideMenu}
-                    />
-                  ) : (
-                    <MenuWithOutSubMenu
-                      menu={levelOne}
-                      menuIndex={index}
-                      hoverArrowIndex={hoverArrowIndex}
-                      hoverMenu={hoverMenu}
-                      icon={true}
-                      hideMenu={hideMenu}
-                    />
-                  )}
-                </div>
-              ))}
+            <div
+              className={classnames(
+                "levelOne flex flex-col p-4 ",
+                { "w-1/2 border-r border-gray-300": levelTwoHasSubMenu },
+                { "w-full": !levelTwoHasSubMenu }
+              )}
+            >
+              <p className="text-14 text-gray-400  mb-4">Browse by {bowseBy}</p>
+              <div
+                className={classnames(
+                  "overflow-y-auto max-h-[450px]"
+                  // { "h-[450px]": levelTwoHasSubMenu },
+                  // { "h-auto": !levelTwoHasSubMenu }
+                )}
+              >
+                {levelOneMenus.map((levelOne, index) => (
+                  <div key={levelOne.linkText}>
+                    {levelOne?.linkChildrenCollection?.items?.length > 0 ? (
+                      <MenuWithSubMenu
+                        menu={levelOne}
+                        menuIndex={index}
+                        hoverArrowIndex={hoverArrowIndex}
+                        hoverMenu={hoverMenu}
+                        showLevelMenu={showLevelMenu}
+                        icon={true}
+                        hideMenu={hideMenu}
+                        isAllProducts={isAllProducts}
+                      />
+                    ) : (
+                      <MenuWithOutSubMenu
+                        menu={levelOne}
+                        menuIndex={index}
+                        hoverArrowIndex={hoverArrowIndex}
+                        hoverMenu={hoverMenu}
+                        icon={true}
+                        hideMenu={hideMenu}
+                        isAllProducts={isAllProducts}
+                      />
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Level Two Starts here */}
-
-          <div
-            className={classnames("levelTwo flex flex-col w-1/2", {
-              "bg-gray-200": !isAllProducts,
-            })}
-          >
-            <LevelTwo
-              levelTwoMenus={levelTwoMenus}
-              selectedMenu={menuActive}
-              isAllProducts={isAllProducts}
-            />
+            {/* Level Two Starts here */}
+            {levelTwoHasSubMenu && (
+              <div
+                className={classnames("levelTwo flex flex-col w-1/2", {
+                  "bg-gray-200": !isAllProducts,
+                })}
+              >
+                <LevelTwo
+                  levelTwoMenus={levelTwoMenus}
+                  selectedMenu={menuActive}
+                  isAllProducts={isAllProducts}
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>

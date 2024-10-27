@@ -10,8 +10,30 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
   const [isLevelOne, setIsLevelOne] = useState(false);
   const [allProducts, setAllProducts] = useState(false);
   const [bowseBy, setBrowseBy] = useState("");
+  const [levelTwoHasSubMenu, setLevelTwoHasSubMenu] = useState(false);
+  const [submenuPostion, setSubmenuPostion] = useState(0);
+  let levelOneHasSubMenu;
+
   const showMenu = (subCategory, index, linkText) => {
     setBrowseBy(linkText);
+    levelOneHasSubMenu = subCategory.length > 0;
+    subCategory.map((cat, index) => {
+      if (cat.linkChildrenCollection.items.length > 0) {
+        setLevelTwoHasSubMenu(true);
+      } else {
+        setLevelTwoHasSubMenu(false);
+      }
+    });
+    const element = document.getElementById(linkText);
+    const rect = element.getBoundingClientRect();
+    setSubmenuPostion(rect.left.toFixed());
+    console.log(
+      "subCategory",
+      subCategory,
+      levelOneHasSubMenu,
+      levelTwoHasSubMenu,
+      submenuPostion
+    );
     if (subCategory.length > 0) {
       setIsLevelOne(true);
     }
@@ -41,10 +63,11 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
           }}
           className=""
         >
-          <div className="snip1168 bg-white shadow-md desktop-menu relative ">
-            <ul className="relative container mx-auto level-0 text-14 leading-14 md:text-16 md:leading-18 font-medium lg:flex gap-2 items-center">
+          <div className="snip1168 bg-white shadow-md desktop-menu text-black relative ">
+            <ul className="relative container mx-auto level-0 text-14 leading-14 font-medium lg:flex gap-2 items-center">
               {menuItems.map((menu, index) => (
                 <li
+                  id={menu.linkText}
                   className={classnames(
                     "cursor-pointer  relative",
                     {
@@ -86,7 +109,7 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
                     href={menu.linkUrl}
                     title={menu.linkText}
                     className={classnames(
-                      "flex gap-2 items-center py-3 px-5 text-center justify-center"
+                      "flex gap-1 items-center py-3 px-5 text-center justify-center"
                     )}
                   >
                     <span>{menu.linkText}</span>
@@ -94,9 +117,12 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
                       menu.linkChildrenCollection.items.length > 0 && (
                         <i
                           className={classnames(
-                            "icon",
+                            "text-20  ease-in-out duration-500",
                             { "icon-chevron-down": menuActive !== index },
-                            { "icon-chevron-up": menuActive === index }
+                            {
+                              "icon-chevron-down rotate-180":
+                                menuActive === index,
+                            }
                           )}
                         ></i>
                       )}
@@ -105,23 +131,25 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
               ))}
             </ul>
           </div>
+
+          {/* All Products Menu */}
           {isLevelOne && allProducts && (
-            <div className="megamenu-dropdown absolute z-10 left-0 top-[47px] w-full">
-              <LevelOneAll
-                levelOneMenus={levelOneMenus}
-                isAllProducts={allProducts}
-                bowseBy={bowseBy}
-              />
-            </div>
+            <LevelOneAll
+              levelOneMenus={levelOneMenus}
+              isAllProducts={allProducts}
+              bowseBy={bowseBy}
+            />
           )}
+
+          {/* Other Menus */}
           {isLevelOne && !allProducts && (
-            <div className="megamenu-dropdown absolute z-10 left-0 top-[47px] w-full">
-              <LevelOne
-                levelOneMenus={levelOneMenus}
-                bowseBy={bowseBy}
-                isAllProducts={allProducts}
-              />
-            </div>
+            <LevelOne
+              levelOneMenus={levelOneMenus}
+              bowseBy={bowseBy}
+              isAllProducts={allProducts}
+              levelTwoHasSubMenu={levelTwoHasSubMenu}
+              submenuPostion={submenuPostion}
+            />
           )}
         </div>
       )}

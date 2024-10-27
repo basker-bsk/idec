@@ -7,7 +7,12 @@ import { useState } from "react";
 import MenuWithSubMenu from "./MenuWithSubMenu";
 import MenuWithOutSubMenu from "./MenuWithOutSubMenu";
 
-export default function LevelOneAll({ levelOneMenus, isAllProducts, bowseBy }) {
+export default function LevelOneAll({
+  levelOneMenus,
+  isAllProducts,
+  bowseBy,
+  levelTwoHasSubMenu,
+}) {
   const [levelTwoMenus, setLevelTwoMenus] = useState([]);
   const [isLevelTwo, setIsLevelTwo] = useState(false);
   const [hoverArrowIndex, setHoverArrowIndex] = useState();
@@ -43,70 +48,74 @@ export default function LevelOneAll({ levelOneMenus, isAllProducts, bowseBy }) {
     });
   };
   return (
-    <div
-      className={classnames(
-        "container border-t border-gray100 mx-auto relative "
-      )}
-    >
+    <div className="megamenu-dropdown absolute z-10 left-0 top-[45px] w-full">
       <div
-        className="shadow-md w-full h-[528px]  bg-white  max-h-100 rounded-br-md rounded-bl-md"
-        onMouseLeave={() => {
-          hideMenu();
-        }}
+        className={classnames(
+          "container border-t border-gray100 mx-auto relative "
+        )}
       >
-        <div className="mx-auto container flex w-full h-full justify-between">
-          {/* Level One  Starts here */}
-          {!isLevelTwo && (
-            <div className={classnames("levelOne flex flex-col p-4 w-2/3")}>
-              <p className="text-14 text-gray-400  mb-4">
-                Browse by Categories
-              </p>
-              <div className="overflow-y-auto h-[450px]">
-                {levelOneMenus.map((levelOne, index) => (
-                  <div key={levelOne.linkText}>
-                    {levelOne?.linkChildrenCollection?.items?.length > 0 ? (
-                      <MenuWithSubMenu
-                        menu={levelOne}
-                        menuIndex={index}
-                        hoverArrowIndex={hoverArrowIndex}
-                        hoverMenu={hoverMenu}
-                        showLevelMenu={showLevelMenu}
-                        icon={true}
-                        hideMenu={hideMenu}
-                      />
-                    ) : (
-                      <MenuWithOutSubMenu
-                        menu={levelOne}
-                        menuIndex={index}
-                        hoverArrowIndex={hoverArrowIndex}
-                        hoverMenu={hoverMenu}
-                        icon={true}
-                        hideMenu={hideMenu}
-                      />
-                    )}
-                  </div>
-                ))}
+        <div
+          className="shadow-md w-full h-[528px]  bg-white  max-h-100 rounded-br-md rounded-bl-md"
+          onMouseLeave={() => {
+            hideMenu();
+          }}
+        >
+          <div className="mx-auto container flex w-full h-full justify-between">
+            {/* Level One  Starts here */}
+            {!isLevelTwo && (
+              <div className={classnames("levelOne flex flex-col p-4 w-2/3")}>
+                <p className="text-14 text-gray-400  mb-4">
+                  Browse by Categories
+                </p>
+                <div className="overflow-y-auto h-[450px]">
+                  {levelOneMenus.map((levelOne, index) => (
+                    <div key={levelOne.linkText}>
+                      {levelOne?.linkChildrenCollection?.items?.length > 0 ? (
+                        <MenuWithSubMenu
+                          menu={levelOne}
+                          menuIndex={index}
+                          hoverArrowIndex={hoverArrowIndex}
+                          hoverMenu={hoverMenu}
+                          showLevelMenu={showLevelMenu}
+                          icon={true}
+                          hideMenu={hideMenu}
+                          isAllProducts={isAllProducts}
+                        />
+                      ) : (
+                        <MenuWithOutSubMenu
+                          menu={levelOne}
+                          menuIndex={index}
+                          hoverArrowIndex={hoverArrowIndex}
+                          hoverMenu={hoverMenu}
+                          icon={true}
+                          hideMenu={hideMenu}
+                          isAllProducts={isAllProducts}
+                        />
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
+            )}
 
-          {/* Level Two Starts here */}
-          {isLevelTwo && (
-            <div className={classnames("levelTwo flex flex-col w-2/3")}>
-              <LevelTwo
-                levelTwoMenus={levelTwoMenus}
-                selectedMenu={menuActive}
-                setIsLevelTwo={setIsLevelTwo}
-                isAllProducts={isAllProducts}
-              />
-            </div>
-          )}
+            {/* Level Two Starts here */}
+            {isLevelTwo && (
+              <div className={classnames("levelTwo flex flex-col w-2/3")}>
+                <LevelTwo
+                  levelTwoMenus={levelTwoMenus}
+                  selectedMenu={menuActive}
+                  setIsLevelTwo={setIsLevelTwo}
+                  isAllProducts={isAllProducts}
+                />
+              </div>
+            )}
 
-          {isAllProducts && (
-            <div className="flex w-1/3">
-              <ProductFinderSearch />
-            </div>
-          )}
+            {isAllProducts && (
+              <div className="flex w-1/3">
+                <ProductFinderSearch />
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

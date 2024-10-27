@@ -119,13 +119,13 @@ body {
   --bg-opacity: 1;
   border-radius: 0.25rem;
   border-width: 0;
-  @apply bg-gray200;
+  @apply bg-scrollGray;
 }
 
 ::-webkit-scrollbar-thumb:active,
 ::-webkit-scrollbar-thumb:hover {
   --bg-opacity: 1;
-  @apply bg-gray200;
+  @apply bg-scrollGray;
 }
 
 ::-webkit-scrollbar-track {
@@ -136,12 +136,12 @@ body {
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-track:hover {
   --bg-opacity: 1;
-  @apply bg-gray50;
+  @apply bg-gray100;
 }
 
 ::-webkit-scrollbar-track:active {
   --bg-opacity: 1;
-  @apply bg-gray50;
+  @apply bg-gray100;
 }
 
 ::-webkit-scrollbar-corner {
