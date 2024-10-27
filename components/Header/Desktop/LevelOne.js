@@ -80,13 +80,7 @@ export default function LevelOne({
               )}
             >
               <p className="text-14 text-gray-400  mb-4">Browse by {bowseBy}</p>
-              <div
-                className={classnames(
-                  "overflow-y-auto max-h-[450px]"
-                  // { "h-[450px]": levelTwoHasSubMenu },
-                  // { "h-auto": !levelTwoHasSubMenu }
-                )}
-              >
+              <div className={classnames("overflow-y-auto max-h-[450px]")}>
                 {levelOneMenus.map((levelOne, index) => (
                   <div key={levelOne.linkText}>
                     {levelOne?.linkChildrenCollection?.items?.length > 0 ? (

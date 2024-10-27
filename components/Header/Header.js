@@ -3,16 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { User, ShoppingBag, ShoppingCart } from "lucide-react";
 import MenuLinks from "@/public/assets/data/header.json";
-import MobileMenu from "./MobileMenu";
+import MobileMenu from "./Mobile/MobileMenu";
 import SearchComponent from "../search";
 import DesktopMenu from "./Desktop/DesktopMenu";
 import { useState } from "react";
 import CartComponent from "../cart";
 export default function Header() {
   const [showOverlay, setShowOverlay] = useState(false);
-  let Menus = MenuLinks?.data?.headerCollection?.items[0]?.hdMainNavigation
-  ?.menusItemsCollection?.items
-  
+  let Menus =
+    MenuLinks?.data?.headerCollection?.items[0]?.hdMainNavigation
+      ?.menusItemsCollection?.items;
+
   return (
     <div className="flex flex-col header relative z-10">
       <div className="bg-black ">
@@ -26,7 +27,7 @@ export default function Header() {
       <div className="bg-white shadow-md px-4 lg:px-0">
         <div className="py-4 lg:py-0 container flex justify-between items-center">
           <div className="lg:hidden">
-            <MobileMenu />
+            <MobileMenu menuItems={Menus} />
           </div>
           <div className="flex gap-8 items-center ">
             <Link href="/">
@@ -52,10 +53,7 @@ export default function Header() {
         </div>
       </div>
       <div className="relative hidden lg:flex lg:flex-col border-t border-gray100 ">
-        <DesktopMenu
-          menuItems={Menus}
-          setShowOverlay={setShowOverlay}
-        />
+        <DesktopMenu menuItems={Menus} setShowOverlay={setShowOverlay} />
       </div>
     </div>
   );

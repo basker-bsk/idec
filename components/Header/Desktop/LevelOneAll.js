@@ -1,7 +1,6 @@
 "use client";
 import classnames from "classnames";
 import LevelTwo from "./LevelTwo";
-import Image from "next/image";
 import ProductFinderSearch from "./ProductFinderSearch";
 import { useState } from "react";
 import MenuWithSubMenu from "./MenuWithSubMenu";
