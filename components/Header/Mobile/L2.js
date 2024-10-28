@@ -5,16 +5,18 @@ import { useState } from "react";
 import MenuTop from "./MenuTop";
 import MobileMenuWithSubMenu from "./MobileMenuWithSubMenu";
 import MobileMenuWithOutSubMenu from "./MobileMenuWithOutSubMenu";
-
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 function L2({ levelTwoMenus, isAllProducts, prevLink, hideMenu, setIsL2Open }) {
   console.log("levelTwoMenus >>", levelTwoMenus);
-  const [accordian, setAccordian] = useState({
-    open: false,
-    index: "",
-  });
+  const [accordian, setAccordian] = useState(0);
 
   const ShowAccordian = (index) => {
-    setAccordian({ open: !accordian.open, index: index });
+    setAccordian(index);
   };
 
   return (
@@ -27,7 +29,7 @@ function L2({ levelTwoMenus, isAllProducts, prevLink, hideMenu, setIsL2Open }) {
       <div className="text-12 leading-12 text-black my-4 flex justify-center border font-medium border-black p-2">
         Expore All {prevLink}
       </div>
-      <ul className="text-16 leading-16 font-medium text-black">
+      {/* <ul className="text-16 leading-16 font-medium text-black">
         {levelTwoMenus.map((levelTwo, index) => (
           <li
             className={classnames(
@@ -58,10 +60,10 @@ function L2({ levelTwoMenus, isAllProducts, prevLink, hideMenu, setIsL2Open }) {
                   className={classnames(
                     "text-24 ease-in-out text-black duration-500",
                     {
-                      "icon-minus": accordian.open,
+                      "icon-minus": accordian === index,
                     },
                     {
-                      "icon-plus": !accordian.open,
+                      "icon-plus": accordian !== index,
                     }
                   )}
                 ></i>
@@ -75,23 +77,65 @@ function L2({ levelTwoMenus, isAllProducts, prevLink, hideMenu, setIsL2Open }) {
                 isAllProducts={isAllProducts}
               />
             )}
-            {accordian.open && accordian.index === index && (
-              <ul className="flex flex-col py-4">
-                {levelTwo.linkChildrenCollection?.items.map(
-                  (menu, indexAcc) => (
-                    <li
-                      className="text-14 leading-14 font-normal p-4"
-                      key={menu.linkText}
-                    >
-                      {menu.linkText}
-                    </li>
-                  )
-                )}
-              </ul>
-            )}
+
+            <ul
+              className={classnames(
+                "flex flex-col ease-in-out duration-500 transition-all",
+                { "h-0": accordian !== index },
+                { "h-auto": accordian === index }
+              )}
+            >
+              {levelTwo.linkChildrenCollection?.items.map((menu, indexAcc) => (
+                <li
+                  className="text-14 leading-14 font-normal p-4"
+                  key={menu.linkText}
+                >
+                  {menu.linkText}
+                </li>
+              ))}
+            </ul>
           </li>
         ))}
-      </ul>
+      </ul> */}
+      <Accordion type="single" collapsible className="w-full">
+        {levelTwoMenus.map((levelTwo, index) => (
+          <>
+            {levelTwo.linkChildrenCollection?.items &&
+            levelTwo.linkChildrenCollection?.items?.length > 0 ? (
+              <AccordionItem value={`item-${index}`} key={`item-${index}`}>
+                <AccordionTrigger className="text-16 font-medium leading-16">
+                  {levelTwo.linkText}
+                </AccordionTrigger>
+
+                <AccordionContent className="text-14 leading-14 font-normal">
+                  <ul className={classnames("flex flex-col")}>
+                    {levelTwo.linkChildrenCollection?.items.map(
+                      (menu, indexAcc) => (
+                        <li
+                          className="text-14 leading-14 font-normal p-4"
+                          key={menu.linkText}
+                        >
+                          {menu.linkText}
+                        </li>
+                      )
+                    )}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            ) : (
+              <Link
+                href={levelTwo.linkUrl}
+                title={levelTwo.linkText}
+                className={classnames(
+                  "py-4 text-black border-b border-gray200 text-16 font-medium leading-16 flex"
+                )}
+              >
+                {levelTwo.linkText}
+              </Link>
+            )}
+          </>
+        ))}
+      </Accordion>
     </>
   );
 }

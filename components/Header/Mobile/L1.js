@@ -50,14 +50,12 @@ function L1({
                 thumbImage={true}
                 isAllProducts={isAllProducts}
                 showLevelMenu={showLevelMenu}
-                accodian={false}
               />
             ) : (
               <MobileMenuWithOutSubMenu
                 menu={levelOne}
                 menuIndex={index}
                 thumbImage={true}
-                accodian={false}
                 isAllProducts={isAllProducts}
               />
             )}

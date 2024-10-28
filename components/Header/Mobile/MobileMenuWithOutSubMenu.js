@@ -6,7 +6,6 @@ function MobileMenuWithOutSubMenu({
   menuIndex,
   thumbImage,
   isAllProducts,
-  accodian,
 }) {
   return (
     <Link
@@ -26,15 +25,6 @@ function MobileMenuWithOutSubMenu({
         )}
         <span>{menu.linkText}</span>
       </div>
-      {accodian ? (
-        <i
-          className={classnames(
-            "text-24 ease-in-out text-black duration-500 icon-plus"
-          )}
-        ></i>
-      ) : (
-        ""
-      )}
     </Link>
   );
 }
