@@ -107,6 +107,7 @@ export default function LevelOne({
                         hideMenu={hideMenu}
                         isAllProducts={isAllProducts}
                         levelTwoHasSubMenu={false}
+                        selectedMenu={menuActive}
                       />
                     ) : (
                       <MenuWithOutSubMenu
