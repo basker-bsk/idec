@@ -22,8 +22,6 @@ export default function LevelOne({
     activeLink: "",
     activeUrl: "",
   });
-
-  console.log("submenuPostion", submenuPostion);
   const showLevelMenu = (subCategory, link, url) => {
     if (subCategory.length > 0) {
       setLevelTwoMenus(subCategory);

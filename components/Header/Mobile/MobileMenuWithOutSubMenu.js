@@ -1,7 +1,13 @@
 import Link from "next/link";
 import classnames from "classnames";
 import Image from "next/image";
-function MobileMenuWithOutSubMenu({ menu, menuIndex, icon, isAllProducts }) {
+function MobileMenuWithOutSubMenu({
+  menu,
+  menuIndex,
+  thumbImage,
+  isAllProducts,
+  accodian,
+}) {
   return (
     <Link
       href={menu.linkUrl}
@@ -9,7 +15,7 @@ function MobileMenuWithOutSubMenu({ menu, menuIndex, icon, isAllProducts }) {
       className="flex justify-between items-center"
     >
       <div className="flex gap-1 items-center">
-        {icon && isAllProducts && (
+        {thumbImage && isAllProducts && (
           <Image
             src={menu.linkIcon ? menu.linkIcon : ""}
             width={42}
@@ -20,11 +26,15 @@ function MobileMenuWithOutSubMenu({ menu, menuIndex, icon, isAllProducts }) {
         )}
         <span>{menu.linkText}</span>
       </div>
-      <i
-        className={classnames(
-          "text-24 ease-in-out text-black duration-500 icon-arrowright"
-        )}
-      ></i>
+      {accodian ? (
+        <i
+          className={classnames(
+            "text-24 ease-in-out text-black duration-500 icon-plus"
+          )}
+        ></i>
+      ) : (
+        ""
+      )}
     </Link>
   );
 }

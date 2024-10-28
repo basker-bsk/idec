@@ -110,7 +110,7 @@ export default function MobileMenu({ menuItems }) {
             ))}
           </ul>
         </div>
-        {/* All Products Menu */}
+        {/* level 1 Menu */}
         <div
           className={classnames(
             "w-full fixed bg-white overflow-auto top-0 ease-in-out duration-500 transition-all h-full px-4 z-10",
@@ -123,7 +123,7 @@ export default function MobileMenu({ menuItems }) {
             isAllProducts={allProducts}
             prevLink={prevLink}
             hideMenu={hideMenu}
-            icon={true}
+            thumbImage={true}
             menuOpen={menuOpen.nextMenu}
             setIsL1Open={setIsL1Open}
           />
