@@ -129,6 +129,7 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
                   levelOneMenus={levelOneMenus}
                   isAllProducts={allProducts}
                   bowseBy={bowseBy}
+                  levelTwoHasSubMenu={levelTwoHasSubMenu}
                 />
               )}
 

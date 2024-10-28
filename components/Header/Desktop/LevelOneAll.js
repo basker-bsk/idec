@@ -79,6 +79,7 @@ export default function LevelOneAll({
                           icon={true}
                           hideMenu={hideMenu}
                           isAllProducts={isAllProducts}
+                          levelTwoHasSubMenu={levelTwoHasSubMenu}
                         />
                       ) : (
                         <MenuWithOutSubMenu
@@ -89,6 +90,7 @@ export default function LevelOneAll({
                           icon={true}
                           hideMenu={hideMenu}
                           isAllProducts={isAllProducts}
+                          levelTwoHasSubMenu={levelTwoHasSubMenu}
                         />
                       )}
                     </div>

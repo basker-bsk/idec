@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import classnames from "classnames";
 import Link from "next/link";
 import LevelThree from "./LevelThree";
@@ -11,6 +11,7 @@ export default function LevelTwo({
   selectedMenu,
   setIsLevelTwo,
   isAllProducts,
+  levelTwoHasSubMenu,
 }) {
   const [levelThreeMenus, setLevelThreeMenus] = useState([]);
   const [isLevelThree, setIsLevelThree] = useState(false);
@@ -37,6 +38,22 @@ export default function LevelTwo({
     setHoverArrowIndex(index);
   };
   const hideMenu = () => {};
+  useEffect(() => {
+    if (
+      levelTwoMenus[0]?.linkChildrenCollection?.items.length > 0 &&
+      isAllProducts
+    ) {
+      setLevelThreeMenus(levelTwoMenus[0].linkChildrenCollection?.items);
+      setIsLevelThree(true);
+      setMenuActive({
+        activeLink: levelTwoMenus[0].linkText,
+        activeUrl: levelTwoMenus[0].linkUrl,
+        activeIndex: 0,
+      });
+    } else {
+      setIsLevelThree(false);
+    }
+  }, [levelTwoMenus]);
   return (
     <div
       className="flex w-full"
@@ -59,6 +76,7 @@ export default function LevelTwo({
           <LevelTwoTop
             selectedMenu={selectedMenu}
             setIsLevelTwo={setIsLevelTwo}
+            levelTwoHasSubMenu={levelTwoHasSubMenu}
           />
         )}
         <div className="overflow-y-auto h-[450px]">
@@ -73,6 +91,8 @@ export default function LevelTwo({
                   showLevelMenu={showLevelMenu}
                   hideMenu={hideMenu}
                   icon={false}
+                  isAllProducts={isAllProducts}
+                  levelTwoHasSubMenu={levelTwoHasSubMenu}
                 />
               ) : (
                 <MenuWithOutSubMenu
@@ -81,6 +101,8 @@ export default function LevelTwo({
                   hoverArrowIndex={hoverArrowIndex}
                   hoverMenu={hoverMenu}
                   icon={false}
+                  isAllProducts={isAllProducts}
+                  levelTwoHasSubMenu={levelTwoHasSubMenu}
                 />
               )}
             </div>

@@ -138,7 +138,7 @@
                                     "linkNewWindow": false
                                   },
                                   {
-                                    "linkText": "Indicator Stop Switches",
+                                    "linkText": "Indicator Stop Switches2",
                                     "linkUrl": "/all-products/Emergency-Stop-Switches",
                                     "linkIcon": "/assets/images/switch.png",
                                     "linkFromSap": false,
@@ -161,7 +161,7 @@
                               "linkNewWindow": false
                             },
                             {
-                              "linkText": "Explore All",
+                              "linkText": "Explore All3",
                               "linkUrl": "/all-products/switches-indicators/explore-all",
                               "linkIcon": "/assets/images/switch.png",
                               "linkFromSap": false,
@@ -171,7 +171,7 @@
                               "linkNewWindow": false
                             },
                             {
-                              "linkText": "Switches & Pushbuttons",
+                              "linkText": "Switches & Pushbuttons2",
                               "linkUrl": "/all-products/switches-indicators/switches-pushbuttons",
                               "linkIcon": "/assets/images/switch.png",
                               "linkFromSap": false,
@@ -205,7 +205,7 @@
                               }
                             },
                             {
-                              "linkText": "Indicator Lights & Buzzers",
+                              "linkText": "Indicator Lights & Buzzers2",
                               "linkUrl": "/all-products/switches-indicators/indicator-lights-buzzers",
                               "linkIcon": "/assets/images/switch.png",
                               "linkFromSap": false,
@@ -239,7 +239,7 @@
                               }
                             },
                             {
-                              "linkText": "LED Lighting",
+                              "linkText": "LED Lighting2",
                               "linkUrl": "/all-products/switches-indicators/led-lighting",
                               "linkIcon": "/assets/images/switch.png",
                               "linkFromSap": false,
@@ -382,7 +382,7 @@
                               "linkNewWindow": false
                             },
                             {
-                              "linkText": "Explore All",
+                              "linkText": "Explore All2",
                               "linkUrl": "/industries/automative/explore-all",
                               "linkIcon": "/assets/images/switch.png",
                               "linkFromSap": false,

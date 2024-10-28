@@ -1,7 +1,7 @@
 "use client";
 import classnames from "classnames";
 import LevelTwo from "./LevelTwo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MenuWithSubMenu from "./MenuWithSubMenu";
 import MenuWithOutSubMenu from "./MenuWithOutSubMenu";
 
@@ -44,6 +44,19 @@ export default function LevelOne({
       activeIndex: "",
     });
   };
+  useEffect(() => {
+    if (
+      levelOneMenus[0]?.linkChildrenCollection?.items.length > 0 &&
+      !isAllProducts
+    ) {
+      setLevelTwoMenus(levelOneMenus[0].linkChildrenCollection?.items);
+      setMenuActive({
+        activeLink: levelOneMenus[0].linkText,
+        activeUrl: levelOneMenus[0].linkUrl,
+        activeIndex: 0,
+      });
+    }
+  }, [levelOneMenus]);
   return (
     <div
       className={classnames("megamenu-dropdown absolute z-10  top-[45px] ")}
@@ -93,6 +106,7 @@ export default function LevelOne({
                         icon={true}
                         hideMenu={hideMenu}
                         isAllProducts={isAllProducts}
+                        levelTwoHasSubMenu={false}
                       />
                     ) : (
                       <MenuWithOutSubMenu
@@ -103,6 +117,7 @@ export default function LevelOne({
                         icon={true}
                         hideMenu={hideMenu}
                         isAllProducts={isAllProducts}
+                        levelTwoHasSubMenu={false}
                       />
                     )}
                   </div>
