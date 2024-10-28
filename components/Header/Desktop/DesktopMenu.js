@@ -25,14 +25,15 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
       }
     });
     const element = document.getElementById(linkText);
-    const rect = element.getBoundingClientRect();
-    setSubmenuPostion(rect.left.toFixed());
+    //const rect = element.getBoundingClientRect();
+    setSubmenuPostion(element.offsetLeft.toFixed());
     console.log(
       "subCategory",
       subCategory,
       levelOneHasSubMenu,
       levelTwoHasSubMenu,
-      submenuPostion
+      submenuPostion,
+      element.offsetLeft.toFixed()
     );
     if (subCategory.length > 0) {
       setIsLevelOne(true);
@@ -57,101 +58,93 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
   return (
     <>
       {menuItems && (
-        <div
-          onMouseLeave={() => {
-            hideMenu();
-          }}
-          className=""
-        >
-          <div className="snip1168 bg-white shadow-md desktop-menu text-black relative ">
-            <ul className="relative container mx-auto level-0 text-14 leading-14 font-medium lg:flex gap-2 items-center">
-              {menuItems.map((menu, index) => (
-                <li
-                  id={menu.linkText}
-                  className={classnames(
-                    "cursor-pointer  relative",
-                    {
-                      "gradient text-white": index === 0,
-                    },
-                    {
-                      "active-bdr  ":
-                        menuActive === index &&
-                        index !== 0 &&
-                        menu.linkClass === null,
-                    },
-                    { "text-primary": menu.linkClass !== null }
-                  )}
-                  key={menu.linkText}
-                  // onClick={() => {
-                  //   if (
-                  //     menu.linkChildrenCollection.items &&
-                  //     menu.linkChildrenCollection.items.length > 0
-                  //   ) {
-                  //     showMenu(menu.linkChildrenCollection.items, index, menu.linkText);
-                  //   } else {
-                  //     hideMenu();
-                  //   }
-                  // }}
-                  onMouseEnter={() => {
-                    if (
-                      menu.linkChildrenCollection.items &&
-                      menu.linkChildrenCollection.items.length > 0
-                    ) {
-                      showMenu(
-                        menu.linkChildrenCollection.items,
-                        index,
-                        menu.linkText
-                      );
-                    }
-                  }}
-                >
-                  <Link
-                    href={menu.linkUrl}
-                    title={menu.linkText}
+        <>
+          <div className="relative container mx-auto">
+            <div
+              onMouseLeave={() => {
+                hideMenu();
+              }}
+              className="float-left"
+            >
+              <ul className="float-left level-0 text-14 leading-14 font-medium">
+                {menuItems.map((menu, index) => (
+                  <li
+                    id={menu.linkText}
                     className={classnames(
-                      "flex gap-1 items-center py-3 px-5 text-center justify-center"
+                      "cursor-pointer  relative",
+                      {
+                        "gradient text-white": index === 0,
+                      },
+                      {
+                        "active-bdr  ":
+                          menuActive === index &&
+                          index !== 0 &&
+                          menu.linkClass === null,
+                      },
+                      { "text-primary": menu.linkClass !== null }
                     )}
+                    key={menu.linkText}
+                    onMouseEnter={() => {
+                      if (
+                        menu.linkChildrenCollection.items &&
+                        menu.linkChildrenCollection.items.length > 0
+                      ) {
+                        showMenu(
+                          menu.linkChildrenCollection.items,
+                          index,
+                          menu.linkText
+                        );
+                      }
+                    }}
                   >
-                    <span>{menu.linkText}</span>
-                    {menu.linkChildrenCollection.items &&
-                      menu.linkChildrenCollection.items.length > 0 && (
-                        <i
-                          className={classnames(
-                            "text-20  ease-in-out duration-500",
-                            { "icon-chevron-down": menuActive !== index },
-                            {
-                              "icon-chevron-down rotate-180":
-                                menuActive === index,
-                            }
-                          )}
-                        ></i>
+                    <Link
+                      href={menu.linkUrl}
+                      title={menu.linkText}
+                      className={classnames(
+                        "flex gap-1 items-center py-3 px-5 text-center justify-center"
                       )}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+                    >
+                      <span>{menu.linkText}</span>
+                      {menu.linkChildrenCollection.items &&
+                        menu.linkChildrenCollection.items.length > 0 && (
+                          <i
+                            className={classnames(
+                              "text-20  ease-in-out duration-500",
+                              { "icon-chevron-down": menuActive !== index },
+                              {
+                                "icon-chevron-down rotate-180":
+                                  menuActive === index,
+                              }
+                            )}
+                          ></i>
+                        )}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              {/* All Products Menu */}
+              {isLevelOne && allProducts && (
+                <LevelOneAll
+                  levelOneMenus={levelOneMenus}
+                  isAllProducts={allProducts}
+                  bowseBy={bowseBy}
+                />
+              )}
+
+              {/* Other Menus */}
+              {isLevelOne && !allProducts && (
+                <LevelOne
+                  levelOneMenus={levelOneMenus}
+                  bowseBy={bowseBy}
+                  isAllProducts={allProducts}
+                  levelTwoHasSubMenu={levelTwoHasSubMenu}
+                  submenuPostion={submenuPostion}
+                />
+              )}
+            </div>
           </div>
-
-          {/* All Products Menu */}
-          {isLevelOne && allProducts && (
-            <LevelOneAll
-              levelOneMenus={levelOneMenus}
-              isAllProducts={allProducts}
-              bowseBy={bowseBy}
-            />
-          )}
-
-          {/* Other Menus */}
-          {isLevelOne && !allProducts && (
-            <LevelOne
-              levelOneMenus={levelOneMenus}
-              bowseBy={bowseBy}
-              isAllProducts={allProducts}
-              levelTwoHasSubMenu={levelTwoHasSubMenu}
-              submenuPostion={submenuPostion}
-            />
-          )}
-        </div>
+        </>
       )}
     </>
   );

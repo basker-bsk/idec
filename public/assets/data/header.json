@@ -672,7 +672,7 @@
                         }
                       },
                       {
-                        "linkText": "Applications Notes",
+                        "linkText": "Applications Notes2",
                         "linkUrl": "/resources/application-notes",
                         "linkIcon": "/assets/images/switch.png",
                         "linkFromSap": null,
@@ -685,7 +685,7 @@
                         }
                       },
                       {
-                        "linkText": "Catalogs & Brochures",
+                        "linkText": "Catalogs & Brochures2",
                         "linkUrl": "/resources/catalogs-brochures",
                         "linkIcon": "/assets/images/switch.png",
                         "linkFromSap": null,
@@ -750,7 +750,7 @@
                         }
                       },
                       {
-                        "linkText": "CAD Files",
+                        "linkText": "CAD Files2",
                         "linkUrl": "/resou/cad-files",
                         "linkIcon": "/assets/images/switch.png",
                         "linkFromSap": null,

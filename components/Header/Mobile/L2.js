@@ -6,7 +6,7 @@ import MenuTop from "./MenuTop";
 import MobileMenuWithSubMenu from "./MobileMenuWithSubMenu";
 import MobileMenuWithOutSubMenu from "./MobileMenuWithOutSubMenu";
 
-function L1({
+function L2({
   levelOneMenus,
   isAllProducts,
   prevLink,
@@ -15,15 +15,6 @@ function L1({
   menuOpen,
   setIsL1Open,
 }) {
-  const [levelTwoMenus, setLevelTwoMenus] = useState([]);
-  const showLevelMenu = (subCategory, link, url) => {
-    if (subCategory.length > 0) {
-      setLevelTwoMenus(subCategory);
-    }
-
-    const isLevelTwo = subCategory.length > 0;
-    console.log("levelTwo", isLevelTwo);
-  };
   return (
     <>
       <MenuTop
@@ -47,7 +38,6 @@ function L1({
                 menuIndex={index}
                 icon={true}
                 isAllProducts={isAllProducts}
-                showLevelMenu={showLevelMenu}
               />
             ) : (
               <MobileMenuWithOutSubMenu
@@ -64,4 +54,4 @@ function L1({
   );
 }
 
-export default L1;
+export default L2;

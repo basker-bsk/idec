@@ -23,9 +23,6 @@ function MenuWithSubMenu({
       onMouseEnter={() => {
         hoverMenu(menuIndex);
       }}
-      // onMouseLeave={() => {
-      //   hoverMenu(-1);
-      // }}
     >
       {icon && isAllProducts && (
         <Image

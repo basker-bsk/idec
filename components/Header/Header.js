@@ -52,7 +52,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className="relative hidden lg:flex lg:flex-col border-t border-gray100 ">
+      <div className="relative hidden lg:flex lg:flex-col border-t border-gray100 bg-white shadow-md desktop-menu text-black ">
         <DesktopMenu menuItems={Menus} setShowOverlay={setShowOverlay} />
       </div>
     </div>

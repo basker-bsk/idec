@@ -378,7 +378,9 @@ form {
     @apply absolute left-0 bottom-0 bg-primary w-full h-[2px];
   }
 }
-
+.desktop-menu ul li {
+  float: left;
+}
 /* Overlay */
 .overlay {
   @apply fixed top-0 left-0 h-full w-full bg-black z-50 opacity-75;
