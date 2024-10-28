@@ -11,7 +11,9 @@ export default function LevelOne({
   isAllProducts,
   levelTwoHasSubMenu,
   submenuPostion,
+  l1Wrap,
 }) {
+  console.log("levelTwoHasSubMenu, l1Wrap", levelTwoHasSubMenu, l1Wrap);
   const [levelTwoMenus, setLevelTwoMenus] = useState([]);
   console.log("levelTwoHasSubMenu", levelTwoHasSubMenu);
   const [hoverArrowIndex, setHoverArrowIndex] = useState();
@@ -20,6 +22,7 @@ export default function LevelOne({
     activeLink: "",
     activeUrl: "",
   });
+
   console.log("submenuPostion", submenuPostion);
   const showLevelMenu = (subCategory, link, url) => {
     if (subCategory.length > 0) {
@@ -61,21 +64,30 @@ export default function LevelOne({
     <div
       className={classnames("megamenu-dropdown absolute z-10  top-[45px] ")}
       style={{
-        left: levelTwoHasSubMenu ? "0" : `${submenuPostion}px`,
-        width: levelTwoHasSubMenu ? "100%" : "auto",
+        left:
+          levelTwoHasSubMenu || (!levelTwoHasSubMenu && l1Wrap)
+            ? "0"
+            : `${submenuPostion}px`,
+        width:
+          levelTwoHasSubMenu || (!levelTwoHasSubMenu && l1Wrap)
+            ? "100%"
+            : "auto",
       }}
     >
       <div
         className={classnames(
           " border-t border-gray100 relative container-menu",
-          { "mx-auto  max-w-[1000px]": levelTwoHasSubMenu },
-          { "max-w-[450px]": !levelTwoHasSubMenu }
+          {
+            "mx-auto  max-w-[1000px]":
+              levelTwoHasSubMenu || (!levelTwoHasSubMenu && l1Wrap),
+          },
+          { "max-w-[450px]": !levelTwoHasSubMenu && !l1Wrap }
         )}
       >
         <div
           className={classnames(
             "shadow-md w-full   bg-white  rounded-br-md rounded-bl-md",
-            { "h-[528px]  max-h-100": levelTwoHasSubMenu },
+            { "h-[528px]  max-h-100": levelTwoHasSubMenu || l1Wrap },
             { "h-auto": !levelTwoHasSubMenu }
           )}
           onMouseLeave={() => {
@@ -88,12 +100,18 @@ export default function LevelOne({
             <div
               className={classnames(
                 "levelOne flex flex-col p-4 ",
-                { "w-1/2 border-r border-gray-300": levelTwoHasSubMenu },
+                {
+                  "w-1/2 border-r border-gray-300": levelTwoHasSubMenu,
+                },
                 { "w-full": !levelTwoHasSubMenu }
               )}
             >
               <p className="text-14 text-gray-400  mb-4">Browse by {bowseBy}</p>
-              <div className={classnames("overflow-y-auto max-h-[450px]")}>
+              <div
+                className={classnames("overflow-y-auto max-h-[450px]", {
+                  "flex flex-col flex-wrap": l1Wrap && !levelTwoHasSubMenu,
+                })}
+              >
                 {levelOneMenus.map((levelOne, index) => (
                   <div key={levelOne.linkText}>
                     {levelOne?.linkChildrenCollection?.items?.length > 0 ? (

@@ -597,6 +597,40 @@
                             }
                           ]
                         }
+                      },
+                      {
+                        "linkText": "Special Vehicles2",
+                        "linkUrl": "/industries/special-vehicles2",
+                        "linkIcon": "/assets/images/switch.png",
+                        "linkFromSap": false,
+                        "linkClass": null,
+                        "linkId": null,
+                        "linkHideText": false,
+                        "linkNewWindow": false,
+                        "linkChildrenCollection": {
+                          "items": [
+                            {
+                              "linkText": "Special Vehicles dummy link (1)2",
+                              "linkUrl": "/special-vehicles-dummy-link",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": null,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": null,
+                              "linkNewWindow": true
+                            },
+                            {
+                              "linkText": "Special Vehicles dummy link (2)2",
+                              "linkUrl": "/special-vehicles-dummy-link",
+                              "linkIcon": "/assets/images/switch.png",
+                              "linkFromSap": null,
+                              "linkClass": null,
+                              "linkId": null,
+                              "linkHideText": null,
+                              "linkNewWindow": true
+                            }
+                          ]
+                        }
                       }
                     ]
                   }

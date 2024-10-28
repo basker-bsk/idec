@@ -9,12 +9,14 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
   const [menuActive, setMenuActive] = useState("");
   const [isLevelOne, setIsLevelOne] = useState(false);
   const [allProducts, setAllProducts] = useState(false);
+  const [l1Wrap, setL1Wrap] = useState(false);
   const [bowseBy, setBrowseBy] = useState("");
   const [levelTwoHasSubMenu, setLevelTwoHasSubMenu] = useState(false);
   const [submenuPostion, setSubmenuPostion] = useState(0);
   let levelOneHasSubMenu;
 
   const showMenu = (subCategory, index, linkText) => {
+    setL1Wrap(false);
     setBrowseBy(linkText);
     levelOneHasSubMenu = subCategory.length > 0;
     subCategory.map((cat, index) => {
@@ -24,6 +26,11 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
         setLevelTwoHasSubMenu(false);
       }
     });
+    if (subCategory.length > 7) {
+      setL1Wrap(true);
+    }
+    console.log("subCategory----", subCategory);
+
     const element = document.getElementById(linkText);
     //const rect = element.getBoundingClientRect();
     setSubmenuPostion(element.offsetLeft.toFixed());
@@ -53,6 +60,7 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
     setLevelOneMenus("");
     setShowOverlay(false);
     setMenuActive("");
+    setL1Wrap(false);
   };
 
   return (
@@ -71,7 +79,7 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
                   <li
                     id={menu.linkText}
                     className={classnames(
-                      "cursor-pointer  relative",
+                      "cursor-pointer mr-[1px] relative",
                       {
                         "gradient text-white": index === 0,
                       },
@@ -141,6 +149,7 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
                   isAllProducts={allProducts}
                   levelTwoHasSubMenu={levelTwoHasSubMenu}
                   submenuPostion={submenuPostion}
+                  l1Wrap={l1Wrap}
                 />
               )}
             </div>
