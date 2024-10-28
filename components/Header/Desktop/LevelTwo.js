@@ -72,16 +72,16 @@ export default function LevelTwo({
           }
         )}
       >
-        {isAllProducts && (
-          <LevelTwoTop
-            selectedMenu={selectedMenu}
-            setIsLevelTwo={setIsLevelTwo}
-            levelTwoHasSubMenu={levelTwoHasSubMenu}
-          />
-        )}
-        <p className="text-14 text-gray-40 hover:text-primary mb-4">
+        <LevelTwoTop
+          selectedMenu={selectedMenu}
+          setIsLevelTwo={setIsLevelTwo}
+          levelTwoHasSubMenu={levelTwoHasSubMenu}
+          isAllProducts={isAllProducts}
+        />
+
+        {/* <p className="text-14 text-gray-40 hover:text-primary mb-4">
           {selectedMenu.activeLink}
-        </p>
+        </p> */}
         <div className="overflow-y-auto h-[450px]">
           {levelTwoMenus.map((levelTwo, index) => (
             <div key={levelTwo.linkText}>
