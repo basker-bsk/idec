@@ -72,16 +72,17 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
               onMouseLeave={() => {
                 hideMenu();
               }}
-              className="float-left"
+              className="float-left h-12"
             >
-              <ul className="float-left level-0 text-14 leading-14 font-medium">
+              <ul className="float-left level-0 h-full">
                 {menuItems.map((menu, index) => (
                   <li
                     id={menu.linkText}
                     className={classnames(
-                      "cursor-pointer mr-[1px] relative",
+                      "cursor-pointer mr-[1px] relative  h-full",
                       {
-                        "gradient text-white": index === 0,
+                        "gradient text-white":
+                          index === 0 && menuActive === index,
                       },
                       {
                         "active-bdr  ":
@@ -105,11 +106,11 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
                       }
                     }}
                   >
-                    <Link
+                    <div
                       href={menu.linkUrl}
                       title={menu.linkText}
                       className={classnames(
-                        "flex gap-1 items-center py-3 px-5 text-center justify-center"
+                        "flex gap-1 items-center py-3 px-5 text-center justify-center text-14 leading-14 font-medium"
                       )}
                     >
                       <span>{menu.linkText}</span>
@@ -126,7 +127,7 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
                             )}
                           ></i>
                         )}
-                    </Link>
+                    </div>
                   </li>
                 ))}
               </ul>

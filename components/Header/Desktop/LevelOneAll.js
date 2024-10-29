@@ -50,7 +50,7 @@ export default function LevelOneAll({
   };
 
   return (
-    <div className="megamenu-dropdown absolute z-10 left-0 top-[45px] w-full">
+    <div className="megamenu-dropdown absolute z-10 left-0 top-[48px] w-full">
       <div
         className={classnames(
           "container border-t border-gray100 mx-auto relative "
@@ -62,7 +62,7 @@ export default function LevelOneAll({
             hideMenu();
           }}
         >
-          <div className="mx-auto container flex w-full h-full justify-between">
+          <div className=" flex w-full h-full justify-between">
             {/* Level One  Starts here */}
             {!isLevelTwo && (
               <div className={classnames("levelOne flex flex-col p-4 w-2/3")}>

@@ -1,23 +1,63 @@
 {
-  "banner": {
-    "bannerItems": [
+  "crComponentsCollection": {
+    "items": [
       {
-        "heading": "MEC switches: visually appealing for enhanced user experience",
-        "description": "MEC caps are visually appealing and highly customizable, providing a pleasing user experience without compromising on functionality.",
-        "bgImageDesktop": "/assets/images/banner-1.png",
-        "ctaText": "Learn More",
-        "ctaUrl": "#Devices",
-        "textAlignment": "left",
-        "textTheme": "Dark"
+        "__typename": "Banner",
+        "bannerOverlineTxt": "FEATURED SERIES",
+        "bannerTitle": "FT2J Series",
+        "bannerSubTitle": null,
+        "bannerBody": "A technologically advanced 7” vivid multi-touch capacitive HMI, with an integrated PLC controller and expandable I./O.",
+        "bannerSectionAllignment": "Left",
+        "bannerTextColor": "#ffffff",
+        "bannerLinkCollection": {
+          "items": [
+            {
+              "linkText": "View Product",
+              "linkId": null,
+              "linkUrl": "https://idec.com",
+              "linkStyle": "Button",
+              "linkClass": null,
+              "linkNewWindow": false
+            }
+          ]
+        },
+        "bannerBgImgDsktp": {
+          "title": "FT2J Series-Desktop",
+          "url": "https://images.ctfassets.net/fg4hnnyn9urp/1ffgZBXJUzCG9LUjWiJTZH/96e2d9871a03843ab4c598a35e9553b3/ft2j-series-desktop.jpg"
+        },
+        "bannerBgImgMob": {
+          "title": "FT2J Series-Mobile",
+          "url": "https://images.ctfassets.net/fg4hnnyn9urp/1NnR6fibmK6EUghyv8NWuA/51fbbee198b660b437db6a2e80f04aa4/ft2j-series-mobile.jpg"
+        }
       },
       {
-        "heading": "HMI PROTECTION AGAINT SAND, MUD AND DIRT ",
-        "description": "Imagine an interface designed not just for functionality but also for reliability. When facing sand, mud and dirt exposure, it is vital that your HMIs ensure durability in demanding conditions.",
-        "bgImageDesktop": "/assets/images/banner-2.png",
-        "ctaText": "Learn More",
-        "ctaUrl": "#Devices",
-        "textAlignment": "left",
-        "textTheme": "Dark"
+        "__typename": "Banner",
+        "bannerOverlineTxt": null,
+        "bannerTitle": "Best Solutions",
+        "bannerSubTitle": "For All Industries",
+        "bannerBody": "Our expertise empowers businesses to optimize operations, enhance productivity, and achieve their goals with cutting-edge technology.",
+        "bannerSectionAllignment": "Left",
+        "bannerTextColor": "#ffffff",
+        "bannerLinkCollection": {
+          "items": [
+            {
+              "linkText": "Learn More",
+              "linkId": null,
+              "linkUrl": "https://idec.com/learn-more",
+              "linkStyle": "Button",
+              "linkClass": null,
+              "linkNewWindow": false
+            }
+          ]
+        },
+        "bannerBgImgDsktp": {
+          "title": "Best Solutions-Desktop",
+          "url": "https://images.ctfassets.net/fg4hnnyn9urp/5BJlXwrVgFkM3WnpRuX5zs/8776f6eb7508f750d71e3edc01ef8cbe/best-solutions-desktop.jpg"
+        },
+        "bannerBgImgMob": {
+          "title": "Best Solutions-Mobile",
+          "url": "https://images.ctfassets.net/fg4hnnyn9urp/3SC800587sezouMNAdcSvs/854bc1571a8ba2ab8be7a254b30585c4/best-solutions-mobile.jpg"
+        }
       }
     ]
   }

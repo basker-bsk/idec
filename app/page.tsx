@@ -8,7 +8,11 @@ import News from "@/components/News";
 import IdecCard from "@/components/Idec-Card";
 import FeaturedProducts from "@/components/featured-products/feature-products";
 import PopularCategories from "@/components/PopularCaregories";
+import content from "@/public/assets/data/home.json";
 export default function Home() {
+  const response =
+    content.landingPageIdecCollection?.items[0]?.lpComponentsCollection
+      ?.items[0];
   return (
     <>
       <div className="mb-12">

@@ -34,11 +34,13 @@ function banner() {
     <div className="lg:min-h-[460px] herobanner">
       {Banners && (
         <Slider {...settings}>
-          {Banners.banner.bannerItems.map((data: any, index: number) => (
-            <div key={index}>
-              <HeroSlides data={data} />
-            </div>
-          ))}
+          {Banners.crComponentsCollection.items.map(
+            (data: any, index: number) => (
+              <div key={index}>
+                <HeroSlides props={data} />
+              </div>
+            )
+          )}
         </Slider>
       )}
     </div>

@@ -15,44 +15,29 @@ export default function Header() {
       ?.menusItemsCollection?.items;
 
   return (
-    <div className="flex flex-col header relative z-10">
-      <div className="bg-black ">
-        <div className="p-2 uppercase text-[10px] tracking-wide container  flex justify-end">
-          <div className="text-white flex gap-4   ">
-            <Link href="/">Partners</Link>
-            <Link href="/">Support</Link>
-          </div>
-        </div>
-      </div>
-      <div className="bg-white shadow-md">
-        <div className="py-4 lg:py-0 container flex justify-between items-center">
-          <div className="lg:hidden">
-            <MobileMenu menuItems={Menus} />
-          </div>
-          <div className="flex gap-8 items-center ">
+    <div className="flex flex-col header relative z-10  header-shadow ">
+      <div className="bg-white header-top container pt-[50px] pb-4 md:pt-5 md:pb-5">
+        <div className="flex justify-between gap-2 items-center">
+          <div className="flex gap-2 items-center ">
+            <div className="lg:hidden">
+              <MobileMenu menuItems={Menus} />
+            </div>
             <Link href="/">
               <Image
-                src="/images/logo.jpg"
-                width={150}
-                height={100}
-                alt="Picture of the author"
-                className="w-[100px] lg:w-[150px]"
+                src="/assets/images/IDEC-Logo.png"
+                width={100}
+                height={34}
+                alt="Logo"
+                className="h-[30px] w-[90px] md:h-[34px] md:w-[100px]"
               />
             </Link>
           </div>
-          <div className="flex gap-2 lg:gap-4 items-center relative">
-            <SearchComponent />
-            <div className="flex gap-1 items-center hover:text-red-800  cursor-pointer ">
-              <User className="h-4 w-4" />
-              <span className="text-[14px] font-medium uppercase hidden lg:flex">
-                James
-              </span>
-            </div>
-            <CartComponent />
-          </div>
+          <SearchComponent />
+
+          <p>Login</p>
         </div>
       </div>
-      <div className="relative hidden lg:flex lg:flex-col border-t border-gray100 bg-white shadow-md desktop-menu text-black ">
+      <div className="relative hidden lg:flex lg:flex-col border-t border-gray100 bg-white  desktop-menu text-black ">
         <DesktopMenu menuItems={Menus} setShowOverlay={setShowOverlay} />
       </div>
     </div>

@@ -60,7 +60,7 @@ export default function LevelOne({
   }, [levelOneMenus]);
   return (
     <div
-      className={classnames("megamenu-dropdown absolute z-10  top-[45px] ")}
+      className={classnames("megamenu-dropdown absolute z-10  top-[48px] ")}
       style={{
         left:
           levelTwoHasSubMenu || (!levelTwoHasSubMenu && l1Wrap)
@@ -92,7 +92,7 @@ export default function LevelOne({
             hideMenu();
           }}
         >
-          <div className="mx-auto container flex w-full h-full justify-between">
+          <div className="flex w-full h-full justify-between">
             {/* Level One  Starts here */}
 
             <div
