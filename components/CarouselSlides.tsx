@@ -1,7 +1,6 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import ScreenSize from "@/utlis/ScreenSize";
 
 function CarouselSlides({ props }: any) {

@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import ScreenSize from "@/utlis/ScreenSize";
+
 export default function ProductFinderBanner() {
   const PFBanner = {
     __typename: "CallToAction",
