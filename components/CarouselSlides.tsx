@@ -1,21 +1,28 @@
-"use client";
-
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import ScreenSize from "@/utlis/ScreenSize";
 
 function CarouselSlides({ props }: any) {
   return (
     <div className="relative flex flex-col justify-center lg:flex-row">
-      <div className="relative z-1 flex">
-        <LazyLoadImage
-          alt={props.bannerBgImgDsktp.title}
-          effect="blur"
-          src={props.bannerBgImgDsktp.url}
-        />
-      </div>
-      <div className="pt-6 md:pt-0 z-10 absolute w-full md:w-1/3 md:left-20 xl:left-[192px] md:top-1/2 md:-translate-y-2/4 px-4 md:px-0  ">
+      <>
+        {ScreenSize() ? (
+          <LazyLoadImage
+            alt={props.bannerBgImgDsktp.title}
+            effect="blur"
+            src={props.bannerBgImgDsktp.url}
+          />
+        ) : (
+          <LazyLoadImage
+            alt={props.bannerBgImgMob.title}
+            effect="blur"
+            src={props.bannerBgImgMob.url}
+          />
+        )}
+      </>
+      <div className="absolute w-full md:w-1/3 md:left-20 xl:left-[192px] top-0 md:top-1/2 md:-translate-y-2/4 px-4 md:px-0 pt-6 md:pt-0">
         <div
           className={`flex flex-col mb-6 md:mb-8 w-full md:max-w-[500px]`}
           style={{

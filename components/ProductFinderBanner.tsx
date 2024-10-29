@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
+import ScreenSize from "@/utlis/ScreenSize";
 export default function ProductFinderBanner() {
   const PFBanner = {
     __typename: "CallToAction",
@@ -56,10 +57,13 @@ export default function ProductFinderBanner() {
   return (
     <>
       {PFBanner && (
-        <div className=" text-white" style={styleDesktop}>
+        <div
+          className=" text-white px-4"
+          style={ScreenSize() ? styleDesktop : styleMobile}
+        >
           <div className="flex gap-4 justify-center items-center py-10 text-center flex-col">
             <h2>{PFBanner.ctaTitle}</h2>
-            <p className="text-14 leading-14 md:text-16 md:leading-16">
+            <p className="text-14 leading-14 md:text-16 md:leading-16 max-w-[660px]">
               The product finder helps you easily locate and select the right
               solutions to meet your specific needs.
             </p>
