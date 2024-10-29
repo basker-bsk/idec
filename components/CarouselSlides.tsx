@@ -5,7 +5,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-function HeroSlides({ props }: any) {
+function CarouselSlides({ props }: any) {
   return (
     <div className="relative flex flex-col justify-center lg:flex-row">
       <div className="relative z-1 flex">
@@ -54,4 +54,4 @@ function HeroSlides({ props }: any) {
   );
 }
 
-export default HeroSlides;
+export default CarouselSlides;

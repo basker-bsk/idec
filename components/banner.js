@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import Banners from "@/public/assets/data/banner.json";
-import HeroSlides from "./HeroSlides";
+import CarouselSlides from "./CarouselSlides";
 
 function banner() {
   const settings = {
@@ -35,9 +35,7 @@ function banner() {
       {Banners && (
         <Slider {...settings}>
           {Banners.crComponentsCollection.items.map((data, index) => (
-            <div key={index}>
-              <HeroSlides props={data} />
-            </div>
+            <CarouselSlides props={data} key={index} />
           ))}
         </Slider>
       )}

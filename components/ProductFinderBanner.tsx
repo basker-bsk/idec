@@ -46,21 +46,7 @@ export default function ProductFinderBanner() {
       url: "https://images.ctfassets.net/fg4hnnyn9urp/27eVEFDEsNNJ7vf1A0H4lS/5097d43fd05721ecff57833aa953015e/product-finder-bg-mob.png",
     },
   };
-  //   const [isBigScreen, setIsBigScreen] = useState(false);
-  //   useEffect(() => {
-  //     if (window.matchMedia("(min-width: 62rem)").matches) {
-  //       setIsBigScreen(true);
-  //     } else {
-  //       setIsBigScreen(false);
-  //     }
-  //   }, []);
-  //   window.matchMedia("(min-width: 62rem)").addEventListener("change", (e) => {
-  //     if (e.matches) {
-  //       setIsBigScreen(true);
-  //     } else {
-  //       setIsBigScreen(false);
-  //     }
-  //   });
+
   const styleDesktop = {
     background: `url(${PFBanner.ctaBgImageDsktp.url}) repeat-x center`,
   };
