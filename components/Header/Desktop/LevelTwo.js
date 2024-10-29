@@ -30,7 +30,7 @@ export default function LevelTwo({
         activeIndex: index,
       });
       const isLevelThree = subCategory.length > 0;
-      console.log("levelThree", isLevelThree, subCategory);
+
       setLevelThreeMenus(subCategory);
     }
   };

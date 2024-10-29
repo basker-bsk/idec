@@ -20,7 +20,6 @@ export default function FeatureProducts() {
   };
   useEffect(() => {
     if (selectedCategory) {
-      console.log(selectedCategory);
       const selectedProducts: any = FeatureProductsData.products.filter((e) => {
         return e.id === selectedCategory;
       });
@@ -31,7 +30,6 @@ export default function FeatureProducts() {
   }, [selectedCategory]);
   useEffect(() => {
     if (productList.length > 0) {
-      // console.log(productList);
     }
   }, [productList]);
   return (
@@ -95,8 +93,7 @@ export default function FeatureProducts() {
             <li>
               <Button
                 className="uppercase"
-                theme={selectedCategory === "auto-id" ?  "primary"
-                  : "secondary"}
+                theme={selectedCategory === "auto-id" ? "primary" : "secondary"}
                 onClick={() => filterCategory("auto-id")}
               >
                 auto-id

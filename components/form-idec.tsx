@@ -51,9 +51,7 @@ export default function IdecForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log("values", values);
-  }
+  function onSubmit(values: z.infer<typeof formSchema>) {}
   return (
     <>
       <div className="flex flex-col w-full p-4 lg:p-8 border border-gray-300 bg-white">

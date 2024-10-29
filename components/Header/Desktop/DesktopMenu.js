@@ -29,19 +29,11 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
     if (subCategory.length > 7) {
       setL1Wrap(true);
     }
-    console.log("subCategory----", subCategory);
 
     const element = document.getElementById(linkText);
     //const rect = element.getBoundingClientRect();
     setSubmenuPostion(element.offsetLeft.toFixed());
-    console.log(
-      "subCategory",
-      subCategory,
-      levelOneHasSubMenu,
-      levelTwoHasSubMenu,
-      submenuPostion,
-      element.offsetLeft.toFixed()
-    );
+
     if (subCategory.length > 0) {
       setIsLevelOne(true);
     }

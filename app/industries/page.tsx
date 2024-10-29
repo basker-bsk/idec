@@ -7,7 +7,6 @@ export default async function Fashion() {
   await wait(1000);
   const response = await client.getEntries();
   const fashionsList: any = response.items;
-  console.log("response----++++++++++++-------", response.items);
 
   return (
     <>

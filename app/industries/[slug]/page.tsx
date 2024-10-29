@@ -13,7 +13,6 @@ export default async function Detail({ params }: { params: { slug: string } }) {
       return fd;
     }
   });
-  console.log("-------", detail);
 
   const { title, brief, cI, description } = detail?.fields;
 

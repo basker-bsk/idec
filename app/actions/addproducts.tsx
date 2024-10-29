@@ -3,7 +3,6 @@
 import { client } from "@/lib/db";
 
 export async function addProduct(data: any) {
-  console.log("id, title, price, description, category, image", data);
   const { id, title, price, description, category, image } = data;
 
   // add the product to the sorted set

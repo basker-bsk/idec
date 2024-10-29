@@ -32,7 +32,6 @@ export default function MobileMenu({ menuItems }) {
     } else {
       setAllProducts(false);
     }
-    console.log("subCategory", subCategory);
   };
   // Hide Menu when click Overlay
   const hideMenu = () => {

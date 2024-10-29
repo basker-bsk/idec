@@ -9,7 +9,7 @@ export default function Cart() {
   const totalPrice = cartItems.reduce((accumulator: any, currentItem: any) => {
     return accumulator + currentItem.price * currentItem.qty;
   }, 0);
-  console.log(cartItems);
+
   return (
     <div className="grid grid-cols-12 gap-4">
       <div className="col-span-12 md:col-span-8">

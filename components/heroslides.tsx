@@ -6,37 +6,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 function HeroSlides({ props }: any) {
-  // const [isBigScreen, setIsBigScreen] = useState(false);
-  // useEffect(() => {
-  //   if (window.matchMedia("(min-width: 62rem)").matches) {
-  //     setIsBigScreen(true);
-  //   } else {
-  //     setIsBigScreen(false);
-  //   }
-  // }, []);
-  // window.matchMedia("(min-width: 62rem)").addEventListener("change", (e) => {
-  //   if (e.matches) {
-  //     setIsBigScreen(true);
-  //   } else {
-  //     setIsBigScreen(false);
-  //   }
-  // });
   return (
     <div className="relative flex flex-col justify-center lg:flex-row">
       <div className="relative z-1 flex">
-        {/* {isBigScreen ? (
-          <LazyLoadImage
-            alt={props.bannerBgImgDsktp.title}
-            effect="blur"
-            src={props.bannerBgImgDsktp.url}
-          />
-        ) : (
-          <LazyLoadImage
-            alt={props.bannerBgImgMob.title}
-            effect="blur"
-            src={props.bannerBgImgMob.url}
-          />
-        )} */}
         <LazyLoadImage
           alt={props.bannerBgImgDsktp.title}
           effect="blur"

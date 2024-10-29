@@ -31,7 +31,7 @@ export default function LevelOneAll({
       activeUrl: url,
     });
     const isLevelTwo = subCategory.length > 0;
-    console.log("levelTwo", isLevelTwo);
+
     setLevelTwoMenus(subCategory);
   };
 

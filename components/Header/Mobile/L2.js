@@ -12,7 +12,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 function L2({ levelTwoMenus, isAllProducts, prevLink, hideMenu, setIsL2Open }) {
-  console.log("levelTwoMenus >>", levelTwoMenus);
   const [accordian, setAccordian] = useState(0);
 
   const ShowAccordian = (index) => {

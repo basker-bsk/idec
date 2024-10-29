@@ -14,9 +14,7 @@ export default function LevelOne({
   l1Wrap,
   hideMenu,
 }) {
-  console.log("levelTwoHasSubMenu, l1Wrap", levelTwoHasSubMenu, l1Wrap);
   const [levelTwoMenus, setLevelTwoMenus] = useState([]);
-  console.log("levelTwoHasSubMenu", levelTwoHasSubMenu);
   const [hoverArrowIndex, setHoverArrowIndex] = useState();
   const [menuActive, setMenuActive] = useState({
     activeIndex: "",
@@ -32,7 +30,6 @@ export default function LevelOne({
       activeUrl: url,
     });
     const isLevelTwo = subCategory.length > 0;
-    console.log("levelTwo", isLevelTwo);
   };
 
   const hoverMenu = (index) => {
