@@ -103,6 +103,9 @@ body {
     @apply bg-background overflow-x-hidden text-gray900;
   }
 }
+img[alt] {
+  @apply text-10;
+}
 
 /* Scroll Bar Styles */
 ::-webkit-scrollbar {
