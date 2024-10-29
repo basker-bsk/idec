@@ -369,7 +369,7 @@ form {
     gap: 10px;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 160px;
+
     li {
       width: auto;
       height: auto;
@@ -403,8 +403,9 @@ form {
   }
   .slick-prev,
   .slick-next {
-    @apply z-20 text-10;
+    @apply z-20 text-10 w-auto h-auto;
   }
+
   .slick-prev::before,
   .slick-next::before {
     font-family: "icomoon";
@@ -425,6 +426,42 @@ form {
     left: 30px;
     &::before {
       content: "\e937";
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .herobanner {
+    .slick-dots {
+      left: 32px;
+    }
+    .slick-prev,
+    .slick-next {
+      @apply top-auto bottom-[20px];
+    }
+    .slick-next {
+      right: 0px;
+    }
+    .slick-prev {
+      right: 30px;
+      left: auto;
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .herobanner {
+    .slick-dots {
+      padding: 0 160px;
+    }
+    .slick-prev,
+    .slick-next {
+      @apply top-auto bottom-[20px];
+    }
+    .slick-next {
+      right: 0px;
+    }
+    .slick-prev {
+      right: 30px;
+      left: auto;
     }
   }
 }

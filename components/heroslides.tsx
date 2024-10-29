@@ -1,19 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Link from "next/link";
 
 function heroslides({ props }: any) {
+  const [screen, setScreen] = useState(
+    window.innerWidth > 768 ? "desk" : "mob"
+  );
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setScreen("desk");
+      } else {
+        setScreen("mob");
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
-    <div className="min-h-[260px] lg:min-h-[460px] relative flex flex-col lg:flex-row">
-      <div className="relative z-1 min-h-[140px]">
-        <LazyLoadImage
-          alt={props.bannerBgImgDsktp.title}
-          effect="blur"
-          src={props.bannerBgImgDsktp.url}
-        />
+    <div className="h-[500px] relative flex flex-col lg:flex-row">
+      <div className="relative z-1 ">
+        {screen == "desk" ? (
+          <LazyLoadImage
+            alt={props.bannerBgImgDsktp.title}
+            effect="blur"
+            src={props.bannerBgImgDsktp.url}
+          />
+        ) : (
+          <LazyLoadImage
+            alt={props.bannerBgImgMob.title}
+            effect="blur"
+            src={props.bannerBgImgMob.url}
+          />
+        )}
       </div>
-      <div className=" z-10 relative lg:absolute w-full md:w-1/3  md:left-20 xl:left-40 md:top-1/2 md:-translate-y-2/4 text-center md:text-left px-4 md:px-0 lg:pt-16 md:pt-0 ">
+      <div className="pt-6 z-10 absolute w-full md:w-1/3 md:left-20 xl:left-40 md:top-1/2 md:-translate-y-2/4 px-4 md:px-0  ">
         <div
           className={`flex flex-col mb-6 md:mb-8 w-full md:max-w-[500px]`}
           style={{
