@@ -9,18 +9,23 @@ import IdecCard from "@/components/Idec-Card";
 import FeaturedProducts from "@/components/featured-products/feature-products";
 import PopularCategories from "@/components/PopularCaregories";
 import content from "@/public/assets/data/home.json";
+import USP from "@/components/USPComponent";
 export default function Home() {
   const response =
     content.landingPageIdecCollection?.items[0]?.lpComponentsCollection
       ?.items[0];
   return (
     <>
-      <div className="mb-12">
+      <div>
         <Banner />
       </div>
-      <div className=" mb-32 md:mb-48">
+      <div className=" mb-8 md:mb-12">
+        <USP />
+      </div>
+      <div className=" mb-8 md:mb-12">
         <PopularCategories />
       </div>
+
       {/* <div className="mb-12">
         <CategoriesComponent />
       </div>

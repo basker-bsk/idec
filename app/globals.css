@@ -107,7 +107,7 @@ img[alt] {
   @apply text-10;
 }
 
-.gray-bg {
+.gray-bg-gradient {
   background: linear-gradient(
     156deg,
     rgba(246, 246, 246, 0.1) -22.43%,
@@ -452,16 +452,9 @@ form {
     .slick-dots {
       padding: 0 160px;
     }
-    .slick-prev,
-    .slick-next {
-      @apply top-auto bottom-[20px];
-    }
+
     .slick-next {
       right: 0px;
-    }
-    .slick-prev {
-      right: 30px;
-      left: auto;
     }
   }
 }
