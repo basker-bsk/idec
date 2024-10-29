@@ -359,6 +359,7 @@ form {
 .herobanner .slick-list {
   @apply lg:min-h-[460px];
 }
+
 .herobanner {
   .slick-dots {
     width: auto;
@@ -402,16 +403,17 @@ form {
   }
   .slick-prev,
   .slick-next {
-    @apply z-20;
-    &::before {
-      font-family: "icomoon";
-      background: white;
-      border-radius: 8px;
-      color: black;
-      opacity: 1;
-      font-size: 24px;
-      padding: 8px;
-    }
+    @apply z-20 text-10;
+  }
+  .slick-prev::before,
+  .slick-next::before {
+    font-family: "icomoon";
+    background: white;
+    border-radius: 8px;
+    color: black;
+    opacity: 1;
+    font-size: 24px;
+    padding: 8px;
   }
   .slick-next {
     right: 50px;
