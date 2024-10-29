@@ -26,9 +26,9 @@ export default function PopularCategories() {
                       className="w-20 h-20 "
                     ></Image>
                   </span>
-                  <p className="text-12 md:text-16 md:font-medium text-center mt-[14px]">
+                  <span className="text-12 md:text-16 md:font-medium text-center mt-[14px]">
                     {cat.cdTitle}
-                  </p>
+                  </span>
                 </Link>
               )
             )}
