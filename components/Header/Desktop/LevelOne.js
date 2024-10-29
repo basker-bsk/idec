@@ -12,6 +12,7 @@ export default function LevelOne({
   levelTwoHasSubMenu,
   submenuPostion,
   l1Wrap,
+  hideMenu,
 }) {
   console.log("levelTwoHasSubMenu, l1Wrap", levelTwoHasSubMenu, l1Wrap);
   const [levelTwoMenus, setLevelTwoMenus] = useState([]);
@@ -38,13 +39,13 @@ export default function LevelOne({
     setHoverArrowIndex(index);
   };
 
-  const hideMenu = () => {
-    setLevelTwoMenus([]);
-    setMenuActive({
-      activeMenu: false,
-      activeIndex: "",
-    });
-  };
+  // const hideMenu = () => {
+  //   setLevelTwoMenus([]);
+  //   setMenuActive({
+  //     activeMenu: false,
+  //     activeIndex: "",
+  //   });
+  // };
   useEffect(() => {
     if (
       levelOneMenus[0]?.linkChildrenCollection?.items.length > 0 &&

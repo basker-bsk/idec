@@ -1,4 +1,9 @@
 {
+  "__typename": "Carousel",
+  "crTitle": "Header Carousel",
+  "crStyle": "Banner",
+  "crViewAllLink": null,
+  "crSlidesPerRow": "1",
   "crComponentsCollection": {
     "items": [
       {
@@ -23,11 +28,11 @@
         },
         "bannerBgImgDsktp": {
           "title": "FT2J Series-Desktop",
-          "url": "https://images.ctfassets.net/fg4hnnyn9urp/1ffgZBXJUzCG9LUjWiJTZH/96e2d9871a03843ab4c598a35e9553b3/ft2j-series-desktop.jpg"
+          "url": "/assets/images/ft2j-series-desktop.jpg"
         },
         "bannerBgImgMob": {
           "title": "FT2J Series-Mobile",
-          "url": "https://images.ctfassets.net/fg4hnnyn9urp/1NnR6fibmK6EUghyv8NWuA/51fbbee198b660b437db6a2e80f04aa4/ft2j-series-mobile.jpg"
+          "url": "/assets/images/ft2j-series-mobile.jpg"
         }
       },
       {
@@ -52,11 +57,11 @@
         },
         "bannerBgImgDsktp": {
           "title": "Best Solutions-Desktop",
-          "url": "https://images.ctfassets.net/fg4hnnyn9urp/5BJlXwrVgFkM3WnpRuX5zs/8776f6eb7508f750d71e3edc01ef8cbe/best-solutions-desktop.jpg"
+          "url": "/assets/images/best-solutions-desktop.jpg"
         },
         "bannerBgImgMob": {
           "title": "Best Solutions-Mobile",
-          "url": "https://images.ctfassets.net/fg4hnnyn9urp/3SC800587sezouMNAdcSvs/854bc1571a8ba2ab8be7a254b30585c4/best-solutions-mobile.jpg"
+          "url": "/assets/images/best-solutions-mobile.jpg"
         }
       }
     ]

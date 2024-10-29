@@ -4,7 +4,7 @@
 //
 // import { User } from 'path/to/interfaces';
 
-export type PopularCategories = {
+export type Carousel = {
   image: string;
   ctaText: string;
   ctaLink: string;

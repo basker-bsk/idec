@@ -359,6 +359,73 @@ form {
 .herobanner .slick-list {
   @apply lg:min-h-[460px];
 }
+.herobanner {
+  .slick-dots {
+    width: auto;
+    bottom: 30px;
+    position: absolute;
+    display: flex !important;
+    gap: 10px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 160px;
+    li {
+      width: auto;
+      height: auto;
+      margin: 0;
+      button {
+        width: 5px;
+        height: auto;
+        padding: 0;
+        &:before {
+          color: #d1d1d1;
+          opacity: 1;
+          content: "";
+          background-color: #d1d1d1;
+          width: 5px;
+          height: 5px;
+          border-radius: 10px;
+        }
+      }
+    }
+    .slick-active {
+      button {
+        width: 30px;
+        transition: all 0.5s ease;
+        &:before {
+          opacity: 1;
+          width: 100%;
+          background-color: white;
+        }
+      }
+    }
+  }
+  .slick-prev,
+  .slick-next {
+    @apply z-20;
+    &::before {
+      font-family: "icomoon";
+      background: white;
+      border-radius: 8px;
+      color: black;
+      opacity: 1;
+      font-size: 24px;
+      padding: 8px;
+    }
+  }
+  .slick-next {
+    right: 50px;
+    &::before {
+      content: "\e939";
+    }
+  }
+  .slick-prev {
+    left: 30px;
+    &::before {
+      content: "\e937";
+    }
+  }
+}
 
 /* Search */
 .search-click {

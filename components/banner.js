@@ -11,12 +11,12 @@ import HeroSlides from "./heroslides";
 function banner() {
   const settings = {
     dots: true,
-    arrows: false,
+    arrows: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 5000,
     pauseOnHover: false,
     pauseOnFocus: false,
@@ -24,7 +24,7 @@ function banner() {
       {
         breakpoint: 767,
         settings: {
-          arrows: false,
+          arrows: true,
         },
       },
     ],
@@ -34,13 +34,11 @@ function banner() {
     <div className="lg:min-h-[460px] herobanner">
       {Banners && (
         <Slider {...settings}>
-          {Banners.crComponentsCollection.items.map(
-            (data: any, index: number) => (
-              <div key={index}>
-                <HeroSlides props={data} />
-              </div>
-            )
-          )}
+          {Banners.crComponentsCollection.items.map((data, index) => (
+            <div key={index}>
+              <HeroSlides props={data} />
+            </div>
+          ))}
         </Slider>
       )}
     </div>

@@ -151,6 +151,7 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
                   levelTwoHasSubMenu={levelTwoHasSubMenu}
                   submenuPostion={submenuPostion}
                   l1Wrap={l1Wrap}
+                  hideMenu={hideMenu}
                 />
               )}
             </div>
