@@ -1,29 +1,30 @@
 "use client";
-import React, { useEffect, useState } from "react";
+
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
-function heroslides({ props }: any) {
-  const [screen, setScreen] = useState(
-    window.innerWidth > 768 ? "desk" : "mob"
-  );
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 768) {
-        setScreen("desk");
-      } else {
-        setScreen("mob");
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+function HeroSlides({ props }: any) {
+  // const [isBigScreen, setIsBigScreen] = useState(false);
+  // useEffect(() => {
+  //   if (window.matchMedia("(min-width: 62rem)").matches) {
+  //     setIsBigScreen(true);
+  //   } else {
+  //     setIsBigScreen(false);
+  //   }
+  // }, []);
+  // window.matchMedia("(min-width: 62rem)").addEventListener("change", (e) => {
+  //   if (e.matches) {
+  //     setIsBigScreen(true);
+  //   } else {
+  //     setIsBigScreen(false);
+  //   }
+  // });
   return (
     <div className=" relative flex flex-col lg:flex-row">
       <div className="relative z-1 ">
-        {screen == "desk" ? (
+        {/* {isBigScreen ? (
           <LazyLoadImage
             alt={props.bannerBgImgDsktp.title}
             effect="blur"
@@ -35,7 +36,12 @@ function heroslides({ props }: any) {
             effect="blur"
             src={props.bannerBgImgMob.url}
           />
-        )}
+        )} */}
+        <LazyLoadImage
+          alt={props.bannerBgImgDsktp.title}
+          effect="blur"
+          src={props.bannerBgImgDsktp.url}
+        />
       </div>
       <div className="pt-6 md:pt-0 z-10 absolute w-full md:w-1/3 md:left-20 xl:left-40 md:top-1/2 md:-translate-y-2/4 px-4 md:px-0  ">
         <div
@@ -76,4 +82,4 @@ function heroslides({ props }: any) {
   );
 }
 
-export default heroslides;
+export default HeroSlides;

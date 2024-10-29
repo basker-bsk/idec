@@ -46,21 +46,21 @@ export default function ProductFinderBanner() {
       url: "https://images.ctfassets.net/fg4hnnyn9urp/27eVEFDEsNNJ7vf1A0H4lS/5097d43fd05721ecff57833aa953015e/product-finder-bg-mob.png",
     },
   };
-  const [screen, setScreen] = useState(
-    window.innerWidth > 768 ? "desk" : "mob"
-  );
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 768) {
-        setScreen("desk");
-      } else {
-        setScreen("mob");
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  //   const [isBigScreen, setIsBigScreen] = useState(false);
+  //   useEffect(() => {
+  //     if (window.matchMedia("(min-width: 62rem)").matches) {
+  //       setIsBigScreen(true);
+  //     } else {
+  //       setIsBigScreen(false);
+  //     }
+  //   }, []);
+  //   window.matchMedia("(min-width: 62rem)").addEventListener("change", (e) => {
+  //     if (e.matches) {
+  //       setIsBigScreen(true);
+  //     } else {
+  //       setIsBigScreen(false);
+  //     }
+  //   });
   const styleDesktop = {
     background: `url(${PFBanner.ctaBgImageDsktp.url}) repeat-x center`,
   };
@@ -70,10 +70,7 @@ export default function ProductFinderBanner() {
   return (
     <>
       {PFBanner && (
-        <div
-          className=" text-white"
-          style={screen === "desk" ? styleDesktop : styleMobile}
-        >
+        <div className=" text-white" style={styleDesktop}>
           <div className="flex gap-4 justify-center items-center py-10 text-center flex-col">
             <h2>{PFBanner.ctaTitle}</h2>
             <p className="text-14 leading-14 md:text-16 md:leading-16">

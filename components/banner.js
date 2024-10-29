@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import Banners from "@/public/assets/data/banner.json";
-import HeroSlides from "./heroslides";
+import HeroSlides from "./HeroSlides";
 
 function banner() {
   const settings = {
