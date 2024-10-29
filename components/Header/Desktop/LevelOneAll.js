@@ -2,7 +2,7 @@
 import classnames from "classnames";
 import LevelTwo from "./LevelTwo";
 import ProductFinderSearch from "./ProductFinderSearch";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MenuWithSubMenu from "./MenuWithSubMenu";
 import MenuWithOutSubMenu from "./MenuWithOutSubMenu";
 
@@ -22,6 +22,7 @@ export default function LevelOneAll({
   });
 
   const showLevelMenu = (subCategory, link, url) => {
+    setHoverArrowIndex();
     if (subCategory.length > 0) {
       setIsLevelTwo(true);
     }
@@ -41,11 +42,13 @@ export default function LevelOneAll({
   const hideMenu = () => {
     setIsLevelTwo(false);
     setLevelTwoMenus([]);
+
     setMenuActive({
       activeMenu: false,
       activeIndex: "",
     });
   };
+
   return (
     <div className="megamenu-dropdown absolute z-10 left-0 top-[45px] w-full">
       <div

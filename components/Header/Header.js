@@ -24,7 +24,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className="bg-white shadow-md px-4 lg:px-0">
+      <div className="bg-white shadow-md">
         <div className="py-4 lg:py-0 container flex justify-between items-center">
           <div className="lg:hidden">
             <MobileMenu menuItems={Menus} />
