@@ -7,10 +7,10 @@ export default function PopularCategories() {
       {categories && (
         <div className="container mx-auto">
           <h3 className="md:text-center mb-6 md:mb-8">Popular Categories</h3>
-          <div className="flex gap-x-3 lg:gap-x-[48px] flex-wrap lg:justify-center">
+          <div className="flex gap-x-3 md:gap-x-[48px] flex-wrap justify-center">
             {categories.categories.map((cat: any, index: number) => (
-              <div className="flex flex-col w-[110px]  lg:w-[150px]  mb-6">
-                <div className="rounded-full bg-gray-200 p-[10px] w-[110px] h-[110px] lg:w-[150px] lg:h-[150px] flex justify-center items-center">
+              <div className="flex flex-col w-[110px]  md:w-[150px]  mb-6">
+                <div className="rounded-full bg-gray-200 p-[10px] w-[110px] h-[110px] md:w-[150px] md:h-[150px] flex justify-center items-center">
                   <Image
                     src={cat.image}
                     width={80}
@@ -19,7 +19,7 @@ export default function PopularCategories() {
                     className="w-20 h-20 "
                   ></Image>
                 </div>
-                <p className="text-12 lg:text-16 lg:font-medium text-center mt-[14px]">
+                <p className="text-12 md:text-16 md:font-medium text-center mt-[14px]">
                   {cat.ctaText}
                 </p>
               </div>
