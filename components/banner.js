@@ -31,7 +31,7 @@ function banner() {
   };
 
   return (
-    <div className="herobanner ">
+    <div className="herobanner">
       {Banners && (
         <Slider {...settings}>
           {Banners.crComponentsCollection.items.map((data, index) => (
