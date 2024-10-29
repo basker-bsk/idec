@@ -37,7 +37,7 @@ export default function RootLayout({
     <>
       <html lang="en" className={`${gotham.variable} font-sans`}>
         <link rel="shortcut icon" href="/assets/images/favicon.ico" />
-        <body className="IDEC bg-gray-50">
+        <body className="IDEC bg-white">
           <Providers initialReduxState="">
             <Header />
             <main>{children}</main>

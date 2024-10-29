@@ -107,6 +107,14 @@ img[alt] {
   @apply text-10;
 }
 
+.gray-bg {
+  background: linear-gradient(
+    156deg,
+    rgba(246, 246, 246, 0.1) -22.43%,
+    rgba(20, 55, 127, 0.15) 131.47%
+  );
+  backdrop-filter: blur(9px);
+}
 /* Scroll Bar Styles */
 ::-webkit-scrollbar {
   width: 5px;

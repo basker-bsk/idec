@@ -15,7 +15,7 @@ export default function PopularCategories() {
                 className="flex flex-col w-[110px]  md:w-[150px]  mb-6"
                 key={cat.ctaText}
               >
-                <span className="rounded-full bg-gray-200 p-[10px] w-[110px] h-[110px] md:w-[150px] md:h-[150px] flex justify-center items-center">
+                <span className="rounded-full bg-gray-50 p-[10px] w-[110px] h-[110px] md:w-[150px] md:h-[150px] flex justify-center items-center">
                   <Image
                     src={cat.image}
                     width={80}
