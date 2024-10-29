@@ -369,7 +369,7 @@ form {
     gap: 10px;
     max-width: 1440px;
     margin: 0 auto;
-
+    left: 192px;
     li {
       width: auto;
       height: auto;
@@ -403,7 +403,7 @@ form {
   }
   .slick-prev,
   .slick-next {
-    @apply z-20 text-10 w-auto h-auto;
+    @apply z-20 text-10 w-10 h-10;
   }
 
   .slick-prev::before,
@@ -417,13 +417,13 @@ form {
     padding: 8px;
   }
   .slick-next {
-    right: 50px;
+    right: 80px;
     &::before {
       content: "\e939";
     }
   }
   .slick-prev {
-    left: 30px;
+    left: 80px;
     &::before {
       content: "\e937";
     }
@@ -449,13 +449,6 @@ form {
 }
 @media only screen and (min-width: 768px) {
   .herobanner {
-    .slick-dots {
-      padding: 0 160px;
-    }
-
-    .slick-next {
-      right: 0px;
-    }
   }
 }
 

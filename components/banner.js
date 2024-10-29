@@ -35,9 +35,7 @@ function banner() {
       {Banners && (
         <Slider {...settings}>
           {Banners.crComponentsCollection.items.map((data, index) => (
-            <div key={index}>
-              <HeroSlides props={data} />
-            </div>
+            <HeroSlides props={data} key={index} />
           ))}
         </Slider>
       )}

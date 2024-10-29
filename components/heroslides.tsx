@@ -22,8 +22,8 @@ function HeroSlides({ props }: any) {
   //   }
   // });
   return (
-    <div className=" relative flex flex-col lg:flex-row">
-      <div className="relative z-1 ">
+    <div className="relative flex flex-col justify-center lg:flex-row">
+      <div className="relative z-1 flex">
         {/* {isBigScreen ? (
           <LazyLoadImage
             alt={props.bannerBgImgDsktp.title}
@@ -43,7 +43,7 @@ function HeroSlides({ props }: any) {
           src={props.bannerBgImgDsktp.url}
         />
       </div>
-      <div className="pt-6 md:pt-0 z-10 absolute w-full md:w-1/3 md:left-20 xl:left-40 md:top-1/2 md:-translate-y-2/4 px-4 md:px-0  ">
+      <div className="pt-6 md:pt-0 z-10 absolute w-full md:w-1/3 md:left-20 xl:left-[192px] md:top-1/2 md:-translate-y-2/4 px-4 md:px-0  ">
         <div
           className={`flex flex-col mb-6 md:mb-8 w-full md:max-w-[500px]`}
           style={{
