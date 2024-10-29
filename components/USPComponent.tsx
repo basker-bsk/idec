@@ -9,7 +9,7 @@ export default function USP() {
             humans & machines.
           </div>
           <div className="flex gap-7 md:gap-12 w-full md:w-1/2">
-            <div className="flex flex-col">
+            <div className="flex flex-col md:gap-1">
               <span className="text-12 leading-12 md:text-14 md:leading-14">
                 {usp.counter1Prefix}
               </span>
@@ -20,7 +20,7 @@ export default function USP() {
                 {usp.counter1Suffix}
               </span>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col md:gap-1">
               <span className="text-12 leading-12 md:text-14 md:leading-14">
                 {usp.counter2Prefix}
               </span>
@@ -31,7 +31,7 @@ export default function USP() {
                 {usp.counter2Suffix}
               </span>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col md:gap-1">
               <span className="text-12 leading-12 md:text-14 md:leading-14">
                 {usp.counter3Prefix}
               </span>
