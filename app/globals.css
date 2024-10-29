@@ -256,7 +256,16 @@ form {
 .container {
   @apply mx-auto max-w-[1440px];
 }
-
+@media only screen and (max-width: 1023px) {
+  .container {
+    @apply px-4;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    @apply px-[50px];
+  }
+}
 .menu-active * {
   box-sizing: border-box;
 }

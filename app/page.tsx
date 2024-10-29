@@ -7,13 +7,17 @@ import IdecForm from "@/components/form-idec";
 import News from "@/components/News";
 import IdecCard from "@/components/Idec-Card";
 import FeaturedProducts from "@/components/featured-products/feature-products";
+import PopularCategories from "@/components/PopularCaregories";
 export default function Home() {
   return (
     <>
       <div className="mb-12">
         <Banner />
       </div>
-      <div className="mb-12">
+      <div className=" mb-32 md:mb-48">
+        <PopularCategories />
+      </div>
+      {/* <div className="mb-12">
         <CategoriesComponent />
       </div>
       <div className="mb-12">
@@ -30,7 +34,7 @@ export default function Home() {
       </div>
       <div className="mb-12">
         <IdecForm />
-      </div>
+      </div> */}
     </>
   );
 }

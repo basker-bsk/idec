@@ -40,7 +40,7 @@ export default function RootLayout({
         <body className="IDEC bg-gray-50">
           <Providers initialReduxState="">
             <Header />
-            <main className="mx-auto container">{children}</main>
+            <main>{children}</main>
             <FooterIdec />
           </Providers>
         </body>
