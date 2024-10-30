@@ -42,7 +42,7 @@ export default function Home() {
       <div className=" mb-8 md:mb-12">
         <TextImageComponent />
       </div>
-      <div className=" mb-8 md:mb-12">
+      <div className="">
         <HelpComponent />
       </div>
 
