@@ -4,6 +4,7 @@ import Link from "next/link";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import classnames from "classnames";
 import { Button } from "./ui/button";
+import ScreenSize from "@/utlis/ScreenSize";
 export default function TextImageComponent() {
   return (
     <div className="container mx-auto px-4 lg:px-[50px]">

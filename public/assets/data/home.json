@@ -494,14 +494,6 @@
               "ctaTextColor": "#ffffff",
               "ctaHideForLoggedInUsers": true,
               "ctaStyle": "Ribbon",
-              "ctaBgImageDsktp": {
-                "title": "CTA Background Image-Desktop",
-                "url": "https://images.ctfassets.net/fg4hnnyn9urp/44VSGGBzeUrQcW3g3h9vLl/1c59717ad346c9ad5d39b28e01a96549/cta-bg-desktop.jpg"
-              },
-              "ctaBgImageMob": {
-                "title": "CTA Background Image-Mobile",
-                "url": "https://images.ctfassets.net/fg4hnnyn9urp/2T2o2jawRd3lzS5l2HabMs/7c2bf83815d1ef60a8c1ce837583834b/cta-bg-mobile.jpg"
-              },
               "ctaLink": {
                 "linkText": "Login / Sign Up",
                 "linkId": null,
@@ -509,6 +501,14 @@
                 "linkStyle": "Button",
                 "linkClass": null,
                 "linkNewWindow": false
+              },
+              "ctaBgImageDsktp": {
+                "title": "CTA Background Image-Desktop",
+                "url": "https://images.ctfassets.net/fg4hnnyn9urp/44VSGGBzeUrQcW3g3h9vLl/1c59717ad346c9ad5d39b28e01a96549/cta-bg-desktop.jpg"
+              },
+              "ctaBgImageMob": {
+                "title": "CTA Background Image-Mobile",
+                "url": "https://images.ctfassets.net/fg4hnnyn9urp/2T2o2jawRd3lzS5l2HabMs/7c2bf83815d1ef60a8c1ce837583834b/cta-bg-mobile.jpg"
               }
             },
             {
@@ -611,14 +611,6 @@
               "ctaTextColor": "#ffffff",
               "ctaHideForLoggedInUsers": false,
               "ctaStyle": "Transparent",
-              "ctaBgImageDsktp": {
-                "title": "Product Finder-Desktop",
-                "url": "https://images.ctfassets.net/fg4hnnyn9urp/2AgVXQrL7BfTlk3tXCJLft/a7f9d3a0e2b24ccf1d4f460f347e4f04/product-finder-bg.png"
-              },
-              "ctaBgImageMob": {
-                "title": "Product Finder-Mobile",
-                "url": "https://images.ctfassets.net/fg4hnnyn9urp/27eVEFDEsNNJ7vf1A0H4lS/5097d43fd05721ecff57833aa953015e/product-finder-bg-mob.png"
-              },
               "ctaLink": {
                 "linkText": "Configure Your Own",
                 "linkId": null,
@@ -626,6 +618,14 @@
                 "linkStyle": "Button",
                 "linkClass": null,
                 "linkNewWindow": false
+              },
+              "ctaBgImageDsktp": {
+                "title": "Product Finder-Desktop",
+                "url": "https://images.ctfassets.net/fg4hnnyn9urp/2AgVXQrL7BfTlk3tXCJLft/a7f9d3a0e2b24ccf1d4f460f347e4f04/product-finder-bg.png"
+              },
+              "ctaBgImageMob": {
+                "title": "Product Finder-Mobile",
+                "url": "https://images.ctfassets.net/fg4hnnyn9urp/27eVEFDEsNNJ7vf1A0H4lS/5097d43fd05721ecff57833aa953015e/product-finder-bg-mob.png"
               }
             },
             {
@@ -755,14 +755,6 @@
               "tiOverline": "INDUSTRIES",
               "tiTitle": "Automotive",
               "tiImagePosition": "Right",
-              "tiImageDesktop": {
-                "title": "Industries Automotive",
-                "url": "https://images.ctfassets.net/fg4hnnyn9urp/67m10Hd7PFyxkJz2wG6U3k/84a7ade0ba252c6757743f128a81a305/industries-automotives.png"
-              },
-              "tiImageMobile": {
-                "title": "Industries Automotive",
-                "url": "https://images.ctfassets.net/fg4hnnyn9urp/67m10Hd7PFyxkJz2wG6U3k/84a7ade0ba252c6757743f128a81a305/industries-automotives.png"
-              },
               "tiButton": {
                 "linkText": "Read More",
                 "linkId": null,
@@ -778,6 +770,14 @@
                 "linkStyle": "Button",
                 "linkClass": null,
                 "linkNewWindow": false
+              },
+              "tiImageDesktop": {
+                "title": "Industries Automotive",
+                "url": "https://images.ctfassets.net/fg4hnnyn9urp/67m10Hd7PFyxkJz2wG6U3k/84a7ade0ba252c6757743f128a81a305/industries-automotives.png"
+              },
+              "tiImageMobile": {
+                "title": "Industries Automotive",
+                "url": "https://images.ctfassets.net/fg4hnnyn9urp/67m10Hd7PFyxkJz2wG6U3k/84a7ade0ba252c6757743f128a81a305/industries-automotives.png"
               }
             },
             {
@@ -908,14 +908,6 @@
               "tiTitle": "About IDEC Way",
               "tiLink": null,
               "tiImagePosition": "Left",
-              "tiImageDesktop": {
-                "title": "About idec way.png",
-                "url": "https://images.ctfassets.net/fg4hnnyn9urp/4p3wx8NzrMmlDprLa9Phax/fda148d36aa57780bdca5a399637d071/about-idec-way.png"
-              },
-              "tiImageMobile": {
-                "title": "About idec way.png",
-                "url": "https://images.ctfassets.net/fg4hnnyn9urp/4p3wx8NzrMmlDprLa9Phax/fda148d36aa57780bdca5a399637d071/about-idec-way.png"
-              },
               "tiButton": {
                 "linkText": "Discover Now",
                 "linkId": null,
@@ -923,6 +915,14 @@
                 "linkStyle": "Button",
                 "linkClass": null,
                 "linkNewWindow": false
+              },
+              "tiImageDesktop": {
+                "title": "About idec way.png",
+                "url": "https://images.ctfassets.net/fg4hnnyn9urp/4p3wx8NzrMmlDprLa9Phax/fda148d36aa57780bdca5a399637d071/about-idec-way.png"
+              },
+              "tiImageMobile": {
+                "title": "About idec way.png",
+                "url": "https://images.ctfassets.net/fg4hnnyn9urp/4p3wx8NzrMmlDprLa9Phax/fda148d36aa57780bdca5a399637d071/about-idec-way.png"
               }
             },
             {
