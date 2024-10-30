@@ -305,6 +305,12 @@ form {
   }
 }
 
+.l1-menus {
+  height: calc(100% - 280px);
+}
+.l2-menus {
+  height: calc(100% - 300px);
+}
 /* Categories */
 .categories li:first-child .title {
   @apply border-t border-gray-300;

@@ -6,6 +6,7 @@ import MenuTop from "./MenuTop";
 import MobileMenuWithSubMenu from "./MobileMenuWithSubMenu";
 import MobileMenuWithOutSubMenu from "./MobileMenuWithOutSubMenu";
 import L2 from "./L2";
+import ProductFinderSearchMobile from "./ProductFinderSearchMobile";
 
 function L1({
   levelOneMenus,
@@ -15,6 +16,7 @@ function L1({
   thumbImage,
   menuOpen,
   setIsL1Open,
+  isL1Open,
 }) {
   const [levelTwoMenus, setLevelTwoMenus] = useState([]);
   const [isL2Open, setIsL2Open] = useState(false);
@@ -28,43 +30,48 @@ function L1({
   };
 
   return (
-    <>
+    <div className="relative  h-screen">
       <MenuTop
         hideMenu={hideMenu}
         prevLink={prevLink}
         backtoLink={setIsL1Open}
       ></MenuTop>
       <p className="text-14 text-gray-400 mb-4">Browse By Categories</p>
-      <ul className="text-20 leading-20 text-black">
-        {levelOneMenus.map((levelOne, index) => (
-          <li
-            className={classnames("p-4 text-black", {
-              "text-primary": levelOne.linkClass !== null,
-            })}
-            key={levelOne.linkText}
-          >
-            {levelOne.linkChildrenCollection?.items &&
-            levelOne.linkChildrenCollection?.items?.length > 0 ? (
-              <MobileMenuWithSubMenu
-                menu={levelOne}
-                menuIndex={index}
-                thumbImage={true}
-                isAllProducts={isAllProducts}
-                showLevelMenu={showLevelMenu}
-              />
-            ) : (
-              <MobileMenuWithOutSubMenu
-                menu={levelOne}
-                menuIndex={index}
-                thumbImage={true}
-                isAllProducts={isAllProducts}
-              />
-            )}
-          </li>
-        ))}
-      </ul>
+      <div className="flex flex-col justify-between overflow-y-auto l1-menus ">
+        <ul className="text-20 leading-20 text-black">
+          {levelOneMenus.map((levelOne, index) => (
+            <li
+              className={classnames("p-4 text-black", {
+                "text-primary": levelOne.linkClass !== null,
+              })}
+              key={levelOne.linkText}
+            >
+              {levelOne.linkChildrenCollection?.items &&
+              levelOne.linkChildrenCollection?.items?.length > 0 ? (
+                <MobileMenuWithSubMenu
+                  menu={levelOne}
+                  menuIndex={index}
+                  thumbImage={true}
+                  isAllProducts={isAllProducts}
+                  showLevelMenu={showLevelMenu}
+                />
+              ) : (
+                <MobileMenuWithOutSubMenu
+                  menu={levelOne}
+                  menuIndex={index}
+                  thumbImage={true}
+                  isAllProducts={isAllProducts}
+                />
+              )}
+            </li>
+          ))}
+        </ul>
+        <div className="w-full absolute bottom-0 left-0">
+          <ProductFinderSearchMobile />
+        </div>
+      </div>
 
-      {/* level 1 Menu */}
+      {/* level 2 Menu */}
       <div
         className={classnames(
           "w-full fixed bg-white overflow-auto top-0 ease-in-out duration-500 transition-all h-full px-4 z-10",
@@ -80,7 +87,7 @@ function L1({
           hideMenu={hideMenu}
         />
       </div>
-    </>
+    </div>
   );
 }
 

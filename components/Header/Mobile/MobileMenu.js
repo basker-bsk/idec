@@ -5,6 +5,7 @@ import classnames from "classnames";
 import { useEffect, useState } from "react";
 import MenuTop from "./MenuTop";
 import L1 from "./L1";
+import ProductFinderSearchMobile from "./ProductFinderSearchMobile";
 export default function MobileMenu({ menuItems }) {
   const [menuOpen, setMenuOpen] = useState({
     currentMenu: true,
@@ -125,6 +126,7 @@ export default function MobileMenu({ menuItems }) {
             thumbImage={true}
             menuOpen={menuOpen.nextMenu}
             setIsL1Open={setIsL1Open}
+            isL1Open={isL1Open}
           />
         </div>
       </div>
