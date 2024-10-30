@@ -12,90 +12,21 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 function L2({ levelTwoMenus, isAllProducts, prevLink, hideMenu, setIsL2Open }) {
-  const [accordian, setAccordian] = useState(0);
-
-  const ShowAccordian = (index) => {
-    setAccordian(index);
+  // Hide Menu when click Overlay
+  const hideL2Menu = () => {
+    setIsL2Open(false);
+    hideMenu();
   };
-
   return (
     <>
       <MenuTop
-        hideMenu={hideMenu}
+        hideMenu={hideL2Menu}
         prevLink={prevLink}
         backtoLink={setIsL2Open}
       ></MenuTop>
       <div className="text-12 leading-12 text-black my-4 flex justify-center border font-medium border-black p-2">
         Expore All {prevLink}
       </div>
-      {/* <ul className="text-16 leading-16 font-medium text-black">
-        {levelTwoMenus.map((levelTwo, index) => (
-          <li
-            className={classnames(
-              "py-4 px-2 text-black border-b border-gray200",
-              {
-                "text-primary": levelTwo.linkClass !== null,
-              }
-            )}
-            key={levelTwo.linkText}
-          >
-            {levelTwo.linkChildrenCollection?.items &&
-            levelTwo.linkChildrenCollection?.items?.length > 0 ? (
-              <div
-                className="flex justify-between items-center"
-                onClick={() => {
-                  if (
-                    levelTwo.linkChildrenCollection.items &&
-                    levelTwo.linkChildrenCollection.items.length > 0
-                  ) {
-                    ShowAccordian(index);
-                  }
-                }}
-              >
-                <div className="flex gap-1 items-center">
-                  <span>{levelTwo.linkText}111</span>
-                </div>
-                <i
-                  className={classnames(
-                    "text-24 ease-in-out text-black duration-500",
-                    {
-                      "icon-minus": accordian === index,
-                    },
-                    {
-                      "icon-plus": accordian !== index,
-                    }
-                  )}
-                ></i>
-              </div>
-            ) : (
-              <MobileMenuWithOutSubMenu
-                menu={levelTwo}
-                menuIndex={index}
-                thumbImage={false}
-                accodian={false}
-                isAllProducts={isAllProducts}
-              />
-            )}
-
-            <ul
-              className={classnames(
-                "flex flex-col ease-in-out duration-500 transition-all",
-                { "h-0": accordian !== index },
-                { "h-auto": accordian === index }
-              )}
-            >
-              {levelTwo.linkChildrenCollection?.items.map((menu, indexAcc) => (
-                <li
-                  className="text-14 leading-14 font-normal p-4"
-                  key={menu.linkText}
-                >
-                  {menu.linkText}
-                </li>
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ul> */}
       <Accordion type="single" collapsible className="w-full menu-accordian">
         {levelTwoMenus.map((levelTwo, index) => (
           <>
