@@ -32,14 +32,14 @@ export default function Home() {
       <div className=" mb-8 md:mb-12">
         <LoginBanner />
       </div>
-      <div className=" mb-8 md:mb-12">
+      <div className="">
         <ProductFinderBanner />
       </div>
       <div className=" mb-8 md:mb-12">
-        <TextImageComponent />
+        <ResourceAndDocuments />
       </div>
       <div className=" mb-8 md:mb-12">
-        <ResourceAndDocuments />
+        <TextImageComponent />
       </div>
 
       {/* <div className="mb-12">
