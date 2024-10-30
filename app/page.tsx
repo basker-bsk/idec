@@ -12,6 +12,7 @@ import content from "@/public/assets/data/home.json";
 import USP from "@/components/USPComponent";
 import LoginBanner from "@/components/LoginBanner";
 import ProductFinderBanner from "@/components/ProductFinderBanner";
+import TextImageComponent from "@/components/TextImageComponent";
 export default function Home() {
   const response =
     content.landingPageIdecCollection?.items[0]?.lpComponentsCollection
@@ -32,6 +33,9 @@ export default function Home() {
       </div>
       <div className=" mb-8 md:mb-12">
         <ProductFinderBanner />
+      </div>
+      <div className=" mb-8 md:mb-12">
+        <TextImageComponent />
       </div>
 
       {/* <div className="mb-12">
