@@ -41,7 +41,7 @@ export default function TextImageComponent() {
         </div>
         <div
           className={classnames(
-            "md:absolute md:top-1/2 md:-translate-y-1/2 md:w-6/12 gradient text-white py-8 px-6 rounded-bl-2xl rounded-br-2xl md:rounded-md flex flex-col gap-2",
+            "md:absolute md:top-1/2 md:-translate-y-1/2 md:w-6/12 gradient-red text-white py-8 px-6 rounded-bl-2xl rounded-br-2xl md:rounded-md flex flex-col gap-2",
             {
               "md:right-0": categories.tiImagePosition === "Left",
             },

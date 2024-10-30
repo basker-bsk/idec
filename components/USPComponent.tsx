@@ -1,7 +1,7 @@
 import usp from "@/public/assets/data/usp.json";
 export default function USP() {
   return (
-    <div className="gray-bg-gradient w-full py-6">
+    <div className="gradient-gray w-full py-6">
       <div className="flex container mx-auto px-4 md:px-[50px] lg:px-[100px] items-center">
         <div className="flex gap-10 flex-col md:flex-row  items-center">
           <div className="text-18 leading-18 font-medium md:text-20 md:leading-[30px] w-full md:w-1/2">

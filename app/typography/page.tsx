@@ -23,7 +23,7 @@ export default function Typography() {
         </p>
 
         <h4 className="mt-4">IDEC Gradient</h4>
-        <div className="rounded-md w-full flex gradient p-8 justify-end">
+        <div className="rounded-md w-full flex gradient-red p-8 justify-end">
           <Button theme="secondary" variant="icon">
             <span className="icon-cart"></span>
           </Button>

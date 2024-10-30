@@ -73,7 +73,7 @@ const DesktopMenu = ({ setShowOverlay, menuItems }) => {
                     className={classnames(
                       "cursor-pointer mr-[1px] relative  h-full",
                       {
-                        "gradient text-white":
+                        "gradient-red text-white":
                           index === 0 && menuActive === index,
                       },
                       {
