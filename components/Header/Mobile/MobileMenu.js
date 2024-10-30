@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import MenuTop from "./MenuTop";
 import L1 from "./L1";
 import ProductFinderSearchMobile from "./ProductFinderSearchMobile";
+import CountrySelection from "./CountrySelection";
 export default function MobileMenu({ menuItems }) {
   const [menuOpen, setMenuOpen] = useState({
     currentMenu: true,
@@ -109,6 +110,9 @@ export default function MobileMenu({ menuItems }) {
               </li>
             ))}
           </ul>
+          <div className="absolute bottom-0 left-0 w-full">
+            <CountrySelection />
+          </div>
         </div>
         {/* level 1 Menu */}
         <div
