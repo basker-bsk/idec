@@ -96,7 +96,7 @@ function L2({ levelTwoMenus, isAllProducts, prevLink, hideMenu, setIsL2Open }) {
           </li>
         ))}
       </ul> */}
-      <Accordion type="single" collapsible className="w-full">
+      <Accordion type="single" collapsible className="w-full menu-accordian">
         {levelTwoMenus.map((levelTwo, index) => (
           <>
             {levelTwo.linkChildrenCollection?.items &&

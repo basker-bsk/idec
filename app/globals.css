@@ -277,56 +277,29 @@ form {
     @apply px-[50px];
   }
 }
-.menu-active * {
-  box-sizing: border-box;
-}
-
-.menu-active li {
-  display: inline-block;
-  list-style: outside none none;
-}
-
-.menu-active li a.active {
-  position: relative;
-  text-decoration: none;
-}
-
-.menu-active li a.active:before,
-.menu-active li a.active:after {
-  position: absolute;
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
-
-.menu-active li a.active:before {
-  bottom: 0;
-  display: block;
-  height: 3px;
-  width: 0%;
-  content: "";
-  background-color: #c0392b;
-}
-
-.menu-active a.active:after {
-  left: 0;
-  bottom: 0;
-  position: absolute;
-  content: attr(data-hover);
-  color: black;
-  white-space: nowrap;
-  max-width: 0%;
-  overflow: hidden;
-}
-
-.menu-active li:hover a.active:before,
-.menu-active li.current:hover a.active:before {
-  opacity: 1;
-  width: 100%;
-}
-
-.menu-active li:hover a.active:after,
-.menu-active li.current a.active:after {
-  max-width: 100%;
+.menu-accordian {
+  button {
+    position: relative;
+    &:before {
+      font-family: "icomoon";
+      content: "\e93c";
+      @apply right-0 top-1/2 -translate-y-1/2 text-24 absolute;
+    }
+    svg {
+      display: none;
+    }
+  }
+  button[data-state="closed"] {
+    &:before {
+      content: "\e93c";
+    }
+  }
+  button[data-state="open"] {
+    &:before {
+      content: "\e93b";
+      @apply transition-all rotate-180;
+    }
+  }
 }
 
 /* Categories */
@@ -403,7 +376,8 @@ form {
   }
   .slick-prev,
   .slick-next {
-    @apply z-20 text-10 w-10 h-10;
+    z-index: 1;
+    @apply text-10 w-10 h-10;
   }
 
   .slick-prev::before,
@@ -532,4 +506,56 @@ form {
   opacity: 1;
   padding: 5px;
   @apply w-[100px] lg:w-[200px];
+}
+
+.menu-active * {
+  box-sizing: border-box;
+}
+
+.menu-active li {
+  display: inline-block;
+  list-style: outside none none;
+}
+
+.menu-active li a.active {
+  position: relative;
+  text-decoration: none;
+}
+
+.menu-active li a.active:before,
+.menu-active li a.active:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.menu-active li a.active:before {
+  bottom: 0;
+  display: block;
+  height: 3px;
+  width: 0%;
+  content: "";
+  background-color: #c0392b;
+}
+
+.menu-active a.active:after {
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  content: attr(data-hover);
+  color: black;
+  white-space: nowrap;
+  max-width: 0%;
+  overflow: hidden;
+}
+
+.menu-active li:hover a.active:before,
+.menu-active li.current:hover a.active:before {
+  opacity: 1;
+  width: 100%;
+}
+
+.menu-active li:hover a.active:after,
+.menu-active li.current a.active:after {
+  max-width: 100%;
 }
