@@ -31,13 +31,13 @@ export default function TextImageComponent() {
             }
           )}
         >
-          <Image
+          <img
             src={categories.tiImageDesktop.url}
             width={42}
             height={42}
             alt={categories.tiImageDesktop.title}
             className="w-full h-auto rounded-tl-2xl rounded-tr-2xl md:rounded-md"
-          ></Image>
+          ></img>
         </div>
         <div
           className={classnames(
