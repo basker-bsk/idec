@@ -106,7 +106,12 @@ body {
 img[alt] {
   @apply text-10;
 }
-
+.header {
+  @apply lg:fixed left-0 top-0 w-full;
+}
+.main-content {
+  @apply lg:mt-[122px];
+}
 .header-shadow {
   @apply bg-white;
   box-shadow: 0px 40px 87px 0px rgba(0, 0, 0, 0.1);

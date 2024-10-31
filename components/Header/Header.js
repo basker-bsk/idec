@@ -32,7 +32,7 @@ export default function Header() {
               />
             </Link>
           </div>
-          <SearchComponent />
+          <div>Search</div>
 
           <p>Login</p>
         </div>

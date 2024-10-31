@@ -40,7 +40,7 @@ export default function RootLayout({
         <body className="IDEC bg-white">
           <Providers initialReduxState="">
             <Header />
-            <main>{children}</main>
+            <main className="main-content">{children}</main>
             <FooterIdec />
           </Providers>
         </body>
