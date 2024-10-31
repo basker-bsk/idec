@@ -27,7 +27,11 @@ function L2({ levelTwoMenus, isAllProducts, prevLink, hideMenu, setIsL2Open }) {
         Expore All {prevLink}
       </div>
       <div className="flex flex-col justify-between overflow-y-auto l2-menus ">
-        <Accordion type="single" collapsible className="w-full menu-accordian">
+        <Accordion
+          type="single"
+          collapsible
+          className="w-full custom-accordian"
+        >
           {levelTwoMenus.map((levelTwo, index) => (
             <>
               {levelTwo.linkChildrenCollection?.items &&

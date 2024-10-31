@@ -169,13 +169,6 @@ button.radio-box[aria-checked="true"] {
   @apply border-primary;
 }
 
-.sidebar-menu {
-  height: -moz-calc(100vh - (91px));
-  height: -webkit-calc(100vh - (91px));
-  height: calc(100vh - (91px));
-  padding-bottom: 40px;
-}
-
 /* Form Elemets */
 form {
   text-align: left !important;
@@ -217,9 +210,6 @@ input.error-field {
   @apply w-full;
 }
 
-.menu-active {
-  @apply bg-pink-800 text-white;
-}
 .gradient-gray {
   background: linear-gradient(
     156deg,
@@ -229,7 +219,7 @@ input.error-field {
   backdrop-filter: blur(9px);
 }
 .gradient-red {
-  @apply bg-gradient-to-r from-gradient1 from-10%  to-gradient2 to-90%;
+  @apply bg-gradient-to-r from-themeGradient1 from-10%  to-themeGradient2 to-90%;
 }
 .gradient-blue {
   background: linear-gradient(126deg, #f6f6f6 0%, #c7d2e9 150.68%);
@@ -280,14 +270,15 @@ form {
     @apply px-[50px];
   }
 }
-.menu-accordian {
+/* Cutom Styles added to overwriite the Accodian UI component from arrow to plus/minus */
+.custom-accordian {
   button {
-    position: relative;
     &:before {
       font-family: "icomoon";
       content: "\e93c";
       @apply right-0 top-1/2 -translate-y-1/2 text-24 absolute;
     }
+    @apply relative;
     svg {
       display: none;
     }
@@ -317,21 +308,18 @@ form {
 }
 
 .idec-title {
-  @apply relative pl-[30px] lg:pl-[50px];
+  @apply relative pl-[30px] lg:pl-[50px] z-[1];
   line-height: 1;
-  z-index: 1;
 }
 
 .idec-title::before {
-  @apply absolute bg-gray-400 left-[2px] w-[30px] lg:w-[50px] h-full;
+  @apply absolute bg-gray-400 left-[2px] w-[30px] lg:w-[50px] h-full z-[2];
   content: "";
-  z-index: 2;
 }
 
 .idec-title::after {
-  @apply absolute left-[27px] lg:left-[42px] bg-white w-[5px] lg:w-[10px] h-[70%] top-1/2 -translate-y-1/2;
+  @apply absolute left-[27px] lg:left-[42px] bg-white w-[5px] lg:w-[10px] h-[70%] top-1/2 -translate-y-1/2  z-[3];
   content: "";
-  z-index: 3;
 }
 
 .cards h3 {
@@ -432,25 +420,6 @@ form {
   }
 }
 
-/* Search */
-.search-click {
-  outline: none;
-  width: 100px;
-  padding: 5px;
-  transition: all 0.5s;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  text-align: left;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.search-click:focus {
-  width: 400px;
-  padding-left: 20px;
-}
-
 /* Desktop Menu */
 @media only screen and (max-width: 767px) {
   .overlaySection {
@@ -477,94 +446,9 @@ form {
 .overlay {
   @apply fixed top-0 left-0 h-full w-full bg-black z-50 opacity-75;
 }
-.pfs-container {
-  @apply w-full bg-black;
-}
-
-/* Search */
-.searchContainer {
-  display: flex;
-  align-items: center;
-}
-
-.searchIcon {
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.searchInput {
-  width: 0;
-  opacity: 0;
-  transition:
-    width 0.3s ease,
-    opacity 0.3s ease;
-  padding: 0;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid #ccc;
-}
-
-.searchInput input {
-  border: 0;
-  width: 100%;
-  outline: none;
-  font-size: 12px;
-}
-
-.searchInput.expanded {
-  opacity: 1;
-  padding: 5px;
-  @apply w-[100px] lg:w-[200px];
-}
-
-.menu-active * {
-  box-sizing: border-box;
-}
-
-.menu-active li {
-  display: inline-block;
-  list-style: outside none none;
-}
-
-.menu-active li a.active {
-  position: relative;
-  text-decoration: none;
-}
-
-.menu-active li a.active:before,
-.menu-active li a.active:after {
-  position: absolute;
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
-
-.menu-active li a.active:before {
-  bottom: 0;
-  display: block;
-  height: 3px;
-  width: 0%;
-  content: "";
-  background-color: #c0392b;
-}
-
-.menu-active a.active:after {
-  left: 0;
-  bottom: 0;
-  position: absolute;
-  content: attr(data-hover);
-  color: black;
-  white-space: nowrap;
-  max-width: 0%;
-  overflow: hidden;
-}
-
-.menu-active li:hover a.active:before,
-.menu-active li.current:hover a.active:before {
-  opacity: 1;
-  width: 100%;
-}
-
-.menu-active li:hover a.active:after,
-.menu-active li.current a.active:after {
-  max-width: 100%;
+.sidebar-menu {
+  height: -moz-calc(100vh - (91px));
+  height: -webkit-calc(100vh - (91px));
+  height: calc(100vh - (91px));
+  padding-bottom: 40px;
 }
