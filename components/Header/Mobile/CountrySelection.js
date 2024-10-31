@@ -53,24 +53,21 @@ export default function CountrySelection() {
           </div>
           <ul className="flex flex-col gap-6">
             {regions.regionsCollection.items.map((region, index) => (
-              <>
-                {region.regionSite === "IDEC" && (
-                  <li
-                    key={region.regionLabel + "-" + index}
-                    className=" py-1 flex justify-between items-center"
-                    onClick={() => SelectRegion(region, index)}
-                  >
-                    <span className="text-16 leading-16 font-medium">
-                      {region.regionLabel}
-                    </span>
-                    {chooseRegion.regionIndex === index && (
-                      <span className="rounded-full w-6 h-6 flex justify-center items-center bg-success">
-                        <i className="icon-tick text-12 text-white font-bold"></i>
-                      </span>
-                    )}
-                  </li>
+              <li
+                key={region.regionLabel + "-" + index}
+                id={region.regionLabel + "-" + index}
+                className=" py-1 flex justify-between items-center"
+                onClick={() => SelectRegion(region, index)}
+              >
+                <span className="text-16 leading-16 font-medium">
+                  {region.regionLabel}
+                </span>
+                {chooseRegion.regionIndex === index && (
+                  <span className="rounded-full w-6 h-6 flex justify-center items-center bg-success">
+                    <i className="icon-tick text-12 text-white font-bold"></i>
+                  </span>
                 )}
-              </>
+              </li>
             ))}
           </ul>
           <div className="gradient-red p-6 text-white flex flex-col gap-1 font-medium rounded-md mt-6">

@@ -11,7 +11,7 @@ export default function HelpComponent() {
         <div className="flex flex-col gap-2 mb-4 md:mb-8">
           <h3>{help.clmTitle}</h3>
           <p className="text-16 leading-16">
-            All the technical documentation you need to make things work.
+            Get the help and resources you need quickly with IDEC
           </p>
         </div>
         <div>
@@ -47,8 +47,9 @@ export default function HelpComponent() {
                       href={list.cdLink.linkUrl}
                       target={list.cdLink.linkNewWindow ? "_blank" : "_self"}
                     >
-                      All the technical documentation you need to make things
-                      work.
+                      <div>
+                        {documentToReactComponents(list.cdDescription.json)}
+                      </div>
                     </Link>
                   </p>
                 </div>

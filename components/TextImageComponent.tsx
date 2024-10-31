@@ -53,9 +53,7 @@ export default function TextImageComponent() {
             {categories.tiOverline}
           </span>
           <h4>{categories.tiTitle}</h4>
-          <p className="font-medium text-14 leading-14 md:text-16 md:leading-16">
-            {categories.tiDescription.json.content[0].content[0].value}
-          </p>
+          <div>{documentToReactComponents(categories.tiDescription.json)}</div>
           <div className="flex gap-3 mt-4 md:mt-8">
             <Button theme="secondary">
               <Link href={categories.tiButton.linkUrl}>
@@ -69,11 +67,6 @@ export default function TextImageComponent() {
               <span className="icon-chevron-right text-white"></span>
             </Button>
           </div>
-          {/* <p>
-            {documentToReactComponents(
-              categories.tiDescription.json.content[0].content[0].value
-            )}
-          </p> */}
         </div>
       </div>
     </div>
