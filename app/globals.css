@@ -331,12 +331,9 @@ form {
   display: ruby;
 }
 
-.herobanner .slick-list {
-  @apply lg:min-h-[460px];
-}
-
 .herobanner {
   .slick-dots {
+    left: 82px;
     width: auto;
     bottom: 30px;
     position: absolute;
@@ -344,7 +341,6 @@ form {
     gap: 10px;
     max-width: 1440px;
     margin: 0 auto;
-    left: 192px;
     li {
       width: auto;
       height: auto;
@@ -393,13 +389,13 @@ form {
     padding: 8px;
   }
   .slick-next {
-    right: 80px;
+    right: 16px;
     &::before {
       content: "\e939";
     }
   }
   .slick-prev {
-    left: 80px;
+    left: 16px;
     &::before {
       content: "\e937";
     }
@@ -421,6 +417,19 @@ form {
     .slick-prev {
       right: 70px;
       left: auto;
+    }
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .herobanner {
+    .slick-next {
+      right: 80px;
+    }
+    .slick-prev {
+      left: 80px;
+    }
+    .slick-dots {
+      left: 192px;
     }
   }
 }

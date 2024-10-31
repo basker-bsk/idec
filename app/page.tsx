@@ -21,7 +21,7 @@ export default function Home() {
       ?.items[0];
   return (
     <>
-      <div className=" min-h-[500px]">
+      <div className="">
         <Banner />
       </div>
       <div className=" mb-8 md:mb-12">

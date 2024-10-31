@@ -1,5 +1,4 @@
 import categories from "@/public/assets/data/text-image.json";
-import Image from "next/image";
 import Link from "next/link";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import classnames from "classnames";
@@ -41,7 +40,7 @@ export default function TextImageComponent() {
         </div>
         <div
           className={classnames(
-            "md:absolute md:top-1/2 md:-translate-y-1/2 md:w-6/12 gradient-red text-white py-8 px-6 md:py-20 md:px-8 rounded-bl-2xl rounded-br-2xl md:rounded-md flex flex-col gap-2",
+            "md:absolute md:top-1/2 md:-translate-y-1/2 md:w-6/12 gradient-red text-white py-8 px-6 lg:py-20 md:px-8 rounded-bl-2xl rounded-br-2xl md:rounded-md flex flex-col gap-2",
             {
               "md:right-0": categories.tiImagePosition === "Left",
             },

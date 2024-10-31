@@ -16,18 +16,10 @@ function banner() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 5000,
     pauseOnHover: false,
     pauseOnFocus: false,
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          arrows: true,
-        },
-      },
-    ],
   };
 
   return (
@@ -35,9 +27,7 @@ function banner() {
       {Banners && (
         <Slider {...settings}>
           {Banners.crComponentsCollection.items.map((data, index) => (
-            <>
-              <CarouselSlides props={data} key={index} />
-            </>
+            <CarouselSlides props={data} key={`b-${index}`} />
           ))}
         </Slider>
       )}

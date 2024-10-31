@@ -4,7 +4,7 @@ export default function Screensize() {
   const [isBigScreen, setIsBigScreen] = useState(false);
   useEffect(() => {
     if (typeof window !== "undefined") {
-      if (window.matchMedia("(min-width: 62rem)").matches) {
+      if (window.matchMedia("(min-width: 768px)").matches) {
         setIsBigScreen(true);
       } else {
         setIsBigScreen(false);
@@ -12,7 +12,7 @@ export default function Screensize() {
     }
   }, []);
   if (typeof window !== "undefined") {
-    window.matchMedia("(min-width: 62rem)").addEventListener("change", (e) => {
+    window.matchMedia("(min-width: 768px)").addEventListener("change", (e) => {
       if (e.matches) {
         return setIsBigScreen(true);
       } else {

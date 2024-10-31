@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function ResourceAndDocuments() {
   return (
     <div className="gradient-blue ">
-      <div className="container mx-auto px-5 md:px-[50px] py-6 md:py-12">
+      <div className="container mx-auto px-5 lg:px-[50px] py-6 md:py-12">
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-4 md:mb-6">
           <h3>{rd.listLinkTitle}</h3>
           <p className="md:hidden text-14 leading-14">

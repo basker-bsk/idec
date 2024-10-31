@@ -56,6 +56,7 @@ export default function CountrySelection() {
               <>
                 {region.regionSite === "IDEC" && (
                   <li
+                    key={region.regionLabel + "-" + index}
                     className=" py-1 flex justify-between items-center"
                     onClick={() => SelectRegion(region, index)}
                   >

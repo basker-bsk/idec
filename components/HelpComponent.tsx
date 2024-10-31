@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function HelpComponent() {
   return (
     <div className="gradient-blue ">
-      <div className="container mx-auto px-5 md:px-[50px] py-6 md:py-12">
+      <div className="container mx-auto px-5 lg:px-[50px] py-6 md:py-12">
         <div className="flex flex-col gap-2 mb-4 md:mb-8">
           <h3>{help.clmTitle}</h3>
           <p className="text-16 leading-16">
