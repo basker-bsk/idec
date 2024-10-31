@@ -77,7 +77,7 @@ const config = {
         whiteTint: "rgba(255, 255, 255, 0.8)",
         danger: "#CC0000",
         dangerHover: "#EA0E00",
-        success: "#2D9F48",
+        success: "#0B8F30",
         successTint: "rgba(45, 159, 72, 0.2)",
         orangeTint: "#FFECD1",
         orangeTintDeep: "#FCF3EC",
