@@ -11,9 +11,9 @@ export default function News() {
             key={`news-${index}`}
           >
             <div className="w-full lg:w-1/2 lg:px-6 text-left">
-              <h2 className="idec-title uppercase text-[32px] lg:text-[50px] font-extrabold mb-6">
+              <h4 className="idec-title uppercase text-[32px] lg:text-[50px] font-bold mb-6">
                 {data.news_title}
-              </h2>
+              </h4>
               <p className="text-[12px] lg:text-[14px]">{data.description}</p>
             </div>
             <div className="w-full lg:w-1/2 lg:px-6">

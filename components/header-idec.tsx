@@ -41,7 +41,7 @@ export default function HeaderIdec() {
                 setShowOverlay={setShowOverlay}
               />
             </div>
-            {/* <ul className="snip1168 hidden nav text-[14px] font-semibold uppercase  gap-4">
+            {/* <ul className="snip1168 hidden nav text-[14px] font-medium uppercase  gap-4">
               <li>
                 <Link href="/" data-hover="Products">
                   Products
@@ -73,7 +73,7 @@ export default function HeaderIdec() {
             <SearchComponent />
             <div className="flex gap-1 items-center hover:text-red-800  cursor-pointer ">
               <User className="h-4 w-4" />
-              <span className="text-[14px] font-semibold uppercase hidden lg:flex">
+              <span className="text-[14px] font-medium uppercase hidden lg:flex">
                 James
               </span>
             </div>

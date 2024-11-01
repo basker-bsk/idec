@@ -52,7 +52,7 @@ export default function FooterIdec() {
   ];
   return (
     <div className="flex bg-gray-200 px-4  flex-col">
-      <div className="text-[12px] lg:text-[14px] container border-b border-gray-400 font-semibold">
+      <div className="text-[12px] lg:text-[14px] container border-b border-gray-400 font-medium">
         <div className="flex w-full flex-wrap gap-y-8 py-8 ">
           <div className="w-1/2 lg:w-1/4 flex flex-col gap-2">
             <Image
@@ -95,14 +95,14 @@ export default function FooterIdec() {
           </div>
         </div>
       </div>
-      <div className="container border-b border-gray-400 font-semibold">
+      <div className="container border-b border-gray-400 font-medium">
         <div className="flex w-full  py-8 ">
           <div className=" flex justify-between w-full flex-wrap gap-y-8">
             {footerLinks.map((nav, index) => (
               <div className="flex flex-col w-1/2 lg:w-1/4" key={`f-${index}`}>
-                <h3 className="text-[12px] lg:text-[14px] mb-2 uppercase font-bold">
+                <h4 className="text-[12px] lg:text-[14px] mb-2 uppercase font-bold">
                   {nav.title}
-                </h3>
+                </h4>
                 <ul className="text-[12px] flex lg:gap-2 flex-col font-medium">
                   {nav.links.map((link, index) => (
                     <li aria-hidden="true" className="" key={`fs-${index}`}>

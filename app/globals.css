@@ -1,12 +1,42 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-* {
-  font-family: "Poppins";
+@import url(../public/icons/style.css);
+body {
+  &:lang(en) {
+    @apply text-14 md:text-16;
+    h1 {
+      @apply text-40 md:text-48 font-medium leading-[52px] md:leading-[62px];
+    }
+    h2 {
+      @apply text-32 md:text-40 font-medium leading-[42px] md:leading-[52px];
+    }
+    h3 {
+      @apply text-24 md:text-32 font-medium leading-[31px] md:leading-[42px];
+    }
+    h4 {
+      @apply text-18 md:text-24 font-medium leading-[23px] md:leading-[31px];
+    }
+  }
+
+  &:lang(ch) {
+    @apply text-base md:text-lg;
+    h1 {
+      @apply text-42 md:text-51;
+    }
+    h2 {
+      @apply text-32 md:text-40;
+    }
+    h3 {
+      @apply text-24 md:text-32;
+    }
+    h4 {
+      @apply text-18 md:text-24;
+    }
+  }
 }
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -68,19 +98,27 @@
   * {
     @apply border-border;
   }
+
   body {
-    @apply bg-background text-foreground overflow-x-hidden;
-  }
-  h1 {
-    @apply text-2xl lg:text-3xl font-bold my-2;
-  }
-  h2 {
-    @apply text-["14px"] lg:text-2xl font-semibold capitalize;
+    @apply bg-background overflow-x-hidden text-gray900;
   }
 }
-
+img[alt] {
+  @apply text-10;
+}
+.header {
+  @apply lg:fixed left-0 top-0 w-full;
+}
+.main-content {
+  @apply lg:mt-[122px];
+}
+.header-shadow {
+  @apply bg-white;
+  box-shadow: 0px 40px 87px 0px rgba(0, 0, 0, 0.1);
+}
+/* Scroll Bar Styles */
 ::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 5px;
   height: 0.25rem;
 }
 
@@ -93,13 +131,13 @@
   --bg-opacity: 1;
   border-radius: 0.25rem;
   border-width: 0;
-  @apply bg-slate-400;
+  @apply bg-scrollGray;
 }
 
 ::-webkit-scrollbar-thumb:active,
 ::-webkit-scrollbar-thumb:hover {
   --bg-opacity: 1;
-  @apply bg-slate-500;
+  @apply bg-scrollGray;
 }
 
 ::-webkit-scrollbar-track {
@@ -110,32 +148,89 @@
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-track:hover {
   --bg-opacity: 1;
-  @apply bg-slate-300;
+  @apply bg-gray100;
 }
 
 ::-webkit-scrollbar-track:active {
   --bg-opacity: 1;
-  @apply bg-slate-300;
+  @apply bg-gray100;
 }
 
 ::-webkit-scrollbar-corner {
   background-color: transparent;
 }
-.sidebar-menu {
-  height: -moz-calc(100vh - (91px));
-  height: -webkit-calc(100vh - (91px));
-  height: calc(100vh - (91px));
-  padding-bottom: 40px;
+
+@media only screen and (max-width: 767px) {
+  button span[class*="icon-"] {
+    @apply text-16;
+  }
 }
+@media only screen and (min-width: 768px) {
+  button span[class*="icon-"] {
+    @apply text-24;
+  }
+}
+button.radio-box[aria-checked="true"] {
+  @apply border-primary;
+}
+
+/* Form Elemets */
 form {
   text-align: left !important;
 }
+input.error-field {
+  @apply border-secondary placeholder:text-secondary;
+}
+.custom-select[aria-expanded="true"] {
+  .lucide {
+    @apply rotate-180 ease-in-out duration-500;
+  }
+}
+.custom-select[aria-expanded="false"] {
+  .lucide {
+    @apply ease-in-out duration-500;
+  }
+}
+.radio-box {
+  .lucide {
+    @apply ease-in-out duration-500;
+  }
+}
+.custom-select {
+  span {
+    @apply text-gray400;
+  }
+}
+.checkbox-container {
+  @apply flex gap-2 items-center;
+  label {
+    @apply text-14 cursor-pointer leading-[18px];
+  }
+  + .error-msg {
+    @apply pl-10;
+  }
+}
+
 .custom-select button {
   @apply w-full;
 }
-.menu-active {
-  @apply bg-pink-800 text-white;
+
+.gradient-gray {
+  background: linear-gradient(
+    156deg,
+    rgba(246, 246, 246, 0.1) -22.43%,
+    rgba(20, 55, 127, 0.15) 131.47%
+  );
+  backdrop-filter: blur(9px);
 }
+.gradient-red {
+  @apply bg-gradient-to-r from-themeGradient1 from-10%  to-themeGradient2 to-90%;
+}
+.gradient-blue {
+  background: linear-gradient(126deg, #f6f6f6 0%, #c7d2e9 150.68%);
+  backdrop-filter: blur(9px);
+}
+
 .card {
   @apply bg-white p-5 rounded-md shadow-sm my-5;
 
@@ -147,20 +242,24 @@ form {
       font-variant: small-caps;
     }
   }
+
   & p {
     @apply mb-2 text-sm text-gray-500;
   }
 }
+
 .btn {
   @apply bg-rose-500 text-white p-2 rounded-sm text-xs;
 }
+
 form {
   @apply text-left;
 
   & input,
   & textarea {
-    @apply block w-full p-2 rounded-sm my-4;
+    @apply block w-full;
   }
+
   .error {
     @apply my-4 p-2 text-sm rounded-md border-2 border-red-500 bg-red-200 text-red-500;
   }
@@ -168,108 +267,173 @@ form {
 
 /* Header */
 .container {
-  @apply mx-auto max-w-[1280px];
-}
-.snip1168 {
-  text-align: center;
-  text-transform: uppercase;
-}
-.snip1168 * {
-  box-sizing: border-box;
-}
-.snip1168 li {
-  display: inline-block;
-  list-style: outside none none;
-  margin: 0 0.5em;
-  padding: 28px 0;
-}
-.snip1168 li a {
-  padding: 0.5em 0;
-  color: black;
-  position: relative;
-  letter-spacing: 1px;
-  text-decoration: none;
-}
-.snip1168 li a:before,
-.snip1168 li a:after {
-  position: absolute;
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
-.snip1168 li a:before {
-  top: 0;
-  display: block;
-  height: 3px;
-  width: 0%;
-  content: "";
-  background-color: #c0392b;
-}
-.snip1168 a:after {
-  left: 0;
-  top: 0;
-  padding: 0.5em 0;
-  position: absolute;
-  content: attr(data-hover);
-  color: black;
-  white-space: nowrap;
-  max-width: 0%;
-  overflow: hidden;
-}
-.snip1168 li:hover a:before,
-.snip1168 li.current:hover a:before {
-  opacity: 1;
-  width: 100%;
-}
-.snip1168 li:hover a:after,
-.snip1168 li.current a:after {
-  max-width: 100%;
+  @apply mx-auto max-w-[1440px] px-4;
 }
 
+@media only screen and (min-width: 1440px) {
+  .container {
+    @apply px-[50px];
+  }
+}
+/* Cutom Styles added to overwriite the Accodian UI component from arrow to plus/minus */
+.custom-accordian {
+  button {
+    &:before {
+      font-family: "icomoon";
+      content: "\e93c";
+      @apply right-0 top-1/2 -translate-y-1/2 text-24 absolute;
+    }
+    @apply relative;
+    svg {
+      display: none;
+    }
+  }
+  button[data-state="closed"] {
+    &:before {
+      content: "\e93c";
+    }
+  }
+  button[data-state="open"] {
+    &:before {
+      content: "\e93b";
+      @apply transition-all rotate-180;
+    }
+  }
+}
+
+.l1-menus {
+  height: calc(100% - 280px);
+}
+.l2-menus {
+  height: calc(100% - 300px);
+}
 /* Categories */
 .categories li:first-child .title {
   @apply border-t border-gray-300;
 }
 
 .idec-title {
-  @apply relative  pl-[30px] lg:pl-[50px];
+  @apply relative pl-[30px] lg:pl-[50px] z-[1];
   line-height: 1;
-  z-index: 1;
 }
+
 .idec-title::before {
-  @apply absolute bg-gray-400 left-[2px] w-[30px] lg:w-[50px] h-full;
-  content: "";  
-  z-index: 2;
-}
-.idec-title::after {
-  @apply absolute left-[27px] lg:left-[42px] bg-white w-[5px] lg:w-[10px] h-[70%] top-1/2 -translate-y-1/2;
+  @apply absolute bg-gray-400 left-[2px] w-[30px] lg:w-[50px] h-full z-[2];
   content: "";
-  z-index: 3;
 }
+
+.idec-title::after {
+  @apply absolute left-[27px] lg:left-[42px] bg-white w-[5px] lg:w-[10px] h-[70%] top-1/2 -translate-y-1/2  z-[3];
+  content: "";
+}
+
 .cards h3 {
   display: ruby;
 }
-.herobanner .slick-list {
-  @apply lg:min-h-[460px];
+
+.herobanner {
+  .slick-dots {
+    left: 82px;
+    width: auto;
+    bottom: 30px;
+    position: absolute;
+    display: flex !important;
+    gap: 10px;
+    max-width: 1440px;
+    margin: 0 auto;
+    li {
+      width: auto;
+      height: auto;
+      margin: 0;
+      button {
+        width: 5px;
+        height: auto;
+        padding: 0;
+        &:before {
+          color: #d1d1d1;
+          opacity: 1;
+          content: "";
+          background-color: #d1d1d1;
+          width: 5px;
+          height: 5px;
+          border-radius: 10px;
+        }
+      }
+    }
+    .slick-active {
+      button {
+        width: 30px;
+        transition: all 0.5s ease;
+        &:before {
+          opacity: 1;
+          width: 100%;
+          background-color: white;
+        }
+      }
+    }
+  }
+  .slick-prev,
+  .slick-next {
+    z-index: 1;
+    @apply text-10 w-10 h-10;
+  }
+
+  .slick-prev::before,
+  .slick-next::before {
+    font-family: "icomoon";
+    background: white;
+    border-radius: 8px;
+    color: black;
+    opacity: 1;
+    font-size: 24px;
+    padding: 8px;
+  }
+  .slick-next {
+    right: 16px;
+    &::before {
+      content: "\e939";
+    }
+  }
+  .slick-prev {
+    left: 16px;
+    &::before {
+      content: "\e937";
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .herobanner {
+    .slick-dots {
+      left: 32px;
+      bottom: 30px;
+    }
+    .slick-prev,
+    .slick-next {
+      @apply top-auto bottom-[5px];
+    }
+    .slick-next {
+      right: 20px;
+    }
+    .slick-prev {
+      right: 70px;
+      left: auto;
+    }
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .herobanner {
+    .slick-next {
+      right: 80px;
+    }
+    .slick-prev {
+      left: 80px;
+    }
+    .slick-dots {
+      left: 192px;
+    }
+  }
 }
 
-/* Search */
-.search-click {
-  outline: none;
-  width: 100px;
-  padding: 5px;
-  transition: all 0.5s;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  text-align: left;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.search-click:focus {
-  width: 400px;
-  padding-left: 20px;
-}
 /* Desktop Menu */
 @media only screen and (max-width: 767px) {
   .overlaySection {
@@ -280,51 +444,25 @@ form {
 
 @media only screen and (min-width: 768px) {
   .overlaySection {
-    top: 108px;
+    top: 48px;
     z-index: 2;
   }
 
-  .megamenu-dropdown {
-    left: 0;
-    z-index: 3;
-    top: 108px;
-    padding: 20px 0;
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-    @apply lg:border-t lg:border-gray-100;
+  .desktop-menu .active-bdr:before {
+    content: "";
+    @apply absolute left-0 bottom-0 bg-primary w-full h-[2px];
   }
 }
-
+.desktop-menu ul li {
+  float: left;
+}
 /* Overlay */
 .overlay {
   @apply fixed top-0 left-0 h-full w-full bg-black z-50 opacity-75;
 }
-
-/* Search */
-.searchContainer {
-  display: flex;
-  align-items: center;
-}
-.searchIcon {
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.searchInput {  
-  width: 0;
-  opacity: 0;
-  transition: width 0.3s ease, opacity 0.3s ease;
-  padding: 0;  
-  border: none;
-  outline: none;
-  border-bottom: 1px solid #ccc;
-}
-.searchInput input{
-  border:0;
-  width: 100%;
-  outline: none;
-  font-size: 12px;
-}
-.searchInput.expanded {  
-  opacity: 1;
-  padding: 5px;
-  @apply w-[100px] lg:w-[200px];  
+.sidebar-menu {
+  height: -moz-calc(100vh - (91px));
+  height: -webkit-calc(100vh - (91px));
+  height: calc(100vh - (91px));
+  padding-bottom: 40px;
 }

@@ -22,7 +22,7 @@ export default function CartProduct({ cartItem }: any) {
     dispatch(decrementQty(cartId));
   }
   return (
-    <div className="flex w-full md:items-center gap-4 md:justify-between border-b flex-col md:flex-row border-slate-400  pb-3 font-semibold text-sm mb-4">
+    <div className="flex w-full md:items-center gap-4 md:justify-between border-b flex-col md:flex-row border-slate-400  pb-3 font-medium text-sm mb-4">
       <Link
         href={`products/${cartItem.id}`}
         className="flex md:items-center gap-3 md:w-1/2"

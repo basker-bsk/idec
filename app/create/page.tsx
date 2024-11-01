@@ -22,7 +22,7 @@ export default function Create() {
   return (
     <main>
       <form action={handleSubmit}>
-        <h2>Add a New Book</h2>
+        <h4>Add a New Book</h4>
         <input type="text" name="title" placeholder="title" />
         <input type="text" name="author" placeholder="author" />
         <input

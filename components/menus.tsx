@@ -9,8 +9,8 @@ export default function Menus() {
       text: "buttons",
     },
     {
-      link: "idec-ui/#calendar",
-      text: "calendar",
+      link: "idec-ui/#Typography",
+      text: "Typography",
     },
     {
       link: "products",
@@ -44,6 +44,18 @@ export default function Menus() {
     {
       link: "idec-ui/#users",
       text: "users",
+    },
+    {
+      link: "idec-ui/#toggle",
+      text: "Toggle Switch",
+    },
+    {
+      link: "idec-ui/#selectbox",
+      text: "Select dropdown",
+    },
+    {
+      link: "idec-ui/#radiobutton",
+      text: "Radio button",
     },
   ];
   return menuList;

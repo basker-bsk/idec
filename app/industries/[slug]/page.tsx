@@ -13,7 +13,6 @@ export default async function Detail({ params }: { params: { slug: string } }) {
       return fd;
     }
   });
-  console.log("-------", detail);
 
   const { title, brief, cI, description } = detail?.fields;
 
@@ -22,7 +21,7 @@ export default async function Detail({ params }: { params: { slug: string } }) {
       <p>
         <Link href={"/industries"}>Back to Industries</Link>
       </p>
-      <h1>{detail.fields.title}</h1>
+      <h4>{detail.fields.title}</h4>
       <p>{detail.fields.brief}</p>
       <div className="justify-center items-center flex flex-col gap-4 mt-4">
         <>

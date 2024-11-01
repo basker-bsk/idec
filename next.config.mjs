@@ -7,7 +7,8 @@ const nextConfig = {
       "www.apem.com",
       "images.pexels.com",
       "5.imimg.com",
-      "www.cpecn.com"
+      "www.cpecn.com",
+      "images.ctfassets.net",
     ],
   },
   // experimental: {

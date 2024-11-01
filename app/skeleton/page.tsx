@@ -4,7 +4,7 @@ export default function SkeletonCard() {
   return (
     <div className="flex flex-col  w-full">
       <a id="skeleton"></a>
-      <h1>Skeleton</h1>
+      <h4>Skeleton</h4>
       <div className="flex flex-col space-y-3">
         <Skeleton className="h-[125px] w-[250px] rounded-xl" />
         <div className="space-y-2">

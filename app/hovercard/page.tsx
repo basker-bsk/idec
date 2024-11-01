@@ -8,7 +8,7 @@ export default function HoverCardDemo() {
   return (
     <div className="w-full">
       <a id="hoverCard"></a>
-      <h1>Hover Card</h1>
+      <h4>Hover Card</h4>
 
       <HoverCard>
         <HoverCardTrigger>Hover here</HoverCardTrigger>

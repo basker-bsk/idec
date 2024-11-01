@@ -51,13 +51,11 @@ export default function IdecForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log("values", values);
-  }
+  function onSubmit(values: z.infer<typeof formSchema>) {}
   return (
     <>
       <div className="flex flex-col w-full p-4 lg:p-8 border border-gray-300 bg-white">
-        <h2 className="idec-title uppercase text-[20px] lg:text-[50px] font-extrabold w-full lg:w-3/4">
+        <h2 className="idec-title uppercase text-[20px] lg:text-[50px] font-bold w-full lg:w-3/4">
           LETS TALK ABOUT YOU
         </h2>
         <Form {...form}>
@@ -119,8 +117,8 @@ export default function IdecForm() {
                         onCheckedChange={field.onChange}
                       />
                     </FormControl>
-                    <div className="space-y-1 leading-none">
-                      <FormLabel className="text-[12px]">
+                    <div className="">
+                      <FormLabel className="text-12 leading-12">
                         I agree to APEMs Terms & Conditions and Privacy Policy
                       </FormLabel>
                     </div>

@@ -23,12 +23,21 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectLabel,
+  SelectGroup,
+  SelectValue,
+} from "@/components/ui/select";
 import Link from "next/link";
 
 const formSchema = z
   .object({
-    username: z.string().min(5, {
-      message: "Username must ne atleast 5 characters",
+    firstname: z.string().min(5, {
+      message: "First Name must ne atleast 5 characters",
     }),
     emailAddress: z
       .string()
@@ -40,56 +49,70 @@ const formSchema = z
       .string()
       .min(5, { message: "Password must be atleaset 5 characters" }),
     confirmPassword: z.string(),
-    mobile: z.boolean().default(false),
+    country: z.string().min(1, { message: "Select option required" }),
+    newsletter: z.boolean().default(false),
+    terms: z.boolean().default(false),
   })
   .refine((data) => data.password === data.confirmPassword, {
     message: "Password must be same",
     path: ["confirmPassword"],
   })
-  .refine((data) => data.mobile === true, {
+  .refine((data) => data.newsletter === true, {
     message: "Accept is Required",
-    path: ["mobile"],
+    path: ["newsletter"],
+  })
+  .refine((data) => data.terms === true, {
+    message: "Terms is Required",
+    path: ["terms"],
   });
 
 export default function FormWithZod() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: "",
+      firstname: "",
       emailAddress: "",
       password: "",
       confirmPassword: "",
-      mobile: false,
+      country: "",
+      newsletter: false,
+      terms: false,
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log("values", values);
-  }
+  function onSubmit(values: z.infer<typeof formSchema>) {}
   return (
     <>
       <div className="flex flex-col w-full">
         <a id="form"></a>
-        <h1>Form</h1>
+        <h4>Form</h4>
       </div>
       <Card className="w-full lg:w-1/2">
         <CardHeader>
-          <CardTitle>Dont have an account?</CardTitle>
-          <CardDescription>
-            Register now and benefit from the following:
-          </CardDescription>
+          <p className="text-18 leading-18 md:text-24 md:leading-24 font-medium">
+            Create an IDEC account
+          </p>
+          <span className="text-14 md:text-16 md:leading-16">
+            Already have an account?{" "}
+            <Link href="/" className="underline text-primary">
+              Login
+            </Link>
+          </span>
         </CardHeader>
         <CardContent>
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="form-container"
+            >
               <FormField
                 control={form.control}
-                name="username"
+                name="firstname"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Username</FormLabel>
+                    <FormLabel>First Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="Username" {...field} />
+                      <Input placeholder="Enter First Name here" {...field} />
                     </FormControl>
 
                     <FormMessage />
@@ -148,10 +171,58 @@ export default function FormWithZod() {
               />
               <FormField
                 control={form.control}
-                name="mobile"
+                name="country"
                 render={({ field }) => (
                   <FormItem>
-                    <div className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
+                    <FormLabel>Country</FormLabel>
+                    <FormControl>
+                      <Select
+                        onValueChange={field.onChange}
+                        defaultValue={field.value}
+                      >
+                        <SelectTrigger className="" {...field}>
+                          <SelectValue placeholder="Select where you are from" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectGroup>
+                            <SelectItem value="apple">America</SelectItem>
+                            <SelectItem value="banana">China</SelectItem>
+                            <SelectItem value="blueberry">India</SelectItem>
+                            <SelectItem value="grapes">Japan</SelectItem>
+                          </SelectGroup>
+                        </SelectContent>
+                      </Select>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="newsletter"
+                render={({ field }) => (
+                  <FormItem>
+                    <div className="checkbox-container">
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel>Subscribe me to IDEC newsletter</FormLabel>
+                      </div>
+                    </div>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="terms"
+                render={({ field }) => (
+                  <FormItem>
+                    <div className="checkbox-container">
                       <FormControl>
                         <Checkbox
                           checked={field.value}
@@ -160,7 +231,8 @@ export default function FormWithZod() {
                       </FormControl>
                       <div className="space-y-1 leading-none">
                         <FormLabel>
-                          I agree to APEMs Terms & Conditions and Privacy Policy
+                          I agree to IDEC’s Terms and Conditions & Privacy
+                          Policy
                         </FormLabel>
                       </div>
                     </div>
@@ -168,7 +240,9 @@ export default function FormWithZod() {
                   </FormItem>
                 )}
               />
-              <Button type="submit">Submit</Button>
+              <Button className="mt-6 w-full" type="submit">
+                Create Account
+              </Button>
             </form>
           </Form>
         </CardContent>

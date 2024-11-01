@@ -15,11 +15,11 @@ export default function Modal() {
     return (
         <div className="flex flex-col  w-full">
             <a id="modal"></a>
-            <h1>Modal</h1>
+            <h4>Modal</h4>
             <div className="justify-center items-center flex ">
                 <AlertDialog>
                     <AlertDialogTrigger asChild>
-                        <Button variant="default" size="lg">Show Dialog</Button>
+                        <Button>Show Dialog</Button>
                     </AlertDialogTrigger>
                     <AlertDialogContent>
                         <AlertDialogHeader>

@@ -1,24 +1,31 @@
 {
   "menus": [
     {
-      "id": "Products",
-      "name": "Products",
+      "id": "all_products",
+      "name": "All Products",
       "url": "/products",
-      "type": "internal",
       "subCategories": [
         {
-          "name": "Panel switches",
+          "name": "Automation",
+          "image": "/assets/images/switch.png",
           "url": "/",
-          "type": "internal",
           "subCategories": [
             {
-              "name": "Toggles"
+              "name": "CAD Files",
+              "subCategories": [
+                {
+                  "name": "CAD Files 1"
+                },
+                {
+                  "name": "CAD Files 2"
+                }
+              ]
             },
             {
-              "name": "Pushbutton Switches"
+              "name": "Programmable Logic Controller"
             },
             {
-              "name": "Rocker Switches"
+              "name": "Sensors"
             },
             {
               "name": "Industrial Controls"
@@ -47,150 +54,139 @@
           ]
         },
         {
-          "name": "PCB switches",
+          "name": "Switches & Indicators",
+          "image": "/assets/images/switch.png",
           "url": "/",
-          "type": "internal",
           "subCategories": [
             {
-              "name": "Emergency Stops"
+              "name": "Switches & Pushbuttons",
+              "subCategories": [
+                {
+                  "name": "Push Buttons & Pilot Lights"
+                },
+                {
+                  "name": "Emergency Stop Switches"
+                },
+                {
+                  "name": "Control Stations"
+                },
+                {
+                  "name": "Touchless Switches"
+                },
+                {
+                  "name": "Smart RFID Reader"
+                }
+              ]
             },
             {
-              "name": "Switch Guards"
+              "name": "Indicator Lights & Buzzers",
+              "subCategories": [
+                {
+                  "name": "Industrial Controls"
+                },
+                {
+                  "name": "Emergency Stops"
+                },
+                {
+                  "name": "Switch Guards"
+                },
+                {
+                  "name": "Sealing Boots"
+                },
+                {
+                  "name": "Hardware"
+                },
+                {
+                  "name": "Micro Switches"
+                },
+                {
+                  "name": "Pushwheel Switches"
+                },
+                {
+                  "name": "Keylock switches"
+                }
+              ]
             },
             {
-              "name": "Sealing Boots"
-            },
-            {
-              "name": "Hardware"
-            },
-            {
-              "name": "Micro Switches"
-            },
-            {
-              "name": "Toggles"
-            },
-            {
-              "name": "Pushbutton Switches"
-            },
-            {
-              "name": "Pushwheel Switches"
-            },
-            {
-              "name": "Keylock switches"
+              "name": "LED Lighting",
+              "subCategories": [
+                {
+                  "name": "Industrial Controls1"
+                },
+                {
+                  "name": "Emergency Stops1"
+                },
+                {
+                  "name": "Switch Guards2"
+                },
+                {
+                  "name": "Sealing Boots2"
+                },
+                {
+                  "name": "Hardware3"
+                },
+                {
+                  "name": "Micro Switches4"
+                },
+                {
+                  "name": "Pushwheel Switches5"
+                },
+                {
+                  "name": "Keylock switches6"
+                }
+              ]
             }
           ]
         },
         {
-          "name": "Industrial Controls",
-          "url": "/",
-          "type": "internal",
-          "subCategories": [
-            {
-              "name": "Micro Switches"
-            },
-            {
-              "name": "Toggles"
-            },
-            {
-              "name": "Pushbutton Switches"
-            },
-            {
-              "name": "Pushwheel Switches"
-            },
-            {
-              "name": "Keylock switches"
-            }
-          ]
+          "name": "Safety",
+          "image": "/assets/images/switch.png",
+          "url": "/"
         },
         {
-          "name": "LED Indicators",
-          "url": "/",
-          "type": "internal",
-          "subCategories": [
-            {
-              "name": "Toggles"
-            },
-            {
-              "name": "Pushbutton Switches"
-            },
-            {
-              "name": "Rocker Switches"
-            },
-            {
-              "name": "Industrial Controls"
-            },
-            {
-              "name": "Emergency Stops"
-            },
-            {
-              "name": "Switch Guards"
-            },
-            {
-              "name": "Sealing Boots"
-            },
-            {
-              "name": "Hardware"
-            },
-            {
-              "name": "Micro Switches"
-            },
-            {
-              "name": "Pushwheel Switches"
-            },
-            {
-              "name": "Keylock switches"
-            }
-          ]
+          "name": "Safety & Explosion Protection",
+          "image": "/assets/images/switch.png",
+          "url": "/"
         },
         {
-          "name": "Joysticks",
-          "url": "/",
-          "type": "internal",
-          "subCategories": [
-            {
-              "name": "Micro Switches"
-            },
-            {
-              "name": "Toggles"
-            },
-            {
-              "name": "Pushbutton Switches"
-            },
-            {
-              "name": "Pushwheel Switches"
-            },
-            {
-              "name": "Keylock switches"
-            }
-          ]
+          "name": "Industrial Components",
+          "image": "/assets/images/switch.png",
+          "url": "/"
         },
         {
-          "name": "Panel Solutions",
-          "url": "/",
-          "type": "internal",
-          "subCategories": [
-            {
-              "name": "Pushbutton Switches"
-            },
-            {
-              "name": "Pushwheel Switches"
-            },
-            {
-              "name": "Micro Switches"
-            },
-            {
-              "name": "Toggles"
-            },
-            {
-              "name": "Pushbutton Switches"
-            },
-            {
-              "name": "Pushwheel Switches"
-            },
-            {
-              "name": "Keylock switches"
-            }
-          ]
+          "name": "Auto-ID",
+          "image": "/assets/images/switch.png",
+          "url": "/"
+        },
+        {
+          "name": "Motorized System",
+          "image": "/assets/images/switch.png",
+          "url": "/"
+        },
+        {
+          "name": "Safety2",
+          "image": "/assets/images/switch.png",
+          "url": "/"
+        },
+        {
+          "name": "Safety & Explosion Protection1",
+          "image": "/assets/images/switch.png",
+          "url": "/"
+        },
+        {
+          "name": "Industrial Components3",
+          "image": "/assets/images/switch.png",
+          "url": "/"
+        },
+        {
+          "name": "Auto-ID4",
+          "image": "/assets/images/switch.png",
+          "url": "/"
+        },
+        {
+          "name": "Motorized System5",
+          "image": "/assets/images/switch.png",
+          "url": "/"
         }
       ]
     },
@@ -198,7 +194,7 @@
       "id": "Industries",
       "name": "Industries",
       "url": "/industries",
-      "type": "internal",
+
       "subCategories": [
         {
           "name": "Agricultural Machinery",
@@ -250,8 +246,14 @@
       "type": "internal"
     },
     {
-      "id": "About",
-      "name": "About",
+      "id": "Happenings",
+      "name": "Happenings.",
+      "url": "/",
+      "type": "internal"
+    },
+    {
+      "id": "Support",
+      "name": "Support",
       "url": "/",
       "type": "internal"
     }

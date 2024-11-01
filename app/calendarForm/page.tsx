@@ -60,7 +60,7 @@ export default function CalendarForm() {
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
-                      variant={"outline"}
+                      theme={"ghost"}
                       className={cn(
                         "w-[240px] pl-3 text-left font-normal",
                         !field.value && "text-muted-foreground"
@@ -94,7 +94,7 @@ export default function CalendarForm() {
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button  type="submit">Submit</Button>
       </form>
     </Form>
   )

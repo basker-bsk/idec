@@ -49,13 +49,13 @@ export default function SearchBar() {
         <div className="flex flex-col lg:flex-row gap-4">
           <div className="w-full lg:w-1/4 flex gap-4 flex-col px-3 lg:px-0">
             <ClearRefinements  translations={{resetButtonText: 'Clear all',}}/>
-            <h2 className="text-sm">Brands</h2>
+            <h4 className="text-sm">Brands</h4>
             <RefinementList attribute="brand" />
-            <h2 className="text-sm">Categories</h2>
+            <h4 className="text-sm">Categories</h4>
             <RefinementList attribute="category" />
-            <h2 className="text-sm">Price</h2>
+            <h4 className="text-sm">Price</h4>
             <RefinementList attribute="price" />
-            <h2 className="text-sm">Free Shipping</h2>
+            <h4 className="text-sm">Free Shipping</h4>
             <RefinementList attribute="free_shipping" />
           </div>
           <div className="w-full lg:w-3/4">

@@ -20,7 +20,6 @@ export default function FeatureProducts() {
   };
   useEffect(() => {
     if (selectedCategory) {
-      console.log(selectedCategory);
       const selectedProducts: any = FeatureProductsData.products.filter((e) => {
         return e.id === selectedCategory;
       });
@@ -31,22 +30,21 @@ export default function FeatureProducts() {
   }, [selectedCategory]);
   useEffect(() => {
     if (productList.length > 0) {
-      console.log(productList);
     }
   }, [productList]);
   return (
     <div className="flex flex-col pb-16 lg:pb-8 p-4 lg:p-8 border border-gray-300 bg-white">
-      <h3 className="idec-title uppercase text-[20px] lg:text-[50px] font-extrabold w-full lg:w-3/4 ">
+      <h4 className="idec-title uppercase text-[20px] lg:text-[50px] font-bold w-full lg:w-3/4 ">
         {FeatureProductsData.title}
-      </h3>
+      </h4>
       <div className="my-8">
         <div className="flex w-full relative flex-wrap">
           <ul className="grid gap-4 grid-rows-1 grid-flow-col">
             <li>
               <Button
                 className="uppercase"
-                variant={
-                  selectedCategory === "automation" ? "default" : "outline"
+                theme={
+                  selectedCategory === "automation" ? "primary" : "secondary"
                 }
                 onClick={() => filterCategory("automation")}
               >
@@ -56,10 +54,10 @@ export default function FeatureProducts() {
             <li>
               <Button
                 className="uppercase"
-                variant={
+                theme={
                   selectedCategory === "safety-explosions"
-                    ? "default"
-                    : "outline"
+                    ? "primary"
+                    : "secondary"
                 }
                 onClick={() => filterCategory("safety-explosions")}
               >
@@ -69,10 +67,10 @@ export default function FeatureProducts() {
             <li>
               <Button
                 className="uppercase"
-                variant={
+                theme={
                   selectedCategory === "switches-indicators"
-                    ? "default"
-                    : "outline"
+                    ? "primary"
+                    : "secondary"
                 }
                 onClick={() => filterCategory("switches-indicators")}
               >
@@ -82,10 +80,10 @@ export default function FeatureProducts() {
             <li>
               <Button
                 className="uppercase"
-                variant={
+                theme={
                   selectedCategory === "industrial-components"
-                    ? "default"
-                    : "outline"
+                    ? "primary"
+                    : "secondary"
                 }
                 onClick={() => filterCategory("industrial-components")}
               >
@@ -95,7 +93,7 @@ export default function FeatureProducts() {
             <li>
               <Button
                 className="uppercase"
-                variant={selectedCategory === "auto-id" ? "default" : "outline"}
+                theme={selectedCategory === "auto-id" ? "primary" : "secondary"}
                 onClick={() => filterCategory("auto-id")}
               >
                 auto-id

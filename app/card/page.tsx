@@ -23,7 +23,7 @@ export default function CardWithForm() {
   return (
     <div className="flex flex-col w-full">
       <a id="card"></a>
-      <h1>Card</h1>
+      <h4>Gotham</h4>
       <Card className="w-full">
         <CardHeader>
           <CardTitle>Create project</CardTitle>
@@ -55,8 +55,8 @@ export default function CardWithForm() {
             </div>
           </form>
         </CardContent>
-        <CardFooter className="flex justify-between">
-          <Button variant="outline">Cancel</Button>
+        <CardFooter className="flex gap-4 justify-end">
+          <Button theme="secondary">Cancel</Button>
           <Button>Deploy</Button>
         </CardFooter>
       </Card>

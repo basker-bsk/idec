@@ -7,12 +7,12 @@ export default function CategoriesComponent() {
   const [catIndex, setCatIndex] = useState(0)
   return (
     <div className="flex flex-col pb-16 lg:pb-8 p-4 lg:p-8 border border-gray-300 bg-white">
-      <h2 className="uppercase font-bold text-blue-800 ">
+      <h3 className="uppercase font-bold text-blue-800 ">
         {Categories.category}
-      </h2>
-      <h3 className="idec-title uppercase text-[20px] lg:text-[50px] font-extrabold w-full lg:w-3/4 ">
-        {Categories.title}
       </h3>
+      <h4 className="idec-title uppercase text-[20px] lg:text-[50px] font-bold w-full lg:w-3/4 ">
+        {Categories.title}
+      </h4>
       <div className="my-8">
         <div className="flex w-full relative ">
           <ul className="w-full categories">
