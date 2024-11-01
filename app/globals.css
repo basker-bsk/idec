@@ -331,6 +331,36 @@ form {
   display: ruby;
 }
 
+.main-content {
+  .slick-prev,
+  .slick-next {
+    z-index: 1;
+    @apply text-10 w-10 h-10;
+    &.slick-disabled::before {
+      @apply opacity-100 bg-gray-100 text-gray-300;
+    }
+  }
+  .slick-prev::before,
+  .slick-next::before {
+    font-family: "icomoon";
+    background: white;
+    border-radius: 8px;
+    color: black;
+    opacity: 1;
+    font-size: 24px;
+    padding: 8px;
+  }
+  .slick-next {
+    &::before {
+      content: "\e939";
+    }
+  }
+  .slick-prev {
+    &::before {
+      content: "\e937";
+    }
+  }
+}
 .herobanner {
   .slick-dots {
     left: 82px;
@@ -372,33 +402,16 @@ form {
       }
     }
   }
-  .slick-prev,
-  .slick-next {
-    z-index: 1;
-    @apply text-10 w-10 h-10;
-  }
 
-  .slick-prev::before,
-  .slick-next::before {
-    font-family: "icomoon";
-    background: white;
-    border-radius: 8px;
-    color: black;
-    opacity: 1;
-    font-size: 24px;
-    padding: 8px;
-  }
   .slick-next {
     right: 16px;
-    &::before {
-      content: "\e939";
-    }
   }
   .slick-prev {
     left: 16px;
-    &::before {
-      content: "\e937";
-    }
+  }
+  .slick-prev::before,
+  .slick-next::before {
+    @apply text-16 p-2;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -423,14 +436,43 @@ form {
 @media only screen and (min-width: 1300px) {
   .herobanner {
     .slick-next {
-      right: 80px;
+      right: 20px;
     }
     .slick-prev {
-      left: 80px;
+      left: 20px;
     }
     .slick-dots {
-      left: 192px;
+      left: 110px;
     }
+  }
+}
+
+.card-slider {
+  .slick-prev::before,
+  .slick-next::before {
+    @apply text-16 p-1 shadow-md;
+  }
+
+  .slick-list {
+    margin: 0 -8px;
+    .slick-track {
+      @apply flex flex-col md:flex-row;
+      .slick-slide {
+        @apply px-2;
+      }
+    }
+  }
+  .regular.slider {
+    @apply flex flex-col gap-4;
+  }
+}
+
+@layer utilities {
+  .series-banner {
+    @apply bg-white pt-[35px] pr-[7px] pb-[15px] pl-[25px] md:pt-[23px] md:pb-[23px] md:pr-[25px] md:pl-[28px] flex items-center gap-2 md:gap-3 relative rounded-md;
+  }
+  .tag {
+    @apply tracking-[0.8px] gradient-red text-white  uppercase text-10 font-bold py-[5px] px-[15px] rounded-tl-md rounded-br-md;
   }
 }
 

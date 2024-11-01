@@ -581,6 +581,27 @@
                       "title": "Switches & Indicators",
                       "url": "https://images.ctfassets.net/fg4hnnyn9urp/7pAMKmfYbFwRlyK4jforcf/52b0eaf565f4f6e307dcfa74249cedb0/switches-_-indicators.png"
                     }
+                  },
+                  {
+                    "__typename": "Card",
+                    "cdDescription": null,
+                    "cdTitle": "HG2J 7in Projected Capacitive Touch1",
+                    "cdStyle": "Featured Series1",
+                    "cdBadge": "NEW ARRIVAL1",
+                    "cdOverline1": "Automation1",
+                    "cdOverline2": "Operator Interface1",
+                    "cdLink": {
+                      "linkText": "View Series",
+                      "linkId": null,
+                      "linkUrl": "/view-series",
+                      "linkStyle": "Link",
+                      "linkClass": null,
+                      "linkNewWindow": false
+                    },
+                    "cdImage": {
+                      "title": "Automation-12",
+                      "url": "https://images.ctfassets.net/fg4hnnyn9urp/7nt0YzVNwohHA7R7jwGYYe/29fa968b2dc4b87cc1d8f01cbd87f8e9/automation-1.png"
+                    }
                   }
                 ]
               }
