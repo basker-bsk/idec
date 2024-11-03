@@ -37,6 +37,16 @@ body {
   }
 }
 
+body {
+  .odometer.odometer-auto-theme,
+  .odometer.odometer-theme-default {
+    @apply font-sans;
+  }
+  .odometer-digit {
+    width: 15.5px;
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -508,3 +518,28 @@ form {
   height: calc(100vh - (91px));
   padding-bottom: 40px;
 }
+
+/* @property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.corporations {
+  animation: counter 10s infinite alternate ease-in-out;
+  counter-reset: num var(--num);
+  padding: 1rem;
+}
+
+.corporations::after {
+  content: counter(num);
+}
+
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 10;
+  }
+} */
