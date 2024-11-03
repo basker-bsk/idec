@@ -521,17 +521,15 @@ form {
 
 /* @property --num {
   syntax: "<integer>";
-  initial-value: 0;
+  initial-value: 70;
   inherits: false;
 }
 
-.corporations {
-  animation: counter 10s infinite alternate ease-in-out;
+.counterTxt {
+  animation: counter 5s alternate ease-in-out;
   counter-reset: num var(--num);
-  padding: 1rem;
 }
-
-.corporations::after {
+.counterTxt::after {
   content: counter(num);
 }
 
@@ -540,6 +538,6 @@ form {
     --num: 0;
   }
   to {
-    --num: 10;
+    --num: 70;
   }
 } */

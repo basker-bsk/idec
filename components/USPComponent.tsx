@@ -1,4 +1,7 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+
+import CountUpAnimation from "./CountUpAnimation";
+
 export default function USP({ usp }: any) {
   return (
     <div className="gradient-gray w-full py-6">
@@ -12,9 +15,12 @@ export default function USP({ usp }: any) {
               <span className="text-12 leading-12 md:text-14 md:leading-14">
                 {usp.counter1Prefix}
               </span>
-              <span className="text-20 leading-20 md:text-24 md:leading-24 font-medium">
-                {usp.counter1Text}
-              </span>
+
+              <CountUpAnimation
+                initialValue={0}
+                targetValue={usp.counter1Text}
+              />
+
               <span className="text-12 leading-12 md:text-14 md:leading-14">
                 {usp.counter1Suffix}
               </span>
@@ -23,9 +29,10 @@ export default function USP({ usp }: any) {
               <span className="text-12 leading-12 md:text-14 md:leading-14">
                 {usp.counter2Prefix}
               </span>
-              <span className="text-20 leading-20 md:text-24 md:leading-24 font-medium">
-                {usp.counter2Text}
-              </span>
+              <CountUpAnimation
+                initialValue={0}
+                targetValue={usp.counter2Text}
+              />
               <span className="text-12 leading-12 md:text-14 md:leading-14">
                 {usp.counter2Suffix}
               </span>
@@ -34,9 +41,10 @@ export default function USP({ usp }: any) {
               <span className="text-12 leading-12 md:text-14 md:leading-14">
                 {usp.counter3Prefix}
               </span>
-              <span className="text-20 leading-20 md:text-24 md:leading-24 font-medium">
-                {usp.counter3Text}
-              </span>
+              <CountUpAnimation
+                initialValue={0}
+                targetValue={usp.counter3Text}
+              />
               <span className="text-12 leading-12 md:text-14 md:leading-14">
                 {usp.counter3Suffix}
               </span>
