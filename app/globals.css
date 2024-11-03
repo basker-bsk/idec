@@ -277,7 +277,7 @@ form {
 
 /* Header */
 .container {
-  @apply mx-auto max-w-[1440px] px-4;
+  @apply mx-auto max-w-[1440px];
 }
 
 @media only screen and (min-width: 1440px) {
@@ -466,11 +466,15 @@ form {
   .slick-list {
     margin: 0 -8px;
     .slick-track {
-      @apply flex flex-col md:flex-row;
       .slick-slide {
         @apply px-2;
       }
     }
+  }
+}
+.card-slider {
+  .slick-track {
+    @apply flex flex-col md:flex-row;
   }
   .regular.slider {
     @apply flex flex-col gap-4;
@@ -482,13 +486,13 @@ form {
     top: -54px;
   }
   .slick-next {
-    @apply xl:right-[42px];
+    @apply right-0 xl:right-[42px];
   }
   .slick-prev {
-    @apply xl:right-[72px] left-auto;
+    @apply right-8 xl:right-[72px] left-auto;
   }
   .slick-list {
-    @apply overflow-x-auto pb-8;
+    @apply xl:overflow-x-auto xl:pb-8;
   }
 }
 
@@ -497,7 +501,7 @@ form {
     @apply bg-white pt-[35px] pr-[7px] pb-[15px] pl-[25px] md:pt-[23px] md:pb-[23px] md:pr-[25px] md:pl-[28px] flex items-center gap-2 md:gap-3 relative rounded-md;
   }
   .news-banner {
-    @apply bg-white   flex flex-col-reverse rounded-md relative;
+    @apply bg-white flex flex-col-reverse rounded-md relative grid-cols-1;
   }
   .tag {
     @apply tracking-[0.8px] gradient-red text-white  uppercase text-10 font-bold py-[5px] px-[15px] rounded-tl-md rounded-br-md;

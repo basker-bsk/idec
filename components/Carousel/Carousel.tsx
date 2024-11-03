@@ -15,7 +15,7 @@ export default function Carousel({ series, crStyle }: any) {
     arrows: true,
     infinite: false,
     speed: 500,
-    slidesToShow: crStyle === "Series card" ? series?.crSlidesPerRow : 3.75,
+    slidesToShow: ScreenSize() ? 3.75 : 1.25,
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 5000,
@@ -24,7 +24,7 @@ export default function Carousel({ series, crStyle }: any) {
     responsive: [
       {
         breakpoint: 767,
-        settings: "unslick",
+        settings: crStyle === "Series card" ? "unslick" : "slick",
       },
     ],
   };
@@ -44,7 +44,41 @@ export default function Carousel({ series, crStyle }: any) {
             )}
           >
             <h3 className="mb-6 lg:mb-8">{series.crTitle}</h3>
-            {ScreenSize() ? (
+            {crStyle === "Series card" && (
+              <>
+                {ScreenSize() ? (
+                  <Slider {...settings}>
+                    {series?.crComponentsCollection?.items.map(
+                      (slide: any, index: number) => (
+                        <CarouselSlides
+                          props={slide}
+                          key={`b-${index}`}
+                          crStyle={crStyle}
+                        />
+                      )
+                    )}
+                  </Slider>
+                ) : (
+                  <div className="flex flex-col gap-4">
+                    {series?.crComponentsCollection?.items
+                      .slice(
+                        0,
+                        !loadMore
+                          ? 3
+                          : series?.crComponentsCollection?.items.length
+                      )
+                      .map((slide: any, index: number) => (
+                        <CarouselSlides
+                          props={slide}
+                          key={`b-${index}`}
+                          crStyle={crStyle}
+                        />
+                      ))}
+                  </div>
+                )}
+              </>
+            )}
+            {crStyle === "News card" && (
               <Slider {...settings}>
                 {series?.crComponentsCollection?.items.map(
                   (slide: any, index: number) => (
@@ -56,22 +90,8 @@ export default function Carousel({ series, crStyle }: any) {
                   )
                 )}
               </Slider>
-            ) : (
-              <div className="flex flex-col gap-4">
-                {series?.crComponentsCollection?.items
-                  .slice(
-                    0,
-                    !loadMore ? 3 : series?.crComponentsCollection?.items.length
-                  )
-                  .map((slide: any, index: number) => (
-                    <CarouselSlides
-                      props={slide}
-                      key={`b-${index}`}
-                      crStyle={crStyle}
-                    />
-                  ))}
-              </div>
             )}
+
             {crStyle === "Series card" && (
               <>
                 {series?.crComponentsCollection?.items?.length > 3 && (

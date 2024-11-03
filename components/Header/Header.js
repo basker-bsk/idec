@@ -16,7 +16,7 @@ export default function Header() {
 
   return (
     <div className="flex flex-col header relative z-10  header-shadow ">
-      <div className="bg-white header-top container pt-[50px] pb-4 md:pt-5 md:pb-5">
+      <div className="bg-white header-top container pt-[50px] pb-4 md:pt-5 md:pb-5 px-4 lg:px-0">
         <div className="flex justify-between gap-2 items-center">
           <div className="flex gap-2 items-center ">
             <div className="lg:hidden">

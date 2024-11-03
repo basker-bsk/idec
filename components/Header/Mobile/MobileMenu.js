@@ -2,7 +2,7 @@
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import classnames from "classnames";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import MenuTop from "./MenuTop";
 import L1 from "./L1";
 import ProductFinderSearchMobile from "./ProductFinderSearchMobile";
@@ -12,7 +12,7 @@ export default function MobileMenu({ menuItems }) {
     currentMenu: true,
     nextMenu: false,
   });
-  const [mobileMenu, setMobileMenu] = useState([]);
+
   const [allProducts, setAllProducts] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isL1Open, setIsL1Open] = useState(false);
@@ -40,12 +40,8 @@ export default function MobileMenu({ menuItems }) {
     setPrevLink("");
     setIsMenuOpen(false);
     setIsL1Open(false);
-    setMobileMenu([]);
   };
 
-  useEffect(() => {
-    setMobileMenu(menuItems);
-  }, [isMenuOpen]);
   return (
     <>
       <div className={classnames("", { "menu-open ": isMenuOpen })}>
