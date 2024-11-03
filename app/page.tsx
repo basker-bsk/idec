@@ -59,8 +59,14 @@ export default function Home() {
           )}
           {content.__typename === "Carousel" &&
             content.crStyle === "Series card" && (
-              <div className="card-slider mb-8 md:mb-12">
-                <Carousel series={content} />
+              <div className="slider card-slider mb-8 md:mb-12">
+                <Carousel series={content} crStyle={content.crStyle} />
+              </div>
+            )}
+          {content.__typename === "Carousel" &&
+            content.crStyle === "News card" && (
+              <div className="slider news-slider mb-8 md:mb-12">
+                <Carousel series={content} crStyle={content.crStyle} />
               </div>
             )}
         </>

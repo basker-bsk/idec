@@ -457,7 +457,7 @@ form {
   }
 }
 
-.card-slider {
+.slider {
   .slick-prev::before,
   .slick-next::before {
     @apply text-16 p-1 shadow-md;
@@ -476,10 +476,28 @@ form {
     @apply flex flex-col gap-4;
   }
 }
+.news-slider {
+  .slick-prev,
+  .slick-next {
+    top: -54px;
+  }
+  .slick-next {
+    @apply xl:right-[42px];
+  }
+  .slick-prev {
+    @apply xl:right-[72px] left-auto;
+  }
+  .slick-list {
+    @apply overflow-x-auto pb-8;
+  }
+}
 
 @layer utilities {
   .series-banner {
     @apply bg-white pt-[35px] pr-[7px] pb-[15px] pl-[25px] md:pt-[23px] md:pb-[23px] md:pr-[25px] md:pl-[28px] flex items-center gap-2 md:gap-3 relative rounded-md;
+  }
+  .news-banner {
+    @apply bg-white   flex flex-col-reverse rounded-md relative;
   }
   .tag {
     @apply tracking-[0.8px] gradient-red text-white  uppercase text-10 font-bold py-[5px] px-[15px] rounded-tl-md rounded-br-md;
