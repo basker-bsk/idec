@@ -1,28 +1,27 @@
-import categories from "@/public/assets/data/popular-categories.json";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function PopularCategories() {
+export default function PopularCategories({ categories }: any) {
   return (
     <>
-      {categories && categories.clmContentsCollection && (
+      {categories && (
         <div className="container mx-auto px-4 xl:px-[50px]">
-          <h3 className="md:text-center mb-6 md:mb-8">Popular Categories</h3>
+          <h3 className="md:text-center mb-6 md:mb-8">{categories.clmTitle}</h3>
           <div className="flex gap-x-3 lg:gap-x-[48px] flex-wrap justify-center">
-            {categories.clmContentsCollection.items.map(
+            {categories.clmContentsCollection?.items?.map(
               (cat: any, index: number) => (
                 <Link
-                  href={cat.cdLink.linkUrl}
+                  href={cat.cdLink?.linkUrl}
                   className="flex flex-col w-[110px]  lg:w-[150px]  mb-6"
                   key={cat.ctaText}
-                  target={cat.cdLink.linkNewWindow ? "_blank" : "_self"}
+                  target={cat.cdLink?.linkNewWindow ? "_blank" : "_self"}
                 >
                   <span className="rounded-full bg-gray-50 p-[10px] w-[110px] h-[110px] lg:w-[150px] lg:h-[150px] flex justify-center items-center">
                     <Image
-                      src={cat.cdImageVideo.url}
+                      src={cat.cdImage?.url}
                       width={80}
                       height={80}
-                      alt={cat.cdImageVideo.title}
+                      alt={cat.cdImage?.title}
                       className="w-20 h-20 "
                     ></Image>
                   </span>

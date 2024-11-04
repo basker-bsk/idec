@@ -1,24 +1,23 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
-import rd from "@/public/assets/data/RD.json";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Image from "next/image";
-export default function ResourceAndDocuments() {
+export default function ResourceAndDocuments({ rd }: any) {
   return (
     <div className="gradient-blue ">
       <div className="container mx-auto px-5 lg:px-[50px] py-6 md:py-12">
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-4 md:mb-6">
           <h3>{rd.listLinkTitle}</h3>
-          <p className="md:hidden text-14 leading-14">
-            Check out our resource hub for CAD files and documents to streamline
-            workflow and boost collaboration for engineers & designers.
-          </p>
+          {/* <div className="md:hidden text-14 leading-14">
+            {documentToReactComponents()}
+          </div> */}
           <div className="">
             <Button theme="primary">{rd.listLinkviewAllLink.linkText}</Button>
           </div>
         </div>
         <div>
           <ul className="grid md:grid-cols-2 gap-1 flex-wrap">
-            {rd.listLinkCollection.items.map((list, index) => (
+            {rd.listLinkCollection?.items?.map((list: any, index: number) => (
               <li
                 key={list.linkText}
                 className="px-5 py-4 flex justify-between items-center border-b border-gray-300"

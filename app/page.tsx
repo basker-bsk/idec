@@ -1,6 +1,6 @@
 import FooterIdec from "@/components/footer-idec";
 import HeaderIdec from "@/components/header-idec";
-import Banner from "@/components/banner";
+import HeroBanner from "@/components/HeroBanner/HeroBanner";
 import CategoriesComponent from "@/components/categories/page";
 import SustainabilityComponent from "@/components/sustainability";
 import IdecForm from "@/components/form-idec";
@@ -8,36 +8,71 @@ import News from "@/components/News";
 import IdecCard from "@/components/Idec-Card";
 import FeaturedProducts from "@/components/featured-products/feature-products";
 import PopularCategories from "@/components/PopularCaregories";
-import content from "@/public/assets/data/home.json";
+import homecontent from "@/public/assets/data/home.json";
 import USP from "@/components/USPComponent";
 import LoginBanner from "@/components/LoginBanner";
 import ProductFinderBanner from "@/components/ProductFinderBanner";
 import TextImageComponent from "@/components/TextImageComponent";
 import ResourceAndDocuments from "@/components/ResourceAndDocuments";
 import HelpComponent from "@/components/HelpComponent";
+import Carousel from "@/components/Carousel/Carousel";
+
 export default function Home() {
-  const response =
-    content.landingPageIdecCollection?.items[0]?.lpComponentsCollection
-      ?.items[0];
+  let cms_home =
+    homecontent.landingPageIdecCollection?.items[0].lpComponentsCollection
+      .items;
+
   return (
     <>
-      <div className="">
-        <Banner />
-      </div>
+      {cms_home.map((content, index) => (
+        <>
+          {content.__typename === "Carousel" &&
+            content.crStyle === "Banner" && (
+              <div className="xl:min-h-[500px]">
+                <HeroBanner banner={content.crComponentsCollection?.items} />
+              </div>
+            )}
+          {content.__typename === "Counters" && (
+            <div className=" mb-8 md:mb-12">
+              <USP usp={content} />
+            </div>
+          )}
+          {content.__typename === "Columns" && (
+            <div className=" mb-8 md:mb-12">
+              <PopularCategories categories={content} />
+            </div>
+          )}
+          {content.__typename === "CallToAction" && (
+            <div className=" mb-8 md:mb-12">
+              <LoginBanner data={content} />
+            </div>
+          )}
+          {content.__typename === "ListOfLinks" && (
+            <div className=" mb-8 md:mb-12">
+              <ResourceAndDocuments rd={content} />
+            </div>
+          )}
+          {content.__typename === "TextImage" && (
+            <div className=" mb-8 md:mb-12">
+              <TextImageComponent data={content} />
+            </div>
+          )}
+          {content.__typename === "Carousel" &&
+            content.crStyle === "Series card" && (
+              <div className="slider card-slider mb-8 md:mb-12">
+                <Carousel series={content} crStyle={content.crStyle} />
+              </div>
+            )}
+          {content.__typename === "Carousel" &&
+            content.crStyle === "News card" && (
+              <div className="slider news-slider mb-8 md:mb-12">
+                <Carousel series={content} crStyle={content.crStyle} />
+              </div>
+            )}
+        </>
+      ))}
       <div className=" mb-8 md:mb-12">
-        <USP />
-      </div>
-      <div className=" mb-8 md:mb-12">
-        <PopularCategories />
-      </div>
-      <div className=" mb-8 md:mb-12">
-        <LoginBanner />
-      </div>
-      <div className="">
         <ProductFinderBanner />
-      </div>
-      <div className=" mb-8 md:mb-12">
-        <ResourceAndDocuments />
       </div>
       <div className=" mb-8 md:mb-12">
         <TextImageComponent />
@@ -45,6 +80,18 @@ export default function Home() {
       <div className="">
         <HelpComponent />
       </div>
+      {/* 
+      <div className=" mb-8 md:mb-12">
+        <PopularCategories />
+      </div>
+      
+      <div className=" mb-8 md:mb-12">
+        <ResourceAndDocuments />
+      </div>
+      <div className=" mb-8 md:mb-12">
+        <TextImageComponent />
+      </div>
+      */}
 
       {/* <div className="mb-12">
         <CategoriesComponent />

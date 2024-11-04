@@ -5,10 +5,10 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import Banners from "@/public/assets/data/banner.json";
-import CarouselSlides from "./CarouselSlides";
 
-function banner() {
+import HeroSlides from "./HeroSlides";
+
+function HeroBanner({ banner }: any) {
   const settings = {
     dots: true,
     arrows: true,
@@ -23,11 +23,11 @@ function banner() {
   };
 
   return (
-    <div className="herobanner">
-      {Banners && (
+    <div className="herobanner mx-auto container">
+      {banner && (
         <Slider {...settings}>
-          {Banners.crComponentsCollection.items.map((data, index) => (
-            <CarouselSlides props={data} key={`b-${index}`} />
+          {banner.map((data: any, index: number) => (
+            <HeroSlides props={data} key={`b-${index}`} />
           ))}
         </Slider>
       )}
@@ -35,4 +35,4 @@ function banner() {
   );
 }
 
-export default banner;
+export default HeroBanner;

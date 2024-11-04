@@ -117,7 +117,7 @@
               "counter2Text": "83.9",
               "counter3Prefix": "Over",
               "counter3Suffix": "Corporations Globally",
-              "counter3Text": "10+"
+              "counter3Text": "10 +"
             },
             {
               "__typename": "Columns",
@@ -581,6 +581,27 @@
                       "title": "Switches & Indicators",
                       "url": "https://images.ctfassets.net/fg4hnnyn9urp/7pAMKmfYbFwRlyK4jforcf/52b0eaf565f4f6e307dcfa74249cedb0/switches-_-indicators.png"
                     }
+                  },
+                  {
+                    "__typename": "Card",
+                    "cdDescription": null,
+                    "cdTitle": "HG2J 7in Projected Capacitive Touch1",
+                    "cdStyle": "Featured Series1",
+                    "cdBadge": "NEW ARRIVAL1",
+                    "cdOverline1": "Automation1",
+                    "cdOverline2": "Operator Interface1",
+                    "cdLink": {
+                      "linkText": "View Series",
+                      "linkId": null,
+                      "linkUrl": "/view-series",
+                      "linkStyle": "Link",
+                      "linkClass": null,
+                      "linkNewWindow": false
+                    },
+                    "cdImage": {
+                      "title": "Automation-12",
+                      "url": "https://images.ctfassets.net/fg4hnnyn9urp/7nt0YzVNwohHA7R7jwGYYe/29fa968b2dc4b87cc1d8f01cbd87f8e9/automation-1.png"
+                    }
                   }
                 ]
               }
@@ -877,6 +898,27 @@
                     "cdImage": {
                       "title": "IDEC FT2J Series All-In-One PLC and HMI",
                       "url": "https://images.ctfassets.net/fg4hnnyn9urp/2M8n8VvydxNgmQYGrEYFq1/856eccd03db872d4e4b017800068d683/idec-ft2j-series-all-in-one-plc-and-hmi.png"
+                    }
+                  },
+                  {
+                    "__typename": "Card",
+                    "cdDescription": null,
+                    "cdTitle": "IDEC Financial Briefing Materials for FY20242",
+                    "cdStyle": "News card",
+                    "cdBadge": null,
+                    "cdOverline1": "May 10, 2024",
+                    "cdOverline2": null,
+                    "cdLink": {
+                      "linkText": "Read More",
+                      "linkId": null,
+                      "linkUrl": "/read-more",
+                      "linkStyle": "Button",
+                      "linkClass": null,
+                      "linkNewWindow": false
+                    },
+                    "cdImage": {
+                      "title": "IDEC Financial Briefing Materials for FY20242",
+                      "url": "https://images.ctfassets.net/fg4hnnyn9urp/6dBgmR9BWV8GI0Dr9OJmvo/f501ce3d63e31fca8e183fc2a85d5803/idec-financial-briefing-materials-for-fy2024.png"
                     }
                   }
                 ]

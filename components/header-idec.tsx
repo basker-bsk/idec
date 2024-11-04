@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { User, ShoppingBag, ShoppingCart } from "lucide-react";
 import MenuLinks from "@/public/assets/data/menu.json";
-import MobileMenu from "./mobile-menu";
+import MobileMenu from "../components/Header/Mobile/MobileMenu";
 import SearchComponent from "./search";
 import DesktopMenu from "./mega-menu";
 import { useState } from "react";
@@ -22,9 +22,6 @@ export default function HeaderIdec() {
       </div>
       <div className="bg-white shadow-md px-4 lg:px-0">
         <div className="py-4 lg:py-0 container flex justify-between items-center">
-          <div className="lg:hidden">
-            <MobileMenu />
-          </div>
           <div className="flex gap-8 items-center ">
             <Link href="/">
               <Image
