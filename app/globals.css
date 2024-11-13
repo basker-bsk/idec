@@ -23,8 +23,9 @@
     padding-bottom: 12px;
     font-family: "Courier New", Courier, monospace;
   }
-  p,
-  li {
+
+  li,
+  p {
     line-height: normal;
   }
 }

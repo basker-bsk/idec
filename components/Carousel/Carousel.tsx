@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import classnames from "classnames";
 import CarouselSlides from "./CarouselSlides";
 import { useState } from "react";
-import ScreenSize from "@/utlis/ScreenSize";
+import ScreenSize from "@/utils/ScreenSize";
 import Link from "next/link";
 export default function Carousel({ series, crStyle }: any) {
   const [loadMore, setLoadMore] = useState(false);

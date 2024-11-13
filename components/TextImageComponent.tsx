@@ -3,7 +3,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 import classnames from "classnames";
 import { Button } from "./ui/button";
-import ScreenSize from "@/utlis/ScreenSize";
+import ScreenSize from "@/utils/ScreenSize";
 import Image from "next/image";
 export default function TextImageComponent({ data }: any) {
   const options = {

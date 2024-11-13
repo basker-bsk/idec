@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
-import ScreenSize from "@/utlis/ScreenSize";
+import ScreenSize from "@/utils/ScreenSize";
 
 export default function ProductFinderBanner() {
   const PFBanner = {

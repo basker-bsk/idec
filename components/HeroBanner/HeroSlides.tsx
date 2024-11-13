@@ -4,7 +4,7 @@ import {
 } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Link from "next/link";
-import ScreenSize from "@/utlis/ScreenSize";
+import ScreenSize from "@/utils/ScreenSize";
 
 function HeroSlides({ props }: any) {
   return (
