@@ -26,10 +26,10 @@ export default function CarouselSlides({ props, crStyle }: any) {
             className={classnames(
               "flex flex-col",
               {
-                " gap-2": crStyle === "Series card",
+                " w-1/2 gap-2": crStyle === "Series card",
               },
               {
-                "p-5  gap-5": crStyle === "News card",
+                "p-5 gap-5": crStyle === "News card",
               }
             )}
           >
@@ -77,17 +77,40 @@ export default function CarouselSlides({ props, crStyle }: any) {
               )}
             </Link>
           </div>
-          <div>
-            <Image
-              src={props.cdImage.url}
-              width={150}
-              height={150}
-              alt={props.cdImage.title}
-              className={classnames("md:w-[184px] md:h-[184px] ", {
-                "rounded-tl-md rounded-tr-md rounded-md":
-                  crStyle === "News card",
-              })}
-            ></Image>
+          <div
+            className={classnames(
+              " ",
+              {
+                "w-1/2": crStyle === "Series card",
+              },
+              {
+                "w-full": crStyle === "News card",
+              }
+            )}
+          >
+            {crStyle === "Series card" ? (
+              <Image
+                src={props.cdImage.url}
+                width={150}
+                height={150}
+                alt={props.cdImage.title}
+                className={classnames("md:w-full md:h-full ", {
+                  "rounded-tl-md rounded-tr-md rounded-md":
+                    crStyle === "News card",
+                })}
+              ></Image>
+            ) : (
+              <Image
+                src={props.cdImage.url}
+                width={250}
+                height={250}
+                alt={props.cdImage.title}
+                className={classnames("md:w-full md:h-full ", {
+                  "rounded-tl-md rounded-tr-md rounded-md":
+                    crStyle === "News card",
+                })}
+              ></Image>
+            )}
           </div>
         </div>
       )}

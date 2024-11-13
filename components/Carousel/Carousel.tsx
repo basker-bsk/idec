@@ -15,7 +15,7 @@ export default function Carousel({ series, crStyle }: any) {
     arrows: true,
     infinite: false,
     speed: 500,
-    slidesToShow: ScreenSize() ? 3.75 : 1.25,
+    slidesToShow: crStyle === "Series card" ? 3 : 3.75,
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 5000,

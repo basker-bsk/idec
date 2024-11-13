@@ -47,7 +47,7 @@ const formSchema = z
       .email(),
     password: z
       .string()
-      .min(5, { message: "Password must be atleaset 5 characters" }),
+      .min(8, { message: "Password must be atleaset 8 characters" }),
     confirmPassword: z.string(),
     country: z.string().min(1, { message: "Select option required" }),
     newsletter: z.boolean().default(false),

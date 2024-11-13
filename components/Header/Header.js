@@ -1,13 +1,11 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { User, ShoppingBag, ShoppingCart } from "lucide-react";
 import MenuLinks from "@/public/assets/data/header.json";
 import MobileMenu from "./Mobile/MobileMenu";
-import SearchComponent from "../search";
 import DesktopMenu from "./Desktop/DesktopMenu";
 import { useState } from "react";
-import CartComponent from "../cart";
+
 export default function Header() {
   const [showOverlay, setShowOverlay] = useState(false);
   let Menus =

@@ -24,15 +24,16 @@ export default function HelpComponent() {
                   className="flex p-6  gap-5 justify-between bg-white rounded-md"
                 >
                   <Link
+                    className="gradient-red w-[44px] h-[44px] rounded-full p-[10px]"
                     href={list.cdLink.linkUrl}
                     target={list.cdLink.linkNewWindow ? "_blank" : "_self"}
                   >
                     <Image
                       src={list.cdImage.url}
-                      width={44}
-                      height={44}
+                      width={24}
+                      height={24}
                       alt={list.cdImage.title}
-                      className="w-[44px] h-[44px] "
+                      className="w-6 h-6"
                     ></Image>
                   </Link>
                   <div className="flex flex-col gap-1 md:gap-2">

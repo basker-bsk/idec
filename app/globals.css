@@ -3,6 +3,31 @@
 @tailwind utilities;
 
 @import url(../public/icons/style.css);
+@media print {
+  header,
+  footer,
+  aside,
+  form,
+  … {
+    display: none;
+    font-family: "Courier New", Courier, monospace;
+  }
+}
+@media print {
+  @page {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  body {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-family: "Courier New", Courier, monospace;
+  }
+  p,
+  li {
+    line-height: normal;
+  }
+}
 body {
   &:lang(en) {
     @apply text-14 md:text-16;
@@ -344,8 +369,9 @@ form {
 .main-content {
   .slick-prev,
   .slick-next {
+    font-size: 0;
     z-index: 1;
-    @apply text-10 w-10 h-10;
+    @apply text-10 w-10 h-10 bg-transparent;
     &.slick-disabled::before {
       @apply opacity-100 bg-gray-100 text-gray-300;
     }
@@ -484,6 +510,11 @@ form {
   .slick-prev,
   .slick-next {
     top: -54px;
+  }
+  .slick-list {
+    .slick-track {
+      @apply lg:flex;
+    }
   }
   .slick-next {
     @apply right-0 xl:right-[42px];
