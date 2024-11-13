@@ -9,6 +9,7 @@ const nextConfig = {
       "5.imimg.com",
       "www.cpecn.com",
       "images.ctfassets.net",
+      "in.idec.com",
     ],
   },
   // experimental: {
